@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Biology Chapter 10 Biotechnology and Its Applications</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f8ff;
+        }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="index.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Biology Chapter 10 Biotechnology and Its Applications</h1>
+
+            <p>NCERT Solutions for Class 12 Biology Chapter 10 Biotechnology and Its Applications covers Bt Cotton, Pest Resistant Plants (RNAi), Genetically Engineered Insulin, Gene Therapy, Transgenic Animals, Biopiracy, and Ethical Issues (GEAC).</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Biotechnological Applications in Agriculture</a></li>
+                    <li><a href="#topic2">2. Biotechnological Applications in Medicine</a></li>
+                    <li><a href="#topic3">3. Transgenic Animals, Biopiracy & Ethical Issues</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Biotechnological Applications in Agriculture</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Bt Cotton:</strong> Soil bacterium <em>Bacillus thuringiensis</em> produces insecticidal Crystal (Cry) proteins. In the alkaline pH of the insect gut, inactive protoxin dissolves and solubilizes, becoming active to bind midgut epithelial cells, causing pores, cell lysis, and death of insect pests (e.g., bollworms).</p>
+                    <p>&nbsp;&nbsp;- <em>cryIAc</em> & <em>cryIIAb</em> genes control cotton bollworms; <em>cryIAb</em> gene controls corn borer.</p>
+                    <p>• <strong>RNA Interference (RNAi):</strong> Cellular defense mechanism in all eukaryotes. Silences specific mRNA using complementary dsRNA. Used to protect tobacco roots from nematode parasite <em>Meloidegyne incognita</em> using <em>Agrobacterium</em> vectors.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Biotechnological Applications in Medicine</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Genetically Engineered Insulin:</strong> Human insulin consists of Chain A and Chain B linked by disulphide bonds. Proinsulin has an additional C-peptide. In 1983, Eli Lilly synthesized DNA sequences for chains A and B, introduced them into <em>E. coli</em> plasmids, produced chains separately, and combined them by disulphide bonds.</p>
+                    <p>• <strong>Gene Therapy:</strong> Collection of methods to correct a genetic defect. First clinical gene therapy was given in 1990 to a 4-year-old girl with Adenosine Deaminase (ADA) deficiency using retroviral vector to introduce functional ADA cDNA into lymphocytes.</p>
+                    <p>• <strong>Molecular Diagnosis:</strong> Recombinant DNA technology, PCR, and ELISA (Enzyme Linked Immunosorbent Assay) allow early detection of pathogens/diseases before symptoms appear.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Transgenic Animals, Biopiracy & Ethical Issues</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Transgenic Animals:</strong> Animals whose genome has been manipulated to possess and express a foreign gene. (Over 95% of all existing transgenic animals are mice).</p>
+                    <p>&nbsp;&nbsp;- Applications: Normal physiology study, vaccine safety testing, chemical safety/toxicity testing, and producing biological products (e.g., transgenic cow <em>Rosie</em> (1997) produced human alpha-lactalbumin enriched milk at 2.4 g/L).</p>
+                    <p>• <strong>GEAC (Genetic Engineering Approval Committee):</strong> Indian government organization that makes decisions regarding the validity of GM research and safety of introducing GM organisms for public services.</p>
+                    <p>• <strong>Biopiracy:</strong> Use of bio-resources by multinational companies or other organizations without proper authorization or compensation to the countries and people concerned (e.g., patents on Basmati rice, Neem, and Turmeric).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: How does the toxin produced by Bacillus thuringiensis kill the insect pest without harming the bacterium itself?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. The toxin is produced by <em>Bacillus thuringiensis</em> in an <strong>inactive protoxin form</strong> (crystalline protein) inside the bacterium, which does not harm the bacterial host cell.<br>
+                2. When an insect ingests the protoxin, it reaches the insect's midgut where the <strong>alkaline pH</strong> solubilizes the protein crystals.<br>
+                3. Proteolytic cleavage converts inactive protoxin into its active toxin form.<br>
+                4. The active toxin binds to midgut epithelial cells, creating pores that cause cell swelling, lysis, and death of the insect.
+            </div>
+
+            <div class="question">Q2: Differentiate between Proinsulin and Mature Human Insulin.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Proinsulin</th>
+                            <th>Mature Human Insulin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Structure</strong></td>
+                            <td>Contains Chain A, Chain B, and an extra C-peptide sequence.</td>
+                            <td>Contains only Chain A and Chain B linked together by disulfide bonds.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Biological Activity</strong></td>
+                            <td>Incompletely active / Inactive precursor.</td>
+                            <td>Fully functional and active hormone.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C-peptide Presence</strong></td>
+                            <td>Present.</td>
+                            <td>Absent (removed during maturation process).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: What is RNA Interference (RNAi)? Explain how RNAi protects plants against nematode infestation.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>RNA Interference (RNAi):</strong> A mechanism of gene silencing in eukaryotic cells where double-stranded RNA (dsRNA) prevents translation of a specific mRNA.<br><br>
+                <strong>Mechanism in Nematode Protection:</strong><br>
+                1. Nematode-specific genes are introduced into host plant cells using <em>Agrobacterium</em> vectors.<br>
+                2. The introduced DNA produces both sense and anti-sense RNA in host cells, forming a complementary double-stranded RNA (dsRNA).<br>
+                3. The dsRNA initiates RNAi, binding and silencing the specific mRNA of the parasite <em>Meloidogyne incognita</em>.<br>
+                4. Consequently, the parasite cannot survive in the transgenic host expressing specific interfering RNA.
+            </div>
+
+            <div class="question">Q2: What is Gene Therapy? Illustrate using the example of Adenosine Deaminase (ADA) deficiency.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Gene Therapy:</strong> A collection of therapeutic techniques used to repair or compensate for a defective or mutant gene causing a genetic disorder.<br><br>
+                <strong>Treatment of ADA Deficiency:</strong><br>
+                1. Lymphocytes from the blood of the patient are grown in a culture outside the body.<br>
+                2. A functional ADA cDNA is introduced into these lymphocytes using a retroviral vector.<br>
+                3. The modified lymphocytes are re-infused back into the patient.<br>
+                4. Since these cells are not immortal, periodic infusion of genetically engineered lymphocytes is required unless embryonic stem cell gene therapy is performed for a permanent cure.
+            </div>
+
+            <div class="question">Q3: What is Biopiracy? Mention any one example of biopiracy related to Indian bio-resources.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Biopiracy:</strong> The unauthorized exploitation or patenting of biological resources and traditional knowledge of developing nations by multinational companies without proper authorization, consent, or compensation.<br><br>
+                <strong>Example:</strong> In 1997, a US company got patent rights on Basmati rice through the US Patent and Trademark Office. This allowed the company to sell a 'new' variety of Basmati, derived from Indian farmers' varieties crossed with semi-dwarf varieties, restricting traditional Indian rice exports.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Biology</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 biology notes1.html">Ch 1: Sexual Reproduction in Flowering Plants</a></li>
+                    <li><a href="class 12 biology notes2.html">Ch 2: Human Reproduction</a></li>
+                    <li><a href="class 12 biology notes3.html">Ch 3: Reproductive Health</a></li>
+                    <li><a href="class 12 biology notes4.html">Ch 4: Principles of Inheritance & Variation</a></li>
+                    <li><a href="class 12 biology notes5.html">Ch 5: Molecular Basis of Inheritance</a></li>
+                    <li><a href="class 12 biology notes6.html">Ch 6: Evolution</a></li>
+                    <li><a href="class 12 biology notes7.html">Ch 7: Human Health & Disease</a></li>
+                    <li><a href="class 12 biology notes8.html">Ch 8: Microbes in Human Welfare</a></li>
+                    <li><a href="class 12 biology notes9.html">Ch 9: Biotechnology: Principles & Processes</a></li>
+                    <li class="active"><a href="class 12 biology notes10.html">Ch 10: Biotechnology & Its Applications</a></li>
+                    <li><a href="class 12 biology notes11.html">Ch 11: Organisms & Populations</a></li>
+                    <li><a href="class 12 biology notes12.html">Ch 12: Ecosystem</a></li>
+                    <li><a href="class 12 biology notes13.html">Ch 13: Biodiversity & Conservation</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

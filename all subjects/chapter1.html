@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemical Reactions Test - Class 10 Science</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Roboto, sans-serif; 
+      background: #f0f2f5; 
+      color: #1e2a3e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    .header { 
+      background: white; 
+      padding: 18px 0; 
+      border-bottom: 3px solid #1e4a76; 
+      margin-bottom: 30px; 
+    }
+    .header h1 { font-size: 1.5rem; color: #1e4a76; }
+    .header h1 span { color: #2d6a4f; }
+    .back-link { 
+      display: inline-block; 
+      margin-top: 8px; 
+      color: #1e4a76; 
+      text-decoration: none; 
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* Test Info */
+    .test-info {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .test-info .subject { font-weight: 600; color: #1e4a76; }
+    .test-info .total-q { background: #e6f0ff; padding: 4px 14px; border-radius: 30px; font-size: 0.85rem; }
+
+    /* Progress Bar */
+    .progress-container {
+      background: #e9ecef;
+      border-radius: 30px;
+      height: 10px;
+      margin-bottom: 25px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #2d6a4f;
+      border-radius: 30px;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    /* Question Card */
+    .question-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .q-number {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 12px;
+    }
+    .q-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .option {
+      background: #f8fafc;
+      border: 2px solid #e8ecf0;
+      padding: 14px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .option:hover {
+      background: #eef2ff;
+      border-color: #1e4a76;
+    }
+    .option.selected {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.correct-answer {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.wrong-answer {
+      background: #fee2e2;
+      border-color: #b91c1c;
+    }
+    .option.disabled {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    /* Feedback after answer */
+    .feedback-box {
+      margin-top: 20px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      display: none;
+    }
+    .feedback-box.show {
+      display: block;
+    }
+    .feedback-box.correct {
+      background: #dcfce7;
+      border-left: 4px solid #2d6a4f;
+    }
+    .feedback-box.wrong {
+      background: #fee2e2;
+      border-left: 4px solid #b91c1c;
+    }
+    .feedback-box .exp {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 6px;
+    }
+
+    /* Buttons */
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .btn {
+      padding: 12px 32px;
+      border: none;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary {
+      background: #1e4a76;
+      color: white;
+    }
+    .btn-primary:hover { background: #163a5c; }
+    .btn-success {
+      background: #2d6a4f;
+      color: white;
+    }
+    .btn-success:hover { background: #1f4d39; }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #333;
+    }
+    .btn-secondary:hover { background: #cbd5e1; }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* Result Section */
+    .result-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      padding: 35px;
+      text-align: center;
+      display: none;
+    }
+    .result-card.show { display: block; }
+    .result-score {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #1e4a76;
+      margin: 10px 0;
+    }
+    .result-percent {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2d6a4f;
+    }
+    .result-msg {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 12px;
+      margin: 20px 0;
+      font-size: 1rem;
+    }
+    .result-detail {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .result-detail .stat {
+      background: #f8fafc;
+      padding: 12px;
+      border-radius: 12px;
+    }
+    .result-detail .stat .num { font-size: 1.4rem; font-weight: 700; }
+    .result-detail .stat.correct .num { color: #2d6a4f; }
+    .result-detail .stat.wrong .num { color: #b91c1c; }
+    .result-detail .stat.skip .num { color: #f59e0b; }
+
+    .other-tests {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      padding: 20px 25px;
+      margin-top: 25px;
+    }
+    .other-tests h3 { color: #1e4a76; margin-bottom: 12px; font-size: 1rem; }
+    .test-links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .test-links a {
+      background: #e6f0ff;
+      padding: 8px 18px;
+      border-radius: 30px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .test-links a:hover { background: #1e4a76; color: white; }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 30px 0 18px;
+      margin-top: auto;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .question-card { padding: 20px; }
+      .result-detail { grid-template-columns: 1fr; }
+      .nav-buttons { flex-direction: column; }
+      .btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 10 <span>Science</span></h1>
+    <a href="science all chapters.html" class="back-link">← Back to Science Chapters</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Test Info -->
+  <div class="test-info">
+    <span class="subject">Chemical Reactions and Equations</span>
+    <span class="total-q">10 Questions</span>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Question Card -->
+  <div class="question-card" id="questionCard">
+    <div class="q-number" id="qNumber">Question 1 of 10</div>
+    <div class="q-text" id="qText">Loading question...</div>
+    <div class="options" id="optionsContainer"></div>
+    <div class="feedback-box" id="feedbackBox">
+      <div id="feedbackText"></div>
+      <div class="exp" id="feedbackExp"></div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+      <button class="btn btn-primary" id="nextBtn">Next</button>
+      <button class="btn btn-success" id="submitBtn" style="display:none;">Submit Test</button>
+    </div>
+  </div>
+
+  <!-- Result Card -->
+  <div class="result-card" id="resultCard">
+    <h2>Test Completed</h2>
+    <div class="result-score" id="resultScore">0/10</div>
+    <div class="result-percent" id="resultPercent">0%</div>
+    <div class="result-msg" id="resultMsg">Keep practicing!</div>
+    <div class="result-detail">
+      <div class="stat correct"><div class="num" id="correctCount">0</div><div>Correct</div></div>
+      <div class="stat wrong"><div class="num" id="wrongCount">0</div><div>Wrong</div></div>
+      <div class="stat skip"><div class="num" id="skipCount">0</div><div>Not Answered</div></div>
+    </div>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <button class="btn btn-success" onclick="location.reload()">Retake Test</button>
+      <button class="btn btn-primary" onclick="location.href='science.html'">Back to Chapters</button>
+    </div>
+  </div>
+
+  <!-- Other Tests Links -->
+  <div class="other-tests">
+    <h3>Other Science Tests</h3>
+    <div class="test-links">
+      <a href="chapter2.html">Acids, Bases and Salts</a>
+      <a href="chapter.3.html">Metals and Non-Metals</a>
+      <a href="chapter4.html">Carbon and its Compounds</a>
+      <a href="chapter5.html">Life Processes</a>
+      <a href="chapter11.html">Electricity</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    © 2026 Examora Education Pvt. Ltd. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  // ============================================
+  // 10 QUESTIONS - Chemical Reactions & Equations
+  // Simple English, CBSE Pattern
+  // ============================================
+
+  const questions = [
+    {
+      text: "What is the chemical name of baking soda?",
+      options: ["Sodium chloride", "Sodium bicarbonate", "Sodium hydroxide", "Sodium carbonate"],
+      correct: 1,
+      explanation: "Baking soda is sodium bicarbonate (NaHCO3)."
+    },
+    {
+      text: "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+      options: ["Oxygen", "Carbon dioxide", "Hydrogen", "Nitrogen"],
+      correct: 2,
+      explanation: "Zinc + Sulphuric acid gives Zinc sulphate + Hydrogen gas."
+    },
+    {
+      text: "What type of reaction is: CaCO3 → CaO + CO2?",
+      options: ["Combination", "Decomposition", "Displacement", "Double displacement"],
+      correct: 1,
+      explanation: "One compound breaks into two simpler substances."
+    },
+    {
+      text: "In the reaction Fe + CuSO4 → FeSO4 + Cu, which metal is displaced?",
+      options: ["Iron", "Copper", "Sulphur", "Oxygen"],
+      correct: 1,
+      explanation: "Iron displaces copper from copper sulphate solution."
+    },
+    {
+      text: "Which of these is a combination reaction?",
+      options: ["2H2 + O2 → 2H2O", "CaCO3 → CaO + CO2", "Fe + CuSO4 → FeSO4 + Cu", "NaOH + HCl → NaCl + H2O"],
+      correct: 0,
+      explanation: "Two or more substances combine to form one product."
+    },
+    {
+      text: "What is the colour of copper sulphate solution?",
+      options: ["Green", "Blue", "Colourless", "Yellow"],
+      correct: 1,
+      explanation: "Copper sulphate solution is blue in colour."
+    },
+    {
+      text: "Rusting of iron is an example of:",
+      options: ["Oxidation", "Reduction", "Corrosion", "Rancidity"],
+      correct: 2,
+      explanation: "Rusting is a type of corrosion where iron reacts with oxygen and water."
+    },
+    {
+      text: "What is the balanced equation for H2 + O2 → H2O?",
+      options: ["H2 + O2 → H2O", "2H2 + O2 → 2H2O", "H2 + 2O2 → 2H2O", "2H2 + 2O2 → 2H2O"],
+      correct: 1,
+      explanation: "2H2 + O2 gives 2H2O (both sides equal atoms)."
+    },
+    {
+      text: "Which reaction is used in black and white photography?",
+      options: ["Combination", "Decomposition", "Displacement", "Double displacement"],
+      correct: 1,
+      explanation: "Silver chloride decomposes on exposure to light."
+    },
+    {
+      text: "What is the process of oil becoming bad called?",
+      options: ["Corrosion", "Rancidity", "Oxidation", "Reduction"],
+      correct: 1,
+      explanation: "Rancidity is the oxidation of oils and fats."
+    }
+  ];
+
+  // ============================================
+  // TEST ENGINE
+  // ============================================
+
+  let currentIndex = 0;
+  let userAnswers = new Array(questions.length).fill(null);
+  let answered = new Array(questions.length).fill(false);
+  let testCompleted = false;
+
+  // DOM elements
+  const qNumber = document.getElementById('qNumber');
+  const qText = document.getElementById('qText');
+  const optionsContainer = document.getElementById('optionsContainer');
+  const feedbackBox = document.getElementById('feedbackBox');
+  const feedbackText = document.getElementById('feedbackText');
+  const feedbackExp = document.getElementById('feedbackExp');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const submitBtn = document.getElementById('submitBtn');
+  const progressBar = document.getElementById('progressBar');
+  const questionCard = document.getElementById('questionCard');
+  const resultCard = document.getElementById('resultCard');
+
+  // Render a question
+  function renderQuestion(index) {
+    const q = questions[index];
+    qNumber.textContent = `Question ${index + 1} of ${questions.length}`;
+    qText.textContent = q.text;
+
+    // Build options
+    let optHtml = '';
+    for (let i = 0; i < q.options.length; i++) {
+      let cls = 'option';
+      if (answered[index]) {
+        cls += ' disabled';
+        if (i === q.correct) cls += ' correct-answer';
+        if (userAnswers[index] === i && i !== q.correct) cls += ' wrong-answer';
+        if (userAnswers[index] === i) cls += ' selected';
+      }
+      optHtml += `<div class="${cls}" data-opt="${i}">${String.fromCharCode(65 + i)}. ${q.options[i]}</div>`;
+    }
+    optionsContainer.innerHTML = optHtml;
+
+    // Hide feedback initially if not answered
+    if (answered[index]) {
+      showFeedback(index);
+    } else {
+      feedbackBox.classList.remove('show', 'correct', 'wrong');
+    }
+
+    // Update buttons
+    prevBtn.disabled = (index === 0);
+    if (index === questions.length - 1) {
+      nextBtn.style.display = 'none';
+      submitBtn.style.display = 'inline-block';
+    } else {
+      nextBtn.style.display = 'inline-block';
+      submitBtn.style.display = 'none';
+    }
+
+    // Update progress
+    let answeredCount = answered.filter(a => a === true).length;
+    let progress = (answeredCount / questions.length) * 100;
+    progressBar.style.width = progress + '%';
+
+    // Attach click events to options
+    if (!answered[index]) {
+      document.querySelectorAll('.option').forEach(opt => {
+        opt.addEventListener('click', function() {
+          if (answered[currentIndex]) return;
+          const selected = parseInt(this.dataset.opt);
+          userAnswers[currentIndex] = selected;
+          answered[currentIndex] = true;
+          renderQuestion(currentIndex);
+        });
+      });
+    }
+  }
+
+  // Show feedback for a question
+  function showFeedback(index) {
+    const q = questions[index];
+    const ans = userAnswers[index];
+    const isCorrect = (ans === q.correct);
+    
+    feedbackBox.className = 'feedback-box show';
+    if (isCorrect) {
+      feedbackBox.classList.add('correct');
+      feedbackText.textContent = '✓ Correct! Well done.';
+    } else {
+      feedbackBox.classList.add('wrong');
+      feedbackText.textContent = '✗ Incorrect. The correct answer is ' + String.fromCharCode(65 + q.correct) + '.';
+    }
+    feedbackExp.textContent = q.explanation;
+  }
+
+  // Go to next question
+  function goToNext() {
+    if (currentIndex < questions.length - 1) {
+      currentIndex++;
+      renderQuestion(currentIndex);
+      // Scroll to top of question
+      document.getElementById('questionCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Go to previous question
+  function goToPrev() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      renderQuestion(currentIndex);
+    }
+  }
+
+  // Submit test and show result
+  function submitTest() {
+    // Check if all questions answered
+    let allAnswered = answered.every(a => a === true);
+    let skipCount = answered.filter(a => a === false).length;
+
+    if (!allAnswered) {
+      if (!confirm(`You have ${skipCount} question(s) not answered. Are you sure you want to submit?`)) {
+        return;
+      }
+    }
+
+    testCompleted = true;
+    let correct = 0;
+    let wrong = 0;
+    let skipped = 0;
+
+    for (let i = 0; i < questions.length; i++) {
+      if (!answered[i]) {
+        skipped++;
+      } else if (userAnswers[i] === questions[i].correct) {
+        correct++;
+      } else {
+        wrong++;
+      }
+    }
+
+    // Show result
+    questionCard.style.display = 'none';
+    resultCard.classList.add('show');
+    document.getElementById('resultScore').textContent = `${correct}/${questions.length}`;
+    let percent = Math.round((correct / questions.length) * 100);
+    document.getElementById('resultPercent').textContent = percent + '%';
+    document.getElementById('correctCount').textContent = correct;
+    document.getElementById('wrongCount').textContent = wrong;
+    document.getElementById('skipCount').textContent = skipped;
+
+    let msg = '';
+    if (percent >= 80) msg = 'Excellent! You have a strong understanding of chemical reactions.';
+    else if (percent >= 60) msg = 'Good job! Review the topics you got wrong for better scores.';
+    else if (percent >= 40) msg = 'Keep practicing. Focus on balancing equations and types of reactions.';
+    else msg = 'Need more practice. Read the chapter again and try this test once more.';
+    document.getElementById('resultMsg').textContent = msg;
+
+    // Scroll to result
+    resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Event listeners
+  prevBtn.addEventListener('click', goToPrev);
+  nextBtn.addEventListener('click', goToNext);
+  submitBtn.addEventListener('click', submitTest);
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (testCompleted) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      if (currentIndex === questions.length - 1) {
+        submitTest();
+      } else {
+        goToNext();
+      }
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      goToPrev();
+    }
+  });
+
+  // Start the test
+  renderQuestion(0);
+</script>
+</body>
+</html>

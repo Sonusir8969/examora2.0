@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Physics Chapter 1 Electric Charges and Fields</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Physics Chapter 1 Electric Charges and Fields</h1>
+
+            <p>NCERT Solutions for Class 12 Physics Chapter 1 Electric Charges and Fields provides detailed revision notes, key formulas, derivations, and step-by-step textbook solutions covering electric charges, Coulomb's Law, electric field, dipoles, electric flux, and Gauss's Law.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Electric Charge & Basic Properties</a></li>
+                    <li><a href="#topic2">2. Coulomb's Law & Principle of Superposition</a></li>
+                    <li><a href="#topic3">3. Electric Field & Electric Field Lines</a></li>
+                    <li><a href="#topic4">4. Electric Dipole & Torque in Uniform Field</a></li>
+                    <li><a href="#topic5">5. Electric Flux & Gauss's Law Applications</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Electric Charge & Basic Properties</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Electric Charge (q):</strong> Fundamental property of matter that causes it to experience a force when placed in an electromagnetic field. SI unit is Coulomb (C).</p>
+                    <p>• <strong>Quantization of Charge:</strong> The total charge on a body is always an integral multiple of the basic unit of charge e: <em>q = ±ne</em> (where e = 1.6 × 10⁻¹⁹ C, n = 1, 2, 3...).</p>
+                    <p>• <strong>Conservation of Charge:</strong> The net electric charge of an isolated system remains constant during any physical or chemical process.</p>
+                    <p>• <strong>Additivity of Charge:</strong> Total charge of a system is the algebraic sum of all individual point charges present anywhere on the body.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Coulomb's Law & Principle of Superposition</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Coulomb's Law:</strong> The electrostatic force of attraction or repulsion between two point charges is directly proportional to the product of their magnitudes and inversely proportional to the square of the distance between them.</p>
+                    <p>&nbsp;&nbsp;- Formula: <em>F = (1 / 4πε₀) × (|q₁ q₂| / r²)</em>, where <em>1 / 4πε₀ ≈ 9 × 10⁹ N·m²/C²</em>.</p>
+                    <p>• <strong>Permittivity:</strong> ε₀ is the permittivity of free space (8.854 × 10⁻¹² C²/N·m²). In a medium with dielectric constant K, <em>F_medium = F_vacuum / K</em>.</p>
+                    <p>• <strong>Principle of Superposition:</strong> Force on any charge due to a number of other charges is the vector sum of all the forces exerted on it by the other charges taken one at a time.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Electric Field & Electric Field Lines</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Electric Field (E):</strong> Force experienced per unit positive test charge placed at a point: <em>E = F / q₀</em>. SI unit is N/C or V/m.</p>
+                    <p>• <strong>Electric Field due to Point Charge:</strong> <em>E = (1 / 4πε₀) × (q / r²)</em> directed radially outwards for +q and inwards for -q.</p>
+                    <p>• <strong>Properties of Electric Field Lines:</strong></p>
+                    <p>&nbsp;&nbsp;- Start from positive charges and end at negative charges.</p>
+                    <p>&nbsp;&nbsp;- Continuous curves without any breaks in charge-free regions.</p>
+                    <p>&nbsp;&nbsp;- Two field lines never intersect each other (otherwise two directions of E at intersection point).</p>
+                    <p>&nbsp;&nbsp;- Electrostatic field lines do not form closed loops.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Electric Dipole & Torque in Uniform Field</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Electric Dipole:</strong> A pair of equal and opposite point charges (+q and -q) separated by a distance 2a.</p>
+                    <p>• <strong>Dipole Moment (p):</strong> Vector quantity directed from negative to positive charge: <em>p = q × 2a</em>. SI unit is C·m.</p>
+                    <p>• <strong>Electric Field of Dipole:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Axial Line (r >> a):</em> <em>E_axial = (1 / 4πε₀) × (2p / r³)</em></p>
+                    <p>&nbsp;&nbsp;- <em>Equatorial Line (r >> a):</em> <em>E_eq = (1 / 4πε₀) × (p / r³)</em></p>
+                    <p>• <strong>Torque on Dipole in Uniform Field:</strong> <em>τ = p × E</em> or <em>τ = pE sin θ</em>. Potential energy stored is <em>U = -p · E = -pE cos θ</em>.</p>
+                </div>
+            </div>
+
+            <div id="topic5">
+                <h2>5. Electric Flux & Gauss's Law Applications</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Electric Flux (Φ):</strong> Total number of electric field lines passing normally through a given area: <em>Φ = ∫ E · dA = E A cos θ</em>. SI unit is N·m²/C or V·m.</p>
+                    <p>• <strong>Gauss's Law:</strong> The total electric flux through any closed surface is equal to <em>1/ε₀</em> times the total net charge enclosed by the surface: <em>Φ = ∮ E · dA = q_enclosed / ε₀</em>.</p>
+                    <p>• <strong>Applications of Gauss's Law:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Infinitely Long Straight Wire (linear charge density λ):</em> <em>E = λ / (2πε₀r)</em></p>
+                    <p>&nbsp;&nbsp;- <em>Infinite Plane Sheet (surface charge density σ):</em> <em>E = σ / (2ε₀)</em></p>
+                    <p>&nbsp;&nbsp;- <em>Thin Spherical Shell (radius R, charge Q):</em> <em>E_out = Q / (4πε₀r²)</em> (for r ≥ R) and <em>E_in = 0</em> (for r < R).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Why can two electric field lines never cross each other?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                If two electric field lines cross each other at a point, it would mean that at the point of intersection, two tangents can be drawn. This implies two different directions for the net electric field at the exact same location, which is physically impossible. Hence, two electric field lines can never cross each other.
+            </div>
+
+            <div class="question">Q2: An electric dipole with dipole moment p is placed in a uniform electric field E. Write the expressions for the torque experienced by it and its potential energy when it is in (i) stable equilibrium, and (ii) unstable equilibrium.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Stable Equilibrium:</strong> Dipole moment <strong>p</strong> is parallel to electric field <strong>E</strong> (θ = 0°).<br>
+                &nbsp;&nbsp;- Torque: <em>τ = pE sin 0° = 0</em><br>
+                &nbsp;&nbsp;- Potential Energy: <em>U = -pE cos 0° = -pE</em> (Minimum PE)<br><br>
+                • <strong>Unstable Equilibrium:</strong> Dipole moment <strong>p</strong> is antiparallel to electric field <strong>E</strong> (θ = 180°).<br>
+                &nbsp;&nbsp;- Torque: <em>τ = pE sin 180° = 0</em><br>
+                &nbsp;&nbsp;- Potential Energy: <em>U = -pE cos 180° = +pE</em> (Maximum PE)
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: What is the force between two small charged spheres having charges of 2 × 10⁻⁷ C and 3 × 10⁻⁷ C placed 30 cm apart in air?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • q₁ = 2 × 10⁻⁷ C<br>
+                • q₂ = 3 × 10⁻⁷ C<br>
+                • r = 30 cm = 0.3 m<br>
+                • k = 1 / (4πε₀) = 9 × 10⁹ N·m²/C²<br><br>
+                Using Coulomb's Law formula:<br>
+                <em>F = k × (|q₁ q₂| / r²)</em><br>
+                <em>F = (9 × 10⁹ × 2 × 10⁻⁷ × 3 × 10⁻⁷) / (0.3)²</em><br>
+                <em>F = (54 × 10⁻⁵) / 0.09 = 6 × 10⁻³ N</em><br><br>
+                Since both charges are positive, the force is <strong>repulsive</strong> in nature.
+            </div>
+
+            <div class="question">Q2: Distinguish between Electric Field of a Point Charge and Electric Field of a Dipole.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Point Charge Electric Field</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Electric Dipole Field</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Distance Dependency</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">E is inversely proportional to r² (E ∝ 1/r²).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">E is inversely proportional to r³ (E ∝ 1/r³) at large distances.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Symmetry</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Spherical symmetry around the charge.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Axial symmetry about the dipole axis.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Net Charge</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Net charge is non-zero (q ≠ 0).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Net charge is zero (q_total = +q - q = 0).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Physics</h3>
+                <ul class="sidebar-links">
+                    <li class="active"><a href="class 12 physics notes1">Ch 1: Electric Charges and Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatic Potential & Capacitance</a></li>
+                    <li><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges and Magnetism</a></li>
+                    <li><a href="class 12 physics notes5">Ch 5: Magnetism and Matter</a></li>
+                    <li><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics and Optical Instruments</a></li>
+                    <li><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li><a href="class 12 physics notes11">Ch 11: Dual Nature of Radiation & Matter</a></li>
+                    <li><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

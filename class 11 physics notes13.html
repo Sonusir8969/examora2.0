@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Physics Ch-13: Oscillations</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation (As per Screenshot) --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer (As per Screenshot) --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="#" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Physics Ch-13: Oscillations</h1>
+
+            <p>NCERT Solutions for Class 11 Physics Chapter 13 Oscillations covers periodic and simple harmonic motion (SHM), the characteristics of SHM such as displacement, velocity and acceleration, energy in SHM, and the simple pendulum.</p>
+
+            <h2>Overview of Topics & Subtopics</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#">Periodic Motion and Simple Harmonic Motion (SHM)</a></li>
+                    <li><a href="#">Displacement, Velocity, and Acceleration in SHM</a></li>
+                    <li><a href="#">Energy in Simple Harmonic Motion</a></li>
+                    <li><a href="#">Simple Pendulum and Spring-Mass System</a></li>
+                </ul>
+            </div>
+
+            <h2>Important Questions and Answers</h2>
+            <div class="question">Q1: Define simple harmonic motion (SHM).</div>
+            <div class="answer">Answer: Simple harmonic motion is a type of periodic motion in which the restoring force (or acceleration) acting on a particle is always directed towards a fixed equilibrium point and is directly proportional to the displacement of the particle from that point, mathematically expressed as F = −kx.</div>
+            <div class="question">Q2: Write the expressions for displacement, velocity, and acceleration of a particle executing SHM.</div>
+            <div class="answer">Answer: For a particle in SHM, displacement is x = A sin(ωt + φ), velocity is v = Aω cos(ωt + φ), and acceleration is a = −Aω² sin(ωt + φ) = −ω²x, where A is the amplitude, ω is the angular frequency, and φ is the phase constant.</div>
+            <div class="question">Q3: How does the total mechanical energy of a particle in SHM vary with time?</div>
+            <div class="answer">Answer: The total mechanical energy of a particle executing SHM (sum of kinetic and potential energy) remains constant at all times, equal to (1/2)kA² = (1/2)mω²A², even though kinetic and potential energy individually vary and interconvert continuously as the particle oscillates.</div>
+            <div class="question">Q4: Derive the expression for the time period of a simple pendulum.</div>
+            <div class="answer">Answer: For a simple pendulum of length L undergoing small-angle oscillations, the restoring force leads to SHM with angular frequency ω = √(g/L), giving a time period T = 2π√(L/g), where g is the acceleration due to gravity.</div>
+            <div class="question">Q5: What is the time period of oscillation of a mass-spring system?</div>
+            <div class="answer">Answer: For a mass m attached to a spring of spring constant k undergoing SHM, the time period is given by T = 2π√(m/k), independent of the amplitude of oscillation.</div>
+
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Physics Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 physics notes1.html">Ch-1: Units and Measurements</a></li>
+                    <li><a href="class 11 physics notes2.html">Ch-2: Motion in a Straight Line</a></li>
+                    <li><a href="class 11 physics notes3.html">Ch-3: Motion in a Plane</a></li>
+                    <li><a href="class 11 physics notes4.html">Ch-4: Laws of Motion</a></li>
+                    <li><a href="class 11 physics notes5.html">Ch-5: Work, Energy and Power</a></li>
+                    <li><a href="class 11 physics notes6.html">Ch-6: System of Particles and Rotational Motion</a></li>
+                    <li><a href="class 11 physics notes7.html">Ch-7: Gravitation</a></li>
+                    <li><a href="class 11 physics notes8.html">Ch-8: Mechanical Properties of Solids</a></li>
+                    <li><a href="class 11 physics notes9.html">Ch-9: Mechanical Properties of Fluids</a></li>
+                    <li><a href="class 11 physics notes10.html">Ch-10: Thermal Properties of Matter</a></li>
+                    <li><a href="class 11 physics notes11.html">Ch-11: Thermodynamics</a></li>
+                    <li><a href="class 11 physics notes12.html">Ch-12: Kinetic Theory</a></li>
+                    <li class="active"><a href="class 11 physics notes13.html">Ch-13: Oscillations</a></li>
+                    <li><a href="class 11 physics notes14.html">Ch-14: Waves</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

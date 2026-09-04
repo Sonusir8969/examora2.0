@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Physics Chapter 6 Electromagnetic Induction</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Physics Chapter 6 Electromagnetic Induction</h1>
+
+            <p>NCERT Solutions for Class 12 Physics Chapter 6 Electromagnetic Induction provides complete conceptual notes, key equations, derivations, and step-by-step textbook solutions covering Faraday's laws, Lenz's law, motional emf, eddy currents, self and mutual inductance, and AC generator working principles.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Magnetic Flux & Faraday's Law of EMI</a></li>
+                    <li><a href="#topic2">2. Lenz's Law & Conservation of Energy</a></li>
+                    <li><a href="#topic3">3. Motional Electromotive Force & Eddy Currents</a></li>
+                    <li><a href="#topic4">4. Inductance (Self & Mutual) & AC Generator</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Magnetic Flux & Faraday's Law of EMI</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Magnetic Flux (Φ_B):</strong> The total number of magnetic field lines passing normally through a surface area A in magnetic field B: <em>Φ_B = B · A = B A cos θ</em>. SI Unit: <strong>Weber (Wb)</strong> or Tesla-meter² (T·m²).</p>
+                    <p>• <strong>Faraday's First Law:</strong> Whenever the magnetic flux linked with a closed circuit changes, an electromotive force (emf) is induced in the circuit, which lasts as long as the change in flux continues.</p>
+                    <p>• <strong>Faraday's Second Law:</strong> The magnitude of induced emf in a circuit is directly proportional to the time rate of change of magnetic flux through the circuit:</p>
+                    <p>&nbsp;&nbsp;- <em>Formula:</em> <em>ε = -N (dΦ_B / dt)</em>, where N is the number of turns in the coil.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Lenz's Law & Conservation of Energy</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Lenz's Law:</strong> The direction of the induced current is always such that it opposes the change in magnetic flux that produces it. This opposition is represented by the negative sign in Faraday's law: <em>ε = - (dΦ_B / dt)</em>.</p>
+                    <p>• <strong>Lenz's Law and Conservation of Energy:</strong></p>
+                    <p>&nbsp;&nbsp;- When a bar magnet is moved towards a coil, mechanical work is done against the repulsive magnetic force produced by the induced current.</p>
+                    <p>&nbsp;&nbsp;- This mechanical work done is converted into electrical energy, which subsequently dissipates as heat (Joule heating). If there were no opposition, electrical energy would be created without expending mechanical work, violating the Law of Conservation of Energy.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Motional Electromotive Force & Eddy Currents</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Motional EMF (Translational):</strong> EMF induced across the ends of a conductor of length <em>l</em> moving with velocity <em>v</em> perpendicular to a uniform magnetic field <em>B</em>: <em>ε = B l v</em>.</p>
+                    <p>• <strong>Motional EMF (Rotational):</strong> EMF induced in a metallic rod of length <em>l</em> rotating with angular speed <em>ω</em> about one end in uniform magnetic field <em>B</em>: <em>ε = (1/2) B ω l² = B A f</em>.</p>
+                    <p>• <strong>Eddy Currents (Foucault Currents):</strong> Circulating loops of electrical current induced within solid metallic blocks when subjected to a changing magnetic field.</p>
+                    <p>&nbsp;&nbsp;- <em>Disadvantages:</em> Cause heat loss and overheating in transformers and electric motors.</p>
+                    <p>&nbsp;&nbsp;- <em>Minimization:</em> Reduced by using laminated metal cores insulated from each other.</p>
+                    <p>&nbsp;&nbsp;- <em>Applications:</em> Electromagnetic damping in galvanometers, induction furnaces, electric brakes in trains.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Inductance (Self & Mutual) & AC Generator</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Self-Inductance (L):</strong> Phenomenon in which an induced emf is produced in a coil due to change in current in the same coil. <em>Φ = L I</em>  =>  <em>ε = -L (dI / dt)</em>. SI Unit: <strong>Henry (H)</strong>.</p>
+                    <p>&nbsp;&nbsp;- <em>Solenoid Self-Inductance:</em> <em>L = (μ₀ N² A) / l = μ₀ n² A l</em>.</p>
+                    <p>&nbsp;&nbsp;- <em>Energy Stored in Inductor:</em> <em>U = (1/2) L I²</em>.</p>
+                    <p>• <strong>Mutual Inductance (M):</strong> Phenomenon in which changing current in a primary coil induces emf in a nearby secondary coil. <em>Φ₂ = M I₁</em>  =>  <em>ε₂ = -M (dI₁ / dt)</em>.</p>
+                    <p>&nbsp;&nbsp;- <em>Mutual Inductance of Coaxial Solenoids:</em> <em>M = (μ₀ N₁ N₂ A) / l = μ₀ n₁ n₂ A l</em>.</p>
+                    <p>• <strong>AC Generator:</strong> Converts mechanical energy into alternating electrical energy based on EMI.</p>
+                    <p>&nbsp;&nbsp;- <em>Induced EMF Formula:</em> <em>ε = ε₀ sin(ω t) = N A B ω sin(ω t)</em>, where <em>ε₀ = N A B ω</em> is the peak voltage.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: State Lenz's law. Explain how it complies with the law of conservation of energy.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Statement:</strong> Lenz's law states that the polarity of induced electromotive force is such that it produces a current whose magnetic field opposes the change in magnetic flux that produced it.<br>
+                • <strong>Compliance with Energy Conservation:</strong><br>
+                1. Consider a bar magnet approaching a coil with its North pole facing the coil. The induced current flows in a direction such that the coil face becomes a North pole, resisting the approach of the magnet.<br>
+                2. An external mechanical agent must do work against this repulsive force to move the magnet closer.<br>
+                3. This mechanical work done is transferred to the system and converted into electrical energy in the coil. Thus, Lenz's law is a direct consequence of the Law of Conservation of Energy.
+            </div>
+
+            <div class="question">Q2: Distinguish between Self-Inductance and Mutual Inductance.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Self-Inductance (L)</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Mutual Inductance (M)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Coils Involved</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Involves a single coil.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Involves two neighboring coils (Primary & Secondary).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Working Concept</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">EMF is induced in the coil due to variation of current in the same coil.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">EMF is induced in the secondary coil due to variation of current in primary.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Governing Equation</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">ε = -L (dI / dt)</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">ε₂ = -M (dI₁ / dt)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Main Application</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Choke coils, inductors in tuning circuits.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Transformers and induction coils.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: A 1.0 m long metallic rod is rotated with an angular frequency of 400 rad/s about an axis normal to the rod passing through one end. The other end of the rod is in contact with a circular metallic ring. A constant and uniform magnetic field of 0.5 T parallel to the axis exists everywhere. Calculate the emf developed between the centre and the ring.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Length of metallic rod (l) = 1.0 m<br>
+                • Angular frequency (ω) = 400 rad/s<br>
+                • Magnetic field (B) = 0.5 T<br><br>
+                <strong>Formula:</strong><br>
+                The induced rotational motional emf is given by:<br>
+                <em>ε = (1 / 2) × B × ω × l²</em><br><br>
+                <strong>Calculation:</strong><br>
+                <em>ε = 0.5 × 0.5 × 400 × (1.0)²</em><br>
+                <em>ε = 0.25 × 400 × 1</em><br>
+                <em>ε = 100 V</em><br><br>
+                The emf developed between the centre and the ring is <strong>100 V</strong>.
+            </div>
+
+            <div class="question">Q2: A square loop of side 10 cm and resistance 0.5 Ω is placed vertically in the east-west plane. A uniform magnetic field of 0.10 T is set up across the plane in the north-east direction. The magnetic field is decreased to zero in 0.70 s at a steady rate. Determine the magnitude of induced current during this time interval.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Side of square loop (a) = 10 cm = 0.1 m  =>  Area (A) = 0.1 × 0.1 = 0.01 m²<br>
+                • Resistance (R) = 0.5 Ω<br>
+                • Initial Magnetic Field (B₁) = 0.10 T, Final Magnetic Field (B₂) = 0 T<br>
+                • Angle θ between magnetic field (North-East) and normal to loop (North) = 45°<br>
+                • Time interval (Δt) = 0.70 s<br><br>
+                <strong>Step 1: Calculate Initial Magnetic Flux (Φ₁)</strong><br>
+                <em>Φ₁ = B₁ A cos θ = 0.10 × 0.01 × cos(45°) = 10⁻³ × (1 / √2) ≈ 0.000707 Wb</em><br>
+                <em>Φ₂ = 0 Wb</em><br>
+                <em>Change in flux (ΔΦ) = |Φ₂ - Φ₁| = 0.000707 Wb</em><br><br>
+                <strong>Step 2: Calculate Induced EMF (ε)</strong><br>
+                <em>ε = ΔΦ / Δt = 0.000707 / 0.70 ≈ 0.00101 V = 1.01 mV</em><br><br>
+                <strong>Step 3: Calculate Induced Current (I)</strong><br>
+                <em>I = ε / R = 0.00101 / 0.5 = 0.00202 A = 2.02 mA</em><br><br>
+                The magnitude of the induced current during this time interval is <strong>2.02 mA</strong>.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Physics</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 physics notes1">Ch 1: Electric Charges and Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatic Potential & Capacitance</a></li>
+                    <li><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges and Magnetism</a></li>
+                    <li><a href="class 12 physics notes5">Ch 5: Magnetism and Matter</a></li>
+                    <li class="active"><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics and Optical Instruments</a></li>
+                    <li><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li><a href="class 12 physics notes11">Ch 11: Dual Nature of Radiation & Matter</a></li>
+                    <li><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

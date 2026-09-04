@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Class 11 Biology - JAC Board</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .header {
+      background: white;
+      padding: 28px 0;
+      border-bottom: 3px solid #1e4a76;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      color: #1e4a76;
+      letter-spacing: -0.5px;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .header-sub {
+      color: #4a5b6e;
+      font-size: 1rem;
+      margin-top: 4px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #2f855a;
+    }
+
+    .content {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 20px 28px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    .content-header p {
+      color: #4a5b6e;
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .chapter-list {
+      padding: 4px 0;
+    }
+
+    .chapter-row {
+      display: flex;
+      align-items: center;
+      padding: 14px 28px;
+      border-bottom: 1px solid #f0f4f8;
+      transition: background 0.2s;
+      gap: 16px;
+    }
+
+    .chapter-row:hover {
+      background: #f8fafc;
+    }
+
+    .chapter-num {
+      width: 100px;
+      min-width: 100px;
+      font-weight: 600;
+      color: #1e4a76;
+      font-size: 0.85rem;
+      background: #eef2ff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .chapter-link {
+      flex: 1;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 4px 0;
+      font-size: 0.95rem;
+    }
+
+    .chapter-link:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    .test-badge {
+      font-size: 0.75rem;
+      background: #e6f0ff;
+      padding: 6px 18px;
+      border-radius: 30px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .test-badge:hover {
+      background: #1e4a76;
+      color: white;
+    }
+
+    .section-label {
+      background: #f1f5f9;
+      padding: 10px 28px;
+      font-weight: 700;
+      color: #0f2b3d;
+      border-bottom: 2px solid #e2e8f0;
+      font-size: 0.85rem;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .stats-bar {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      padding: 20px 28px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .stats-bar .stat-item {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .stats-bar .stat-item strong {
+      color: #1e4a76;
+      font-size: 1.1rem;
+    }
+
+    .stats-bar .stat-item span {
+      color: #4a5b6e;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 48px 0 24px;
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-col p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 6px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 24px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .header h1 {
+        font-size: 1.6rem;
+      }
+
+      .content-header {
+        padding: 16px 18px;
+      }
+
+      .content-header h2 {
+        font-size: 1.2rem;
+      }
+
+      .chapter-row {
+        padding: 12px 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .chapter-num {
+        width: 100%;
+        min-width: auto;
+        text-align: left;
+        font-size: 0.8rem;
+        padding: 2px 12px;
+        display: inline-block;
+        width: fit-content;
+      }
+
+      .chapter-link {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 2px 0;
+      }
+
+      .test-badge {
+        font-size: 0.7rem;
+        padding: 4px 14px;
+      }
+
+      .section-label {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+      }
+
+      .stats-bar {
+        padding: 16px 18px;
+        gap: 16px;
+      }
+
+      .stats-bar .stat-item {
+        flex-wrap: wrap;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.3rem;
+      }
+
+      .chapter-row {
+        padding: 10px 14px;
+      }
+
+      .chapter-link {
+        font-size: 0.85rem;
+      }
+
+      .test-badge {
+        font-size: 0.65rem;
+        padding: 3px 12px;
+      }
+
+      .content-header h2 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 11 <span>Biology</span> | JAC Board</h1>
+    <div class="header-sub">Complete Biology Syllabus</div>
+    <a href="#" class="back-link" id="backHome">← Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="stats-bar">
+    <div class="stat-item"><strong>22</strong> <span>Total Chapters</span></div>
+    <div class="stat-item"><strong>5</strong> <span>Units</span></div>
+  </div>
+
+  <div class="content">
+    <div class="content-header">
+      <h2>Biology - All Chapters</h2>
+      <p>Click on any chapter to start test</p>
+    </div>
+    <div class="chapter-list" id="chapterList">
+      <!-- chapters will load here -->
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html">About Us</a>
+        <a href="contact us examora.html">Contact Us</a>
+        <a href="privacy policies examora.html">Privacy Policy</a>
+        <a href="term and conditions.html">Terms & Conditions</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://www.instagram.com/sonu_____study_8969?igsh=a2NtODRsd2U4N29q">Instagram</a>
+        <a href="www.youtube.com/@Sonusir8969">YouTube</a>
+        <a href="https://whatsapp.com/channel/0029VanoIcGEquiN0b5u9x3M">WhatsApp</a>
+      </div>
+    </div>
+    <div class="copyright">2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Class 11 JAC Board Biology Syllabus - Based on NCERT/JAC Curriculum
+  const biologyChapters = [
+    // Unit 1: Diversity in the Living World
+    { num: "Bio-1", name: "The Living World", link: "the living world.html" },
+    { num: "Bio-2", name: "Biological Classification", link: "biological classification.html" },
+    { num: "Bio-3", name: "Plant Kingdom", link: "plant kingdom.html" },
+    { num: "Bio-4", name: "Animal Kingdom", link: "animal kingdom.html" },
+    
+    // Unit 2: Structural Organisation in Plants and Animals
+    { num: "Bio-5", name: "Morphology of Flowering Plants", link: "morphology of plant.html" },
+    { num: "Bio-6", name: "Anatomy of Flowering Plants", link: "anatomy of flowering plant.html" },
+    { num: "Bio-7", name: "Structural Organisation in Animals", link: "structural orginisation.html" },
+    
+    // Unit 3: Cell: Structure and Function
+    { num: "Bio-8", name: "Cell - The Unit of Life", link: "cell the unit of life.html" },
+    { num: "Bio-9", name: "Biomolecules", link: "biomolecules.html" },
+    { num: "Bio-10", name: "Cell Cycle and Cell Division", link: "cell cycle and cell division" },
+    
+    // Unit 4: Plant Physiology
+    { num: "Bio-11", name: "Transport in Plants", link: "transport in plant.html" },
+    { num: "Bio-12", name: "Mineral Nutrition", link: "mineral nutrients.html" },
+    { num: "Bio-13", name: "Photosynthesis in Higher Plants", link: "photosynthesis in higher plant.html" },
+    { num: "Bio-14", name: "Respiration in Plants", link: "respiration in plant.html" },
+    { num: "Bio-15", name: "Plant Growth and Development", link: "plant growth and devlopment.html" },
+    
+    // Unit 5: Human Physiology
+    { num: "Bio-16", name: "Digestion and Absorption", link: "digestion and absorption.html" },
+    { num: "Bio-17", name: "Breathing and Exchange of Gases", link: "breathing and exchange of gasses.html" },
+    { num: "Bio-18", name: "Body Fluids and Circulation", link: "body fluids and circulation.html" },
+    { num: "Bio-19", name: "Excretory Products and their Elimination", link: "excretory products and thier elimination.html" },
+    { num: "Bio-20", name: "Locomotion and Movement", link: "locomotion and movement.html" },
+    { num: "Bio-21", name: "Neural Control and Coordination", link: "neural control and cordination.html" },
+    { num: "Bio-22", name: "Chemical Coordination and Integration", link: "chemical coordination and integration.html" }
+  ];
+
+  function renderChapters() {
+    let html = "";
+    
+    const sections = [
+      { label: "Unit 1: Diversity in the Living World", start: 0, end: 3 },
+      { label: "Unit 2: Structural Organisation in Plants and Animals", start: 4, end: 6 },
+      { label: "Unit 3: Cell: Structure and Function", start: 7, end: 9 },
+      { label: "Unit 4: Plant Physiology", start: 10, end: 14 },
+      { label: "Unit 5: Human Physiology", start: 15, end: 21 }
+    ];
+
+    for (let s = 0; s < sections.length; s++) {
+      const section = sections[s];
+      html += `<div class="section-label">${section.label}</div>`;
+      
+      for (let i = section.start; i <= section.end; i++) {
+        const ch = biologyChapters[i];
+        if (!ch) continue;
+        html += `
+          <div class="chapter-row">
+            <div class="chapter-num">${ch.num}</div>
+            <a href="${ch.link}" class="chapter-link" target="_blank">${ch.name}</a>
+            <a href="${ch.link}" class="test-badge" target="_blank">Test</a>
+          </div>
+        `;
+      }
+    }
+    
+    document.getElementById("chapterList").innerHTML = html;
+  }
+
+  document.getElementById("backHome")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Return to Examora main page.");
+  });
+
+  document.getElementById("aboutLink")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Examora - JAC Board preparation platform.");
+  });
+
+  document.getElementById("contactLink")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Email: support@examora.com");
+  });
+
+  document.getElementById("privacyLink")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Privacy policy: Data is secure.");
+  });
+
+  document.getElementById("termsLink")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Terms and conditions apply.");
+  });
+
+  renderChapters();
+</script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Chemistry Chapter 3 Chemical Kinetics</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Chemistry Chapter 3 Chemical Kinetics</h1>
+
+            <p>NCERT Solutions for Class 12 Chemistry Chapter 3 Chemical Kinetics provides comprehensive coverage of reaction rates, rate laws, order and molecularity of reactions, integrated rate equations, half-life periods, Arrhenius equation, and activation energy.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Rate of Reaction, Factors & Order/Molecularity</a></li>
+                    <li><a href="#topic2">2. Integrated Rate Equations, Half-Life & Pseudo First Order</a></li>
+                    <li><a href="#topic3">3. Temperature Dependence, Arrhenius Equation & Collision Theory</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Rate of Reaction, Factors & Order/Molecularity</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Rate of Reaction:</strong> Change in concentration of reactants or products per unit time ($r = -\frac{\Delta [R]}{\Delta t} = +\frac{\Delta [P]}{\Delta t}$). Unit: $\text{mol L}^{-1}\text{s}^{-1}$.</p>
+
+                    <p>• <strong>Rate Law & Rate Constant ($k$):</strong> Expression relating reaction rate to concentration of reactants: $r = k[A]^x [B]^y$. $k$ is characteristic for a specific reaction at a given temperature.</p>
+
+                    <p>• <strong>Order of Reaction ($n = x + y$):</strong> Sum of powers of reactant concentrations in experimentally determined rate law. Can be 0, fractional, or integer.</p>
+
+                    <p>• <strong>Molecularity:</strong> Number of reacting species taking part in an elementary reaction step simultaneously. Always a positive whole integer ($1, 2, 3$). Cannot be zero or fractional.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Integrated Rate Equations, Half-Life & Pseudo First Order</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Zero Order Reaction:</strong> Rate is independent of concentration.</p>
+                    <p>&nbsp;&nbsp;- Integrated equation: $k = \frac{[R]_0 - [R]}{t}$</p>
+                    <p>&nbsp;&nbsp;- Half-life: $t_{1/2} = \frac{[R]_0}{2k}$ (Directly proportional to initial concentration $[R]_0$).</p>
+
+                    <p>• <strong>First Order Reaction:</strong> Rate depends linearly on reactant concentration.</p>
+                    <p>&nbsp;&nbsp;- Integrated equation: $k = \frac{2.303}{t} \log \frac{[R]_0}{[R]}$</p>
+                    <p>&nbsp;&nbsp;- Half-life: $t_{1/2} = \frac{0.693}{k}$ (Independent of initial concentration $[R]_0$).</p>
+
+                    <p>• <strong>Pseudo First Order Reaction:</strong> A higher-order reaction that behaves as a first-order reaction because one reactant is in excess (e.g., acid hydrolysis of ethyl acetate, inversion of cane sugar).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Temperature Dependence, Arrhenius Equation & Collision Theory</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Temperature Coefficient:</strong> Most chemical reactions double their rate for every $10^\circ\text{C}$ rise in temperature.</p>
+
+                    <p>• <strong>Arrhenius Equation:</strong> $k = A e^{-E_a / RT}$</p>
+                    <p>&nbsp;&nbsp;- Logarithmic Form: $\log k = \log A - \frac{E_a}{2.303 R T}$</p>
+                    <p>&nbsp;&nbsp;- Two-Temperature Form: $\log \frac{k_2}{k_1} = \frac{E_a}{2.303 R} \left[ \frac{T_2 - T_1}{T_1 T_2} \right]$</p>
+
+                    <p>• <strong>Activation Energy ($E_a$):</strong> Minimum energy required by reactant molecules to form an activated complex and turn into products.</p>
+
+                    <p>• <strong>Collision Theory:</strong> Effective collisions depend on two factors: <em>Energetic factor</em> (Energy $\ge E_a$) and <em>Orientational factor</em> (Proper spatial alignment of molecules during collision).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Differentiate between Order and Molecularity of a chemical reaction.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Order of Reaction</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Molecularity of Reaction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Definition</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Sum of exponents of concentration terms in experimental rate law expression.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Number of species colliding simultaneously in an elementary step.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Nature</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Experimental value.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Theoretical value.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Values Possible</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Can be zero, integer, or fractional.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Always a positive whole integer ($1, 2, 3$). Never zero or fractional.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Applicability</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Applicable to elementary as well as complex reactions.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Applicable only to elementary steps of a reaction.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: A reaction is first order in A and second order in B. How is the rate affected when the concentration of B is tripled?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • Rate equation for the given reaction: $r_1 = k [A]^1 [B]^2$<br>
+                • When concentration of B is tripled ($[B'] = 3[B]$):<br>
+                &nbsp;&nbsp;$r_2 = k [A]^1 (3[B])^2 = k [A]^1 \times 9[B]^2 = 9 \times r_1$<br><br>
+                • Therefore, the rate of reaction increases by <strong>9 times</strong>.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: A first order reaction has a rate constant k = 1.15 × 10⁻³ s⁻¹. How long will 5 g of this reactant take to reduce to 3 g?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Rate constant $k = 1.15 \times 10^{-3}\text{ s}^{-1}$<br>
+                • Initial concentration $[R]_0 = 5\text{ g}$<br>
+                • Remaining concentration $[R] = 3\text{ g}$<br><br>
+                <strong>Step 1: Apply First-Order Integrated Rate Formula</strong><br>
+                <em>$t = \frac{2.303}{k} \log \frac{[R]_0}{[R]}$</em><br><br>
+                <strong>Step 2: Substitute Values</strong><br>
+                <em>$t = \frac{2.303}{1.15 \times 10^{-3}} \log \left(\frac{5}{3}\right)$</em><br>
+                <em>$t = 2002.6 \times \log(1.667)$</em><br>
+                <em>$t = 2002.6 \times 0.2219 \approx 444.38\text{ s}$</em><br><br>
+                • The time required for reduction is <strong>444.4 seconds</strong>.
+            </div>
+
+            <div class="question">Q2: The rate constants of a reaction at 500 K and 700 K are 0.02 s⁻¹ and 0.07 s⁻¹ respectively. Calculate the values of activation energy (Eₐ) and pre-exponential factor (A). (R = 8.314 J K⁻¹ mol⁻¹)</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • $T_1 = 500\text{ K}$, $k_1 = 0.02\text{ s}^{-1}$<br>
+                • $T_2 = 700\text{ K}$, $k_2 = 0.07\text{ s}^{-1}$<br>
+                • $R = 8.314\text{ J K}^{-1}\text{ mol}^{-1}$<br><br>
+                <strong>Step 1: Calculate Activation Energy ($E_a$)</strong><br>
+                <em>$\log \frac{k_2}{k_1} = \frac{E_a}{2.303 R} \left[ \frac{T_2 - T_1}{T_1 T_2} \right]$</em><br>
+                <em>$\log \left(\frac{0.07}{0.02}\right) = \frac{E_a}{2.303 \times 8.314} \left[ \frac{700 - 500}{500 \times 700} \right]$</em><br>
+                <em>$\log(3.5) = \frac{E_a}{19.147} \times \left[ \frac{200}{350000} \right]$</em><br>
+                <em>$0.5441 = \frac{E_a}{19.147} \times \left(5.714 \times 10^{-4}\right)$</em><br>
+                <em>$E_a = \frac{0.5441 \times 19.147}{5.714 \times 10^{-4}} \approx 18231\text{ J mol}^{-1} = \mathbf{18.23\text{ kJ mol}^{-1}}$</em><br><br>
+                <strong>Step 2: Calculate Frequency Factor ($A$) using $T_1 = 500\text{ K}$</strong><br>
+                <em>$\log k_1 = \log A - \frac{E_a}{2.303 R T_1}$</em><br>
+                <em>$\log(0.02) = \log A - \frac{18231}{2.303 \times 8.314 \times 500}$</em><br>
+                <em>$-1.6990 = \log A - 1.9043$</em><br>
+                <em>$\log A = -1.6990 + 1.9043 = 0.2053$</em><br>
+                <em>$A = 10^{0.2053} \approx \mathbf{1.603\text{ s}^{-1}}$</em><br><br>
+                • Activation Energy ($E_a$) = <strong>18.23 kJ mol⁻¹</strong><br>
+                • Pre-exponential factor ($A$) = <strong>1.60 s⁻¹</strong>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Chemistry</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 chemistry notes1">Ch 1: Solutions</a></li>
+                    <li><a href="class 12 chemistry notes2">Ch 2: Electrochemistry</a></li>
+                    <li class="active"><a href="class 12 chemistry notes3">Ch 3: Chemical Kinetics</a></li>
+                    <li><a href="class 12 chemistry notes4">Ch 4: d- and f- Block Elements</a></li>
+                    <li><a href="class 12 chemistry notes5">Ch 5: Coordination Compounds</a></li>
+                    <li><a href="class 12 chemistry notes6">Ch 6: Haloalkanes and Haloarenes</a></li>
+                    <li><a href="class 12 chemistry notes7">Ch 7: Alcohols, Phenols and Ethers</a></li>
+                    <li><a href="class 12 chemistry notes8">Ch 8: Aldehydes, Ketones & Carboxylic Acids</a></li>
+                    <li><a href="class 12 chemistry notes9">Ch 9: Amines</a></li>
+                    <li><a href="class 12 chemistry notes10">Ch 10: Biomolecules</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

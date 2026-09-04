@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Biology Chapter 15 Body Fluids and Circulation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Biology Chapter 15 Body Fluids and Circulation</h1>
+
+            <p>NCERT Solutions for Class 11 Biology Chapter 15 Body Fluids and Circulation covers revision notes and step-by-step textbook solutions detailing blood composition, blood groups, blood clotting, lymph, human heart structure, cardiac cycle, electrocardiogram (ECG), double circulation, regulation of cardiac activity, and circulatory disorders.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Blood Composition, Groups & Coagulation</a></li>
+                    <li><a href="#topic2">2. Lymph (Tissue Fluid) & Human Circulatory Pathways</a></li>
+                    <li><a href="#topic3">3. Human Heart, Cardiac Cycle & Electrocardiogram (ECG)</a></li>
+                    <li><a href="#topic4">4. Double Circulation & Circulatory System Disorders</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Blood Composition, Groups & Coagulation</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Plasma (~55% of blood):</strong> Straw-colored fluid containing 90–92% water and proteins (Fibrinogen for clotting, Globulins for defense, Albumins for osmotic balance).</p>
+                    <p>• <strong>Formed Elements (~45% of blood):</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Erythrocytes (RBCs):</em> Biconcave, enucleated in mammals, carry hemoglobin (~5–5.5 million/mm³; lifespan ~120 days).</p>
+                    <p>&nbsp;&nbsp;- <em>Leucocytes (WBCs):</em> Nucleated, defense cells (~6000–8000/mm³). Divided into Granulocytes (Neutrophils, Eosinophils, Basophils) and Agranulocytes (Lymphocytes, Monocytes).</p>
+                    <p>&nbsp;&nbsp;- <em>Thrombocytes (Platelets):</em> Cell fragments from megakaryocytes (~1,500,000–3,500,000/mm³), essential for blood clotting.</p>
+                    <p>• <strong>Blood Groups:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>ABO System:</em> Based on surface antigens A and B. Type O is <strong>universal donor</strong>; Type AB is <strong>universal recipient</strong>.</p>
+                    <p>&nbsp;&nbsp;- <em>Rh Grouping:</em> Rh positive (+ve) or Rh negative (-ve). Rh incompatibility during pregnancy (Rh⁻ mother with Rh⁺ fetus) can cause <strong>Erythroblastosis Fetalis</strong>.</p>
+                    <p>• <strong>Coagulation of Blood:</strong> Injury activates platelets &rarr; release Thromboplastin &rarr; forms <em>Thrombokinase</em> enzyme &rarr; converts inactive Prothrombin to Thrombin (in presence of Ca²⁺) &rarr; converts soluble Fibrinogen to insoluble Fibrin threads to form clot.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Lymph (Tissue Fluid) & Human Circulatory Pathways</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Lymph (Interstitial Fluid):</strong> Colorless fluid containing specialized lymphocytes, lacking RBCs and larger proteins. It transports nutrients, hormones, and absorbs fats via <em>lacteals</em> in intestinal villi.</p>
+                    <p>• <strong>Circulatory Patterns:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Open Circulatory System:</em> Blood pumped by heart passes through large vessels into open spaces or body cavities called sinuses (e.g., Arthropods and Molluscs).</p>
+                    <p>&nbsp;&nbsp;- <em>Closed Circulatory System:</em> Blood is circulated through a closed network of blood vessels (e.g., Annelids and Chordates). Provides more precise blood flow regulation.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Human Heart, Cardiac Cycle & Electrocardiogram (ECG)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Structure of Heart:</strong> Four-chambered muscular organ (2 atria, 2 ventricles) enclosed in pericardium. Nodal tissue includes <strong>SAN (Sino-atrial node)</strong> located in right atrium (pacemaker, generates 70–75 action potentials/min) and <strong>AVN (Atrio-ventricular node)</strong>.</p>
+                    <p>• <strong>Cardiac Cycle (Duration ~0.8 sec):</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Joint Diastole:</em> All four chambers relaxed, blood flows from pulmonary veins/vena cava into ventricles through open AV valves (tricuspid/bicuspid).</p>
+                    <p>&nbsp;&nbsp;- <em>Atrial Systole:</em> SAN generates action potential; both atria contract, increasing blood flow into ventricles by ~30%.</p>
+                    <p>&nbsp;&nbsp;- <em>Ventricular Systole:</em> Ventricles contract; AV valves close (producing 1st heart sound <strong>'LUB'</strong>); semilunar valves open, pumping blood into aorta and pulmonary artery.</p>
+                    <p>&nbsp;&nbsp;- <em>Ventricular Diastole:</em> Ventricles relax; semilunar valves close (producing 2nd heart sound <strong>'DUB'</strong>).</p>
+                    <p>• <strong>Stroke Volume & Cardiac Output:</strong> Stroke volume = ~70 mL per beat. Cardiac Output = Stroke Volume &times; Heart Rate = 70 mL &times; 72 = ~5000 mL (5 Litres/min).</p>
+                    <p>• <strong>Electrocardiogram (ECG):</strong> Graphical representation of electrical activity of heart during cardiac cycle.</p>
+                    <p>&nbsp;&nbsp;- <em>P-wave:</em> Depolarisation (excitation) of atria.</p>
+                    <p>&nbsp;&nbsp;- <em>QRS complex:</em> Depolarisation of ventricles (triggers ventricular contraction).</p>
+                    <p>&nbsp;&nbsp;- <em>T-wave:</em> Repolarisation (return to resting state) of ventricles.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Double Circulation & Circulatory System Disorders</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Double Circulation:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Pulmonary Circulation:</em> Deoxygenated blood from right ventricle &rarr; Pulmonary Artery &rarr; Lungs &rarr; Oxygenated blood &rarr; Pulmonary Veins &rarr; Left Atrium.</p>
+                    <p>&nbsp;&nbsp;- <em>Systemic Circulation:</em> Oxygenated blood from left ventricle &rarr; Aorta &rarr; Body Tissues &rarr; Deoxygenated blood &rarr; Vena Cava &rarr; Right Atrium.</p>
+                    <p>&nbsp;&nbsp;- <em>Hepatic Portal System:</em> Vascular connection between digestive tract and liver before blood enters systemic circulation.</p>
+                    <p>• <strong>Disorders of Circulatory System:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Hypertension (High Blood Pressure):</em> Blood pressure higher than normal (120/80 mmHg). Sustained 140/90 mmHg or higher affects heart, brain, and kidneys.</p>
+                    <p>&nbsp;&nbsp;- <em>Coronary Artery Disease (CAD / Atherosclerosis):</em> Deposition of calcium, fat, cholesterol, and fibrous tissue in arteries supplying heart muscle, narrowing their lumen.</p>
+                    <p>&nbsp;&nbsp;- <em>Angina Pectoris:</em> Acute chest pain due to inadequate oxygen reaching heart muscle.</p>
+                    <p>&nbsp;&nbsp;- <em>Heart Failure:</em> State of heart when it does not pump blood effectively enough to meet the body's needs (congestion of lungs is a main symptom).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: What is Erythroblastosis Fetalis? How can it be prevented?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Definition:</strong> Erythroblastosis Fetalis is a severe hemolytic disease of the newborn caused by Rh incompatibility between an Rh-negative mother and an Rh-positive fetus.<br>
+                • <strong>Mechanism:</strong> During the delivery of the first child, small amounts of Rh⁺ fetal blood may mix with maternal blood, causing the mother to synthesize anti-Rh antibodies. During subsequent Rh⁺ pregnancies, these maternal IgG antibodies cross the placenta into fetal blood, destroying fetal RBCs and leading to severe anemia, jaundice, or fetal death.<br>
+                • <strong>Prevention:</strong> Administering anti-Rh antibodies (RhoGAM) to the Rh-negative mother immediately following the delivery of the first Rh-positive child.
+            </div>
+
+            <div class="question">Q2: What is the significance of the Sino-atrial Node (SAN) being called the pacemaker of the heart?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                The Sino-atrial Node (SAN) is called the <strong>pacemaker</strong> of the human heart because:<br>
+                1. It is a specialized nodal tissue that can generate action potentials automatically without external neural stimulation (auto-excitable).<br>
+                2. It generates the maximum number of action potentials per minute (~70–75 impulses/min).<br>
+                3. It initiates and maintains the rhythmic contractile activity (pacing) of the entire heart.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Distinguish between Open and Closed Circulatory Systems.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Open Circulatory System</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Closed Circulatory System</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Blood Vessels</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Blood vessels open into large open spaces called sinuses.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Blood flows through a closed network of blood vessels (arteries, veins, capillaries).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Direct Tissue Contact</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Body tissues remain in direct contact with circulating fluid (hemolymph).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Blood does not come into direct contact with tissues; exchange occurs via tissue fluid.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Regulation & Pressure</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Blood flows at low pressure and cannot be regulated precisely.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Blood flows at high pressure, allowing precise regulation of flow rate.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Examples</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Arthropods, Molluscs.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Annelids, Cephalopods, Vertebrates (Humans).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: Distinguish between Arteries and Veins.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Arteries</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Veins</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Direction of Flow</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Carry blood away from heart to various organs.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Carry blood from various organs back toward the heart.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Nature of Blood</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Carry oxygenated blood (except Pulmonary Artery).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Carry deoxygenated blood (except Pulmonary Vein).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Wall & Lumen Structure</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Thick, elastic muscular walls with a narrow lumen.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Thinner, less muscular walls with a wide lumen.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Internal Valves</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Valves are absent (high pressure prevents backflow).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Valves are present to prevent backflow of blood under low pressure.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Biology</h3>
+                <ul class="sidebar-links">
+                     <li class="active"><a href="class 11 biology notes1.html">Ch 1: The Living World</a></li>
+                    <li><a href="class 11 biology notes2.html">Ch 2: Biological Classification</a></li>
+                    <li><a href="class 11 biology notes3.html">Ch 3: Plant Kingdom</a></li>
+                    <li><a href="class 11 biology notes4.html">Ch 4: Animal Kingdom</a></li>
+                    <li><a href="class 11 biology notes5.html">Ch 5: Morphology of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes6.html">Ch 6: Anatomy of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes7.html">Ch 7: Structural Organisation in Animals</a></li>
+                    <li><a href="class 11 biology notes8.html">Ch 8: Cell: The Unit of Life</a></li>
+                    <li><a href="class 11 biology notes9.html">Ch 9: Biomolecules</a></li>
+                    <li><a href="class 11 biology notes10.html">Ch 10: Cell Cycle and Cell Division</a></li>
+                    <li><a href="class 11 biology notes11.html">Ch 11: Photosynthesis in Higher Plants</a></li>
+                    <li><a href="class 11 biology notes12.html">Ch 12: Respiration in Plants</a></li>
+                    <li class="active"><a href="class 11 biology notes13.html">Ch 13: Plant Growth and Development</a></li>
+                    <li class="active"><a href="class 11 biology notes14.html">Ch 13: Plant Growth and Development</a></li>
+                    <li class="active"><a href="class 11 biology notes15.html">Ch 15: Body Fluids and Circulation</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 10 Science Chapter 2 Acids, Bases and Salts</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 10 Science Chapter 2 Acids, Bases and Salts</h1>
+
+            <p>NCERT Solutions for Class 10 Science Chapter 2 Acids, Bases and Salts provides detailed step-by-step answers to help students build a solid foundation in chemical concepts, indicators, pH scale calculations, and practical salt preparations for board examinations.</p>
+
+            <h2>Overview of Topics & Subtopics</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#">Understanding the Chemical Properties of Acids and Bases</a></li>
+                    <li><a href="#">What Do All Acids and All Bases Have in Common?</a></li>
+                    <li><a href="#">How Strong Are Acid or Base Solutions?</a></li>
+                    <li><a href="#">More About Salts</a></li>
+                </ul>
+            </div>
+
+            <h2>Intext Questions - Page Number: 18</h2>
+
+            <div class="question">Q1: You have been provided with three test tubes containing distilled water, acidic solution, and basic solution respectively. If you are given only red litmus paper, how will you identify the contents of each test tube?</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p>1. Dip the red litmus paper into each test tube one by one. The tube that turns the red litmus paper <strong>blue</strong> contains the <strong>basic solution</strong>.</p>
+                <p>2. Take the newly turned blue litmus paper and dip it into the remaining two test tubes. The tube that turns the blue litmus paper back to <strong>red</strong> contains the <strong>acidic solution</strong>.</p>
+                <p>3. The remaining test tube, which causes no color change on either red or blue litmus paper, contains <strong>distilled water</strong>.</p>
+            </div>
+
+            <div class="question">Q2: Why should curd and sour substances not be kept in brass and copper vessels?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Curd and sour substances naturally contain acids (such as lactic acid). Acids react with metals like copper and brass to form toxic, harmful metal compounds that make the food unfit for consumption.
+            </div>
+
+            <div class="question">Q3: Which gas is usually liberated when an acid reacts with a metal? Illustrate with an example. How will you test for the presence of this gas?</div>
+            <div class="answer">
+                <strong>Answer:</strong> <strong>Hydrogen gas (H<sub>2</sub>)</strong> is liberated.<br>
+                <em>Example:</em> When zinc granules react with dilute sulphuric acid:<br>
+                <strong>Equation:</strong> Zn (s) + H<sub>2</sub>SO<sub>4</sub> (aq) &rarr; ZnSO<sub>4</sub> (aq) + H<sub>2</sub> (g)&uarr;<br>
+                <em>Test:</em> Bring a burning candle near the gas bubbles. Hydrogen burns rapidly with a characteristic <strong>'pop' sound</strong>.
+            </div>
+
+            <h2>Intext Questions - Page Number: 22</h2>
+
+            <div class="question">Q1: Why do HCl, HNO<sub>3</sub>, etc., show acidic characters in aqueous solutions while solutions of compounds like alcohol and glucose do not show acidic character?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Acids like HCl and HNO<sub>3</sub> dissociate in water to produce hydrogen ions [H<sup>+</sup>(aq) or H<sub>3</sub>O<sup>+</sup>], which are responsible for acidic behavior. Compounds like glucose and alcohol contain hydrogen but do not dissociate into free H<sup>+</sup> ions in water; hence, they do not show acidic properties.
+            </div>
+
+            <div class="question">Q2: Why does an aqueous solution of an acid conduct electricity?</div>
+            <div class="answer">
+                <strong>Answer:</strong> An aqueous solution of an acid dissociates into free ions (hydronium ions and anions) in water. These mobile ions allow the flow of electric current through the solution.
+            </div>
+
+            <div class="question">Q3: Why does dry HCl gas not change the colour of dry litmus paper?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Dry HCl gas lacks water, meaning it does not produce free hydrogen ions [H<sup>+</sup>(aq)]. Since acidity depends on the presence of H<sup>+</sup> ions, dry HCl gas does not exhibit acidic behavior and cannot alter the color of dry litmus paper.
+            </div>
+
+            <h2>Intext Questions - Page Number: 28</h2>
+
+            <div class="question">Q1: You have two solutions, A and B. The pH of solution A is 6 and pH of solution B is 8. Which solution has more hydrogen ion concentration? Which of this is acidic and which one is basic?</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p>• <strong>Solution A (pH = 6)</strong> is <strong>acidic</strong> and has a <strong>higher hydrogen ion concentration</strong>.</p>
+                <p>• <strong>Solution B (pH = 8)</strong> is <strong>basic</strong> and has a lower hydrogen ion concentration.</p>
+                <p><em>Note:</em> Lower pH values represent higher H<sup>+</sup> ion concentrations.</p>
+            </div>
+
+            <div class="question">Q2: What effect does the concentration of H<sup>+</sup>(aq) ions have on the nature of the solution?</div>
+            <div class="answer">
+                <strong>Answer:</strong> An increase in H<sup>+</sup>(aq) ion concentration makes the solution more acidic (lowering the pH value). Conversely, a decrease in H<sup>+</sup> ion concentration makes the solution less acidic or more basic.
+            </div>
+
+            <h2>Intext Questions - Page Number: 33</h2>
+
+            <div class="question">Q1: What is the common name of the compound CaOCl<sub>2</sub>?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Bleaching Powder.
+            </div>
+
+            <div class="question">Q2: Name the substance which on treatment with chlorine yields bleaching powder.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Dry slaked lime [Calcium Hydroxide, Ca(OH)<sub>2</sub>].
+            </div>
+
+            <div class="question">Q3: Name the sodium compound which is used for softening hard water.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Washing Soda (Sodium Carbonate Decahydrate, Na<sub>2</sub>CO<sub>3</sub>&middot;10H<sub>2</sub>O).
+            </div>
+
+            <div class="question">Q4: Write an equation to show the reaction between Plaster of Paris and water.</div>
+            <div class="answer">
+                <strong>Equation:</strong> CaSO<sub>4</sub>&middot;&frac12;H<sub>2</sub>O + 1&frac12;H<sub>2</sub>O &rarr; CaSO<sub>4</sub>&middot;2H<sub>2</sub>O<br>
+                <em>(Plaster of Paris + Water &rarr; Gypsum)</em>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: A solution turns red litmus blue, its pH is likely to be:</div>
+            <div class="answer">
+                <p>(a) 1<br>(b) 4<br>(c) 5<br>(d) 10</p>
+                <p><strong>Correct Answer:</strong> (d) 10 (Solutions that turn red litmus blue are basic, with pH &gt; 7).</p>
+            </div>
+
+            <div class="question">Q2: A solution reacts with crushed egg-shells to give a gas that turns lime-water milky. The solution contains:</div>
+            <div class="answer">
+                <p>(a) NaCl<br>(b) HCl<br>(c) LiCl<br>(d) KCl</p>
+                <p><strong>Correct Answer:</strong> (b) HCl (Egg shells contain calcium carbonate, which reacts with acid to produce carbon dioxide gas that turns lime water milky).</p>
+            </div>
+
+            <div class="question">Q3: Why does distilled water not conduct electricity, whereas rain water does?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Distilled water is a pure form of water containing no dissolved ionic compounds or mineral salts. Rainwater dissolves atmospheric gases like CO<sub>2</sub> and SO<sub>2</sub>, forming weak acids that dissociate into free ions to conduct electricity.
+            </div>
+
+            <div class="question">Q4: Why do acids not show acidic behaviour in the absence of water?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Acids only dissociate to release hydrogen ions [H<sup>+</sup>(aq)] in the presence of water. Without water, ion separation cannot occur, so the acid cannot display acidic behavior.
+            </div>
+
+            <div class="question">Q5: Plaster of Paris should be stored in a moisture-proof container. Explain why.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Plaster of Paris rapidly absorbs moisture from the atmosphere and undergoes hydration to transform into a hard solid mass known as Gypsum (CaSO<sub>4</sub>&middot;2H<sub>2</sub>O), destroying its setting properties.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 10 Science Chapters</h3>
+                <ul class="sidebar-links">
+                   <li><a href="class 10 science notes1.html">Ch 1: Chemical Reactions & Equations</a></li>
+                    <li><a href="class 10 science notes2.html">Ch 2: Acids, Bases and Salts</a></li>
+                    <li><a href="class 10 science notes3.html">Ch 3: Metals and Non-metals</a></li>
+                    <li><a href="class 10 science notes4.html">Ch 4: Carbon and its Compounds</a></li>
+                    <li><a href="class 10 science notes5.html">Ch 5: Life Processes</a></li>
+                    <li><a href="class 10 science notes6.html">Ch 6: Control and Coordination</a></li>
+                    <li><a href="class 10 science notes7.html">Ch 7: How do Organisms Reproduce?</a></li>
+                    <li><a href="class 10 science notes8.html">Ch 8: Heredity</a></li>
+                    <li><a href="class 10 science notes9.html">Ch 9: Light – Reflection and Refraction</a></li>
+                    <li><a href="class 10 science notes10.html">Ch 10: The Human Eye and Colourful World</a></li>
+                    <li><a href="class 10 science notes11.html">Ch 11: Electricity</a></li>
+                    <li><a href="class 10 science notes12.html">Ch 12: Magnetic Effects of Electric Current</a></li>
+                    <li class="active"><a href="class 10 science notes13.html">Ch 13: Our Environment</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

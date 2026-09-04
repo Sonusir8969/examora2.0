@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Chemistry Chapter 7 Redox Reactions</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="#" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Chemistry Chapter 7 Redox Reactions</h1>
+
+            <p>NCERT Solutions for Class 11 Chemistry Chapter 7 Redox Reactions covers classical and electron-transfer concepts of oxidation and reduction, oxidation numbers and rules for calculation, types of redox reactions (combination, decomposition, displacement, disproportionation), balancing redox reactions (oxidation number method and ion-electron/half-reaction method), and redox reactions in electrochemical cells.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Classical & Electron Transfer Concepts of Redox Reactions</a></li>
+                    <li><a href="#topic2">2. Oxidation Number Concept & Stock Notation</a></li>
+                    <li><a href="#topic3">3. Types of Redox Reactions & Disproportionation</a></li>
+                    <li><a href="#topic4">4. Balancing Redox Reactions & Electrochemical Cells</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Classical & Electron Transfer Concepts of Redox Reactions</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Classical Concept:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Oxidation:</em> Addition of oxygen/electronegative element or removal of hydrogen/electropositive element.</p>
+                    <p>&nbsp;&nbsp;- <em>Reduction:</em> Addition of hydrogen/electropositive element or removal of oxygen/electronegative element.</p>
+                    <p>• <strong>Electron Transfer Concept:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Oxidation:</em> Loss of electron(s) by a chemical species (Increase in oxidation state).</p>
+                    <p>&nbsp;&nbsp;- <em>Reduction:</em> Gain of electron(s) by a chemical species (Decrease in oxidation state).</p>
+                    <p>&nbsp;&nbsp;- <em>Oxidising Agent (Oxidant):</em> Species that accepts electrons and gets reduced.</p>
+                    <p>&nbsp;&nbsp;- <em>Reducing Agent (Reductant):</em> Species that donates electrons and gets oxidised.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Oxidation Number Concept & Stock Notation</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Oxidation Number (O.N.):</strong> The residual charge an atom would carry in a compound if all surrounding bonds were completely ionic.</p>
+                    <p>• <strong>Rules for Assigning Oxidation Number:</strong></p>
+                    <p>&nbsp;&nbsp;- Free element / uncombined state = 0 (e.g., O<sub>2</sub>, H<sub>2</sub>, Na, S<sub>8</sub>).</p>
+                    <p>&nbsp;&nbsp;- Monatomic ions = charge on the ion (e.g., Na<sup>+</sup> = +1, Cl<sup>-</sup> = -1, Al<sup>3+</sup> = +3).</p>
+                    <p>&nbsp;&nbsp;- Fluorine = -1 in all compounds.</p>
+                    <p>&nbsp;&nbsp;- Oxygen = -2 generally (except -1 in peroxides like H<sub>2</sub>O<sub>2</sub>, +2 in OF<sub>2</sub>).</p>
+
+                    <p>&nbsp;&nbsp;- Hydrogen = +1 with non-metals, -1 with metals (metal hydrides like NaH).</p>
+                    <p>&nbsp;&nbsp;- Sum of oxidation numbers in a neutral molecule = 0; in a polyatomic ion = total charge on the ion.</p>
+                    <p>• <strong>Stock Notation:</strong> Indicating the oxidation state of a metal in Roman numerals within parentheses, e.g., Gold(III) chloride for AuCl<sub>3</sub>, Iron(II) oxide for FeO.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Types of Redox Reactions & Disproportionation</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Combination Reactions:</strong> A + B → C (where at least one reactant is an element), e.g., C(s) + O<sub>2</sub>(g) → CO<sub>2</sub>(g).</p>
+                    <p>• <strong>Decomposition Reactions:</strong> Breakdown of a compound into simpler substances, e.g., 2KClO<sub>3</sub>(s) → 2KCl(s) + 3O<sub>2</sub>(g).</p>
+                    <p>• <strong>Displacement Reactions:</strong> X + YZ → XZ + Y.</p>
+                    <p>&nbsp;&nbsp;- <em>Metal displacement:</em> CuSO<sub>4</sub> + Zn → ZnSO<sub>4</sub> + Cu.</p>
+                    <p>&nbsp;&nbsp;- <em>Non-metal displacement:</em> 2Na + 2H<sub>2</sub>O → 2NaOH + H<sub>2</sub>.</p>
+                    <p>• <strong>Disproportionation Reactions:</strong> Reactions in which the same element simultaneously undergoes oxidation and reduction, e.g., 2H<sub>2</sub>O<sub>2</sub>(aq) → 2H<sub>2</sub>O(l) + O<sub>2</sub>(g) (O changes from -1 to -2 and 0).</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Balancing Redox Reactions & Electrochemical Cells</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Methods of Balancing Redox Equations:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Oxidation Number Method:</em> Equating total increase in oxidation number with total decrease in oxidation number.</p>
+                    <p>&nbsp;&nbsp;- <em>Ion-Electron (Half-Reaction) Method:</em> Splitting the overall equation into oxidation and reduction half-reactions, balancing atoms and charges separately, and combining them.</p>
+                    <p>• <strong>Redox Titrations:</strong> Using self-indicating reagents like KMnO<sub>4</sub> or K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> for quantitatively determining reductants.</p>
+                    <p>• <strong>Electrochemical Cells:</strong> Device converting chemical energy into electrical energy through redox reactions (e.g., Daniell Cell: Zn(s) + Cu<sup>2+</sup>(aq) → Zn<sup>2+</sup>(aq) + Cu(s)). Anode = Oxidation (-), Cathode = Reduction (+).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Assign oxidation numbers to the underlined elements in the following species: (a) K<u>Mn</u>O<sub>4</sub>, (b) K<sub>2</sub><u>Cr</u><sub>2</sub>O<sub>7</sub>, (c) H<sub>2</sub><u>S</u>O<sub>4</sub>.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>(a) KMnO<sub>4</sub> (Manganese):</strong><br>
+                Let oxidation number of Mn = x.<br>
+                (+1) + x + 4(-2) = 0<br>
+                1 + x - 8 = 0 ⇒ <strong>x = +7</strong>.<br><br>
+
+                <strong>(b) K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> (Chromium):</strong><br>
+                Let oxidation number of Cr = x.<br>
+                2(+1) + 2x + 7(-2) = 0<br>
+                2 + 2x - 14 = 0 ⇒ 2x = 12 ⇒ <strong>x = +6</strong>.<br><br>
+
+                <strong>(c) H<sub>2</sub>SO<sub>4</sub> (Sulfur):</strong><br>
+                Let oxidation number of S = x.<br>
+                2(+1) + x + 4(-2) = 0<br>
+                2 + x - 8 = 0 ⇒ <strong>x = +6</strong>.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Justify that the following reaction is a redox reaction: CuO(s) + H<sub>2</sub>(g) → Cu(s) + H<sub>2</sub>O(g). Identify the species oxidised, reduced, oxidising agent, and reducing agent.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Assigning oxidation numbers to each element in the reaction:<br>
+                • In CuO: Cu = +2, O = -2<br>
+                • In H<sub>2</sub>: H = 0<br>
+                • In Cu: Cu = 0<br>
+                • In H<sub>2</sub>O: H = +1, O = -2<br><br>
+
+                <strong>Analysis:</strong><br>
+                • <strong>Oxidation Number of Cu</strong> decreases from +2 (in CuO) to 0 (in Cu) → <strong>Reduction</strong>.<br>
+                • <strong>Oxidation Number of H</strong> increases from 0 (in H<sub>2</sub>) to +1 (in H<sub>2</sub>O) → <strong>Oxidation</strong>.<br><br>
+
+                Since both oxidation and reduction occur simultaneously, it is a <strong>redox reaction</strong>.<br><br>
+
+                • <strong>Species Oxidised:</strong> H<sub>2</sub><br>
+                • <strong>Species Reduced:</strong> CuO<br>
+                • <strong>Oxidising Agent:</strong> CuO<br>
+                • <strong>Reducing Agent:</strong> H<sub>2</sub>
+            </div>
+
+            <div class="question">Q2: Balance the following ionic redox equation in acidic medium using the ion-electron method: Fe<sup>2+</sup>(aq) + Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup>(aq) → Fe<sup>3+</sup>(aq) + Cr<sup>3+</sup>(aq).</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Step 1: Separate into half-reactions:</strong><br>
+                • Oxidation half-reaction: Fe<sup>2+</sup> → Fe<sup>3+</sup><br>
+                • Reduction half-reaction: Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup> → Cr<sup>3+</sup><br><br>
+
+                <strong>Step 2: Balance atoms other than O and H:</strong><br>
+                • Oxidation: Fe<sup>2+</sup> → Fe<sup>3+</sup><br>
+                • Reduction: Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup> → 2Cr<sup>3+</sup><br><br>
+
+                <strong>Step 3: Balance O by adding H<sub>2</sub>O and H by adding H<sup>+</sup> (acidic medium):</strong><br>
+                • Reduction: Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup> + 14H<sup>+</sup> → 2Cr<sup>3+</sup> + 7H<sub>2</sub>O<br><br>
+
+                <strong>Step 4: Balance charges by adding electrons (e<sup>-</sup>):</strong><br>
+                • Oxidation: Fe<sup>2+</sup> → Fe<sup>3+</sup> + e<sup>-</sup> &nbsp;&nbsp;(Multiply by 6)<br>
+                • Reduction: Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup> + 14H<sup>+</sup> + 6e<sup>-</sup> → 2Cr<sup>3+</sup> + 7H<sub>2</sub>O<br><br>
+
+                <strong>Step 5: Add both half-reactions to cancel electrons:</strong><br>
+                6Fe<sup>2+</sup> + Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup> + 14H<sup>+</sup> + 6e<sup>-</sup> → 6Fe<sup>3+</sup> + 2Cr<sup>3+</sup> + 7H<sub>2</sub>O + 6e<sup>-</sup><br><br>
+
+                <strong>Final Balanced Ionic Equation:</strong><br>
+                <strong>6Fe<sup>2+</sup>(aq) + Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup>(aq) + 14H<sup>+</sup>(aq) → 6Fe<sup>3+</sup>(aq) + 2Cr<sup>3+</sup>(aq) + 7H<sub>2</sub>O(l)</strong>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Chemistry</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 chemistry notes1">Ch 1: Some Basic Concepts of Chemistry</a></li>
+                    <li><a href="class 11 chemistry notes2">Ch 2: Structure of Atom</a></li>
+                    <li><a href="class 11 chemistry notes3">Ch 3: Classification of Elements & Periodicity</a></li>
+                    <li><a href="class 11 chemistry notes4">Ch 4: Chemical Bonding & Molecular Structure</a></li>
+                    <li><a href="class 11 chemistry notes5">Ch 5: Chemical Thermodynamics</a></li>
+                    <li><a href="class 11 chemistry notes6">Ch 6: Equilibrium</a></li>
+                    <li class="active"><a href="class 11 chemistry notes7">Ch 7: Redox Reactions</a></li>
+                    <li><a href="class 11 chemistry notes8">Ch 8: Organic Chemistry - Basic Principles</a></li>
+                    <li><a href="class 11 chemistry notes9">Ch 9: Hydrocarbons</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Physics Chapter 11 Dual Nature of Radiation and Matter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Physics Chapter 11 Dual Nature of Radiation and Matter</h1>
+
+            <p>NCERT Solutions for Class 12 Physics Chapter 11 Dual Nature of Radiation and Matter provides in-depth explanations of electron emission, photoelectric effect experiments, Einstein's photoelectric equation, photon energy concepts, and de Broglie wave-particle duality relations.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Electron Emission & Photoelectric Effect</a></li>
+                    <li><a href="#topic2">2. Einstein's Photoelectric Equation & Photon Theory</a></li>
+                    <li><a href="#topic3">3. Wave Nature of Matter & De Broglie Wavelength</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Electron Emission & Photoelectric Effect</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Work Function (ϕ₀ or W):</strong> Minimum energy required to emit an electron from a metal surface (unit: eV, where <em>1 eV = 1.6 × 10⁻¹⁹ J</em>).</p>
+                    <p>• <strong>Types of Electron Emission:</strong> Thermionic emission, Field emission, Photoelectric emission, and Secondary emission.</p>
+                    <p>• <strong>Photoelectric Effect:</strong> Emission of electrons from a metal surface when light of suitable frequency strikes it.</p>
+                    <p>&nbsp;&nbsp;- <strong>Threshold Frequency (ν₀):</strong> Minimum frequency of incident radiation below which no photoelectron emission takes place regardless of intensity.</p>
+                    <p>&nbsp;&nbsp;- <strong>Stopping Potential (V₀):</strong> Minimum retarding potential applied to anode that completely stops the photoelectric current (<em>K_max = e V₀</em>).</p>
+                    <p>&nbsp;&nbsp;- Photoelectric current is <strong>directly proportional</strong> to light intensity, provided frequency <em>ν > ν₀</em>.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Einstein's Photoelectric Equation & Photon Theory</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Photon Concept:</strong> Light consists of discrete packets of energy called quanta or photons. Each photon carries energy <em>E = h ν = h c / λ</em> and momentum <em>p = E / c = h / λ</em>.</p>
+                    <p>• <strong>Einstein's Photoelectric Equation:</strong></p>
+                    <p>&nbsp;&nbsp;<em>K_max = h ν - ϕ₀</em>  =>  <em>e V₀ = h ν - h ν₀ = h (ν - ν₀)</em></p>
+                    <p>• <strong>Key Inferences:</strong></p>
+                    <p>&nbsp;&nbsp;1. Emission is instantaneous (time lag < 10⁻⁹ s).</p>
+                    <p>&nbsp;&nbsp;2. Maximum Kinetic Energy (<em>K_max</em>) depends linearly on incident frequency, independent of intensity.</p>
+                    <p>&nbsp;&nbsp;3. Intensity determines the number of emitted photoelectrons per second, not their energy.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Wave Nature of Matter & De Broglie Wavelength</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>de Broglie Hypothesis:</strong> Moving material particles exhibit wave-like characteristics. The wavelength associated with a particle of momentum <em>p</em> is called the <strong>de Broglie wavelength (λ)</strong>.</p>
+                    <p>&nbsp;&nbsp;<em>λ = h / p = h / (m v) = h / √(2 m K)</em></p>
+                    <p>• <strong>de Broglie Wavelength of Electron Accelerated by Potential V:</strong></p>
+                    <p>&nbsp;&nbsp;<em>λ = h / √(2 m e V) = 1.227 / √V nm = 12.27 / √V Å</em></p>
+                    <p>• <strong>Davisson and Germer Experiment:</strong> Experimentally verified the wave nature of electrons by observing diffraction peaks when an electron beam scattered off a Nickel crystal target.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Explain the terms (i) Work function, (ii) Threshold frequency, and (iii) Stopping potential in the photoelectric effect.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>(i) Work Function (ϕ₀):</strong> It is the minimum amount of energy required to remove an electron from the outermost surface of a metal without imparting any kinetic energy to it. It depends on the nature of the metal.<br>
+                • <strong>(ii) Threshold Frequency (ν₀):</strong> It is the minimum frequency of incident electromagnetic radiation required to cause photoelectric emission from a given metal surface. If <em>ν < ν₀</em>, no emission occurs.<br>
+                • <strong>(iii) Stopping Potential (V₀):</strong> It is the minimum negative (retarding) potential applied to the collector plate relative to the emitter plate at which the photoelectric current becomes exactly zero. It measures the maximum kinetic energy of emitted photoelectrons (<em>K_max = e V₀</em>).
+            </div>
+
+            <div class="question">Q2: Why cannot wave theory of light explain the key features of the photoelectric effect?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Wave theory fails to explain photoelectric effect due to the following reasons:<br>
+                1. <strong>Kinetic Energy vs Intensity:</strong> Wave theory predicts that higher light intensity spreads more wave energy, increasing the kinetic energy of emitted electrons. Experiments show kinetic energy depends solely on <em>frequency</em>, not intensity.<br>
+                2. <strong>Threshold Frequency:</strong> Wave theory predicts that light of any frequency should emit electrons if intensity is high enough. Experiments show no emission occurs below threshold frequency <em>ν₀</em> regardless of intensity.<br>
+                3. <strong>Instantaneous Emission:</strong> Wave theory predicts a measurable time delay while an electron absorbs continuous wave energy over a large surface area. Experiments show photoelectric emission is virtually instantaneous (< 10⁻⁹ s).
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: The work function of Cesium metal is 2.14 eV. When light of frequency 6.0 × 10¹⁴ Hz is incident on the metal surface, photoemission of electrons occurs. What is the (a) maximum kinetic energy of emitted photoelectrons, (b) stopping potential, and (c) maximum speed of emitted photoelectrons?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Work function (ϕ₀) = 2.14 eV = 2.14 × 1.6 × 10⁻¹⁹ J = 3.424 × 10⁻¹⁹ J<br>
+                • Incident frequency (ν) = 6.0 × 10¹⁴ Hz<br>
+                • Planck's constant (h) = 6.63 × 10⁻³⁴ J s<br>
+                • Mass of electron (m) = 9.1 × 10⁻³¹ kg<br><br>
+                <strong>Part (a): Maximum Kinetic Energy (K_max)</strong><br>
+                <em>E = h ν = (6.63 × 10⁻³⁴) × (6.0 × 10¹⁴) = 3.978 × 10⁻¹⁹ J = 2.486 eV</em><br>
+                <em>K_max = E - ϕ₀ = 2.486 eV - 2.14 eV = 0.346 eV = 0.35 eV</em> (or <strong>5.54 × 10⁻²⁰ J</strong>)<br><br>
+                <strong>Part (b): Stopping Potential (V₀)</strong><br>
+                <em>e V₀ = K_max  =>  V₀ = 0.35 V</em><br><br>
+                <strong>Part (c): Maximum Speed (v_max)</strong><br>
+                <em>K_max = (1/2) m (v_max)²</em><br>
+                <em>v_max = √(2 K_max / m) = √[(2 × 5.54 × 10⁻²⁰) / (9.1 × 10⁻³¹)] ≈ 3.49 × 10⁵ m/s</em><br><br>
+                • Maximum Kinetic Energy = <strong>0.35 eV</strong><br>
+                • Stopping Potential = <strong>0.35 V</strong><br>
+                • Maximum Speed = <strong>3.49 × 10⁵ m/s</strong>
+            </div>
+
+            <div class="question">Q2: What is the de Broglie wavelength associated with an electron accelerated through a potential difference of 100 volts?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Accelerating Potential (V) = 100 V<br><br>
+                <strong>Formula:</strong><br>
+                <em>λ = 1.227 / √V nm</em><br><br>
+                <strong>Calculation:</strong><br>
+                <em>λ = 1.227 / √100 = 1.227 / 10 = 0.1227 nm = 1.227 Å</em><br><br>
+                The de Broglie wavelength of the accelerated electron is <strong>0.123 nm</strong> (or <strong>1.227 Å</strong>).
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Physics</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 physics notes1">Ch 1: Electric Charges and Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatic Potential & Capacitance</a></li>
+                    <li><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges and Magnetism</a></li>
+                    <li><a href="class 12 physics notes5">Ch 5: Magnetism and Matter</a></li>
+                    <li><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics and Optical Instruments</a></li>
+                    <li><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li class="active"><a href="class 12 physics notes11">Ch 11: Dual Nature of Radiation & Matter</a></li>
+                    <li><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

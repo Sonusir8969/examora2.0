@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Chemistry Chapter 5 Coordination Compounds</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Chemistry Chapter 5 Coordination Compounds</h1>
+
+            <p>NCERT Solutions for Class 12 Chemistry Chapter 5 Coordination Compounds provides step-by-step explanations covering Werner's theory, ligands, IUPAC nomenclature, isomerism, Valence Bond Theory (VBT), Crystal Field Theory (CFT), and practical applications of coordination complex compounds.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Werner's Theory, Terms & IUPAC Nomenclature</a></li>
+                    <li><a href="#topic2">2. Isomerism in Coordination Compounds</a></li>
+                    <li><a href="#topic3">3. Bonding Theories (VBT & CFT) & Applications</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Werner's Theory, Terms & IUPAC Nomenclature</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Werner's Theory:</strong> Central metal atoms exhibit two types of valencies: Primary Valency (ionizable, corresponds to oxidation state) and Secondary Valency (non-ionizable, corresponds to coordination number, fixed directional geometry).</p>
+
+                    <p>• <strong>Important Terms:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Central Atom/Ion:</em> Lewis acid that accepts lone pairs of electrons from donor ligands.</p>
+                    <p>&nbsp;&nbsp;- <em>Ligands:</em> Ion/molecule donating electron pairs (Lewis base). Classified into monodentate ($\text{Cl}^-, \text{H}_2\text{O}$), didentate ($\text{ox}^{2-}, \text{en}$), polydentate ($\text{EDTA}^{4-}$), and ambidentate ($\text{NO}_2^-/\text{ONO}^-, \text{SCN}^-/\text{NCS}^-$).</p>
+                    <p>&nbsp;&nbsp;- <em>Chelate Effect:</em> Ring formation by di-/polydentate ligands significantly enhances complex stability.</p>
+
+                    <p>• <strong>IUPAC Nomenclature Rules:</strong> Cation is named first. Ligands are named in alphabetical order followed by central metal name and its oxidation state in Roman numerals in parentheses. (If complex ion is anionic, metal name ends in <em>-ate</em>).</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Isomerism in Coordination Compounds</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Structural Isomerism:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Ionisation Isomerism:</em> Exchange of counter ions with ligating ions inside coordination sphere (e.g., $[\text{Co(NH}_3)_5\text{SO}_4]\text{Br}$ vs $[\text{Co(NH}_3)_5\text{Br}]\text{SO}_4$).</p>
+                    <p>&nbsp;&nbsp;- <em>Solvate/Hydrate Isomerism:</em> Water acts as ligand vs crystal water (e.g., $[\text{Cr(H}_2\text{O})_6]\text{Cl}_3$ vs $[\text{Cr(H}_2\text{O})_5\text{Cl}]\text{Cl}_2\cdot\text{H}_2\text{O}$).</p>
+                    <p>&nbsp;&nbsp;- <em>Linkage Isomerism:</em> Involves ambidentate ligands bonding through different donor atoms (e.g., $-\text{NO}_2$ vs $-\text{ONO}$).</p>
+                    <p>&nbsp;&nbsp;- <em>Coordination Isomerism:</em> Interchange of ligands between cationic and anionic entities of different metal ions.</p>
+
+                    <p>• <strong>Stereoisomerism:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Geometrical Isomerism:</em> Cis/Trans positioning of ligands in square planar ($\text{MA}_2\text{B}_2$) and octahedral ($\text{MA}_4\text{B}_2$) complexes, or Facial ($fac$) / Meridional ($mer$) in $\text{MA}_3\text{B}_3$ complexes.</p>
+                    <p>&nbsp;&nbsp;- <em>Optical Isomerism:</em> Non-superimposable mirror images ($d$- and $l$- forms), typically seen in chiral octahedral complexes containing chelate rings like $[\text{Co(en)}_3]^{3+}$.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Bonding Theories (VBT & CFT) & Applications</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Valence Bond Theory (VBT):</strong> Explains geometry and magnetic behaviour via orbital hybridization:</p>
+                    <p>&nbsp;&nbsp;- $sp^3$ (Tetrahedral), $dsp^2$ (Square planar), $d^2sp^3$ (Inner orbital Octahedral), $sp^3d^2$ (Outer orbital Octahedral).</p>
+                    <p>&nbsp;&nbsp;- Strong field ligands ($\text{CN}^-, \text{CO}, \text{en}$) force electron pairing (diamagnetic / low-spin); weak field ligands ($\text{F}^-, \text{Cl}^-, \text{H}_2\text{O}$) do not (paramagnetic / high-spin).</p>
+
+                    <p>• <strong>Crystal Field Theory (CFT):</strong> Treats ligands as point charges causing electrostatic repulsion that splits degenerate $d$-orbitals:</p>
+                    <p>&nbsp;&nbsp;- <em>Octahedral Splitting ($\Delta_o$):</em> $d$-orbitals split into lower energy $t_{2g}$ ($d_{xy}, d_{yz}, d_{zx}$) and higher energy $e_g$ ($d_{x^2-y^2}, d_{z^2}$) sets.</p>
+                    <p>&nbsp;&nbsp;- <em>Spectrochemical Series:</em> Orders ligands by field strength: $\text{I}^- < \text{Br}^- < \text{Cl}^- < \text{F}^- < \text{OH}^- < \text{H}_2\text{O} < \text{NH}_3 < \text{en} < \text{CN}^- < \text{CO}$.</p>
+
+                    <p>• <strong>Applications:</strong> Metallurgy (Extraction of Gold/Silver via cyanide complexation), Biological systems (Chlorophyll with $\text{Mg}^{2+}$, Hemoglobin with $\text{Fe}^{2+}$), Medicine (Cisplatin $[\text{Pt(NH}_3)_2\text{Cl}_2]$ as anti-cancer drug).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Write the IUPAC names of the following coordination compounds:
+(i) [Co(NH₃)₆]Cl₃
+(ii) [Pt(NH₃)₂Cl(NO₂)]
+(iii) K₃[Fe(CN)₆]</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. <strong>$[\text{Co(NH}_3)_6]\text{Cl}_3$:</strong> Hexaamminecobalt(III) chloride<br>
+                2. <strong>$[\text{Pt(NH}_3)_2\text{Cl(NO}_2)]$:</strong> Diamminechloridonitrito-N-platinum(II)<br>
+                3. <strong>$\text{K}_3[\text{Fe(CN)}_6]$:</strong> Potassium hexacyanoferrate(III)
+            </div>
+
+            <div class="question">Q2: Differentiate between Inner Orbital Complex and Outer Orbital Complex on the basis of Valence Bond Theory (VBT).</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Inner Orbital Complex</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Outer Orbital Complex</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>d-Orbital Used</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Uses inner $(n-1)d$ orbitals for hybridization.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Uses outer $nd$ orbitals for hybridization.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Hybridization Type</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">$d^2sp^3$ hybridization.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">$sp^3d^2$ hybridization.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ligand Nature</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Formed in the presence of strong field ligands ($\text{CN}^-, \text{CO}$).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Formed in the presence of weak field ligands ($\text{F}^-, \text{H}_2\text{O}$).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Spin & Magnetism</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Low-spin complex; usually diamagnetic or less paramagnetic.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">High-spin complex; strongly paramagnetic.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Specify the oxidation number, coordination number, and d-electron configuration of the central metal ion in the complex [Fe(H₂O)₆]Cl₃.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given complex: $[\text{Fe(H}_2\text{O})_6]\text{Cl}_3$<br><br>
+                • <strong>Oxidation Number of Fe:</strong> Let oxidation state of $\text{Fe}$ be $x$. $\text{H}_2\text{O}$ is neutral ligand (charge = 0), $\text{Cl}^-$ has charge $-1$.<br>
+                &nbsp;&nbsp;$x + 6(0) + 3(-1) = 0 \implies x = +3$. Thus, oxidation state of $\text{Fe}$ is <strong>+3</strong>.<br><br>
+                • <strong>Coordination Number:</strong> Central $\text{Fe}^{3+}$ is bonded to 6 monodentate $\text{H}_2\text{O}$ molecules. Hence, Coordination Number = <strong>6</strong>.<br><br>
+                • <strong>d-Electron Configuration:</strong> Atomic number of $\text{Fe} = 26$. Configuration of $\text{Fe} = [\text{Ar}] 3d^6 4s^2$.<br>
+                &nbsp;&nbsp;For $\text{Fe}^{3+}$ ion: $[\text{Ar}] 3d^5 4s^0$. Since $\text{H}_2\text{O}$ is a weak field ligand ($\Delta_o < P$), electrons do not pair up.<br>
+                &nbsp;&nbsp;CFT configuration in octahedral field: $t_{2g}^3 e_g^2$. Total $d$-electrons = <strong>$3d^5$ ($t_{2g}^3 e_g^2$)</strong>.
+            </div>
+
+            <div class="question">Q2: Explain on the basis of Crystal Field Theory (CFT) why [Fe(H₂O)₆]³⁺ is strongly paramagnetic while [Fe(CN)₆]³⁻ is weakly paramagnetic.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                In both complex ions, Iron is present in the $+3$ oxidation state ($\text{Fe}^{3+}$ with $3d^5$ configuration).<br><br>
+                • <strong>In $[\text{Fe(H}_2\text{O})_6]^{3+}$:</strong><br>
+                Water ($\text{H}_2\text{O}$) is a <strong>weak field ligand</strong>. The crystal field splitting energy ($\Delta_o$) is less than the electron pairing energy ($\Delta_o < P$). Thus, electrons enter $e_g$ orbitals rather than pairing up in $t_{2g}$.<br>
+                - Electronic Distribution: $t_{2g}^3 e_g^2$<br>
+                - Number of unpaired electrons ($n$) = <strong>5</strong><br>
+                - Spin-only magnetic moment: $\mu = \sqrt{5(5+2)} = \sqrt{35} \approx \mathbf{5.92\text{ BM}}$ (Strongly Paramagnetic).<br><br>
+                • <strong>In $[\text{Fe(CN)}_6]^{3-}$:</strong><br>
+                Cyanide ($\text{CN}^-$) is a <strong>strong field ligand</strong>. The crystal field splitting energy is greater than pairing energy ($\Delta_o > P$). Thus, all electrons pair up in the lower energy $t_{2g}$ set.<br>
+                - Electronic Distribution: $t_{2g}^5 e_g^0$<br>
+                - Number of unpaired electrons ($n$) = <strong>1</strong><br>
+                - Spin-only magnetic moment: $\mu = \sqrt{1(1+2)} = \sqrt{3} \approx \mathbf{1.73\text{ BM}}$ (Weakly Paramagnetic).
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Chemistry</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 chemistry notes1">Ch 1: Solutions</a></li>
+                    <li><a href="class 12 chemistry notes2">Ch 2: Electrochemistry</a></li>
+                    <li><a href="class 12 chemistry notes3">Ch 3: Chemical Kinetics</a></li>
+                    <li><a href="class 12 chemistry notes4">Ch 4: d- and f- Block Elements</a></li>
+                    <li class="active"><a href="class 12 chemistry notes5">Ch 5: Coordination Compounds</a></li>
+                    <li><a href="class 12 chemistry notes6">Ch 6: Haloalkanes and Haloarenes</a></li>
+                    <li><a href="class 12 chemistry notes7">Ch 7: Alcohols, Phenols and Ethers</a></li>
+                    <li><a href="class 12 chemistry notes8">Ch 8: Aldehydes, Ketones & Carboxylic Acids</a></li>
+                    <li><a href="class 12 chemistry notes9">Ch 9: Amines</a></li>
+                    <li><a href="class 12 chemistry notes10">Ch 10: Biomolecules</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

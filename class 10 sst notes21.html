@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Class 10 English Chapter-wise Solutions & Notes | Examora</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .intro-box {
+            background-color: #eef6fc;
+            border-left: 4px solid #11426b;
+            padding: 15px 20px;
+            margin: 15px 0 25px 0;
+            border-radius: 4px;
+        }
+        .subject-unit-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .subject-unit-card h3 {
+            color: #11426b;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
+        }
+        .chapter-btn {
+            display: block;
+            background-color: #f8f9fa;
+            border: 1px solid #d0d7de;
+            border-radius: 5px;
+            padding: 10px 12px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .chapter-btn:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            border-color: #3498db;
+            text-decoration: none;
+        }
+        .exam-tips-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #27ae60; 
+            padding: 15px 20px; 
+            border-radius: 5px; 
+            margin: 20px 0; 
+        }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="index.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 10 English (All Chapters Index)</h1>
+
+            <div class="intro-box">
+                <p><strong>Welcome to Class 10 English Study Hub!</strong></p>
+                <p>Access complete NCERT chapter-wise solutions, line-by-line summaries, character sketches, poetic devices, extracted MCQs, and textbook exercise answers for <em>First Flight</em> and <em>Footprints Without Feet</em> tailored specifically for CBSE, JAC Board, and other state board examinations.</p>
+            </div>
+
+            <h2>Chapter Directory by Books & Units</h2>
+
+            <!-- First Flight Prose Unit -->
+            <div class="subject-unit-card">
+                <h3>Unit I: Main Reader - First Flight (Prose)</h3>
+                <div class="chapter-grid">
+                    <a href="class 10 english notes1" class="chapter-btn">Ch 1: A Letter to God</a>
+                    <a href="class 10 english notes2" class="chapter-btn">Ch 2: Nelson Mandela: Long Walk to Freedom</a>
+                    <a href="class 10 english notes3" class="chapter-btn">Ch 3: Two Stories about Flying</a>
+                    <a href="class 10 english notes4" class="chapter-btn">Ch 4: From the Diary of Anne Frank</a>
+                    <a href="class 10 english notes5" class="chapter-btn">Ch 5: Glimpses of India</a>
+                    <a href="class 10 english notes6" class="chapter-btn">Ch 6: Mijbil the Otter</a>
+                    <a href="class 10 english notes7" class="chapter-btn">Ch 7: Madam Rides the Bus</a>
+                    <a href="class 10 english notes8" class="chapter-btn">Ch 8: The Sermon at Benares</a>
+                    <a href="class 10 english notes9" class="chapter-btn">Ch 9: The Proposal</a>
+                </div>
+            </div>
+
+            <!-- First Flight Poetry Unit -->
+            <div class="subject-unit-card">
+                <h3>Unit II: Main Reader - First Flight (Poetry)</h3>
+                <div class="chapter-grid">
+                    <a href="class 10 english poem1" class="chapter-btn">Poem 1: Dust of Snow</a>
+                    <a href="class 10 english poem2" class="chapter-btn">Poem 2: Fire and Ice</a>
+                    <a href="class 10 english poem3" class="chapter-btn">Poem 3: A Tiger in the Zoo</a>
+                    <a href="class 10 english poem4" class="chapter-btn">Poem 4: How to Tell Wild Animals</a>
+                    <a href="class 10 english poem5" class="chapter-btn">Poem 5: The Ball Poem</a>
+                    <a href="class 10 english poem6" class="chapter-btn">Poem 6: Amanda!</a>
+                    <a href="class 10 english poem7" class="chapter-btn">Poem 7: The Trees</a>
+                    <a href="class 10 english poem8" class="chapter-btn">Poem 8: Fog</a>
+                    <a href="class 10 english poem9" class="chapter-btn">Poem 9: The Tale of Custard the Dragon</a>
+                    <a href="class 10 english poem10" class="chapter-btn">Poem 10: For Anne Gregory</a>
+                </div>
+            </div>
+
+            <!-- Footprints without Feet Unit -->
+            <div class="subject-unit-card">
+                <h3>Unit III: Supplementary Reader - Footprints without Feet</h3>
+                <div class="chapter-grid">
+                    <a href="class 10 english notes10" class="chapter-btn">Ch 1: A Triumph of Surgery</a>
+                    <a href="class 10 english notes11" class="chapter-btn">Ch 2: The Thief's Story</a>
+                    <a href="class 10 english notes12" class="chapter-btn">Ch 3: The Midnight Visitor</a>
+                    <a href="class 10 english notes13" class="chapter-btn">Ch 4: A Question of Trust</a>
+                    <a href="class 10 english notes14" class="chapter-btn">Ch 5: Footprints without Feet</a>
+                    <a href="class 10 english notes15" class="chapter-btn">Ch 6: The Making of a Scientist</a>
+                    <a href="class 10 english notes16" class="chapter-btn">Ch 7: The Necklace</a>
+                    <a href="class 10 english notes17" class="chapter-btn">Ch 8: Bholi</a>
+                    <a href="class 10 english notes18" class="chapter-btn">Ch 9: The Book That Saved the Earth</a>
+                </div>
+            </div>
+
+            <h2>Class 10 English Exam Preparation Strategy</h2>
+            <div class="exam-tips-box">
+                <p><strong>Key Preparation Tips:</strong></p>
+                <p>• <strong>Prose Section:</strong> Focus on major plot points, central themes, and detailed character sketches (e.g., Lencho, Valli, Natalia, Lomov).</p>
+                <p>• <strong>Poetry Analysis:</strong> Identify rhyming schemes and literary devices (metaphor, personification, alliteration, oxymoron, irony) for extract-based questions.</p>
+                <p>• <strong>Supplementary Reader:</strong> Prepare value-based analytical questions regarding character transformations (e.g., Hari Singh, Bholi, Matilda Loisel).</p>
+                <p>• <strong>JAC & State Board Focus:</strong> Practice objective multiple-choice questions (MCQs) alongside descriptive long answer format for maximum score in board exams.</p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 10 English Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 10 english notes1">Ch 1: A Letter to God</a></li>
+                    <li><a href="class 10 english notes2">Ch 2: Nelson Mandela</a></li>
+                    <li><a href="class 10 english notes3">Ch 3: Two Stories about Flying</a></li>
+                    <li><a href="class 10 english notes4">Ch 4: From Diary of Anne Frank</a></li>
+                    <li><a href="class 10 english notes5">Ch 5: Glimpses of India</a></li>
+                    <li><a href="class 10 english notes6">Ch 6: Mijbil the Otter</a></li>
+                    <li><a href="class 10 english notes7">Ch 7: Madam Rides the Bus</a></li>
+                    <li><a href="class 10 english notes8">Ch 8: The Sermon at Benares</a></li>
+                    <li><a href="class 10 english notes9">Ch 9: The Proposal</a></li>
+                    <li><a href="class 10 english poem1">Poem 1: Dust of Snow</a></li>
+                    <li><a href="class 10 english poem2">Poem 2: Fire and Ice</a></li>
+                    <li><a href="class 10 english poem3">Poem 3: A Tiger in the Zoo</a></li>
+                    <li><a href="class 10 english poem4">Poem 4: How to Tell Wild Animals</a></li>
+                    <li><a href="class 10 english poem5">Poem 5: The Ball Poem</a></li>
+                    <li><a href="class 10 english poem6">Poem 6: Amanda!</a></li>
+                    <li><a href="class 10 english poem7">Poem 7: The Trees</a></li>
+                    <li><a href="class 10 english poem8">Poem 8: Fog</a></li>
+                    <li><a href="class 10 english poem9">Poem 9: Tale of Custard the Dragon</a></li>
+                    <li><a href="class 10 english poem10">Poem 10: For Anne Gregory</a></li>
+                    <li><a href="class 10 english notes10">Supp 1: A Triumph of Surgery</a></li>
+                    <li><a href="class 10 english notes11">Supp 2: The Thief's Story</a></li>
+                    <li><a href="class 10 english notes12">Supp 3: The Midnight Visitor</a></li>
+                    <li><a href="class 10 english notes13">Supp 4: A Question of Trust</a></li>
+                    <li><a href="class 10 english notes14">Supp 5: Footprints without Feet</a></li>
+                    <li><a href="class 10 english notes15">Supp 6: Making of a Scientist</a></li>
+                    <li><a href="class 10 english notes16">Supp 7: The Necklace</a></li>
+                    <li><a href="class 10 english notes17">Supp 8: Bholi</a></li>
+                    <li><a href="class 10 english notes18">Supp 9: Book That Saved the Earth</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

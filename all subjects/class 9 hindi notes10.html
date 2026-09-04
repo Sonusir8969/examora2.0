@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 9 Hindi Poem-2: Rahim Ke Dohe</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 9 Hindi Poem-2: Rahim Ke Dohe</h1>
+
+            <p>रहीम अर्थात अब्दुर्रहीम खानखाना मध्यकालीन हिंदी साहित्य के प्रसिद्ध कवि थे, जो अकबर के दरबार से जुड़े थे। उनके दोहे सरल भाषा में गहरे जीवन-दर्शन, नीति और मानवीय मूल्यों को प्रस्तुत करते हैं।</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. कवि परिचय</a></li>
+                    <li><a href="#topic2">2. दोहों के प्रमुख भाव व विषय</a></li>
+                    <li><a href="#topic3">3. शिक्षा</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. कवि परिचय</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; <strong>रहीम</strong> मध्यकालीन भक्ति व नीतिकाव्य परंपरा के प्रमुख कवि थे, जिनके दोहे सरल, सहज भाषा में गूढ़ जीवन-सत्य प्रस्तुत करते हैं।</p>
+                    <p>&bull; वे भाषा, धर्म और संस्कृति के प्रति उदार दृष्टिकोण रखने वाले कवि माने जाते हैं।</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. दोहों के प्रमुख भाव व विषय</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; रहीम के दोहों में <strong>प्रेम, मित्रता, विनम्रता, परोपकार, स्वाभिमान</strong> और सच्चे संबंधों के महत्व पर बल दिया गया है।</p>
+                    <p>&bull; उनके दोहे यह सिखाते हैं कि संकट के समय सच्चे मित्र और सच्चे रिश्ते ही साथ देते हैं, और विनम्रता व दूसरों के प्रति सहानुभूति जीवन में सफलता की कुंजी है।</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. शिक्षा</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; रहीम के दोहे हमें सरलता, नम्रता, धैर्य और परोपकार जैसे गुणों को अपनाने की प्रेरणा देते हैं।</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>NCERT Textbook Exercise Questions</h2>
+
+            <div class="question">रहीम के दोहों की भाषा-शैली की क्या विशेषता है?</div>
+            <div class="answer">
+                <strong>Answer:</strong> रहीम के दोहों की भाषा सरल, सहज और मुहावरेदार है, जिसमें दैनिक जीवन के उदाहरणों के माध्यम से गहरी बातें प्रभावशाली ढंग से कही गई हैं।
+            </div>
+
+            <div class="question">रहीम के दोहों में किन मानवीय मूल्यों पर बल दिया गया है?</div>
+            <div class="answer">
+                <strong>Answer:</strong> इनमें प्रेम, मित्रता, विनम्रता, परोपकार, स्वाभिमान और सच्चे संबंधों के महत्व जैसे मानवीय मूल्यों पर विशेष बल दिया गया है।
+            </div>
+
+            <div class="question">रहीम के अनुसार सच्चे मित्र की क्या पहचान है?</div>
+            <div class="answer">
+                <strong>Answer:</strong> रहीम के अनुसार सच्चा मित्र वही है जो विपत्ति और संकट के समय साथ न छोड़े और निःस्वार्थ भाव से सहायता करे।
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 9 Hindi Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 9 hindi notes1.html">Ch-1: Do Bailon Ki Katha</a></li>
+                    <li><a href="class 9 hindi notes2.html">Ch-2: Lhasa Ki Aur</a></li>
+                    <li><a href="class 9 hindi notes3.html">Ch-3: Upbhoktawad Ki Sanskriti</a></li>
+                    <li><a href="class 9 hindi notes4.html">Ch-4: Saanwale Sapno Ki Yaad</a></li>
+                    <li><a href="class 9 hindi notes5.html">Ch-5: Pratyay</a></li>
+                    <li><a href="class 9 hindi notes6.html">Ch-6: Prem Chand Ke Phate Joote</a></li>
+                    <li><a href="class 9 hindi notes7.html">Ch-7: Mere Sang Ki Auratein</a></li>
+                    <li><a href="class 9 hindi notes8.html">Ch-8: Hazar Varsh</a></li>
+                    <li><a href="class 9 hindi notes9.html">Poem-1: Gadhya Khand</a></li>
+                    <li class="active"><a href="class 9 hindi notes10.html">Poem-2: Rahim Ke Dohe</a></li>
+                    <li><a href="class 9 hindi notes11.html">Poem-3: Raidas Ke Pad</a></li>
+                    <li><a href="class 9 hindi notes12.html">Grammar: Vyakaran - Sandhi, Samas, Alankar</a></li>
+                    <li><a href="class 9 hindi notes13.html">Writing: Nibandh, Patra, Anuched Lekhan</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,500 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 11 Maths Chapter 6 Permutations and Combinations MCQs - JAC Board</title>
+    <meta name="description" content="JAC Board Class 11 Maths Chapter 6 Permutations and Combinations 30 MCQ Questions with Answers and Explanations.">
+    <meta name="keywords" content="Class 11 Maths, JAC Board, Permutations, Combinations, Factorial, NCERT Chapter 6">
+    <style>
+        html, body { width: 100%; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; background-color: #f9fafc; color: #222; box-sizing: border-box; overflow-x: hidden; }
+        *, *::before, *::after { box-sizing: inherit; }
+        .page-container { max-width: 100%; padding: 16px 20px 40px 20px; background: #ffffff; }
+        .header-title { font-size: 22px; font-weight: 700; color: #1b5a55; margin: 0 0 8px 0; letter-spacing: -0.5px; }
+        .back-link { display: inline-block; font-size: 14px; color: #0e5a89; text-decoration: none; margin-bottom: 12px; }
+        .back-link:hover { text-decoration: underline; }
+        .divider-line { border: 0; height: 3px; background: #1a4875; margin: 16px 0 24px 0; width: 100%; }
+        .chapter-card { background: #ffffff; border: 1px solid #e5e9f0; border-radius: 10px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .chapter-title { font-size: 16px; font-weight: 600; color: #142c4b; }
+        .badge-questions { background: #e5f1fb; color: #0d6efd; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; white-space: nowrap; }
+        .q-item { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px dashed #e0e4ed; }
+        .q-item:last-child { border-bottom: 0; margin-bottom: 0; }
+        .question { font-size: 15px; font-weight: 600; color: #cc0000; margin: 0 0 6px 0; line-height: 1.4; }
+        .options { list-style: none; padding: 0; margin: 0 0 8px 0; }
+        .options li { font-size: 14px; color: #000000; padding: 2px 0; line-height: 1.5; }
+        .show-answer-btn { background: #e5f1fb; color: #0d6efd; border: none; padding: 6px 16px; border-radius: 14px; font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.2s; margin-top: 4px; display: inline-block; }
+        .show-answer-btn:hover { background: #d0e3fa; }
+        .answer-section { display: none; margin-top: 6px; }
+        .revealed-answer { font-size: 14px; font-weight: 600; color: #198754; margin: 0 0 2px 0; }
+        .revealed-explain { font-size: 13px; font-weight: 400; color: #198754; margin: 0; line-height: 1.4; }
+        .other-links-section { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e9f0; }
+        .other-links-section a { display: block; color: #0e5a89; text-decoration: underline; padding: 6px 0; font-size: 14px; }
+        .other-links-section a:hover { color: #1b5a55; }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <h1 class="header-title">Class 11 Mathematics</h1>
+        <a href="class 11 mcq hub.html" class="back-link">← Back to Class 11 Mathematics Chapters</a>
+        <hr class="divider-line">
+        <div class="chapter-card">
+            <span class="chapter-title">Ch-6: Permutations and Combinations</span>
+            <span class="badge-questions">30 Questions</span>
+        </div>
+        <div class="questions-container">
+            <div class="q-item">
+                <p class="question">1. The value of 0! is equal to:</p>
+                <ul class="options">
+                    <li>A. 1</li>
+                    <li>B. 0</li>
+                    <li>C. Infinity</li>
+                    <li>D. Not defined</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 1</p>
+                    <p class="revealed-explain">Explanation: By definition in mathematics, 0! = 1.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">2. Compute the value of 7! / 5! :</p>
+                <ul class="options">
+                    <li>A. 42</li>
+                    <li>B. 35</li>
+                    <li>C. 49</li>
+                    <li>D. 21</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 42</p>
+                    <p class="revealed-explain">Explanation: 7! / 5! = (7 × 6 × 5!) / 5! = 7 × 6 = 42.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">3. If 1/8! + 1/9! = x/10!, then x is equal to:</p>
+                <ul class="options">
+                    <li>A. 100</li>
+                    <li>B. 90</li>
+                    <li>C. 81</li>
+                    <li>D. 10</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 100</p>
+                    <p class="revealed-explain">Explanation: Divide by 1/8!: 1 + 1/9 = x/(10 × 9) ⇒ 10/9 = x/90 ⇒ x = 100.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">4. The value of ⁿPᵣ is given by the formula:</p>
+                <ul class="options">
+                    <li>A. n! / (n - r)!</li>
+                    <li>B. n! / [r! (n - r)!]</li>
+                    <li>C. (n - r)! / n!</li>
+                    <li>D. n! / r!</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. n! / (n - r)!</p>
+                    <p class="revealed-explain">Explanation: By standard formula, permutation ⁿPᵣ = n! / (n - r)!.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">5. The value of ⁿCᵣ is given by the formula:</p>
+                <ul class="options">
+                    <li>A. n! / [r! (n - r)!]</li>
+                    <li>B. n! / (n - r)!</li>
+                    <li>C. n! / r!</li>
+                    <li>D. r! / (n - r)!</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. n! / [r! (n - r)!]</p>
+                    <p class="revealed-explain">Explanation: By standard formula, combination ⁿCᵣ = n! / [r! (n - r)!].</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">6. The relation between ⁿPᵣ and ⁿCᵣ is:</p>
+                <ul class="options">
+                    <li>A. ⁿPᵣ = r! × ⁿCᵣ</li>
+                    <li>B. ⁿCᵣ = r! × ⁿPᵣ</li>
+                    <li>C. ⁿPᵣ = ⁿCᵣ / r!</li>
+                    <li>D. ⁿPᵣ = n! × ⁿCᵣ</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. ⁿPᵣ = r! × ⁿCᵣ</p>
+                    <p class="revealed-explain">Explanation: Since ⁿCᵣ = ⁿPᵣ / r!, rearranging gives ⁿPᵣ = r! × ⁿCᵣ.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">7. If ⁿC₈ = ⁿC₂, then the value of n is:</p>
+                <ul class="options">
+                    <li>A. 10</li>
+                    <li>B. 6</li>
+                    <li>C. 16</li>
+                    <li>D. 8</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 10</p>
+                    <p class="revealed-explain">Explanation: Property: If ⁿCₐ = ⁿC_b, then a = b or a + b = n. Here 8 + 2 = n ⇒ n = 10.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">8. If ⁿC₈ = ⁿC₂, then the value of ⁿC₂ is:</p>
+                <ul class="options">
+                    <li>A. 45</li>
+                    <li>B. 90</li>
+                    <li>C. 10</li>
+                    <li>D. 20</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 45</p>
+                    <p class="revealed-explain">Explanation: n = 8 + 2 = 10. Thus, ¹⁰C₂ = (10 × 9) / 2 = 45.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">9. How many 3-digit numbers can be formed from the digits 1, 2, 3, 4, 5 if repetition of digits is allowed?</p>
+                <ul class="options">
+                    <li>A. 125</li>
+                    <li>B. 60</li>
+                    <li>C. 24</li>
+                    <li>D. 120</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 125</p>
+                    <p class="revealed-explain">Explanation: Each of the 3 places can be filled in 5 ways. Total ways = 5 × 5 × 5 = 125.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">10. How many 3-digit numbers can be formed from the digits 1, 2, 3, 4, 5 if repetition of digits is not allowed?</p>
+                <ul class="options">
+                    <li>A. 60</li>
+                    <li>B. 125</li>
+                    <li>C. 120</li>
+                    <li>D. 20</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 60</p>
+                    <p class="revealed-explain">Explanation: ⁵P₃ = 5 × 4 × 3 = 60.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">11. How many 4-digit code numbers can be formed using the first 10 letters of the English alphabet, if no letter can be repeated?</p>
+                <ul class="options">
+                    <li>A. 5040</li>
+                    <li>B. 10000</li>
+                    <li>C. 210</li>
+                    <li>D. 720</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 5040</p>
+                    <p class="revealed-explain">Explanation: ¹⁰P₄ = 10 × 9 × 8 × 7 = 5040.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">12. Find the number of permutations of the letters of the word 'ALLAHABAD':</p>
+                <ul class="options">
+                    <li>A. 7560</li>
+                    <li>B. 9!</li>
+                    <li>C. 362880</li>
+                    <li>D. 15120</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 7560</p>
+                    <p class="revealed-explain">Explanation: Word has 9 letters: A=4, L=2. Total permutations = 9! / (4! × 2!) = 362880 / (24 × 2) = 7560.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">13. In how many ways can a committee of 3 persons be chosen from a group of 2 men and 3 women?</p>
+                <ul class="options">
+                    <li>A. 10</li>
+                    <li>B. 12</li>
+                    <li>C. 15</li>
+                    <li>D. 20</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 10</p>
+                    <p class="revealed-explain">Explanation: Total people = 2 + 3 = 5. Ways to choose 3 = ⁵C₃ = (5 × 4 × 3) / (3 × 2 × 1) = 10.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">14. The value of ⁿC₀ + ⁿC₁ + ⁿC₂ + ... + ⁿCₙ is equal to:</p>
+                <ul class="options">
+                    <li>A. 2ⁿ</li>
+                    <li>B. 2ⁿ - 1</li>
+                    <li>C. n²</li>
+                    <li>D. 2n</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 2ⁿ</p>
+                    <p class="revealed-explain">Explanation: The sum of all binomial coefficients in the expansion of (1 + x)ⁿ when x = 1 is equal to 2ⁿ.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">15. The value of ⁿCₙ is always:</p>
+                <ul class="options">
+                    <li>A. 1</li>
+                    <li>B. n</li>
+                    <li>C. 0</li>
+                    <li>D. n!</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 1</p>
+                    <p class="revealed-explain">Explanation: ⁿCₙ = n! / (n! × 0!) = 1.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">16. The value of ⁿC₁ is always:</p>
+                <ul class="options">
+                    <li>A. n</li>
+                    <li>B. 1</li>
+                    <li>C. 0</li>
+                    <li>D. n!</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. n</p>
+                    <p class="revealed-explain">Explanation: ⁿC₁ = n! / (1! × (n-1)!) = n.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">17. Pascal's identity states that ⁿCᵣ + ⁿCᵣ₋₁ is equal to:</p>
+                <ul class="options">
+                    <li>A. ⁿ⁺¹Cᵣ</li>
+                    <li>B. ⁿ⁺¹Cᵣ₊₁</li>
+                    <li>C. ⁿCᵣ₊₁</li>
+                    <li>D. ⁿ⁺²Cᵣ</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. ⁿ⁺¹Cᵣ</p>
+                    <p class="revealed-explain">Explanation: Pascal's rule for combinations states ⁿCᵣ + ⁿCᵣ₋₁ = ⁿ⁺¹Cᵣ.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">18. The number of diagonals in a polygon of 'n' sides is:</p>
+                <ul class="options">
+                    <li>A. n(n - 3) / 2</li>
+                    <li>B. n(n - 1) / 2</li>
+                    <li>C. n(n - 2) / 2</li>
+                    <li>D. n(n + 1) / 2</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. n(n - 3) / 2</p>
+                    <p class="revealed-explain">Explanation: Total line segments joining n vertices is ⁿC₂ = n(n-1)/2. Subtracting n sides gives n(n-3)/2.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">19. How many diagonals are there in a hexagon (6 sides)?</p>
+                <ul class="options">
+                    <li>A. 9</li>
+                    <li>B. 12</li>
+                    <li>C. 15</li>
+                    <li>D. 6</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 9</p>
+                    <p class="revealed-explain">Explanation: Formula = 6(6 - 3) / 2 = 18 / 2 = 9.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">20. The number of ways to arrange n distinct objects in a circle is:</p>
+                <ul class="options">
+                    <li>A. (n - 1)!</li>
+                    <li>B. n!</li>
+                    <li>C. (n + 1)!</li>
+                    <li>D. n! / 2</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. (n - 1)!</p>
+                    <p class="revealed-explain">Explanation: Circular permutations of n distinct objects is (n - 1)!.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">21. In how many ways can 5 people sit around a circular table?</p>
+                <ul class="options">
+                    <li>A. 24</li>
+                    <li>B. 120</li>
+                    <li>C. 60</li>
+                    <li>D. 12</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 24</p>
+                    <p class="revealed-explain">Explanation: Circular arrangement formula = (5 - 1)! = 4! = 24.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">22. What is the value of ⁿP₀?</p>
+                <ul class="options">
+                    <li>A. 1</li>
+                    <li>B. 0</li>
+                    <li>C. n</li>
+                    <li>D. n!</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 1</p>
+                    <p class="revealed-explain">Explanation: ⁿP₀ = n! / (n - 0)! = n! / n! = 1.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">23. What is the value of ⁿPₙ?</p>
+                <ul class="options">
+                    <li>A. n!</li>
+                    <li>B. 1</li>
+                    <li>C. n</li>
+                    <li>D. 0</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. n!</p>
+                    <p class="revealed-explain">Explanation: ⁿPₙ = n! / (n - n)! = n! / 0! = n!.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">24. If ⁿP₅ = 42 × ⁿP₃ (n &gt; 4), then n is:</p>
+                <ul class="options">
+                    <li>A. 10</li>
+                    <li>B. 12</li>
+                    <li>C. 9</li>
+                    <li>D. 8</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 10</p>
+                    <p class="revealed-explain">Explanation: n(n-1)(n-2)(n-3)(n-4) = 42 × n(n-1)(n-2) ⇒ (n-3)(n-4) = 42 ⇒ n² - 7n - 30 = 0 ⇒ (n-10)(n+3) = 0 ⇒ n = 10.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">25. Out of 7 consonants and 4 vowels, how many words of 3 consonants and 2 vowels can be formed?</p>
+                <ul class="options">
+                    <li>A. 25200</li>
+                    <li>B. 210</li>
+                    <li>C. 2400</li>
+                    <li>D. 5040</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 25200</p>
+                    <p class="revealed-explain">Explanation: Selection = ⁷C₃ × ⁴C₂ = 35 × 6 = 210. Arrangement of 5 chosen letters = 5! = 120. Total = 210 × 120 = 25200.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">26. How many chords can be drawn through 21 points on a circle?</p>
+                <ul class="options">
+                    <li>A. 210</li>
+                    <li>B. 420</li>
+                    <li>C. 105</li>
+                    <li>D. 21</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 210</p>
+                    <p class="revealed-explain">Explanation: A chord needs 2 points. Number of chords = ²¹C₂ = (21 × 20) / 2 = 210.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">27. How many 3-digit even numbers can be made using digits 1, 2, 3, 4, 6, 7 if no digit is repeated?</p>
+                <ul class="options">
+                    <li>A. 60</li>
+                    <li>B. 120</li>
+                    <li>C. 30</li>
+                    <li>D. 90</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 60</p>
+                    <p class="revealed-explain">Explanation: Unit place can be 2, 4, or 6 (3 ways). Remaining 2 places filled from remaining 5 digits in ⁵P₂ = 20 ways. Total = 3 × 20 = 60.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">28. The number of ways in which 5 boys and 3 girls can be seated in a row so that no two girls are together is:</p>
+                <ul class="options">
+                    <li>A. 14400</li>
+                    <li>B. 7200</li>
+                    <li>C. 2880</li>
+                    <li>D. 1200</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 14400</p>
+                    <p class="revealed-explain">Explanation: Arrange 5 boys in 5! = 120 ways. 6 gaps created. Choose 3 gaps for girls in ⁶P₃ = 120 ways. Total = 120 × 120 = 14400.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">29. The total number of sub-sets of a set containing 5 elements is:</p>
+                <ul class="options">
+                    <li>A. 32</li>
+                    <li>B. 25</li>
+                    <li>C. 16</li>
+                    <li>D. 64</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 32</p>
+                    <p class="revealed-explain">Explanation: Total subsets = 2ⁿ = 2⁵ = 32.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">30. Find the number of ways of selecting 9 balls from 6 red balls, 5 white balls and 5 blue balls if each selection consists of 3 balls of each colour:</p>
+                <ul class="options">
+                    <li>A. 2000</li>
+                    <li>B. 1000</li>
+                    <li>C. 500</li>
+                    <li>D. 2500</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 2000</p>
+                    <p class="revealed-explain">Explanation: ⁶C₃ × ⁵C₃ × ⁵C₃ = 20 × 10 × 10 = 2000.</p>
+                </div>
+            </div>
+        </div>
+        <div class="other-links-section">
+            <a href="class 11 math mcq7.html">Chapter 7: Binomial Theorem</a>
+        </div>
+    </div>
+    <script>function revealAnswer(btn){var section=btn.nextElementSibling;if(section.style.display==="none"||section.style.display===""){section.style.display="block";btn.style.display="none";}else{section.style.display="none";btn.style.display="inline-block";}}</script>
+</body>
+</html>

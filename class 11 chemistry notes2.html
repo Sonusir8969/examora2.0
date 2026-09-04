@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Chemistry Chapter 2 Structure of Atom</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Chemistry Chapter 2 Structure of Atom</h1>
+
+            <p>NCERT Solutions for Class 11 Chemistry Chapter 2 Structure of Atom covers the discovery of sub-atomic particles, atomic models, the dual nature of matter, Bohr's model, quantum mechanical model, and electronic configuration.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Discovery of Sub-atomic Particles</a></li>
+                    <li><a href="#topic2">2. Atomic Models</a></li>
+                    <li><a href="#topic3">3. Dual Nature of Matter and Quantum Mechanical Model</a></li>
+                    <li><a href="#topic4">4. Electronic Configuration of Atoms</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Discovery of Sub-atomic Particles</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; <strong>Electron</strong> (discovered by J.J. Thomson, via cathode ray experiments): negatively charged, e/m = 1.75 &times; 10&sup8; C/g.</p>
+                    <p>&bull; <strong>Proton</strong> (discovered by Goldstein, via anode/canal rays): positively charged particle present in the nucleus.</p>
+                    <p>&bull; <strong>Neutron</strong> (discovered by Chadwick): neutral particle present in the nucleus, mass nearly equal to that of a proton.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Atomic Models</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; <strong>Rutherford's Nuclear Model:</strong> based on the alpha-particle scattering experiment, proposed that most of the atom's mass and all positive charge is concentrated in a tiny, dense nucleus, with electrons revolving around it.</p>
+                    <p>&bull; <strong>Bohr's Model:</strong> electrons revolve in fixed circular orbits (energy levels) without radiating energy; energy is absorbed or emitted only when an electron jumps between orbits, explaining the hydrogen line spectrum.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Dual Nature of Matter and Quantum Mechanical Model</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; <strong>de Broglie's Equation:</strong> &lambda; = h/mv, showing that matter (like light) has both wave and particle nature.</p>
+                    <p>&bull; <strong>Heisenberg's Uncertainty Principle:</strong> it is impossible to determine simultaneously, with absolute accuracy, both the position and momentum of a microscopic particle like an electron.</p>
+                    <p>&bull; The <strong>Quantum Mechanical Model</strong> describes electrons in terms of <strong>orbitals</strong> (regions of maximum probability of finding an electron), characterised by four quantum numbers: principal (n), azimuthal (l), magnetic (m<sub>l</sub>), and spin (m<sub>s</sub>).</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Electronic Configuration of Atoms</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; <strong>Aufbau Principle:</strong> electrons are filled into orbitals in order of increasing energy.</p>
+                    <p>&bull; <strong>Pauli Exclusion Principle:</strong> no two electrons in an atom can have the same set of all four quantum numbers.</p>
+                    <p>&bull; <strong>Hund's Rule of Maximum Multiplicity:</strong> electrons are distributed singly among orbitals of the same subshell before pairing up.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>NCERT Textbook Exercise Questions</h2>
+
+            <div class="question">Calculate the number of electrons, protons and neutrons in an atom of 35Cl17.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Atomic number Z = 17, so number of protons = 17 = number of electrons (neutral atom). Mass number A = 35, so number of neutrons = A &minus; Z = 35 &minus; 17 = 18.
+            </div>
+
+            <div class="question">Calculate the energy associated with the first orbit of the hydrogen atom.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Using Bohr's formula E<sub>n</sub> = &minus;2.18 &times; 10<sup>&minus;18</sup>(Z&sup2;/n&sup2;) J. For hydrogen, Z=1, n=1: E<sub>1</sub> = &minus;2.18 &times; 10<sup>&minus;18</sup> J.
+            </div>
+
+            <div class="question">What is the maximum number of electrons that can be associated with the principal quantum number n = 3?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Total electrons in a shell = 2n&sup2; = 2(3)&sup2; = 18. So the n=3 shell can hold a maximum of 18 electrons.
+            </div>
+
+            <div class="question">Write the electronic configuration of Cr (Z=24) and explain any exception observed.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Expected configuration by Aufbau would be [Ar]3d&sup4;4s&sup2;, but the actual configuration is [Ar]3d&sup5;4s&sup1;, because a half-filled d-subshell (3d&sup5;) provides extra stability.
+            </div>
+
+            <div class="question">How many sub-shells are associated with n = 4, and what are the possible values of l for n = 4?</div>
+            <div class="answer">
+                <strong>Answer:</strong> For n=4, l can take values 0, 1, 2, 3, corresponding to 4 sub-shells: 4s (l=0), 4p (l=1), 4d (l=2), and 4f (l=3).
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Chemistry Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 chemistry notes1.html">Ch 1: Some Basic Concepts of Chemistry</a></li>
+                    <li class="active"><a href="class 11 chemistry notes2.html">Ch 2: Structure of Atom</a></li>
+                    <li><a href="class 11 chemistry notes3.html">Ch 3: Classification of Elements and Periodicity in Properties</a></li>
+                    <li><a href="class 11 chemistry notes4.html">Ch 4: Chemical Bonding and Molecular Structure</a></li>
+                    <li><a href="class 11 chemistry notes5.html">Ch 5: Chemical Thermodynamics</a></li>
+                    <li><a href="class 11 chemistry notes6.html">Ch 6: Equilibrium</a></li>
+                    <li><a href="class 11 chemistry notes7.html">Ch 7: Redox Reactions</a></li>
+                    <li><a href="class 11 chemistry notes8.html">Ch 8: Organic Chemistry: Basic Principles & Techniques</a></li>
+                    <li><a href="class 11 chemistry notes9.html">Ch 9: Hydrocarbons</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

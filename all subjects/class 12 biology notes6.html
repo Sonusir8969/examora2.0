@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Biology Chapter 6 Evolution</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f8ff;
+        }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="index.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Biology Chapter 6 Evolution</h1>
+
+            <p>NCERT Solutions for Class 12 Biology Chapter 6 Evolution provides detailed study notes and answers covering Origin of Life, Evidences for Evolution, Darwinism, Adaptive Radiation, Hardy-Weinberg Principle, Mechanisms of Evolution, and Human Evolution.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Origin of Life & Evidences for Evolution</a></li>
+                    <li><a href="#topic2">2. Theories of Evolution & Adaptive Radiation</a></li>
+                    <li><a href="#topic3">3. Hardy-Weinberg Principle & Human Evolution</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Origin of Life & Evidences for Evolution</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Origin of Life:</strong> Universe originated around 20 billion years ago (Big Bang Theory). Earth formed 4.5 billion years ago. Life appeared 500 million years after formation of Earth (~4 billion years ago).</p>
+                    <p>• <strong>Miller Experiment (1953):</strong> S.L. Miller created primitive Earth conditions in spark discharge apparatus containing CH<sub>4</sub>, NH<sub>3</sub>, H<sub>2</sub>, and H<sub>2</sub>O vapor at 800°C. Formation of amino acids proved chemical evolution hypothesis of Oparin and Haldane.</p>
+                    <p>• <strong>Evidences of Evolution:</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>Homologous Organs:</em> Same structure/origin but different function (Divergent Evolution). E.g., Forelimbs of Whales, Bats, Cheetah, and Humans.</p>
+                    <p>&nbsp;&nbsp;2. <em>Analogous Organs:</em> Different structure/origin but same function (Convergent Evolution). E.g., Wings of Butterflies and Birds, Eyes of Octopus and Mammals.</p>
+
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Theories of Evolution & Adaptive Radiation</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Theories of Evolution:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Lamarckism:</em> Theory of inheritance of acquired characters (use and disuse of organs, e.g., Giraffe neck).</p>
+                    <p>&nbsp;&nbsp;- <em>Darwinism:</em> Natural Selection (Branching Descent and Survival of the Fittest based on natural variations).</p>
+                    <p>&nbsp;&nbsp;- <em>Mutation Theory:</em> Proposed by Hugo de Vries working on Evening Primrose (<em>Oenothera lamarckiana</em>). Mutations are random, directionless, and cause speciation in single step (Saltation).</p>
+                    <p>• <strong>Adaptive Radiation:</strong> Process of evolution of different species in a given geographical area starting from a point and radiating to other habitats. E.g., Darwin's Finches in Galapagos Islands, Australian Marsupials.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Hardy-Weinberg Principle & Human Evolution</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Hardy-Weinberg Principle:</strong> Allele frequencies in a population are stable and constant from generation to generation in absence of evolutionary factors. Algebraic equation: <strong>p² + 2pq + q² = 1</strong>.</p>
+                    <p>&nbsp;&nbsp;- <em>Factors Affecting Equilibrium:</em> Gene migration/gene flow, Genetic drift (Founder effect), Mutation, Genetic recombination, and Natural Selection.</p>
+                    <p>• <strong>Human Evolution Stages:</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>Dryopithecus & Ramapithecus:</em> 15 mya (Ramapithecus was more man-like).</p>
+                    <p>&nbsp;&nbsp;2. <em>Australopithecines:</em> 2 mya in East African grasslands (used stone weapons, ate fruit).</p>
+                    <p>&nbsp;&nbsp;3. <em>Homo habilis:</em> First human-like hominid (Brain capacity 650–800 cc, did not eat meat).</p>
+                    <p>&nbsp;&nbsp;4. <em>Homo erectus:</em> 1.5 mya (Brain capacity 900 cc, ate meat).</p>
+                    <p>&nbsp;&nbsp;5. <em>Neanderthal Man:</em> 100,000–40,000 years ago (Brain capacity 1400 cc, used hides, buried dead).</p>
+                    <p>&nbsp;&nbsp;6. <em>Homo sapiens:</em> Arose in Africa 75,000–10,000 years ago during Ice Age.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Differentiate between Homologous structures and Analogous structures.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Homologous Structures</th>
+                            <th>Analogous Structures</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Anatomy / Origin</strong></td>
+                            <td>Same basic anatomical structure and embryonic origin.</td>
+                            <td>Different anatomical structure and embryonic origin.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Function</strong></td>
+                            <td>Adapted to perform different functions.</td>
+                            <td>Adapted to perform similar functions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pattern of Evolution</strong></td>
+                            <td>Indicates <strong>Divergent Evolution</strong>.</td>
+                            <td>Indicates <strong>Convergent Evolution</strong>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Example</strong></td>
+                            <td>Forelimbs of Whales, Bats, Cheetah, and Humans.</td>
+                            <td>Wings of Birds and Insects; Eyes of Octopus and Mammals.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: What is Adaptive Radiation? Give an example.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Adaptive Radiation:</strong> It is the evolutionary process in which different species evolve from a common ancestral stock and diversify to adapt to different ecological niches/habitats.<br><br>
+                <strong>Examples:</strong><br>
+                1. <strong>Darwin's Finches:</strong> On the Galapagos Islands, Darwin observed many varieties of small black birds. From an original seed-eating ancestor, different varieties evolved with altered beak shapes adapted to eating seeds, insects, cactus, etc.<br>
+                2. <strong>Australian Marsupials:</strong> A number of distinct marsupials (e.g., Kangaroo, Koala, Tasmanian wolf) evolved from a single ancestral stock within the Australian island continent.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Describe Stanley Miller's experiment and state its significance.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Miller's Experiment (1953):</strong> Stanley Miller created experimental conditions similar to primitive Earth atmosphere in a laboratory setup:<br><br>
+                1. He used a closed glass apparatus containing methane (CH<sub>4</sub>), ammonia (NH<sub>3</sub>), hydrogen (H<sub>2</sub>), and water vapor.<br>
+                2. Electric sparks were discharged using electrodes at 800°C to simulate lightning.<br>
+                3. After running the experiment for a week, he observed the formation of simple organic compounds including amino acids (such as glycine, alanine, aspartic acid).<br><br>
+                <strong>Significance:</strong> It provided experimental proof for Oparin-Haldane's theory of Chemical Evolution (Abiogenesis followed by Biogenesis).
+            </div>
+
+            <div class="question">Q2: State the Hardy-Weinberg Principle. What factors disturb the Hardy-Weinberg Equilibrium?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Hardy-Weinberg Principle:</strong> States that allele frequencies in a large, randomly mating population remain constant from generation to generation, provided no evolutionary influences act on it. Represented as:<br>
+                <strong>p² + 2pq + q² = 1</strong> (where p and q are frequencies of dominant and recessive alleles).<br><br>
+                <strong>Factors Disturbance Equilibrium:</strong><br>
+                1. <em>Gene Migration / Gene Flow:</em> Movement of genes into or out of a population.<br>
+                2. <em>Genetic Drift:</em> Random changes in allele frequency by chance events (e.g., Founder Effect).<br>
+                3. <em>Mutation:</em> New alleles introduced by genetic mutations.<br>
+                4. <em>Genetic Recombination:</em> Crossing over during meiosis.<br>
+                5. <em>Natural Selection:</em> Differential reproduction favoring certain genotypes.
+            </div>
+
+            <div class="question">Q3: Trace the evolutionary stages of Modern Humans (Homo sapiens).</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                The sequential stages of human evolution are:<br>
+                1. <strong>Dryopithecus & Ramapithecus (15 mya):</strong> Ape-like and man-like hominids.<br>
+                2. <strong>Australopithecines (2 mya):</strong> Walked upright, lived in grasslands, used stone tools.<br>
+                3. <strong>Homo habilis (2 mya):</strong> First human-like hominid, brain capacity 650–800 cc.<br>
+                4. <strong>Homo erectus (1.5 mya):</strong> Walked fully erect, brain capacity 900 cc, ate meat.<br>
+                5. <strong>Neanderthal Man (100,000–40,000 years ago):</strong> Brain capacity 1400 cc, used hides, buried dead.<br>
+                6. <strong>Homo sapiens (75,000–10,000 years ago):</strong> Modern humans, developed agriculture, art, and civilization.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Biology</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 biology notes1.html">Ch 1: Sexual Reproduction in Flowering Plants</a></li>
+                    <li><a href="class 12 biology notes2.html">Ch 2: Human Reproduction</a></li>
+                    <li><a href="class 12 biology notes3.html">Ch 3: Reproductive Health</a></li>
+                    <li><a href="class 12 biology notes4.html">Ch 4: Principles of Inheritance & Variation</a></li>
+                    <li><a href="class 12 biology notes5.html">Ch 5: Molecular Basis of Inheritance</a></li>
+                    <li class="active"><a href="class 12 biology notes6.html">Ch 6: Evolution</a></li>
+                    <li><a href="class 12 biology notes7.html">Ch 7: Human Health & Disease</a></li>
+                    <li><a href="class 12 biology notes8.html">Ch 8: Microbes in Human Welfare</a></li>
+                    <li><a href="class 12 biology notes9.html">Ch 9: Biotechnology: Principles & Processes</a></li>
+                    <li><a href="class 12 biology notes10.html">Ch 10: Biotechnology & Its Applications</a></li>
+                    <li><a href="class 12 biology notes11.html">Ch 11: Organisms & Populations</a></li>
+                    <li><a href="class 12 biology notes12.html">Ch 12: Ecosystem</a></li>
+                    <li><a href="class 12 biology notes13.html">Ch 13: Biodiversity & Conservation</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

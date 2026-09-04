@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 9 Science Chapter 7 Motion</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="class 9 all chapters notes.html" class="nav-right-link">Back to notes hub</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 9 Science Chapter 7 Motion</h1>
+
+            <p>NCERT Solutions for Class 9 Science Chapter 7 Motion covers concepts of rest and motion, distance, displacement, speed, velocity, acceleration, distance-time and velocity-time graphs, equations of motion, and uniform circular motion.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Describing Motion, Distance & Displacement</a></li>
+                    <li><a href="#topic2">2. Speed, Velocity & Acceleration</a></li>
+                    <li><a href="#topic3">3. Graphical Representation & Equations of Motion</a></li>
+                    <li><a href="#topic4">4. Uniform Circular Motion</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Describing Motion, Distance & Displacement</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>State of Rest and Motion:</strong> An object is in motion if its position changes relative to a reference point with time.</p>
+                    <p>• <strong>Distance:</strong> The total length of the path travelled by an object. It is a scalar quantity and always positive.</p>
+                    <p>• <strong>Displacement:</strong> The shortest straight-line distance from the initial position to the final position. It is a vector quantity and can be positive, negative, or zero.</p>
+                    <p>• <strong>Key Point:</strong> Displacement can be zero even if distance is non-zero (e.g., returning to the starting point in a closed path).</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Speed, Velocity & Acceleration</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Speed:</strong> Distance travelled per unit time (m/s). Scalar quantity. Average Speed = Total Distance / Total Time.</p>
+                    <p>• <strong>Velocity:</strong> Displacement per unit time in a specified direction (m/s). Vector quantity. Average Velocity = (Initial Velocity + Final Velocity) / 2 = (u + v) / 2.</p>
+                    <p>• <strong>Acceleration (a):</strong> Rate of change of velocity with time. SI Unit: m/s².</p>
+                    <p>&nbsp;&nbsp;- Formula: <code>a = (v - u) / t</code> where <em>u</em> = initial velocity, <em>v</em> = final velocity, <em>t</em> = time.</p>
+                    <p>&nbsp;&nbsp;- Positive acceleration: Velocity increases with time.</p>
+                    <p>&nbsp;&nbsp;- Negative acceleration (Retardation/Deceleration): Velocity decreases with time.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Graphical Representation & Equations of Motion</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Distance-Time Graph:</strong> Slope gives the <strong>speed</strong> of the object.</p>
+                    <p>• <strong>Velocity-Time Graph:</strong> Slope gives the <strong>acceleration</strong>, and the area under the velocity-time graph gives the <strong>displacement</strong> (or distance).</p>
+                    <p>• <strong>Equations of Motion (for uniform acceleration):</strong></p>
+                    <p>&nbsp;&nbsp;1. First Equation: <code>v = u + at</code> (Velocity-time relation)</p>
+                    <p>&nbsp;&nbsp;2. Second Equation: <code>s = ut + ½ at²</code> (Position-time relation)</p>
+                    <p>&nbsp;&nbsp;3. Third Equation: <code>v² = u² + 2as</code> (Position-velocity relation)</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Uniform Circular Motion</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Definition:</strong> When an object moves in a circular path with constant speed, its motion is called uniform circular motion.</p>
+                    <p>• <strong>Accelerated Motion:</strong> Even though the speed remains constant, the direction of motion changes continuously at every point, making uniform circular motion an accelerated motion.</p>
+                    <p>• <strong>Formula for Speed:</strong> <code>v = (2πr) / t</code>, where <em>r</em> is the radius of the circular path and <em>t</em> is the time taken for one full revolution.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext Questions - Page Number: 74</h2>
+
+            <div class="question">Q1: An object has moved through a distance. Can it have zero displacement? If yes, support your answer with an example.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Yes, an object that has moved through a distance can have zero displacement. This occurs when the initial and final positions of the object coincide.<br><br>
+                <strong>Example:</strong> If an athlete runs around a circular track of radius <em>r</em> and returns back to the starting point, the distance covered is 2πr, but the displacement is <strong>zero</strong>.
+            </div>
+
+            <div class="question">Q2: A farmer moves along the boundary of a square field of side 10 m in 40 s. What will be the magnitude of displacement of the farmer at the end of 2 minutes 20 seconds from his initial position?</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p>• Side of square field = 10 m; Perimeter = 4 × 10 = 40 m.</p>
+                <p>• Time taken to cover 40 m = 40 s (1 round = 40 s).</p>
+                <p>• Total time given = 2 min 20 s = 140 s.</p>
+                <p>• Number of rounds in 140 s = 140 / 40 = 3.5 rounds.</p>
+                <p>• After 3 complete rounds, the farmer returns to the starting corner. In the remaining 0.5 round, he reaches the diagonally opposite corner.</p>
+                <p>• Displacement = Diagonal of square field = √(10² + 10²) = √(200) = <strong>10√2 m ≈ 14.14 m</strong>.</p>
+            </div>
+
+            <h2>Intext Questions - Page Number: 76</h2>
+
+            <div class="question">Q1: Distinguish between speed and velocity.</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p>1. <strong>Nature:</strong> Speed is a scalar quantity (has magnitude only), whereas velocity is a vector quantity (has both magnitude and direction).</p>
+                <p>2. <strong>Formula:</strong> Speed = Distance / Time, whereas Velocity = Displacement / Time.</p>
+                <p>3. <strong>Value:</strong> Speed is always positive or zero, whereas Velocity can be positive, negative, or zero.</p>
+            </div>
+
+            <div class="question">Q2: Under what condition(s) is the magnitude of average velocity of an object equal to its average speed?</div>
+            <div class="answer">
+                <strong>Answer:</strong> The magnitude of average velocity of an object is equal to its average speed when the object moves along a <strong>straight line in a single direction</strong> without reversing.
+            </div>
+
+            <div class="question">Q3: What does the odometer of an automobile measure?</div>
+            <div class="answer">
+                <strong>Answer:</strong> The odometer of an automobile measures the total distance travelled by the vehicle.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: A bus decreases its speed from 80 km/h to 60 km/h in 5 s. Find the acceleration of the bus.</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p>• Initial velocity (u) = 80 km/h = 80 × (5/18) m/s = 22.22 m/s</p>
+                <p>• Final velocity (v) = 60 km/h = 60 × (5/18) m/s = 16.67 m/s</p>
+                <p>• Time (t) = 5 s</p>
+                <p>• Acceleration (a) = (v - u) / t = (16.67 - 22.22) / 5 = -5.55 / 5 = <strong>-1.11 m/s²</strong></p>
+                <p><em>(Negative sign indicates retardation).</em></p>
+            </div>
+
+            <div class="question">Q2: State the three equations of motion and explain the symbols used.</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p>1. <strong>v = u + at</strong></p>
+                <p>2. <strong>s = ut + ½ at²</strong></p>
+                <p>3. <strong>v² = u² + 2as</strong></p>
+                <p>Where: <em>u</em> = initial velocity, <em>v</em> = final velocity, <em>a</em> = uniform acceleration, <em>t</em> = time taken, and <em>s</em> = distance/displacement covered.</p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 9 Science Chapters</h3>
+                <ul class="sidebar-links">
+                   <li class="active"><a href="class 9 science notes1.html">Ch 1: Matter in Our Surroundings</a></li>
+                    <li><a href="class 9 science notes2.html">Ch 2: Is Matter Around Us Pure?</a></li>
+                    <li><a href="class 9 science notes3.html">Ch 3: Atoms and Molecules</a></li>
+                    <li><a href="class 9 science notes4.html">Ch 4: Structure of the Atom</a></li>
+                    <li><a href="class 9 science notes5.html">Ch 5: The Fundamental Unit of Life</a></li>
+                    <li><a href="class 9 science notes6.html">Ch 6: Tissues</a></li>
+                    <li><a href="class 9 science notes7.html">Ch 7: Motion</a></li>
+                    <li><a href="class 9 science notes8.html">Ch 8: Force and Laws of Motion</a></li>
+                    <li><a href="class 9 science notes9.html">Ch 9: Gravitation</a></li>
+                    <li><a href="class 9 science notes10.html">Ch 10: Work and Energy</a></li>
+                    <li><a href="class 9 science notes11.html">Ch 11: Sound</a></li>
+                    <li><a href="class 9 science notes12.html">Ch 12: Improvement in Food Resources</a></li>
+                    <li><a href="class 9 science notes13.html">Ch 13: Why Do We Fall Ill</a></li>
+                    <li class="active"><a href="class 9 science notes14.html">Ch 14: Natural Resources</a></li>
+                    <li class="active"><a href="class 9 science notes15.html">Ch 15: Improvement in Food Resources</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

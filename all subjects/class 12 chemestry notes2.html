@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Chemistry Chapter 2 Electrochemistry</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Chemistry Chapter 2 Electrochemistry</h1>
+
+            <p>NCERT Solutions for Class 12 Chemistry Chapter 2 Electrochemistry provides complete coverage of galvanic cells, Nernst equation, conductance in electrolytic solutions, Kohlrausch's law, Faraday's laws of electrolysis, batteries, fuel cells, and corrosion.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Electrochemical Cells, EMF & Nernst Equation</a></li>
+                    <li><a href="#topic2">2. Conductance of Electrolytic Solutions & Kohlrausch's Law</a></li>
+                    <li><a href="#topic3">3. Electrolysis, Batteries, Fuel Cells & Corrosion</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Electrochemical Cells, EMF & Nernst Equation</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Galvanic Cell (Voltaic Cell):</strong> Device converting chemical energy stored in a spontaneous redox reaction into electrical energy (e.g., Daniell Cell: $\text{Zn(s)} + \text{Cu}^{2+}\text{(aq)} \rightarrow \text{Zn}^{2+}\text{(aq)} + \text{Cu(s)}$).</p>
+
+                    <p>• <strong>Standard Cell Potential ($E^\circ_{\text{cell}}$):</strong> $E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}}$ (measured against Standard Hydrogen Electrode, $E^\circ = 0\text{ V}$).</p>
+
+                    <p>• <strong>Nernst Equation (at 298 K):</strong> Relates cell potential to ion concentration:</p>
+                    <p>&nbsp;&nbsp;<em>$E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.0591}{n} \log \frac{[\text{Products}]}{[\text{Reactants}]}$</em></p>
+
+                    <p>• <strong>Equilibrium Constant ($K_c$) & Gibbs Free Energy ($\Delta G^\circ$):</strong></p>
+                    <p>&nbsp;&nbsp;- $\log K_c = \frac{n \cdot E^\circ_{\text{cell}}}{0.0591}$</p>
+                    <p>&nbsp;&nbsp;- $\Delta G^\circ = -n F E^\circ_{\text{cell}}$ (where $F = 96487\text{ C mol}^{-1} \approx 96500\text{ C mol}^{-1}$)</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Conductance of Electrolytic Solutions & Kohlrausch's Law</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Conductivity ($\kappa$):</strong> Inverse of resistivity ($\kappa = 1/\rho = \frac{1}{R} \cdot \frac{l}{A}$). Unit: $\text{S m}^{-1}$ or $\text{S cm}^{-1}$.</p>
+
+                    <p>• <strong>Molar Conductivity ($\Lambda_m$):</strong> Conductance of a solution containing $1\text{ mole}$ of electrolyte:</p>
+                    <p>&nbsp;&nbsp;<em>$\Lambda_m = \frac{\kappa \times 1000}{M}$</em> (where $M$ is molarity in $\text{mol L}^{-1}$). Unit: $\text{S cm}^2 \text{mol}^{-1}$.</p>
+
+                    <p>• <strong>Variation with Dilution:</strong></p>
+                    <p>&nbsp;&nbsp;- $\kappa$ decreases with dilution because number of ions per unit volume decreases.</p>
+                    <p>&nbsp;&nbsp;- $\Lambda_m$ increases with dilution for both strong and weak electrolytes.</p>
+
+                    <p>• <strong>Kohlrausch's Law of Independent Migration of Ions:</strong> At infinite dilution, molar conductivity of an electrolyte is equal to the sum of ionic conductivities of its constituent cations and anions:</p>
+                    <p>&nbsp;&nbsp;<em>$\Lambda_m^\circ = \nu_+ \lambda_+^\circ + \nu_- \lambda_-^\circ$</em></p>
+                    <p>• <strong>Degree of Dissociation ($\alpha$) for Weak Electrolyte:</strong> $\alpha = \frac{\Lambda_m}{\Lambda_m^\circ}$</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Electrolysis, Batteries, Fuel Cells & Corrosion</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Faraday's Laws of Electrolysis:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>1st Law:</em> Mass deposited $m = Z \cdot Q = Z \cdot I \cdot t$ (where $Z$ is electrochemical equivalent).</p>
+                    <p>&nbsp;&nbsp;- <em>2nd Law:</em> For same quantity of electricity, masses deposited are proportional to equivalent weights ($m_1 / m_2 = E_1 / E_2$).</p>
+
+                    <p>• <strong>Commercial Batteries:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Primary Batteries:</em> Cannot be recharged (e.g., Dry Cell, Mercury Cell).</p>
+                    <p>&nbsp;&nbsp;- <em>Secondary Batteries:</em> Rechargeable (e.g., Lead storage battery, Ni-Cd cell).</p>
+
+                    <p>• <strong>Fuel Cells:</strong> Devices converting energy from combustion of fuels (like $\text{H}_2, \text{CH}_4$) directly into electrical energy (e.g., $\text{H}_2-\text{O}_2$ fuel cell with ~70% efficiency).</p>
+
+                    <p>• <strong>Corrosion:</strong> Electrochemical phenomenon where metal gets oxidized. Anodic region: $\text{Fe(s)} \rightarrow \text{Fe}^{2+} + 2e^-$; Cathodic region: $\text{O}_2 + 4\text{H}^+ + 4e^- \rightarrow 2\text{H}_2\text{O}$. Prevents by sacrificial coating (Galvanization using Zinc).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Explain how molar conductivity ($\Lambda_m$) varies with concentration for strong and weak electrolytes.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>For Strong Electrolytes:</strong> Strong electrolytes are completely ionized even at high concentrations. On dilution, interionic interactions decrease, allowing ions to move faster. Thus, $\Lambda_m$ increases slightly with dilution following the Debye-Hückel-Onsager equation: $\Lambda_m = \Lambda_m^\circ - A \sqrt{C}$. A plot of $\Lambda_m$ vs $\sqrt{C}$ gives a straight line with $y$-intercept $\Lambda_m^\circ$.<br><br>
+                • <strong>For Weak Electrolytes:</strong> Weak electrolytes dissociate partially at higher concentrations. Dilution significantly increases the degree of dissociation ($\alpha$). Near infinite dilution, $\alpha \rightarrow 1$, causing a steep, exponential rise in $\Lambda_m$. Hence, $\Lambda_m^\circ$ cannot be obtained by direct extrapolation and must be determined using <strong>Kohlrausch's Law</strong>.
+            </div>
+
+            <div class="question">Q2: Distinguish between Primary and Secondary Batteries with examples.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Primary Battery</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Secondary Battery</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Rechargeability</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Non-rechargeable. Reaction occurs only once.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Rechargeable by passing current in opposite direction.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Lifespan</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Becomes dead over time after reactants are consumed.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Can undergo several charge-discharge cycles.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Examples</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Leclanché Dry Cell, Mercury Cell (used in hearing aids).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Lead Storage Battery (automobiles), Nickel-Cadmium Cell.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Calculate the standard Gibbs energy ($\Delta G^\circ$) and equilibrium constant ($K_c$) for the cell reaction: 2 Fe³⁺(aq) + 2 I⁻(aq) → 2 Fe²⁺(aq) + I₂(s) (Given: E°_cell = 0.236 V at 298 K).</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • $E^\circ_{\text{cell}} = 0.236\text{ V}$<br>
+                • Reaction transfers $n = 2$ moles of electrons ($2\text{Fe}^{3+} + 2e^- \rightarrow 2\text{Fe}^{2+}$)<br>
+                • Faraday constant $F = 96487\text{ C mol}^{-1}$<br><br>
+                <strong>Step 1: Calculate Standard Gibbs Free Energy ($\Delta G^\circ$)</strong><br>
+                <em>$\Delta G^\circ = -n F E^\circ_{\text{cell}}$</em><br>
+                <em>$\Delta G^\circ = -2 \times 96487 \times 0.236\text{ J mol}^{-1}$</em><br>
+                <em>$\Delta G^\circ = -45541.86\text{ J mol}^{-1} \approx -45.54\text{ kJ mol}^{-1}$</em><br><br>
+                <strong>Step 2: Calculate Equilibrium Constant ($K_c$)</strong><br>
+                <em>$\log K_c = \frac{n \cdot E^\circ_{\text{cell}}}{0.0591} = \frac{2 \times 0.236}{0.0591} = 7.986$</em><br>
+                <em>$K_c = 10^{7.986} \approx 9.68 \times 10^7$</em><br><br>
+                • $\Delta G^\circ = \mathbf{-45.54\text{ kJ mol}^{-1}}$<br>
+                • $K_c = \mathbf{9.68 \times 10^7}$
+            </div>
+
+            <div class="question">Q2: The molar conductivity of 0.025 mol L⁻¹ methanoic acid (HCOOH) is 46.1 S cm² mol⁻¹. Calculate its degree of dissociation (α) and dissociation constant (K_a). Given: λ°(H⁺) = 349.6 S cm² mol⁻¹ and λ°(HCOO⁻) = 54.6 S cm² mol⁻¹.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Concentration $C = 0.025\text{ mol L}^{-1}$<br>
+                • Molar conductivity $\Lambda_m = 46.1\text{ S cm}^2 \text{mol}^{-1}$<br>
+                • $\lambda^\circ(\text{H}^+) = 349.6\text{ S cm}^2 \text{mol}^{-1}$<br>
+                • $\lambda^\circ(\text{HCOO}^-) = 54.6\text{ S cm}^2 \text{mol}^{-1}$<br><br>
+                <strong>Step 1: Calculate $\Lambda_m^\circ$ using Kohlrausch's Law</strong><br>
+                <em>$\Lambda_m^\circ = \lambda^\circ(\text{H}^+) + \lambda^\circ(\text{HCOO}^-)$</em><br>
+                <em>$\Lambda_m^\circ = 349.6 + 54.6 = 404.2\text{ S cm}^2 \text{mol}^{-1}$</em><br><br>
+                <strong>Step 2: Calculate Degree of Dissociation ($\alpha$)</strong><br>
+                <em>$\alpha = \frac{\Lambda_m}{\Lambda_m^\circ} = \frac{46.1}{404.2} \approx 0.114$ (or 11.4%)</em><br><br>
+                <strong>Step 3: Calculate Dissociation Constant ($K_a$)</strong><br>
+                <em>$K_a = \frac{C \alpha^2}{1 - \alpha} = \frac{0.025 \times (0.114)^2}{1 - 0.114}$</em><br>
+                <em>$K_a = \frac{0.025 \times 0.0130}{0.886} \approx 3.67 \times 10^{-4}\text{ mol L}^{-1}$</em><br><br>
+                • Degree of dissociation ($\alpha$) = <strong>0.114</strong><br>
+                • Dissociation constant ($K_a$) = <strong>3.67 × 10⁻⁴ mol L⁻¹</strong>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Chemistry</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 chemistry notes1">Ch 1: Solutions</a></li>
+                    <li class="active"><a href="class 12 chemistry notes2">Ch 2: Electrochemistry</a></li>
+                    <li><a href="class 12 chemistry notes3">Ch 3: Chemical Kinetics</a></li>
+                    <li><a href="class 12 chemistry notes4">Ch 4: d- and f- Block Elements</a></li>
+                    <li><a href="class 12 chemistry notes5">Ch 5: Coordination Compounds</a></li>
+                    <li><a href="class 12 chemistry notes6">Ch 6: Haloalkanes and Haloarenes</a></li>
+                    <li><a href="class 12 chemistry notes7">Ch 7: Alcohols, Phenols and Ethers</a></li>
+                    <li><a href="class 12 chemistry notes8">Ch 8: Aldehydes, Ketones & Carboxylic Acids</a></li>
+                    <li><a href="class 12 chemistry notes9">Ch 9: Amines</a></li>
+                    <li><a href="class 12 chemistry notes10">Ch 10: Biomolecules</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

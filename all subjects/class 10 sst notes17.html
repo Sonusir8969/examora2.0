@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 10 Economics Chapter 1 Development</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f8ff;
+        }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="class 10 all subjects notes.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 10 Economics Chapter 1 Development</h1>
+
+            <p>NCERT Solutions for Class 10 Economics Chapter 1 covers What Development Promises, Income and Other Goals, National Development, Comparison of Countries using Per Capita Income, Human Development Index (HDI), and Sustainability of Development.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. What Development Promises - Different People, Different Goals</a></li>
+                    <li><a href="#topic2">2. Income & Other Goals (Non-Material Goals)</a></li>
+                    <li><a href="#topic3">3. How to Compare Different Countries (Per Capita Income vs HDI)</a></li>
+                    <li><a href="#topic4">4. Sustainability of Development</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. What Development Promises - Different People, Different Goals</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Different Goals:</strong> Different people can have different development goals. What may be development for one may not be development for another; it may even be destructive for the other (e.g., Construction of dams for industrialists vs displacement of tribals).</p>
+                    <p>• <strong>Conflicting Goals:</strong> Development goals are often conflicting in nature depending on economic and social standing.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Income & Other Goals (Non-Material Goals)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Income as a Goal:</strong> People seek more income for higher purchasing power and better standard of living.</p>
+                    <p>• <strong>Non-Material Goals:</strong> Besides income, people also seek equal treatment, freedom, security, respect of others, and an unpolluted environment.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. How to Compare Different Countries (Per Capita Income vs HDI)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Per Capita Income (Average Income):</strong> Total income of the country divided by its total population. Used by the World Bank to classify countries into High Income and Low Income countries.</p>
+                    <p>• <strong>Limitations of Average Income:</strong> It hides disparities and gives no information about how income is distributed among people.</p>
+                    <p>• <strong>Human Development Index (HDI):</strong> Published by UNDP, compares countries based on educational levels, health status (Life Expectancy at Birth), and Per Capita Income.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Sustainability of Development</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Sustainable Development:</strong> Development that meets the needs of the present generation without compromising the ability of future generations to meet their own needs.</p>
+                    <p>• <strong>Resource Depletion:</strong> Overuse of renewable resources (like groundwater) and rapid exhaustion of non-renewable resources (like crude oil) pose major threats to sustainable growth.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Why do different people have different notions of development? Give examples.</div>
+            <div class="answer">
+                1. Different people have different life situations, needs, and aspirations.<br>
+                2. <strong>Example 1:</strong> A landless rural laborer seeks more days of work and better wages.<br>
+                3. <strong>Example 2:</strong> An urban unemployed youth seeks a stable job and career growth.
+            </div>
+
+            <div class="question">Q2: What is Per Capita Income? What is its main limitation?</div>
+            <div class="answer">
+                1. <strong>Definition:</strong> Per Capita Income is the average income earned per person in a given country in a year (Total Income ÷ Total Population).<br>
+                2. <strong>Limitation:</strong> It hides income disparities; a country with a few extremely rich people and many poor people can still have a high per capita income.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Development of a country can generally be determined by its: (a) Per capita income (b) Average literacy level (c) Health status of its people (d) All the above.</div>
+            <div class="answer">
+                <strong>Answer:</strong> (d) All the above.
+            </div>
+
+            <div class="question">Q2: Why is the issue of sustainability important for development?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. Present development path relies heavily on excessive extraction of non-renewable resources like coal and crude oil.<br>
+                2. Renewable resources like groundwater are being depleted faster than they can replenish.<br>
+                3. Environmental degradation and pollution do not respect national or state boundaries.<br>
+                4. Sustainable development ensures long-term economic prosperity and protects resources for future generations.
+            </div>
+
+            <div class="question">Q3: Why does UNDP use criteria other than income to measure human development?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. Income is a material aspect and cannot buy all essential life components like freedom, security, clean air, and health.<br>
+                2. Standard of living also depends on social indicators such as life expectancy, infant mortality rate, and literacy rate.<br>
+                3. UNDP considers health, education, and standard of living together to present a comprehensive measure (HDI) of real human well-being.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 10 SST Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 10 sst notes1.html">Ch 1: Rise of Nationalism in Europe</a></li>
+                    <li><a href="class 10 sst notes2.html">Ch 2: Nationalism in India</a></li>
+                    <li><a href="class 10 sst notes3.html">Ch 3: Making of a Global World</a></li>
+                    <li><a href="class 10 sst notes4.html">Ch 4: Age of Industrialisation</a></li>
+                    <li><a href="class 10 sst notes5.html">Ch 5: Print Culture & Modern World</a></li>
+                    <li><a href="class 10 sst notes6.html">Ch 6: Resources and Development</a></li>
+                    <li><a href="class 10 sst notes7.html">Ch 7: Forest & Wildlife Resources</a></li>
+                    <li><a href="class 10 sst notes8.html">Ch 8: Water Resources</a></li>
+                    <li><a href="class 10 sst notes9.html">Ch 9: Agriculture</a></li>
+                    <li><a href="class 10 sst notes10.html">Ch 10: Minerals & Energy Resources</a></li>
+                    <li><a href="class 10 sst notes11.html">Ch 11: Manufacturing Industries</a></li>
+                    <li><a href="class 10 sst notes12.html">Ch 12: Lifelines of National Economy</a></li>
+                    <li><a href="class 10 sst notes13.html">Ch 13: Power Sharing</a></li>
+                    <li><a href="class 10 sst notes14.html">Ch 14: Federalism</a></li>
+                    <li><a href="class 10 sst notes15.html">Ch 15: Gender, Religion & Caste</a></li>
+                    <li><a href="class 10 sst notes16.html">Ch 16: Political Parties</a></li>
+                    <li><a href="class 10 sst notes17.html">Ch 17: Outcomes of Democracy</a></li>
+                    <li class="active"><a href="class 10 sst notes18.html">Ch 18: Development</a></li>
+                    <li><a href="class 10 sst notes19.html">Ch 19: Sectors of Indian Economy</a></li>
+                    <li><a href="class 10 sst notes20.html">Ch 20: Money and Credit</a></li>
+                    <li><a href="class 10 sst notes21.html">Ch 21: Globalisation & Indian Economy</a></li>
+                    <li><a href="class 10 sst notes22.html">Ch 22: Consumer Rights</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

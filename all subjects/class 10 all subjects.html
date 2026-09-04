@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Class 10 JAC Board</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header {
+      background: white;
+      padding: 20px 0;
+      border-bottom: 2px solid #1e4a76;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      color: #1e4a76;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .row {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: white;
+      border-radius: 16px;
+      padding: 15px 0;
+      border: 1px solid #ddd;
+      height: fit-content;
+      position: sticky;
+      top: 20px;
+    }
+
+    .sidebar h3 {
+      padding: 0 18px 12px 18px;
+      border-bottom: 1px solid #eee;
+      color: #1e4a76;
+    }
+
+    .subject-link {
+      display: block;
+      padding: 12px 18px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #1e2a3e;
+      border-left: 3px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .subject-link:hover {
+      background: #eef2ff;
+    }
+
+    .subject-link.active {
+      background: #eef2ff;
+      border-left-color: #1e4a76;
+      color: #1e4a76;
+    }
+
+    .content {
+      flex: 1;
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 18px 22px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.4rem;
+    }
+
+    .chapter-list {
+      padding: 10px 0;
+    }
+
+    .chapter-row {
+      display: flex;
+      align-items: baseline;
+      padding: 10px 22px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .chapter-num {
+      width: 65px;
+      font-weight: 600;
+      color: #555;
+      font-size: 0.85rem;
+    }
+
+    .chapter-link {
+      flex: 1;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .chapter-link:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    .test-badge {
+      font-size: 0.7rem;
+      background: #e6f0ff;
+      padding: 2px 10px;
+      border-radius: 20px;
+      color: #1e4a76;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 40px 0 20px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 20px;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        position: relative;
+      }
+      .subject-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+      }
+      .subject-link {
+        padding: 8px 16px;
+        border-radius: 40px;
+        border-left: none;
+        background: #f1f5f9;
+        display: inline-block;
+      }
+      .subject-link.active {
+        background: #1e4a76;
+        color: white;
+      }
+      .chapter-row {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 10 <span>JAC Board</span></h1>
+    <a href="#" class="back-link" id="backHome">← Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="sidebar">
+      <h3>Subjects</h3>
+      <div class="subject-list">
+        <a href="#" class="subject-link active" data-sub="science">Science</a>
+        <a href="#" class="subject-link" data-sub="maths">Mathematics</a>
+        <a href="#" class="subject-link" data-sub="english">English</a>
+        <a href="#" class="subject-link" data-sub="hindi">Hindi</a>
+        <a href="#" class="subject-link" data-sub="social">Social Science</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content-header">
+        <h2 id="subTitle">Science</h2>
+      </div>
+      <div class="chapter-list" id="chapterList"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html" id="aboutLink">About Us</a>
+        <a href="contact us examora.html" id="contactLink">Contact Us</a>
+        <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+        <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://whatsapp.com/channel/0029VanoIcGEquiN0b5u9x3M">WhatsApp</a>
+        <a href="https://youtube.com/@sonusir8969?si=Rh0UO_wlG07Dcyiw">youTube</a>
+        <a href="https://www.instagram.com/sonu_____study_8969?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const scienceChapters = [
+    { num: "Ch-1", name: "Chemical Reactions and Equations", link: "chapter1.html" },
+    { num: "Ch-2", name: "Acids, Bases and Salts", link: "chapter2.html" },
+    { num: "Ch-3", name: "Metals and Non-Metals", link: "chapter3.html" },
+    { num: "Ch-4", name: "Carbon and its Compounds", link: "chapter4.html" },
+    { num: "Ch-5", name: "Life Processes", link: "chapter5.html" },
+    { num: "Ch-6", name: "Control and Coordination", link: "chapter6.html" },
+    { num: "Ch-7", name: "How do Organisms Reproduce?", link: "chapter7..html" },
+    { num: "Ch-8", name: "Heredity and Evolution", link: "chapter8.html" },
+    { num: "Ch-9", name: "Light - Reflection and Refraction", link: "chapter9.html" },
+    { num: "Ch-10", name: "The Human Eye and Colourful World", link: "chapter10.html" },
+    { num: "Ch-11", name: "Electricity", link: "chapter11.html" },
+    { num: "Ch-12", name: "Magnetic Effects of Current", link: "chapter12.html" },
+    { num: "Ch-13", name: "Our Environment", link: "chapter13.html" }
+  ];
+
+  const mathsChapters = [
+    { num: "Ch-1", name: "Real Numbers", link: "math 1.html" },
+    { num: "Ch-2", name: "Polynomials", link: "math 2.html" },
+    { num: "Ch-3", name: "Pair of Linear Equations", link: "math 3.html" },
+    { num: "Ch-4", name: "Quadratic Equations", link: "math 4.html" },
+    { num: "Ch-5", name: "Arithmetic Progressions", link: "math5.html" },
+    { num: "Ch-6", name: "Triangles", link: "math6.html" },
+    { num: "Ch-7", name: "Coordinate Geometry", link: "math7.html" },
+    { num: "Ch-8", name: "Introduction to Trigonometry", link: "math8.html" },
+    { num: "Ch-9", name: "Applications of Trigonometry", link: "math9.html" },
+    { num: "Ch-10", name: "Circles", link: "math10.html" },
+    { num: "Ch-11", name: "Areas Related to Circles", link: "math11.html" },
+    { num: "Ch-12", name: "Surface Areas and Volumes", link: "math12.html" },
+    { num: "Ch-13", name: "Statistics", link: "math13.html" },
+    { num: "Ch-14", name: "Probability", link: "math15.html" }
+  ];
+
+  const englishChapters = [
+    { num: "Ch-1", name: "A Letter to God", link: "english1.html" },
+    { num: "Ch-2", name: "Nelson Mandela Long Walk", link: "english2.html" },
+    { num: "Ch-3", name: "Two Stories about Flying", link: "english3.html" },
+    { num: "Ch-4", name: "From the Diary of Anne Frank", link: "english4.html" },
+    { num: "Ch-5", name: "The Hundred Dresses I", link: "english5.html" },
+    { num: "Ch-6", name: "The Hundred Dresses II", link: "english6.html" },
+    { num: "Ch-7", name: "Glimpses of India", link: "englsh7.html" },
+    { num: "Ch-8", name: "Mijbil the Otter", link: "english8.html" },
+    { num: "Ch-9", name: "Madam Rides the Bus", link: "english9.html" },
+    { num: "Ch-10", name: "The Sermon at Benares", link: "english10.html" },
+    { num: "Ch-11", name: "The Proposal", link: "english11.html" },
+    { num: "Ch-12", name: "Grammar - Tenses and Modals", link: "english12.html" }
+  ];
+
+ const hindiChapters = [
+  { num: "Path-1", name: "Soordas Ke Pad", link: "surdas ke pad.html" },
+  { num: "Path-2", name: "Ram Lakshman Parshuram Samvad", link: "ram-lakshman or parsuram.html" },
+  { num: "Path-3", name: "Utsah / At Nahin Rahi Hai", link: "utsah at nahi rahi.html" },
+  { num: "Path-4", name: "Yah Danturit Muskan / Fasal", link: "yah danturit muskan.html" },
+  { num: "Path-5", name: "Atmakathya", link: "aatmakathya.html" },
+  { num: "Path-6", name: "Netaji Ka Chashma", link: "netaji ka chasma.html" },
+  { num: "Path-7", name: "Balgobin Bhagat", link: "balgobin bhagat.html" },
+  { num: "Path-8", name: "Lakhnavi Andaaz", link: "lakhnavi andaaz.html" },
+  { num: "Path-9", name: "Ek Kahani Yah Bhi", link: "ek kahani ya v.html" },
+  { num: "Path-10", name: "Naubatkhane Mein Ibadat", link: "noubat khane ki ibadat.html" },
+  { num: "Path-11", name: "Sanskriti", link: "sanskriti.html" },
+  { num: "Path-12", name: "Mata Ka Anchal", link: "maata ka aanchal.html" },
+  { num: "Path-14", name: "Sana-Sana Haath Jodi", link: "sana sana hath jodi.html" },
+  { num: "Path-15", name: "Main Kyon Likhta Hoon", link: "me q likhta hu.html" },
+ 
+];
+  const socialChapters = [
+    { num: "Ch-1", name: "The Rise of Nationalism in Europe", link: "the rise of nationalism.html" },
+    { num: "Ch-2", name: "Nationalism in India", link: "nationalism in india.html" },
+    { num: "Ch-3", name: "Making of a Global World", link: "making of global world.html" },
+    { num: "Ch-4", name: "Resources and Development", link: "resources and deplopment.html" },
+    { num: "Ch-5", name: "Forest and Wildlife", link: "forest and wildlife.html" },
+    { num: "Ch-6", name: "Water Resources", link: "water resoursess.html" },
+    { num: "Ch-7", name: "Agriculture", link: "agriculture.html" },
+    { num: "Ch-8", name: "Minerals and Energy", link: "mineral and energy.html" },
+    { num: "Ch-9", name: "Power Sharing and Federalism", link: "power sharing.html" },
+    { num: "Ch-10", name: "Democracy and Diversity", link: "democracy and diversity.html" },
+    { num: "Ch-11", name: "Political Parties", link: "political parties.html" },
+    { num: "Ch-12", name: "Outcomes of Democracy", link: "outcomes of democracy.html" },
+    { num: "Ch-13", name: "Development (Economics)", link: "deplopment.html" },
+    { num: "Ch-14", name: "Sectors of Indian Economy", link: "sector of indian economy.html" },
+    { num: "Ch-15", name: "Money and Credit", link: "money and credit.html" }
+  ];
+
+  const subjects = {
+    science: { name: "Science", chapters: scienceChapters },
+    maths: { name: "Mathematics", chapters: mathsChapters },
+    english: { name: "English", chapters: englishChapters },
+    hindi: { name: "Hindi", chapters: hindiChapters },
+    social: { name: "Social Science", chapters: socialChapters }
+  };
+
+  function renderChapters(subjectKey) {
+    const subject = subjects[subjectKey];
+    if (!subject) return;
+    
+    document.getElementById("subTitle").textContent = subject.name;
+    
+    let html = "";
+    subject.chapters.forEach(function(ch) {
+      html += `
+        <div class="chapter-row">
+          <div class="chapter-num">${ch.num}</div>
+          <a href="${ch.link}" class="chapter-link">${ch.name}</a>
+          <div class="test-badge">test</div>
+        </div>
+      `;
+    });
+    
+    document.getElementById("chapterList").innerHTML = html;
+  }
+
+  document.querySelectorAll(".subject-link").forEach(function(item) {
+    item.addEventListener("click", function(e) {
+      e.preventDefault();
+      document.querySelectorAll(".subject-link").forEach(function(s) {
+        s.classList.remove("active");
+      });
+      this.classList.add("active");
+      const subject = this.getAttribute("data-sub");
+      renderChapters(subject);
+    });
+  });
+
+  document.getElementById("backHome")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Return to Examora main page.");
+  });
+
+  document.getElementById("aboutLink")?.addEventListener("click", function(e) { 
+    e.preventDefault(); 
+    alert("Examora - JAC Board preparation platform."); 
+  });
+
+  document.getElementById("contactLink")?.addEventListener("click", function(e) { 
+    e.preventDefault(); 
+    alert("Email: support@examora.com"); 
+  });
+
+  document.getElementById("privacyLink")?.addEventListener("click", function(e) { 
+    e.preventDefault(); 
+    alert("Privacy policy: Data is secure."); 
+  });
+
+  document.getElementById("termsLink")?.addEventListener("click", function(e) { 
+    e.preventDefault(); 
+    alert("Terms and conditions apply."); 
+  });
+
+  renderChapters("science");
+</script>
+</body>
+</html>

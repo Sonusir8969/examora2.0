@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Physics Chapter 7 Alternating Current</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Physics Chapter 7 Alternating Current</h1>
+
+            <p>NCERT Solutions for Class 12 Physics Chapter 7 Alternating Current provides detailed topic summaries, essential formulas, phasor analysis, and step-by-step solutions for AC circuits containing pure R, L, and C components, series LCR circuits, resonance, power factor, LC oscillations, and transformers.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. AC Voltage Applied to Resistor, Inductor, and Capacitor</a></li>
+                    <li><a href="#topic2">2. LCR Series Circuit, Resonance & Power Factor</a></li>
+                    <li><a href="#topic3">3. LC Oscillations & Transformers</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. AC Voltage Applied to Resistor, Inductor, and Capacitor</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>AC Current & Voltage:</strong> Alternating voltage <em>V = V₀ sin(ω t)</em>, where <em>V₀</em> is peak voltage and <em>ω = 2π f</em> is angular frequency.</p>
+                    <p>• <strong>RMS Value (Root Mean Square):</strong> <em>V_rms = V₀ / √2 ≈ 0.707 V₀</em> and <em>I_rms = I₀ / √2 ≈ 0.707 I₀</em>.</p>
+                    <p>• <strong>Pure Resistive Circuit:</strong> Current and voltage are in <strong>same phase</strong> (<em>φ = 0°</em>).</p>
+                    <p>• <strong>Pure Inductive Circuit:</strong> Current <strong>lags voltage by 90°</strong> (<em>π/2 rad</em>). Inductive Reactance <em>X_L = ω L = 2π f L</em> (increases linearly with frequency).</p>
+                    <p>• <strong>Pure Capacitive Circuit:</strong> Current <strong>leads voltage by 90°</strong> (<em>π/2 rad</em>). Capacitive Reactance <em>X_C = 1 / (ω C) = 1 / (2π f C)</em> (decreases with frequency; blocks DC where <em>f = 0</em>).</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. LCR Series Circuit, Resonance & Power Factor</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Impedance (Z):</strong> Total effective opposition in an AC circuit containing R, L, and C in series: <em>Z = √[R² + (X_L - X_C)²]</em>.</p>
+                    <p>• <strong>Phase Angle (φ):</strong> Angle by which voltage leads current: <em>tan φ = (X_L - X_C) / R</em>.</p>
+                    <p>• <strong>Electrical Resonance:</strong> Occurs when <em>X_L = X_C</em> (i.e., <em>ω L = 1 / (ω C)</em>).</p>
+                    <p>&nbsp;&nbsp;- <em>Resonant Frequency:</em> <em>f₀ = 1 / [2π √(L C)]</em> or <em>ω₀ = 1 / √(L C)</em>.</p>
+                    <p>&nbsp;&nbsp;- At resonance, impedance is minimum (<em>Z = R</em>) and current amplitude is maximum (<em>I_max = V₀ / R</em>).</p>
+                    <p>• <strong>Quality Factor (Q-factor):</strong> Measure of sharpness of resonance: <em>Q = (ω₀ L) / R = 1 / (ω₀ C R) = (1 / R) × √(L / C)</em>.</p>
+                    <p>• <strong>Average Power in AC Circuit:</strong> <em>P_avg = V_rms × I_rms × cos φ</em>, where <em>cos φ = R / Z</em> is the <strong>Power Factor</strong>.</p>
+                    <p>&nbsp;&nbsp;- <em>Pure R circuit:</em> cos φ = 1 (Maximum power dissipated).</p>
+                    <p>&nbsp;&nbsp;- <em>Pure L or C circuit:</em> cos φ = 0 (Zero average power dissipation; current is <strong>Wattless Current</strong>).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. LC Oscillations & Transformers</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>LC Oscillations:</strong> When a charged capacitor C is connected across an inductor L, energy oscillates back and forth between electric field of capacitor and magnetic field of inductor with frequency <em>ω = 1 / √(L C)</em>.</p>
+                    <p>• <strong>Transformer:</strong> Electrical device used to step-up or step-down alternating voltages based on <strong>mutual induction</strong>.</p>
+                    <p>&nbsp;&nbsp;- <em>Transformation Ratio Equation:</em> <em>V_s / V_p = N_s / N_p = I_p / I_s = k</em>.</p>
+                    <p>&nbsp;&nbsp;- <em>Step-up Transformer:</em> N_s > N_p  =>  V_s > V_p and I_s < I_p.</p>
+                    <p>&nbsp;&nbsp;- <em>Step-down Transformer:</em> N_s < N_p  =>  V_s < V_p and I_s > I_p.</p>
+                    <p>• <strong>Energy Losses in Transformers:</strong> Flux leakage, Resistance of windings (Joule heat loss), Eddy currents (minimized by laminated core), Hysteresis loss, and Magnetostriction (humming noise).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: What is wattless current? Under what condition does it flow in an AC circuit?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Definition:</strong> The component of alternating current that consumes zero average electrical power over a full cycle is called <strong>wattless current</strong>.<br>
+                • <strong>Condition:</strong> It flows in a purely inductive or purely capacitive AC circuit where the phase difference between current and voltage is <em>φ = 90° (π/2 rad)</em>.<br>
+                • <strong>Proof:</strong> Average power is given by <em>P_avg = V_rms × I_rms × cos φ</em>. Since <em>cos(90°) = 0</em>, the power dissipated is <em>P_avg = 0</em>, making the current purely wattless.
+            </div>
+
+            <div class="question">Q2: Distinguish between Step-Up and Step-Down Transformers.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Step-Up Transformer</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Step-Down Transformer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Output Voltage (V_s)</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Increases voltage (V_s > V_p).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Decreases voltage (V_s < V_p).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Number of Turns</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">N_s > N_p (Secondary has more turns).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">N_s < N_p (Primary has more turns).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Output Current (I_s)</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Decreases current (I_s < I_p).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Increases current (I_s > I_p).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Transformation Ratio (k)</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">k > 1</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">k < 1</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Primary Application</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Power generating stations for long-distance power transmission.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Substations, mobile chargers, welding transformers.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: A 100 Ω resistor is connected to a 220 V, 50 Hz ac supply. (a) What is the rms value of current in the circuit? (b) What is the net power consumed over a full cycle?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Resistance (R) = 100 Ω<br>
+                • RMS Voltage (V_rms) = 220 V<br>
+                • Frequency (f) = 50 Hz<br><br>
+                <strong>Part (a): RMS Value of Current</strong><br>
+                <em>I_rms = V_rms / R = 220 / 100 = 2.2 A</em><br><br>
+                <strong>Part (b): Net Power Consumed</strong><br>
+                For a purely resistive circuit, power factor <em>cos φ = 1</em>.<br>
+                <em>P_avg = V_rms × I_rms = 220 × 2.2 = 484 W</em><br><br>
+                • The rms value of current is <strong>2.2 A</strong>.<br>
+                • The net power consumed over a full cycle is <strong>484 W</strong>.
+            </div>
+
+            <div class="question">Q2: A 44 mH inductor is connected to a 220 V, 50 Hz ac supply. Determine the rms value of the current in the circuit.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Inductance (L) = 44 mH = 44 × 10⁻³ H<br>
+                • RMS Voltage (V_rms) = 220 V<br>
+                • Frequency (f) = 50 Hz<br><br>
+                <strong>Step 1: Calculate Inductive Reactance (X_L)</strong><br>
+                <em>X_L = 2π f L = 2 × 3.1416 × 50 × (44 × 10⁻³)</em><br>
+                <em>X_L = 314.16 × 0.044 ≈ 13.82 Ω</em><br><br>
+                <strong>Step 2: Calculate RMS Current (I_rms)</strong><br>
+                <em>I_rms = V_rms / X_L = 220 / 13.82 ≈ 15.92 A</em><br><br>
+                The rms value of the current in the circuit is <strong>15.92 A</strong>.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Physics</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 physics notes1">Ch 1: Electric Charges and Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatic Potential & Capacitance</a></li>
+                    <li><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges and Magnetism</a></li>
+                    <li><a href="class 12 physics notes5">Ch 5: Magnetism and Matter</a></li>
+                    <li><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li class="active"><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics and Optical Instruments</a></li>
+                    <li><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li><a href="class 12 physics notes11">Ch 11: Dual Nature of Radiation & Matter</a></li>
+                    <li><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

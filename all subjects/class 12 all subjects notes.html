@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Class 12 Science Chapter-wise Solutions & Notes | Examora</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .intro-box {
+            background-color: #eef6fc;
+            border-left: 4px solid #11426b;
+            padding: 15px 20px;
+            margin: 15px 0 25px 0;
+            border-radius: 4px;
+        }
+        .subject-unit-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .subject-unit-card h3 {
+            color: #11426b;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
+        }
+        .chapter-btn {
+            display: block;
+            background-color: #f8f9fa;
+            border: 1px solid #d0d7de;
+            border-radius: 5px;
+            padding: 10px 12px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .chapter-btn:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            border-color: #3498db;
+            text-decoration: none;
+        }
+        .exam-tips-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #27ae60; 
+            padding: 15px 20px; 
+            border-radius: 5px; 
+            margin: 20px 0; 
+        }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-subtitle {
+            font-size: 14px;
+            color: #1b7a53;
+            margin: 12px 0 6px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 8px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 13px;
+            display: block;
+            padding: 5px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Science (All Subjects & Chapters Index)</h1>
+
+            <div class="intro-box">
+                <p><strong>Welcome to Class 12 Science Master Portal!</strong></p>
+                <p>Access comprehensive NCERT rationalized syllabus notes, solved textbook exercises, derivations, organic reaction mechanisms, numerical problems, and objective questions for Physics, Chemistry, and Biology.</p>
+            </div>
+
+            <h2>Chapter Directory by Subject</h2>
+
+            <!-- Physics Unit -->
+            <div class="subject-unit-card">
+                <h3>Class 12 Physics (NCERT)</h3>
+                <div class="chapter-grid">
+                    <a href="class 12 physics notes1" class="chapter-btn">Ch 1: Electric Charges and Fields</a>
+                    <a href="class 12 physics notes2" class="chapter-btn">Ch 2: Electrostatic Potential & Capacitance</a>
+                    <a href="class 12 physics notes3" class="chapter-btn">Ch 3: Current Electricity</a>
+                    <a href="class 12 physics notes4" class="chapter-btn">Ch 4: Moving Charges and Magnetism</a>
+                    <a href="class 12 physics notes5" class="chapter-btn">Ch 5: Magnetism and Matter</a>
+                    <a href="class 12 physics notes6" class="chapter-btn">Ch 6: Electromagnetic Induction</a>
+                    <a href="class 12 physics notes7" class="chapter-btn">Ch 7: Alternating Current</a>
+                    <a href="class 12 physics notes8" class="chapter-btn">Ch 8: Electromagnetic Waves</a>
+                    <a href="class 12 physics notes9" class="chapter-btn">Ch 9: Ray Optics & Optical Instruments</a>
+                    <a href="class 12 physics notes10" class="chapter-btn">Ch 10: Wave Optics</a>
+                    <a href="class 12 physics notes11" class="chapter-btn">Ch 11: Dual Nature of Radiation & Matter</a>
+                    <a href="class 12 physics notes12" class="chapter-btn">Ch 12: Atoms</a>
+                    <a href="class 12 physics notes13" class="chapter-btn">Ch 13: Nuclei</a>
+                    <a href="class 12 physics notes14" class="chapter-btn">Ch 14: Semiconductor Electronics</a>
+                </div>
+            </div>
+
+            <!-- Chemistry Unit -->
+            <div class="subject-unit-card">
+                <h3>Class 12 Chemistry (NCERT)</h3>
+                <div class="chapter-grid">
+                    <a href="class 12 chemistry notes1" class="chapter-btn">Ch 1: Solutions</a>
+                    <a href="class 12 chemistry notes2" class="chapter-btn">Ch 2: Electrochemistry</a>
+                    <a href="class 12 chemistry notes3" class="chapter-btn">Ch 3: Chemical Kinetics</a>
+                    <a href="class 12 chemistry notes4" class="chapter-btn">Ch 4: The d- and f-Block Elements</a>
+                    <a href="class 12 chemistry notes5" class="chapter-btn">Ch 5: Coordination Compounds</a>
+                    <a href="class 12 chemistry notes6" class="chapter-btn">Ch 6: Haloalkanes and Haloarenes</a>
+                    <a href="class 12 chemistry notes7" class="chapter-btn">Ch 7: Alcohols, Phenols and Ethers</a>
+                    <a href="class 12 chemistry notes8" class="chapter-btn">Ch 8: Aldehydes, Ketones & Carboxylic Acids</a>
+                    <a href="class 12 chemistry notes9" class="chapter-btn">Ch 9: Amines</a>
+                    <a href="class 12 chemistry notes10" class="chapter-btn">Ch 10: Biomolecules</a>
+                </div>
+            </div>
+
+            <!-- Biology Unit -->
+            <div class="subject-unit-card">
+                <h3>Class 12 Biology (NCERT)</h3>
+                <div class="chapter-grid">
+                    <a href="class 12 biology notes1" class="chapter-btn">Ch 1: Sexual Reproduction in Flowering Plants</a>
+                    <a href="class 12 biology notes2" class="chapter-btn">Ch 2: Human Reproduction</a>
+                    <a href="class 12 biology notes3" class="chapter-btn">Ch 3: Reproductive Health</a>
+                    <a href="class 12 biology notes4" class="chapter-btn">Ch 4: Principles of Inheritance & Variation</a>
+                    <a href="class 12 biology notes5" class="chapter-btn">Ch 5: Molecular Basis of Inheritance</a>
+                    <a href="class 12 biology notes6" class="chapter-btn">Ch 6: Evolution</a>
+                    <a href="class 12 biology notes7" class="chapter-btn">Ch 7: Human Health and Disease</a>
+                    <a href="class 12 biology notes8" class="chapter-btn">Ch 8: Microbes in Human Welfare</a>
+                    <a href="class 12 biology notes9" class="chapter-btn">Ch 9: Biotechnology: Principles & Processes</a>
+                    <a href="class 12 biology notes10" class="chapter-btn">Ch 10: Biotechnology and its Applications</a>
+                    <a href="class 12 biology notes11" class="chapter-btn">Ch 11: Organisms and Populations</a>
+                    <a href="class 12 biology notes12" class="chapter-btn">Ch 12: Ecosystem</a>
+                    <a href="class 12 biology notes13" class="chapter-btn">Ch 13: Biodiversity and Conservation</a>
+                </div>
+            </div>
+
+            <h2>Class 12 Board & Competitive Exam Strategy</h2>
+            <div class="exam-tips-box">
+                <p><strong>Key Tips for Board Examinations & Competitive Entrance Tests (JEE / NEET):</strong></p>
+                <p>• <strong>Physics:</strong> Master standard derivations (Gauss Law, Lens Maker Formula, Wavefronts), circuit numericals (Kirchhoff's Laws, AC Circuits), and semiconductor p-n junction characteristics.</p>
+                <p>• <strong>Chemistry:</strong> Practice named organic reactions (Aldol, Cannizzaro, Reimer-Tiemann), coordination compound IUPAC/CFT concepts, and physical chemistry formula-based numericals (Nernst equation, rate laws).</p>
+                <p>• <strong>Biology:</strong> Focus on NCERT diagrams (embryo sac, human reproductive system, DNA replication fork), genetic pedigree analysis, lac operon mechanism, and recombinant DNA technology steps.</p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Quick Links</h3>
+                
+                <div class="sidebar-subtitle">Physics</div>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 physics notes1">Ch 1: Electric Charges & Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatics & Capacitance</a></li>
+                    <li><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges & Magnetism</a></li>
+                    <li><a href="class 12 physics notes5">Ch 5: Magnetism & Matter</a></li>
+                    <li><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics</a></li>
+                    <li><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li><a href="class 12 physics notes11">Ch 11: Dual Nature of Matter</a></li>
+                    <li><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+
+                <div class="sidebar-subtitle">Chemistry</div>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 chemistry notes1">Ch 1: Solutions</a></li>
+                    <li><a href="class 12 chemistry notes2">Ch 2: Electrochemistry</a></li>
+                    <li><a href="class 12 chemistry notes3">Ch 3: Chemical Kinetics</a></li>
+                    <li><a href="class 12 chemistry notes4">Ch 4: d- and f-Block Elements</a></li>
+                    <li><a href="class 12 chemistry notes5">Ch 5: Coordination Compounds</a></li>
+                    <li><a href="class 12 chemistry notes6">Ch 6: Haloalkanes & Haloarenes</a></li>
+                    <li><a href="class 12 chemistry notes7">Ch 7: Alcohols, Phenols & Ethers</a></li>
+                    <li><a href="class 12 chemistry notes8">Ch 8: Aldehydes & Ketones</a></li>
+                    <li><a href="class 12 chemistry notes9">Ch 9: Amines</a></li>
+                    <li><a href="class 12 chemistry notes10">Ch 10: Biomolecules</a></li>
+                </ul>
+
+                <div class="sidebar-subtitle">Biology</div>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 biology notes1">Ch 1: Flowering Plant Reproduction</a></li>
+                    <li><a href="class 12 biology notes2">Ch 2: Human Reproduction</a></li>
+                    <li><a href="class 12 biology notes3">Ch 3: Reproductive Health</a></li>
+                    <li><a href="class 12 biology notes4">Ch 4: Principles of Inheritance</a></li>
+                    <li><a href="class 12 biology notes5">Ch 5: Molecular Basis of Inheritance</a></li>
+                    <li><a href="class 12 biology notes6">Ch 6: Evolution</a></li>
+                    <li><a href="class 12 biology notes7">Ch 7: Human Health & Disease</a></li>
+                    <li><a href="class 12 biology notes8">Ch 8: Microbes in Human Welfare</a></li>
+                    <li><a href="class 12 biology notes9">Ch 9: Biotech Principles</a></li>
+                    <li><a href="class 12 biology notes10">Ch 10: Biotech Applications</a></li>
+                    <li><a href="class 12 biology notes11">Ch 11: Organisms & Populations</a></li>
+                    <li><a href="class 12 biology notes12">Ch 12: Ecosystem</a></li>
+                    <li><a href="class 12 biology notes13">Ch 13: Biodiversity & Conservation</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

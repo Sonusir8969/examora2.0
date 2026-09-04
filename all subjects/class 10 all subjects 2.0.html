@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Class 10 NCERT</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header {
+      background: white;
+      padding: 20px 0;
+      border-bottom: 2px solid #1e4a76;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      color: #1e4a76;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .row {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: white;
+      border-radius: 16px;
+      padding: 15px 0;
+      border: 1px solid #ddd;
+      height: fit-content;
+      position: sticky;
+      top: 20px;
+    }
+
+    .sidebar h3 {
+      padding: 0 18px 12px 18px;
+      border-bottom: 1px solid #eee;
+      color: #1e4a76;
+    }
+
+    .subject-item {
+      padding: 12px 18px;
+      font-weight: 500;
+      color: #1e2a3e;
+      border-left: 3px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .subject-item:hover {
+      background: #eef2ff;
+    }
+
+    .subject-item.active {
+      background: #eef2ff;
+      border-left-color: #1e4a76;
+      color: #1e4a76;
+    }
+
+    .content {
+      flex: 1;
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 18px 22px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.4rem;
+    }
+
+    .chapter-list {
+      padding: 10px 0;
+    }
+
+    .chapter-row {
+      display: flex;
+      align-items: center;
+      padding: 10px 22px;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+    }
+
+    .chapter-row:hover {
+      background: #f8fafc;
+    }
+
+    .chapter-num {
+      width: 65px;
+      font-weight: 600;
+      color: #555;
+      font-size: 0.85rem;
+    }
+
+    .chapter-link {
+      flex: 1;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 6px 0;
+    }
+
+    .chapter-link:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    .test-badge {
+      font-size: 0.7rem;
+      background: #e6f0ff;
+      padding: 4px 14px;
+      border-radius: 20px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .test-badge:hover {
+      background: #1e4a76;
+      color: white;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 40px 0 20px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 20px;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        position: relative;
+      }
+      .subject-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+      }
+      .subject-item {
+        padding: 8px 16px;
+        border-radius: 40px;
+        border-left: none;
+        background: #f1f5f9;
+      }
+      .subject-item.active {
+        background: #1e4a76;
+        color: white;
+      }
+      .chapter-row {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chapter-num {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 10 <span>JAC Board</span></h1>
+    <a href="examora.html" class="back-link" id="backHome">← Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="sidebar">
+      <h3>Subjects</h3>
+      <div class="subject-list">
+        <div class="subject-item active" data-sub="science">Science</div>
+        <div class="subject-item" data-sub="maths">Mathematics</div>
+        <div class="subject-item" data-sub="english">English</div>
+        <div class="subject-item" data-sub="hindi">Hindi</div>
+        <div class="subject-item" data-sub="social">Social Science</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content-header">
+        <h2 id="subTitle">Science</h2>
+      </div>
+      <div class="chapter-list" id="chapterList">
+        <!-- chapters will load here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html" id="aboutLink">About Us</a>
+        <a href="contact us examora.html" id="contactLink">Contact Us</a>
+        <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+        <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://whatsapp.com/channel/0029VanoIcGEquiN0b5u9x3M" target="_blank">WhatsApp</a>
+        <a href="https://www.youtube.com/@Sonusir8969" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/sonu_____study_8969?igsh=a2NtODRsd2U4N29q" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Class 10 JAC Board Syllabus Data
+  const chaptersData = {
+    science: {
+      name: "Science",
+      list: [
+        { num: "Ch-1", name: "Chemical Reactions and Equations", link: "class 10 science mcq1.html" },
+        { num: "Ch-2", name: "Acids, Bases and Salts", link: "class 10 science mcq2.html" },
+        { num: "Ch-3", name: "Metals and Non-Metals", link: "class 10 science mcq3.html" },
+        { num: "Ch-4", name: "Carbon and its Compounds", link: "class 10 science mcq4.html" },
+        { num: "Ch-5", name: "Life Processes", link: "class 10 science mcq5.html" },
+        { num: "Ch-6", name: "Control and Coordination", link: "class 10 science mcq6.html" },
+        { num: "Ch-7", name: "How do Organisms Reproduce?", link: "class 10 science mcq7.html" },
+        { num: "Ch-8", name: "Heredity and Evolution", link: "class 10 science mcq8.html" },
+        { num: "Ch-9", name: "Light - Reflection and Refraction", link: "class 10 science mcq9.html" },
+        { num: "Ch-10", name: "The Human Eye and Colourful World", link: "class 10 science mcq10.html" },
+        { num: "Ch-11", name: "Electricity", link: "class 10 science mcq11.html" },
+        { num: "Ch-12", name: "Magnetic Effects of Current", link: "class 10 science mcq12.html" },
+        { num: "Ch-13", name: "Our Environment", link: "class 10 science mcq13.html" }
+      ]
+    },
+    maths: {
+      name: "Mathematics",
+      list: [
+        { num: "Ch-1", name: "Real Numbers", link: "class 10 math mcq1.html" },
+        { num: "Ch-2", name: "Polynomials", link: "class 10 math mcq2.html" },
+        { num: "Ch-3", name: "Pair of Linear Equations", link: "class 10 math mcq3.html" },
+        { num: "Ch-4", name: "Quadratic Equations", link: "class 10 math mcq4.html" },
+        { num: "Ch-5", name: "Arithmetic Progressions", link: "class 10 math mcq5.html" },
+        { num: "Ch-6", name: "Triangles", link: "class 10 math mcq6.html" },
+        { num: "Ch-7", name: "Coordinate Geometry", link: "class 10 math mcq7.html" },
+        { num: "Ch-8", name: "Introduction to Trigonometry", link: "class 10 math mcq8.html" },
+        { num: "Ch-9", name: "Applications of Trigonometry", link: "class 10 math mcq9.html" },
+        { num: "Ch-10", name: "Circles", link: "class 10 math mcq10.html" },
+        { num: "Ch-11", name: "Areas Related to Circles", link: "class 10 math mcq11.html" },
+        { num: "Ch-12", name: "Surface Areas and Volumes", link: "class 10 math mcq12.html" },
+        { num: "Ch-13", name: "Statistics", link: "class 10 math mcq13.html" },
+        { num: "Ch-14", name: "Probability", link: "class 10 math mcq14.html" }
+      ]
+    },
+    english: {
+      name: "English",
+      list: [
+        { num: "Ch-1", name: "A Letter to God", link: "class 10 english mcq1.html" },
+        { num: "Ch-2", name: "Nelson Mandela Long Walk", link: "class 10 english mcq2.html" },
+        { num: "Ch-3", name: "Two Stories about Flying", link: "class 10 english mcq3.html" },
+        { num: "Ch-4", name: "From the Diary of Anne Frank", link: "class 10 english mcq4.html" },
+        { num: "Ch-5", name: "The Hundred Dresses I", link: "class 10 english mcq5.html" },
+        { num: "Ch-6", name: "The Hundred Dresses II", link: "class 10 english mcq6.html" },
+        { num: "Ch-7", name: "Glimpses of India", link: "class 10 english mcq7.html" },
+        { num: "Ch-8", name: "Mijbil the Otter", link: "class 10 english mcq8.html" },
+        { num: "Ch-9", name: "Madam Rides the Bus", link: "class 10 english mcq9.html" },
+        { num: "Ch-10", name: "The Sermon at Benares", link: "class 10 english mcq10.html" },
+        { num: "Ch-11", name: "The Proposal", link: "class 10 english mcq11.html" },
+        { num: "Ch-12", name: "Grammar - Tenses and Modals", link: "class 10 english mcq12.html" }
+      ]
+    },
+    hindi: {
+      name: "Hindi",
+      list: [
+        { num: "Path-1", name: "Soordas Ke Pad", link: "class 10 hindi mcq1.html" },
+        { num: "Path-2", name: "Ram Lakshman Parshuram Samvad", link: "class 10 hindi mcq2.html" },
+        { num: "Path-3", name: "Utsah / At Nahin Rahi Hai", link: "class 10 hindi mcq3.html" },
+        { num: "Path-4", name: "Yah Danturit Muskan / Fasal", link: "class 10 hindi mcq4.html" },
+        { num: "Path-5", name: "Sangatkar", link: "class 10 hindi mcq5.html" },
+        { num: "Path-6", name: "Netaji Ka Chashma", link: "class 10 hindi mcq6.html" },
+        { num: "Path-7", name: "Balgobin Bhagat", link: "class 10 hindi mcq7.html" },
+        { num: "Path-8", name: "Lakhnavi Andaaz", link: "class 10 hindi mcq15..html" },
+        { num: "Path-9", name: "Ek Kahani Yah Bhi", link: "class 10 hindi mcq9.html" },
+        { num: "Path-10", name: "Naubatkhane Mein Ibadat", link: "class 10 hindi mcq9.html" },
+        { num: "Path-11", name: "Sanskriti", link: "class 10 hindi mcq10.html" },
+        { num: "Path-12", name: "Mata Ka Anchal", link: "class 10 hindi mcq11.html" },
+        { num: "Path-13", name: "Sana-Sana Haath Jodi", link: "class 10 hindi mcq12.html" },
+        { num: "Path-14", name: "Main Kyon Likhta Hoon", link: "class 10 hindi mcq13.html" }
+      ]
+    },
+    social: {
+      name: "Social Science",
+      list: [
+        { num: "Ch-1", name: "The Rise of Nationalism in Europe", link: "class 10 social mcq1.html" },
+        { num: "Ch-2", name: "Nationalism in India", link: "class 10 social mcq2.html" },
+        { num: "Ch-3", name: "Making of a Global World", link: "class 10 social mcq3.html" },
+        { num: "Ch-4", name: "Resources and Development", link: "class 10 social mcq4.html" },
+        { num: "Ch-5", name: "Forest and Wildlife", link: "class 10 social mcq5.html" },
+        { num: "Ch-6", name: "Water Resources", link: "class 10 social mcq6.html" },
+        { num: "Ch-7", name: "Agriculture", link: "class 10 social mcq7.html" },
+        { num: "Ch-8", name: "Minerals and Energy", link: "class 10 social mcq8.html" },
+        { num: "Ch-9", name: "Power Sharing and Federalism", link: "class 10 social mcq10.html" },
+        { num: "Ch-10", name: "Democracy and Diversity", link: "class 10 social mcq11.html" },
+        { num: "Ch-11", name: "Political Parties", link: "class 10 social mcq14.html" },
+        { num: "Ch-12", name: "Outcomes of Democracy", link: "class 10 social mcq12.html" },
+        { num: "Ch-13", name: "Development (Economics)", link: "class 10 social mcq13.html" },
+        { num: "Ch-14", name: "Sectors of Indian Economy", link: "class 10 social mcq15.html" },
+        { num: "Ch-15", name: "Money and Credit", link: "class 10 social mcq18.html" }
+      ]
+    }
+  };
+
+  // Function to render chapters cleanly
+  function renderChapters(subject) {
+    const data = chaptersData[subject];
+    if (!data) return;
+    document.getElementById("subTitle").textContent = data.name;
+
+    let html = "";
+    for (let i = 0; i < data.list.length; i++) {
+      const ch = data.list[i];
+      html += `
+        <div class="chapter-row">
+          <div class="chapter-num">${ch.num}</div>
+          <a href="${ch.link}" class="chapter-link" target="_blank">${ch.name}</a>
+          <a href="${ch.link}" class="test-badge" target="_blank">MCQ</a>
+        </div>
+      `;
+    }
+    document.getElementById("chapterList").innerHTML = html;
+  }
+
+  // Handle subject tab clicks
+  document.querySelectorAll(".subject-item").forEach(function(item) {
+    item.addEventListener("click", function() {
+      document.querySelectorAll(".subject-item").forEach(function(s) {
+        s.classList.remove("active");
+      });
+      this.classList.add("active");
+      const subject = this.getAttribute("data-sub");
+      renderChapters(subject);
+    });
+  });
+
+  // Load Science chapters by default
+  renderChapters("science");
+</script>
+</body>
+</html>

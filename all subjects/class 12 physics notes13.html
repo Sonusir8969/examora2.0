@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Physics Chapter 13 Nuclei</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Physics Chapter 13 Nuclei</h1>
+
+            <p>NCERT Solutions for Class 12 Physics Chapter 13 Nuclei provides complete explanations of nuclear composition, nuclear radius and density, mass defect, binding energy per nucleon curve, nuclear forces, radioactivity, nuclear fission, and nuclear fusion.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Atomic Mass Unit, Nuclear Composition & Size of Nucleus</a></li>
+                    <li><a href="#topic2">2. Mass Defect, Binding Energy & Nuclear Forces</a></li>
+                    <li><a href="#topic3">3. Radioactivity, Nuclear Fission & Fusion</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Atomic Mass Unit, Nuclear Composition & Size of Nucleus</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Atomic Mass Unit (u):</strong> Defined as 1/12th of the mass of a neutral Carbon-12 atom (<em>1 u = 1.660539 × 10⁻²⁷ kg ≈ 931.5 MeV/c²</em>).</p>
+                    <p>• <strong>Composition of Nucleus:</strong> Contains protons ($Z$) and neutrons ($N$). Total mass number <em>A = Z + N</em>.</p>
+                    <p>&nbsp;&nbsp;- <em>Isotopes:</em> Same atomic number $Z$, different mass number $A$ (e.g., ¹₁H, ²₁H, ³₁H).</p>
+                    <p>&nbsp;&nbsp;- <em>Isobars:</em> Same mass number $A$, different atomic number $Z$ (e.g., ³₁H and ³₂He).</p>
+                    <p>&nbsp;&nbsp;- <em>Isotones:</em> Same number of neutrons $N = A - Z$.</p>
+                    <p>• <strong>Nuclear Size:</strong> Empirical formula for nuclear radius: <em>R = R₀ A¹/³</em>, where <em>R₀ ≈ 1.2 × 10⁻¹⁵ m = 1.2 fm</em>.</p>
+                    <p>• <strong>Nuclear Density (ρ):</strong> Mass per unit volume of nucleus is nearly <strong>constant and independent of mass number A</strong>: <em>ρ ≈ 2.3 × 10¹⁷ kg/m³</em>.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Mass Defect, Binding Energy & Nuclear Forces</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Mass Defect (Δm):</strong> Difference between the total mass of individual constituent nucleons and the actual rest mass of the bound nucleus:</p>
+                    <p>&nbsp;&nbsp;<em>Δm = [Z m_p + (A - Z) m_n] - M_nucleus</em></p>
+                    <p>• <strong>Nuclear Binding Energy (E_b):</strong> Energy released when nucleons come together to form a nucleus, or energy required to completely separate nucleons: <em>E_b = Δm × c² = Δm (in u) × 931.5 MeV</em>.</p>
+                    <p>• <strong>Binding Energy per Nucleon (E_bn):</strong> Average binding energy per constituent particle: <em>E_bn = E_b / A</em>.</p>
+                    <p>&nbsp;&nbsp;- Peak stability occurs around <em>A = 56 (Fe-56, E_bn ≈ 8.75 MeV/nucleon)</em>.</p>
+                    <p>&nbsp;&nbsp;- Average value is around <em>8.0 MeV/nucleon</em> for $30 < A < 170$.</p>
+                    <p>• <strong>Nuclear Force Properties:</strong> Strongest fundamental force in nature, extremely short-ranged (~ 1-2 fm), charge-independent, and exhibits saturation effects.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Radioactivity, Nuclear Fission & Fusion</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Nuclear Fission:</strong> Process in which a heavy nucleus ($A > 230$) splits into two lighter medium-mass fragments upon absorbing a neutron, releasing a large amount of energy (~200 MeV per fission event).</p>
+                    <p>&nbsp;&nbsp;<em>Example: ²³⁵₉₂U + ¹₀n → ¹⁴¹₅₆Ba + ⁹²₃₆Kr + 3 ¹₀n + Q</em></p>
+                    <p>• <strong>Controlled Chain Reaction:</strong> Used in nuclear reactors with moderators (heavy water/graphite) and control rods (cadmium/boron).</p>
+                    <p>• <strong>Nuclear Fusion:</strong> Process in which two or more lighter nuclei ($A \le 10$) combine under extreme temperature ($10⁷$ K) and pressure to form a heavier, more stable nucleus with energy release.</p>
+                    <p>&nbsp;&nbsp;<em>Example: ²₁H + ³₁H → ⁴₂He + ¹₀n + 17.6 MeV</em> (Primary source of stellar energy in the Sun).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Draw the plot of Binding Energy per Nucleon (E_bn) vs Mass Number (A). State the key features and inferences drawn from this curve.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Features of the E_bn vs A Curve:</strong><br>
+                1. <strong>Intermediate Nuclei Stability:</strong> $E_{bn}$ is almost constant (around $8.0\text{ MeV/nucleon}$) for nuclei with mass numbers in the range $30 < A < 170$. It reaches a maximum peak of $8.75\text{ MeV/nucleon}$ at $A = 56$ (Fe-56).<br>
+                2. <strong>Lighter Nuclei (A < 30):</strong> $E_{bn}$ is lower for light elements, but shows distinct local peaks at $A = 4, 8, 12, 16$ (such as ⁴₂He, ⁸₄Be, ¹²₆C, ¹⁶₈O), indicating special stability of even-even nuclei.<br>
+                3. <strong>Heavier Nuclei (A > 170):</strong> $E_{bn}$ gradually decreases as mass number increases, dropping to about $7.6\text{ MeV/nucleon}$ for ²³⁸U.<br><br>
+                • <strong>Key Inferences:</strong><br>
+                • <strong>Short-range & Saturation of Nuclear Forces:</strong> The constancy of $E_{bn}$ over a wide range implies a nucleon interacts only with its immediate neighbors.<br>
+                • <strong>Energy Release in Fission & Fusion:</strong> Splitting a heavy nucleus ($A > 200$) or fusing light nuclei ($A < 10$) results in products with higher $E_{bn}$ (more tightly bound state), liberating massive quantities of nuclear energy.
+            </div>
+
+            <div class="question">Q2: Distinguish between Nuclear Fission and Nuclear Fusion.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Nuclear Fission</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Nuclear Fusion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Process</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Splitting of a heavy unstable nucleus into lighter fragments.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Combining light nuclei to form a heavier stable nucleus.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Temperature Required</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Can occur at normal room temperatures upon neutron absorption.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Requires ultra-high temperatures (~10⁷ K) to overcome Coulomb repulsion.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Energy per Unit Mass</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">High total energy per reaction (~200 MeV), lower energy yield per unit mass.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Significantly higher energy yield per unit mass than fission.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Radioactive Waste</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Produces highly hazardous radioactive nuclear waste products.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Produces virtually non-radioactive or environmentally harmless byproducts (e.g. Helium).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Obtain the binding energy of a Nitrogen nucleus (¹⁴₇N) in MeV. (Given: Mass of ¹⁴₇N = 14.00307 u, Mass of proton m_p = 1.007825 u, Mass of neutron m_n = 1.008665 u)</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                For Nitrogen nucleus ¹⁴₇N:<br>
+                • Number of protons ($Z$) = 7<br>
+                • Number of neutrons ($N = A - Z$) = 14 - 7 = 7<br><br>
+                <strong>Step 1: Calculate Total Mass of Constituent Nucleons</strong><br>
+                <em>Mass of 7 protons = 7 × 1.007825 u = 7.054775 u</em><br>
+                <em>Mass of 7 neutrons = 7 × 1.008665 u = 7.060655 u</em><br>
+                <em>Total mass = 7.054775 + 7.060655 = 14.115430 u</em><br><br>
+                <strong>Step 2: Calculate Mass Defect (Δm)</strong><br>
+                <em>Δm = Total Mass - Rest Mass of ¹⁴₇N</em><br>
+                <em>Δm = 14.115430 u - 14.003070 u = 0.11236 u</em><br><br>
+                <strong>Step 3: Calculate Binding Energy (E_b)</strong><br>
+                <em>E_b = 0.11236 × 931.5 MeV ≈ 104.66 MeV</em><br><br>
+                • Total Binding Energy = <strong>104.66 MeV</strong><br>
+                • Binding Energy per Nucleon = <em>104.66 / 14 ≈ 7.48 MeV/nucleon</em>
+            </div>
+
+            <div class="question">Q2: Assuming the radius of a nucleus with mass number A = 27 is 3.6 fm, calculate the radius of a nucleus with mass number A = 125.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Formula for nuclear radius: <em>R = R₀ A¹/³</em><br><br>
+                Given:<br>
+                • $A_1 = 27$, $R_1 = 3.6\text{ fm}$<br>
+                • $A_2 = 125$, $R_2 = ?$ <br><br>
+                <strong>Step 1: Ratio of Radii</strong><br>
+                <em>R₂ / R₁ = (A₂ / A₁)¹/³</em><br>
+                <em>R₂ / 3.6 = (125 / 27)¹/³ = 5 / 3</em><br><br>
+                <strong>Step 2: Calculate R₂</strong><br>
+                <em>R₂ = 3.6 × (5 / 3) = 1.2 × 5 = 6.0 fm</em><br><br>
+                The radius of the nucleus with $A = 125$ is <strong>6.0 fm</strong> (or <strong>6.0 × 10⁻¹⁵ m</strong>).
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Physics</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 physics notes1">Ch 1: Electric Charges and Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatic Potential & Capacitance</a></li>
+                    <li><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges and Magnetism</a></li>
+                    <li><a href="class 12 physics notes5">Ch 5: Magnetism and Matter</a></li>
+                    <li><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics and Optical Instruments</a></li>
+                    <li><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li><a href="class 12 physics notes11">Ch 11: Dual Nature of Radiation & Matter</a></li>
+                    <li><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li class="active"><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

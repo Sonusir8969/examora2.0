@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 10 Maths | Chapter 7 - Coordinate Geometry</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header {
+      background: white;
+      padding: 20px 0;
+      border-bottom: 2px solid #1e4a76;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      color: #1e4a76;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 18px 22px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.4rem;
+    }
+
+    .content-header p {
+      color: #4a5b6e;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    .question-section {
+      padding: 24px 22px;
+    }
+
+    .question {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #1e2a3e;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .opt {
+      background: #f8fafc;
+      border: 1px solid #ddd;
+      padding: 12px 18px;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .opt:hover {
+      background: #eef2ff;
+    }
+
+    .opt.selected {
+      background: #dcfce7;
+      border-color: #2f855a;
+    }
+
+    .opt.correct {
+      background: #dcfce7;
+      border-color: #2f855a;
+    }
+
+    .opt.wrong {
+      background: #fee2e2;
+      border-color: #dc2626;
+    }
+
+    .opt.disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    .feedback-box {
+      background: #f1f5f9;
+      padding: 14px 18px;
+      margin: 10px 0 20px;
+      border-left: 4px solid #1e4a76;
+      border-radius: 0 8px 8px 0;
+      display: none;
+    }
+
+    .feedback-box.show {
+      display: block;
+    }
+
+    .feedback-box.correct-ans {
+      border-left-color: #2f855a;
+      background: #dcfce7;
+    }
+
+    .feedback-box.wrong-ans {
+      border-left-color: #dc2626;
+      background: #fee2e2;
+    }
+
+    .feedback-box .exp-label {
+      font-weight: 600;
+      color: #1e4a76;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .quiz-btn {
+      background: #2f855a;
+      color: white;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .quiz-btn:hover {
+      background: #236b48;
+    }
+
+    .quiz-btn.secondary {
+      background: #cbd5e1;
+      color: #333;
+    }
+
+    .quiz-btn.secondary:hover {
+      background: #b0bcca;
+    }
+
+    .quiz-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .result-box {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .result-score {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1e4a76;
+      margin: 15px 0;
+    }
+
+    .result-percent {
+      font-size: 1.2rem;
+      color: #4a5b6e;
+    }
+
+    .result-msg {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+
+    .result-msg.pass {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .result-msg.fail {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .question-counter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      color: #4a5b6e;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 40px 0 20px;
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 6px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 20px;
+      font-size: 0.75rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 14px;
+      }
+      .header h1 {
+        font-size: 1.3rem;
+      }
+      .question-section {
+        padding: 16px 14px;
+      }
+      .question {
+        font-size: 1rem;
+      }
+      .opt {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+      }
+      .nav-buttons {
+        flex-direction: column;
+      }
+      .quiz-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 10 <span>Mathematics</span> | JAC Board</h1>
+    <a href="math all chapters class 10.html" class="back-link">← Back to Maths Chapters</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="content-header">
+      <h2>Chapter 7: Coordinate Geometry</h2>
+      <p>Answer all 10 questions. Each question has explanation for correct answer.</p>
+    </div>
+    <div class="question-section" id="quizContainer">
+      <!-- Questions will load here -->
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html">About Us</a>
+        <a href="contact us examora.html">Contact Us</a>
+        <a href="privacy policies examora.html">Privacy Policy</a>
+        <a href="term and conditions.html">Terms & Conditions</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://whatsapp.com/channel/0029VanoIcGEquiN0b5u9x3M">WhatsApp</a>
+        <a href="www.youtube.com/@Sonusir8969">YouTube</a>
+        <a href="https://www.instagram.com/sonu_____study_8969?igsh=a2NtODRsd2U4N29q">Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const questions = [
+    {
+      question: "What are the coordinates of the origin?",
+      options: ["(0, 0)", "(1, 0)", "(0, 1)", "(1, 1)"],
+      correct: 0,
+      explanation: "The origin has coordinates (0, 0) where the x-axis and y-axis intersect."
+    },
+    {
+      question: "What is the distance between points (2, 3) and (5, 7)?",
+      options: ["3", "4", "5", "6"],
+      correct: 2,
+      explanation: "Distance = √((5-2)² + (7-3)²) = √(9 + 16) = √25 = 5."
+    },
+    {
+      question: "What is the midpoint of points (2, 3) and (4, 7)?",
+      options: ["(3, 5)", "(3, 4)", "(2, 5)", "(4, 3)"],
+      correct: 0,
+      explanation: "Midpoint = ((2+4)/2, (3+7)/2) = (3, 5)."
+    },
+    {
+      question: "What is the distance of point (3, 4) from origin?",
+      options: ["3", "4", "5", "6"],
+      correct: 2,
+      explanation: "Distance from origin = √(3² + 4²) = √(9 + 16) = √25 = 5."
+    },
+    {
+      question: "What is the x-coordinate of a point on y-axis?",
+      options: ["0", "1", "2", "3"],
+      correct: 0,
+      explanation: "Any point on y-axis has x-coordinate 0, like (0, y)."
+    },
+    {
+      question: "What is the y-coordinate of a point on x-axis?",
+      options: ["0", "1", "2", "3"],
+      correct: 0,
+      explanation: "Any point on x-axis has y-coordinate 0, like (x, 0)."
+    },
+    {
+      question: "What is the slope of a line parallel to x-axis?",
+      options: ["0", "1", "-1", "Undefined"],
+      correct: 0,
+      explanation: "A line parallel to x-axis has slope 0 because y-coordinate does not change."
+    },
+    {
+      question: "What is the slope of a line parallel to y-axis?",
+      options: ["0", "1", "-1", "Undefined"],
+      correct: 3,
+      explanation: "A line parallel to y-axis has undefined slope because x-coordinate does not change."
+    },
+    {
+      question: "What is the section formula?",
+      options: ["x = (mx₂ + nx₁)/(m+n)", "x = (mx₁ + nx₂)/(m+n)", "x = (mx₂ - nx₁)/(m+n)", "None"],
+      correct: 1,
+      explanation: "The section formula is x = (m₁x₂ + m₂x₁)/(m₁ + m₂), y = (m₁y₂ + m₂y₁)/(m₁ + m₂)."
+    },
+    {
+      question: "What is the area of triangle with vertices (0,0), (4,0), (0,3)?",
+      options: ["6 square units", "12 square units", "4 square units", "8 square units"],
+      correct: 0,
+      explanation: "Area = 1/2 × base × height = 1/2 × 4 × 3 = 6 square units."
+    }
+  ];
+
+  let currentQuestion = 0;
+  let userAnswers = [];
+  let quizSubmitted = false;
+
+  function renderQuestion() {
+    if (quizSubmitted) {
+      showResults();
+      return;
+    }
+
+    const q = questions[currentQuestion];
+    const selected = userAnswers[currentQuestion];
+
+    let optionsHtml = "";
+    for (let i = 0; i < q.options.length; i++) {
+      optionsHtml += `
+        <div class="opt ${selected === i ? 'selected' : ''}" data-opt="${i}">${String.fromCharCode(65 + i)}. ${q.options[i]}</div>
+      `;
+    }
+
+    const html = `
+      <div class="question-counter">
+        <span>Question ${currentQuestion + 1} of ${questions.length}</span>
+        <span>${Math.round(((currentQuestion + 1) / questions.length) * 100)}% Complete</span>
+      </div>
+      <div class="question">${q.question}</div>
+      <div class="options" id="optionsDiv">${optionsHtml}</div>
+      <div class="feedback-box" id="feedbackDiv"></div>
+      <div class="nav-buttons">
+        <button class="quiz-btn secondary" id="prevBtn" ${currentQuestion === 0 ? 'disabled' : ''}>Previous</button>
+        <button class="quiz-btn" id="nextBtn">${currentQuestion === questions.length - 1 ? 'Submit Test' : 'Next'}</button>
+      </div>
+    `;
+
+    document.getElementById("quizContainer").innerHTML = html;
+
+    document.querySelectorAll(".opt").forEach(opt => {
+      opt.addEventListener("click", function() {
+        if (quizSubmitted) return;
+        const idx = parseInt(this.dataset.opt);
+        userAnswers[currentQuestion] = idx;
+        document.querySelectorAll(".opt").forEach(o => o.classList.remove("selected"));
+        this.classList.add("selected");
+        document.getElementById("feedbackDiv").classList.remove("show");
+        document.getElementById("feedbackDiv").className = "feedback-box";
+      });
+    });
+
+    document.getElementById("prevBtn")?.addEventListener("click", function() {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        renderQuestion();
+      }
+    });
+
+    document.getElementById("nextBtn")?.addEventListener("click", function() {
+      if (userAnswers[currentQuestion] === undefined || userAnswers[currentQuestion] === null) {
+        const fb = document.getElementById("feedbackDiv");
+        fb.textContent = "Please select an answer before proceeding.";
+        fb.className = "feedback-box show";
+        return;
+      }
+
+      showExplanation();
+
+      if (currentQuestion === questions.length - 1) {
+        document.getElementById("nextBtn").textContent = "Submit";
+        document.getElementById("nextBtn").disabled = true;
+        setTimeout(() => {
+          quizSubmitted = true;
+          renderQuestion();
+        }, 1500);
+        return;
+      }
+
+      currentQuestion++;
+      renderQuestion();
+    });
+  }
+
+  function showExplanation() {
+    const q = questions[currentQuestion];
+    const userAns = userAnswers[currentQuestion];
+    const isCorrect = userAns === q.correct;
+
+    const fb = document.getElementById("feedbackDiv");
+    const correctLetter = String.fromCharCode(65 + q.correct);
+    const correctText = q.options[q.correct];
+    const userLetter = userAns !== undefined ? String.fromCharCode(65 + userAns) : 'Not answered';
+    const userText = userAns !== undefined ? q.options[userAns] : 'Not answered';
+
+    let html = `
+      <div style="margin-bottom: 6px;">
+        <span style="font-weight: 600; color: ${isCorrect ? '#2f855a' : '#dc2626'};">
+          ${isCorrect ? 'Correct!' : 'Wrong!'}
+        </span>
+        <span style="margin-left: 10px; color: #4a5b6e;">
+          Your answer: ${userLetter}. ${userText}
+        </span>
+        ${!isCorrect ? `<br><span style="color: #2f855a; font-weight: 500;">Correct answer: ${correctLetter}. ${correctText}</span>` : ''}
+      </div>
+      <div style="margin-top: 6px;">
+        <span class="exp-label">Explanation:</span> ${q.explanation}
+      </div>
+    `;
+
+    fb.innerHTML = html;
+    fb.className = `feedback-box show ${isCorrect ? 'correct-ans' : 'wrong-ans'}`;
+
+    document.querySelectorAll(".opt").forEach(opt => {
+      opt.classList.add("disabled");
+      const idx = parseInt(opt.dataset.opt);
+      if (idx === q.correct) {
+        opt.classList.add("correct");
+      } else if (idx === userAns && userAns !== q.correct) {
+        opt.classList.add("wrong");
+      }
+    });
+  }
+
+  function showResults() {
+    let score = 0;
+    for (let i = 0; i < questions.length; i++) {
+      if (userAnswers[i] === questions[i].correct) score++;
+    }
+
+    const percent = Math.round((score / questions.length) * 100);
+    let msg = "";
+    let msgClass = "";
+
+    if (percent >= 70) {
+      msg = "Excellent! You have a strong understanding of Coordinate Geometry.";
+      msgClass = "pass";
+    } else if (percent >= 50) {
+      msg = "Good effort! Review the topics you got wrong and try again.";
+      msgClass = "pass";
+    } else {
+      msg = "Need more practice. Go through the chapter once more and retake the test.";
+      msgClass = "fail";
+    }
+
+    let html = `
+      <div class="result-box">
+        <h3>Test Completed</h3>
+        <div class="result-score">${score} / ${questions.length}</div>
+        <div class="result-percent">Percentage: ${percent}%</div>
+        <div class="result-msg ${msgClass}">${msg}</div>
+        <div style="margin-top: 20px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <button class="quiz-btn" id="restartBtn">Retake Test</button>
+          <button class="quiz-btn secondary" id="reviewBtn">Review Answers</button>
+        </div>
+      </div>
+    `;
+
+    document.getElementById("quizContainer").innerHTML = html;
+
+    document.getElementById("restartBtn")?.addEventListener("click", function() {
+      userAnswers = [];
+      currentQuestion = 0;
+      quizSubmitted = false;
+      renderQuestion();
+    });
+
+    document.getElementById("reviewBtn")?.addEventListener("click", function() {
+      reviewAnswers();
+    });
+  }
+
+  function reviewAnswers() {
+    let html = "";
+    for (let i = 0; i < questions.length; i++) {
+      const q = questions[i];
+      const userAns = userAnswers[i];
+      const correct = q.correct;
+      const isCorrect = userAns === correct;
+
+      html += `
+        <div style="padding: 14px 16px; border-bottom: 1px solid #f0f0f0;">
+          <div style="font-weight: 600; font-size: 0.95rem; color: #1e4a76;">Q${i + 1}. ${q.question}</div>
+          <div style="font-size: 0.9rem; margin-top: 4px;">
+            <span style="color: ${isCorrect ? '#2f855a' : '#dc2626'};">
+              ${isCorrect ? 'Correct' : 'Wrong'} - Your answer: ${userAns !== undefined ? String.fromCharCode(65 + userAns) + '. ' + q.options[userAns] : 'Not answered'}
+            </span>
+            ${!isCorrect ? `<br><span style="color: #2f855a;">Correct answer: ${String.fromCharCode(65 + correct)}. ${q.options[correct]}</span>` : ''}
+          </div>
+          <div style="font-size: 0.85rem; color: #4a5b6e; margin-top: 4px; background: #f8fafc; padding: 6px 10px; border-radius: 6px;">
+            <strong>Explanation:</strong> ${q.explanation}
+          </div>
+        </div>
+      `;
+    }
+
+    html += `
+      <div style="padding: 16px; text-align: center;">
+        <button class="quiz-btn" id="backToResults">Back to Results</button>
+      </div>
+    `;
+
+    document.getElementById("quizContainer").innerHTML = html;
+
+    document.getElementById("backToResults")?.addEventListener("click", function() {
+      showResults();
+    });
+  }
+
+  renderQuestion();
+</script>
+</body>
+</html>

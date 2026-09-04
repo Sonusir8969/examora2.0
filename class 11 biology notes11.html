@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Biology Chapter 11 Photosynthesis in Higher Plants</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Biology Chapter 11 Photosynthesis in Higher Plants</h1>
+
+            <p>NCERT Solutions for Class 11 Biology Chapter 11 Photosynthesis in Higher Plants provides structured revision notes and comprehensive textbook solutions covering early historical experiments, chloroplast pigments, photochemical light reactions, chemiosmotic ATP synthesis, C3 and C4 biosynthetic pathways, photorespiration, and factors governing photosynthetic rate.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Early Landmark Experiments & Site of Photosynthesis</a></li>
+                    <li><a href="#topic2">2. Photosynthetic Pigments & Light Reaction (Z-Scheme)</a></li>
+                    <li><a href="#topic3">3. Chemiosmotic Hypothesis & Cyclic vs Non-Cyclic Photophosphorylation</a></li>
+                    <li><a href="#topic4">4. Biosynthetic Phase: C3 Cycle, C4 Pathway & Photorespiration</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Early Landmark Experiments & Site of Photosynthesis</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Photosynthesis:</strong> Physico-chemical process by which green plants use light energy to synthesize organic compounds from CO<sub>2</sub> and H<sub>2</sub>O, releasing O<sub>2</sub> as a byproduct.</p>
+                    <p>• <strong>Key Historical Contributions:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Joseph Priestley (1770):</em> Bell jar experiment showing plants restore air consumed by breathing mice or burning candles; discovered Oxygen in 1774.</p>
+                    <p>&nbsp;&nbsp;- <em>Jan Ingenhousz (1779):</em> Showed that sunlight is essential and green aquatic plants release oxygen bubbles in light.</p>
+                    <p>&nbsp;&nbsp;- <em>Julius von Sachs (1854):</em> Proved green parts produce glucose, stored as starch granules.</p>
+                    <p>&nbsp;&nbsp;- <em>T.W. Engelmann (1843–1909):</em> Placed <em>Cladophora</em> in a prism light spectrum with aerobic bacteria; plotted the first <strong>action spectrum</strong> matching absorption of Chlorophyll <em>a</em> and <em>b</em> (blue & red regions).</p>
+                    <p>&nbsp;&nbsp;- <em>Cornelis van Niel (1897–1985):</em> Demonstrated O<sub>2</sub> evolves from water (H<sub>2</sub>O), not carbon dioxide (CO<sub>2</sub>), using purple/green sulfur bacteria.</p>
+                    <p>• <strong>Chloroplast Structure:</strong> Consists of a membrane system (grana, stroma lamellae) for light reactions and fluid stroma for dark reactions.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Photosynthetic Pigments & Light Reaction</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Photosynthetic Pigments (Separated by Paper Chromatography):</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Chlorophyll a:</em> Bright or blue-green (Chief photosynthetic reaction center pigment).</p>
+                    <p>&nbsp;&nbsp;- <em>Chlorophyll b:</em> Yellow-green (Accessory pigment).</p>
+                    <p>&nbsp;&nbsp;- <em>Xanthophylls:</em> Yellow pigments.</p>
+                    <p>&nbsp;&nbsp;- <em>Carotenoids:</em> Yellow to yellow-orange (Protect chlorophyll <em>a</em> from photo-oxidation).</p>
+                    <p>• <strong>Light Harvesting Complexes (LHC):</strong> Antenna molecules absorb photons and transfer energy to a reaction center.</p>
+                    <p>&nbsp;&nbsp;- <em>Photosystem I (PS I):</em> Reaction center P700 (absorbs light at 700 nm).</p>
+                    <p>&nbsp;&nbsp;- <em>Photosystem II (PS II):</em> Reaction center P680 (absorbs light at 680 nm).</p>
+                    <p>• <strong>Splitting of Water (Photolysis):</strong> Associated with PS II on the inner thylakoid membrane: 2H<sub>2</sub>O &rarr; 4H<sup>+</sup> + O<sub>2</sub> + 4e<sup>-</sup>.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Chemiosmotic Hypothesis & Photophosphorylation</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Non-Cyclic Photophosphorylation (Z-Scheme):</strong> Involves both PS II and PS I. Electrons flow from H<sub>2</sub>O &rarr; PS II &rarr; Electron Transport Chain &rarr; PS I &rarr; NADP<sup>+</sup>, yielding both ATP and NADPH + H<sup>+</sup>.</p>
+                    <p>• <strong>Cyclic Photophosphorylation:</strong> Involves PS I only when wavelength > 680 nm or NADPH accumulates. Electrons circulate within PS I, producing only ATP (no NADPH or O<sub>2</sub> evolved).</p>
+                    <p>• <strong>Chemiosmotic Hypothesis (Peter Mitchell):</strong> ATP synthesis requires a proton gradient across the thylakoid membrane:</p>
+                    <p>&nbsp;&nbsp;1. H<sup>+</sup> ions accumulate inside the thylakoid lumen due to photolysis and stroma H<sup>+</sup> pumping.</p>
+                    <p>&nbsp;&nbsp;2. Breakdown of proton gradient through CF<sub>0</sub>-CF<sub>1</sub> ATP Synthase channels activates the catalytic headpiece (CF<sub>1</sub>) to synthesize ATP from ADP and inorganic phosphate (Pi).</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Biosynthetic Phase: C3, C4 Pathways & Photorespiration</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Calvin Cycle (C3 Pathway):</strong> Occurs in stroma of all photosynthetic plants. Primary CO<sub>2</sub> acceptor is 5-carbon <strong>RuBP</strong> (Ribulose-1,5-bisphosphate).</p>
+                    <p>&nbsp;&nbsp;- <em>3 Main Steps:</em> <strong>Carboxylation</strong> (catalyzed by RuBisCO to form 3-PGA) &rarr; <strong>Reduction</strong> (uses 2 ATP and 2 NADPH per CO<sub>2</sub>) &rarr; <strong>Regeneration</strong> (uses 1 ATP per CO<sub>2</sub>).</p>
+
+                    <p>• <strong>C4 Pathway (Hatch & Slack Pathway):</strong> Adapted to dry tropical climates (e.g., Maize, Sugarcane, Sorghum).</p>
+                    <p>&nbsp;&nbsp;- Characterized by <strong>Kranz Anatomy</strong> (bundle sheath cells around vascular bundles with large chloroplasts lacking grana).</p>
+                    <p>&nbsp;&nbsp;- Primary CO<sub>2</sub> acceptor in mesophyll cells is 3-carbon <strong>PEP</strong> (Phosphoenolpyruvate), catalyzed by PEPcase (no RuBisCO in mesophyll).</p>
+
+                    <p>• <strong>Photorespiration (C2 Cycle):</strong> Wasteful process in C3 plants when RuBisCO binds O<sub>2</sub> instead of CO<sub>2</sub> at high O<sub>2</sub>/low CO<sub>2</sub> ratios and high temperatures. Consumes ATP and releases CO<sub>2</sub> without synthesizing sugars or ATP. Absent in C4 plants.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Why is the RuBisCO enzyme called an oxygenase as well as a carboxylase?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                RuBisCO (Ribulose-1,5-bisphosphate carboxylase-oxygenase) possesses active sites that can bind to both carbon dioxide (CO<sub>2</sub>) and oxygen (O<sub>2</sub>). When CO<sub>2</sub> concentration is high relative to O<sub>2</sub>, it acts as a <strong>carboxylase</strong> to initiate the Calvin cycle. However, when O<sub>2</sub> concentration is high or temperatures rise, it acts as an <strong>oxygenase</strong>, combining RuBP with O<sub>2</sub> to form phosphoglycolate and initiating wasteful photorespiration.
+            </div>
+
+            <div class="question">Q2: Which anatomical feature is characteristic of C4 plants, and what is its biological advantage?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Anatomical Feature:</strong> <strong>Kranz Anatomy</strong>, characterized by large bundle sheath cells arranged in wreath-like layers around vascular bundles with thick walls impervious to gas exchange and abundant chloroplasts.<br>
+                • <strong>Advantage:</strong> It concentrates CO<sub>2</sub> at the RuBisCO site in bundle sheath cells, preventing oxygenation of RuBP and completely eliminating photorespiration, thereby improving photosynthetic yield at high temperatures.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Distinguish between the C3 Pathway and the C4 Pathway.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">C3 Pathway</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">C4 Pathway</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Primary CO<sub>2</sub> Acceptor</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">RuBP (5-Carbon sugar)</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">PEP (3-Carbon compound)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>First Stable Product</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">3-PGA (3-Carbon acid)</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">OAA (Oxaloacetic acid - 4-Carbon)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Kranz Anatomy</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Absent</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Present in bundle sheath cells</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Photorespiration Loss</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">High at high temp and light</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Negligible / Completely absent</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Optimum Temperature</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">20°C to 25°C</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">30°C to 45°C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: Distinguish between Cyclic Photophosphorylation and Non-Cyclic Photophosphorylation.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Cyclic Photophosphorylation</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Non-Cyclic Photophosphorylation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Photosystems Involved</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Only PS I (P700)</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Both PS I (P700) and PS II (P680)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Electron Pathway</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Cyclic (returns to PS I)</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Non-cyclic (linear Z-scheme)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Photolysis of Water</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Does not occur</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Occurs associated with PS II</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>End Products</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Only ATP synthesized</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">ATP, NADPH, and O<sub>2</sub> evolved</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Biology</h3>
+                <ul class="sidebar-links">
+                    <li class="active"><a href="class 11 biology notes1.html">Ch 1: The Living World</a></li>
+                    <li><a href="class 11 biology notes2.html">Ch 2: Biological Classification</a></li>
+                    <li><a href="class 11 biology notes3.html">Ch 3: Plant Kingdom</a></li>
+                    <li><a href="class 11 biology notes4.html">Ch 4: Animal Kingdom</a></li>
+                    <li><a href="class 11 biology notes5.html">Ch 5: Morphology of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes6.html">Ch 6: Anatomy of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes7.html">Ch 7: Structural Organisation in Animals</a></li>
+                    <li><a href="class 11 biology notes8.html">Ch 8: Cell: The Unit of Life</a></li>
+                    <li><a href="class 11 biology notes9.html">Ch 9: Biomolecules</a></li>
+                    <li><a href="class 11 biology notes10.html">Ch 10: Cell Cycle and Cell Division</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

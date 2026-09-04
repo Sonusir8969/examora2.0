@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Biology Chapter 13 Biodiversity and Conservation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f8ff;
+        }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="index.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Biology Chapter 13 Biodiversity and Conservation</h1>
+
+            <p>NCERT Solutions for Class 12 Biology Chapter 13 Biodiversity and Conservation covers Levels of Biodiversity, Patterns of Biodiversity, Species-Area Relationship, Loss of Biodiversity ('The Evil Quartet'), In-situ and Ex-situ Conservation Strategies, and International Summits.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Levels & Patterns of Biodiversity</a></li>
+                    <li><a href="#topic2">2. Loss of Biodiversity & 'The Evil Quartet'</a></li>
+                    <li><a href="#topic3">3. Biodiversity Conservation Strategies (In-situ & Ex-situ)</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Levels & Patterns of Biodiversity</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Levels of Biodiversity:</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>Genetic Diversity:</em> Diversity at the genetic level within a single species (e.g., <em>Rauvolfia vomitoria</em> producing reserpine, &gt;50,000 rice strains in India).</p>
+                    <p>&nbsp;&nbsp;2. <em>Species Diversity:</em> Diversity at the species level (e.g., Western Ghats have greater amphibian species diversity than Eastern Ghats).</p>
+                    <p>&nbsp;&nbsp;3. <em>Ecological Diversity:</em> Diversity at the ecosystem level (e.g., India has deserts, rainforests, mangroves, coral reefs).</p>
+                    <p>• <strong>Species-Area Relationship (Alexander von Humboldt):</strong> Within a region, species richness increases with increasing explored area up to a limit. Equation: <code>S = C A<sup>Z</sup></code> or <code>log S = log C + Z log A</code>.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Loss of Biodiversity & 'The Evil Quartet'</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>The Evil Quartet (Four Major Causes of Extinction):</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>Habitat Loss and Fragmentation:</em> Most important cause (e.g., Amazon rainforest reduced from 14% to less than 6% of Earth's land surface).</p>
+                    <p>&nbsp;&nbsp;2. <em>Over-exploitation:</em> Excessive human consumption leading to extinction (e.g., Steller's sea cow, Passenger pigeon).</p>
+                    <p>&nbsp;&nbsp;3. <em>Alien Species Invasions:</em> Introduced foreign species causing decline or extinction of indigenous species (e.g., Nile perch introduced into Lake Victoria, <em>Lantana</em>, <em>Water Hyacinth / Eichhornia</em>, <em>Parthenium</em>, African catfish <em>Clarias gariepinus</em>).</p>
+                    <p>&nbsp;&nbsp;4. <em>Co-extinctions:</em> When a host species becomes extinct, parasites or plant-pollinator mutualists linked to it also go extinct.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Biodiversity Conservation Strategies (In-situ & Ex-situ)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>In-situ Conservation (On-site):</strong> Protecting endangered species within their natural habitat.</p>
+                    <p>&nbsp;&nbsp;- Examples: Biosphere Reserves (14 in India), National Parks (90 in India), Wildlife Sanctuaries (448 in India), Biodiversity Hotspots (34 worldwide; Western Ghats-Sri Lanka, Indo-Burma, Himalayas), and Sacred Groves (e.g., Khasi and Jaintia Hills in Meghalaya).</p>
+                    <p>• <strong>Ex-situ Conservation (Off-site):</strong> Protecting threatened plants and animals outside their natural habitats.</p>
+                    <p>&nbsp;&nbsp;- Examples: Zoological Parks, Botanical Gardens, Wildlife Safari Parks, Cryopreservation (-196°C in liquid nitrogen), Seed Banks, Tissue Culture.</p>
+                    <p>• <strong>International Conventions:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>The Earth Summit (1992):</em> Rio de Janeiro, Brazil - aimed at conservation of biodiversity and sustainable utilization of its benefits.</p>
+                    <p>&nbsp;&nbsp;- <em>World Summit on Sustainable Development (2002):</em> Johannesburg, South Africa - 190 countries pledged to achieve significant reduction in biodiversity loss rate.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Differentiate between In-situ and Ex-situ Conservation strategies.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>In-situ Conservation</th>
+                            <th>Ex-situ Conservation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Definition</strong></td>
+                            <td>Conservation of species within their natural habitats and ecosystems.</td>
+                            <td>Conservation of threatened organisms outside their natural habitat in controlled environments.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Protection Scope</strong></td>
+                            <td>Protects the entire ecosystem along with all associated wild organisms.</td>
+                            <td>Focuses on individual threatened or endangered plant and animal species.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Examples</strong></td>
+                            <td>National Parks, Wildlife Sanctuaries, Biosphere Reserves, Sacred Groves.</td>
+                            <td>Zoological Parks, Botanical Gardens, Seed Banks, Cryopreservation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cost & Space</strong></td>
+                            <td>Cost-effective for large areas; preserves natural evolutionary processes.</td>
+                            <td>Requires specialized infrastructure, high maintenance costs, and active management.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: What is the Species-Area Relationship? State its mathematical equation.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Species-Area Relationship:</strong> German naturalist Alexander von Humboldt observed that within a given region, species richness increases with an increase in explored area, but only up to a specific limit.<br><br>
+                On a logarithmic scale, the relationship forms a straight line represented by:<br>
+                <code>log S = log C + Z log A</code><br><br>
+                Where:<br>
+                • <strong>S:</strong> Species richness<br>
+                • <strong>A:</strong> Area explored<br>
+                • <strong>Z:</strong> Slope of the line (regression coefficient, typically 0.1 to 0.2)<br>
+                • <strong>C:</strong> Y-intercept
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: What are the four major causes of Biodiversity Loss? Describe them briefly.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                The four major causes of biodiversity loss are collectively termed <strong>'The Evil Quartet'</strong>:<br><br>
+                1. <strong>Habitat Loss and Fragmentation:</strong> Destruction of natural habitats due to deforestation, urbanization, and land clearing isolates wildlife populations and drastically reduces living space.<br>
+                2. <strong>Over-exploitation:</strong> Excessive hunting, poaching, and harvesting beyond natural replacement levels have caused species extinctions (e.g., Passenger Pigeon, Steller's Sea Cow).<br>
+                3. <strong>Alien Species Invasions:</strong> Non-native species introduced accidentally or deliberately compete with and eliminate indigenous species (e.g., Nile perch in Lake Victoria, <em>Lantana</em>, Water Hyacinth).<br>
+                4. <strong>Co-extinctions:</strong> Obligate mutualistic relationships mean that the extinction of one species inevitably leads to the extinction of another (e.g., host-parasite pairs, plant-pollinator systems).
+            </div>
+
+            <div class="question">Q2: Define Biodiversity Hotspots. Mention any two Biodiversity Hotspots present in India.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Biodiversity Hotspots:</strong> Geographic regions characterized by exceptionally high levels of species richness, high degree of endemism (species confined exclusively to that region), and facing severe threats of habitat destruction.<br><br>
+                <strong>Biodiversity Hotspots covering India:</strong><br>
+                1. <strong>Western Ghats and Sri Lanka</strong><br>
+                2. <strong>Indo-Burma Region</strong><br>
+                3. <strong>Himalayas</strong>
+            </div>
+
+            <div class="question">Q3: What are Sacred Groves? What is their significance in biodiversity conservation?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Sacred Groves:</strong> Undisturbed forest patches protected by indigenous communities due to religious beliefs, cultural traditions, and spiritual veneration.<br><br>
+                <strong>Significance:</strong><br>
+                • They serve as sanctuary zones for rare, threatened, and endemic species of flora and fauna that have disappeared from surrounding deforested landscapes.<br>
+                • Examples include the Khasi and Jaintia Hills in Meghalaya, Aravalli Hills of Rajasthan, and Western Ghat regions of Karnataka and Maharashtra.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Biology</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 biology notes1.html">Ch 1: Sexual Reproduction in Flowering Plants</a></li>
+                    <li><a href="class 12 biology notes2.html">Ch 2: Human Reproduction</a></li>
+                    <li><a href="class 12 biology notes3.html">Ch 3: Reproductive Health</a></li>
+                    <li><a href="class 12 biology notes4.html">Ch 4: Principles of Inheritance & Variation</a></li>
+                    <li><a href="class 12 biology notes5.html">Ch 5: Molecular Basis of Inheritance</a></li>
+                    <li><a href="class 12 biology notes6.html">Ch 6: Evolution</a></li>
+                    <li><a href="class 12 biology notes7.html">Ch 7: Human Health & Disease</a></li>
+                    <li><a href="class 12 biology notes8.html">Ch 8: Microbes in Human Welfare</a></li>
+                    <li><a href="class 12 biology notes9.html">Ch 9: Biotechnology: Principles & Processes</a></li>
+                    <li><a href="class 12 biology notes10.html">Ch 10: Biotechnology & Its Applications</a></li>
+                    <li><a href="class 12 biology notes11.html">Ch 11: Organisms & Populations</a></li>
+                    <li><a href="class 12 biology notes12.html">Ch 12: Ecosystem</a></li>
+                    <li class="active"><a href="class 12 biology notes13.html">Ch 13: Biodiversity & Conservation</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Biology Chapter 11 Organisms and Populations</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f8ff;
+        }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="index.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Biology Chapter 11 Organisms and Populations</h1>
+
+            <p>NCERT Solutions for Class 12 Biology Chapter 11 Organisms and Populations covers Abiotic Factors, Responses to Abiotic Factors, Adaptations, Population Attributes, Age Pyramids, Population Growth Models (Exponential and Logistic), and Population Interactions.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Organisms and Their Environment & Adaptations</a></li>
+                    <li><a href="#topic2">2. Populations & Growth Models</a></li>
+                    <li><a href="#topic3">3. Population Interactions</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Organisms and Their Environment & Adaptations</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Abiotic Factors:</strong> Key environmental parameters include Temperature, Water, Light, and Soil.</p>
+                    <p>• <strong>Responses to Abiotic Stress:</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>Regulate:</em> Maintaining internal homeostasis (e.g., mammals, birds).</p>
+                    <p>&nbsp;&nbsp;2. <em>Conform:</em> Internal environment changes according to external ambient conditions (e.g., 99% animals, plants).</p>
+                    <p>&nbsp;&nbsp;3. <em>Migrate:</em> Moving temporarily away to a hospitable area (e.g., migratory birds in Keoladeo National Park, Bharatpur).</p>
+                    <p>&nbsp;&nbsp;4. <em>Suspend:</em> Development/metabolism is suspended (e.g., Hibernation in bears, Aestivation in snails, Diapause in zooplankton).</p>
+                    <p>• <strong>Allen's Rule:</strong> Mammals from colder climates generally have shorter ears and limbs to minimize heat loss.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Populations & Growth Models</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Population Attributes:</strong> Birth rate (Natality), Death rate (Mortality), Sex ratio, and Age distribution (represented by Age Pyramids: Expanding, Stable, Declining).</p>
+                    <p>• <strong>Exponential Growth (J-shaped Curve):</strong> Occurs when resources (food and space) are unlimited. Formula: <code>dN/dt = rN</code> (where <em>r</em> is intrinsic rate of natural increase).</p>
+                    <p>• <strong>Logistic Growth (S-shaped / Sigmoid Curve):</strong> Occurs when resources are limited, reaching Carrying Capacity (<em>K</em>). Formula: <code>dN/dt = rN [(K - N) / K]</code> (Verhulst-Pearl Logistic Growth).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Population Interactions</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Mutualism (+/+):</strong> Both species benefit (e.g., Lichens [Algae & Fungi], Mycorrhizae, Fig tree & Wasp).</p>
+                    <p>• <strong>Competition (-/-):</strong> Both species suffer (e.g., Gause's Competitive Exclusion Principle).</p>
+                    <p>• <strong>Predation (+/-):</strong> One benefits (predator) while the other is harmed (prey).</p>
+                    <p>• <strong>Parasitism (+/-):</strong> Parasite derives benefit at the expense of host (e.g., Liver fluke, Brood parasitism in Cuckoo/Koel).</p>
+                    <p>• <strong>Commensalism (+/0):</strong> One benefits while the other is unaffected (e.g., Orchid growing on Mango branch, Barnacles on Whale).</p>
+                    <p>• <strong>Amensalism (-/0):</strong> One is harmed while the other remains unaffected (e.g., <em>Penicillium</em> producing penicillin inhibiting bacterial growth).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Differentiate between Regulators and Conformers with suitable examples.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Regulators</th>
+                            <th>Conformers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Homeostasis</strong></td>
+                            <td>Maintain a constant internal body environment (thermoregulation & osmoregulation) regardless of external conditions.</td>
+                            <td>Cannot maintain constant internal conditions; internal state changes with environmental changes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Energy Requirement</strong></td>
+                            <td>High energy expenditure required to maintain constant internal state.</td>
+                            <td>Low energy expenditure; body temperature fluctuates with ambient temperature.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Examples</strong></td>
+                            <td>Mammals, Birds, and very few lower vertebrates.</td>
+                            <td>Nearly 99% of animals, aquatic species, and almost all plants.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: Summarize the primary types of Population Interactions using '+' (benefit), '-' (harm), and '0' (neutral) signs.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Interaction Type</th>
+                            <th>Species A</th>
+                            <th>Species B</th>
+                            <th>Common Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Mutualism</strong></td>
+                            <td>+</td>
+                            <td>+</td>
+                            <td>Lichen (Algae + Fungi), Mycorrhizae</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Competition</strong></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Abingdon tortoise & goats in Galápagos Islands</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Predation</strong></td>
+                            <td>+</td>
+                            <td>-</td>
+                            <td>Tiger and Deer, Prickly pear cactus & moth</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Parasitism</strong></td>
+                            <td>+</td>
+                            <td>-</td>
+                            <td><em>Cuscuta</em> on hedge plants, Brood parasitism</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Commensalism</strong></td>
+                            <td>+</td>
+                            <td>0</td>
+                            <td>Epiphytic Orchid on Mango branch, Cattle Egret & Cattle</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Amensalism</strong></td>
+                            <td>-</td>
+                            <td>0</td>
+                            <td><em>Penicillium</em> fungi and Bacteria</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Define Allen's Rule. Explain how animals living in extremely cold climates adapt to survive.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Allen's Rule:</strong> Mammals residing in colder climates generally possess shorter ears, snouts, and extremities (limbs) to minimize body heat loss.<br><br>
+                <strong>Adaptations in Cold Climate Animals:</strong><br>
+                1. <strong>Thick Blubber Layer:</strong> Aquatic mammals such as seals have a thick layer of fat (blubber) below their skin that acts as an insulator to reduce body heat dissipation.<br>
+                2. <strong>Thick Fur / Hair:</strong> Polar bears and snow leopards possess dense fur coat to trap an insulating layer of air.<br>
+                3. <strong>Behavioral Huddling:</strong> Animals aggregate together in groups to conserve energy and body heat.
+            </div>
+
+            <div class="question">Q2: Explain Verhulst-Pearl Logistic Growth and write its mathematical equation.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Verhulst-Pearl Logistic Growth:</strong> Describes a realistic population growth model where natural resources (food and space) are finite. As population density increases, competition intensifies until the population reaches the maximum carrying capacity (<em>K</em>) of the environment, giving a Sigmoid (S-shaped) curve.<br><br>
+                <strong>Mathematical Equation:</strong><br>
+                <code>dN / dt = rN [ (K - N) / K ]</code><br><br>
+                Where:<br>
+                • <strong>N:</strong> Population density at time <em>t</em><br>
+                • <strong>r:</strong> Intrinsic rate of natural increase<br>
+                • <strong>K:</strong> Carrying capacity of the habitat
+            </div>
+
+            <div class="question">Q3: What is Brood Parasitism? Explain with a suitable example.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Brood Parasitism:</strong> A specialized form of parasitism in birds where the parasitic bird lays its eggs in the nest of a host bird, leaving the host to incubate and rear the parasitic chicks.<br><br>
+                <strong>Example:</strong> The Cuckoo (Koel) lays its eggs in the nest of a Crow. Through evolution, the cuckoo's eggs have evolved to closely resemble the host crow's eggs in size, color, and pattern, preventing the crow from detecting and ejecting the foreign eggs.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Biology</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 biology notes1.html">Ch 1: Sexual Reproduction in Flowering Plants</a></li>
+                    <li><a href="class 12 biology notes2.html">Ch 2: Human Reproduction</a></li>
+                    <li><a href="class 12 biology notes3.html">Ch 3: Reproductive Health</a></li>
+                    <li><a href="class 12 biology notes4.html">Ch 4: Principles of Inheritance & Variation</a></li>
+                    <li><a href="class 12 biology notes5.html">Ch 5: Molecular Basis of Inheritance</a></li>
+                    <li><a href="class 12 biology notes6.html">Ch 6: Evolution</a></li>
+                    <li><a href="class 12 biology notes7.html">Ch 7: Human Health & Disease</a></li>
+                    <li><a href="class 12 biology notes8.html">Ch 8: Microbes in Human Welfare</a></li>
+                    <li><a href="class 12 biology notes9.html">Ch 9: Biotechnology: Principles & Processes</a></li>
+                    <li><a href="class 12 biology notes10.html">Ch 10: Biotechnology & Its Applications</a></li>
+                    <li class="active"><a href="class 12 biology notes11.html">Ch 11: Organisms & Populations</a></li>
+                    <li><a href="class 12 biology notes12.html">Ch 12: Ecosystem</a></li>
+                    <li><a href="class 12 biology notes13.html">Ch 13: Biodiversity & Conservation</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

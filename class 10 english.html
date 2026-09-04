@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Class 10 English - JAC Board</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header {
+      background: white;
+      padding: 20px 0;
+      border-bottom: 2px solid #1e4a76;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      color: #1e4a76;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 18px 22px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.4rem;
+    }
+
+    .chapter-list {
+      padding: 10px 0;
+    }
+
+    .chapter-row {
+      display: flex;
+      align-items: center;
+      padding: 12px 22px;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+    }
+
+    .chapter-row:hover {
+      background: #f8fafc;
+    }
+
+    .chapter-num {
+      width: 80px;
+      font-weight: 600;
+      color: #555;
+      font-size: 0.85rem;
+    }
+
+    .chapter-link {
+      flex: 1;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 6px 0;
+    }
+
+    .chapter-link:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    .test-badge {
+      font-size: 0.7rem;
+      background: #e6f0ff;
+      padding: 4px 14px;
+      border-radius: 20px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .test-badge:hover {
+      background: #1e4a76;
+      color: white;
+    }
+
+    .section-label {
+      background: #f1f5f9;
+      padding: 8px 22px;
+      font-weight: 600;
+      color: #1e4a76;
+      border-bottom: 1px solid #ddd;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 40px 0 20px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 20px;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 600px) {
+      .chapter-row {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chapter-num {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 10 <span>English</span> | JAC Board</h1>
+    <a href="examora.html" class="back-link" id="backHome">Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="content-header">
+      <h2>English - All Chapters</h2>
+    </div>
+    <div class="chapter-list" id="chapterList">
+      <!-- chapters will load here -->
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+       <div class="footer-col">
+        <a href="about us examora.html" id="aboutLink">About Us</a>
+        <a href="contact us examora.html" id="contactLink">Contact Us</a>
+        <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+        <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://www.instagram.com/sonu_____study_8969?igsh=a2NtODRsd2U4N29q" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/@Sonusir8969" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://whatsapp.com/channel/0029VanoIcGEquiN0b5u9x3M" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+    <div class="copyright">2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Class 10 JAC Board English Syllabus - Based on NCERT/JAC Curriculum
+  const englishChapters = [
+    // First Flight (Prose)
+    { num: "Ch-1", name: "A Letter to God", link: "english1.html" },
+    { num: "Ch-2", name: "Nelson Mandela - Long Walk to Freedom", link: "english2.html" },
+    { num: "Ch-3", name: "Two Stories about Flying", link: "engish3.html" },
+    { num: "Ch-4", name: "From the Diary of Anne Frank", link: "english4.html" },
+    { num: "Ch-5", name: "The Hundred Dresses - I", link: "english5.html" },
+    { num: "Ch-6", name: "The Hundred Dresses - II", link: "english6.html" },
+    { num: "Ch-7", name: "Glimpses of India", link: "english7.html" },
+    { num: "Ch-8", name: "Mijbil the Otter", link: "english8.html" },
+    { num: "Ch-9", name: "Madam Rides the Bus", link: "english9.html" },
+    { num: "Ch-10", name: "The Sermon at Benares", link: "english10.html" },
+    { num: "Ch-11", name: "The Proposal", link: "english111.html" },
+    
+    // First Flight (Poems)
+    { num: "Poem-1", name: "Dust of Snow", link: "dust of snow.html" },
+    { num: "Poem-2", name: "Fire and Ice", link: "fire and ice.html" },
+    { num: "Poem-3", name: "A Tiger in the Zoo", link: "a tiger in the zoo.html" },
+    { num: "Poem-4", name: "How to Tell Wild Animals", link: "how to tell.html" },
+    { num: "Poem-5", name: "The Ball Poem", link: "the ball poem.html" },
+    { num: "Poem-6", name: "Amanda!", link: "amanda.html" },
+    { num: "Poem-7", name: "Animals", link: "animals.html" },
+    { num: "Poem-8", name: "The Trees", link: "the trees.html" },
+    { num: "Poem-9", name: "Fog", link: "fog.html" },
+    { num: "Poem-10", name: "The Tale of Custard the Dragon", link: "the tale.html" },
+    { num: "Poem-11", name: "For Anne Gregory", link: "for anne.html" },
+    
+    // Footprints Without Feet (Supplementary Reader)
+    { num: "Suppl-1", name: "A Triumph of Surgery", link: "#" },
+    { num: "Suppl-2", name: "The Thief's Story", link: "#" },
+    { num: "Suppl-3", name: "The Midnight Visitor", link: "#" },
+    { num: "Suppl-4", name: "A Question of Trust", link: "#" },
+    { num: "Suppl-5", name: "Footprints Without Feet", link: "#" },
+    { num: "Suppl-6", name: "The Making of a Scientist", link: "#" },
+    { num: "Suppl-7", name: "The Necklace", link: "#" },
+    { num: "Suppl-8", name: "The Hack Driver", link: "#" },
+    { num: "Suppl-9", name: "Bholi", link: "#" },
+    { num: "Suppl-10", name: "The Book That Saved the Earth", link: "#" }
+  ];
+
+  function renderChapters() {
+    let html = "";
+    
+    // Add section labels
+    const sections = [
+      { label: "First Flight - Prose", start: 0, end: 10 },
+      { label: "First Flight - Poems", start: 11, end: 21 },
+      { label: "Footprints Without Feet - Supplementary Reader", start: 22, end: 31 }
+    ];
+
+    for (let s = 0; s < sections.length; s++) {
+      const section = sections[s];
+      html += `<div class="section-label">${section.label}</div>`;
+      
+      for (let i = section.start; i <= section.end; i++) {
+        const ch = englishChapters[i];
+        if (!ch) continue;
+        html += `
+          <div class="chapter-row">
+            <div class="chapter-num">${ch.num}</div>
+            <a href="${ch.link}" class="chapter-link" target="_blank">${ch.name}</a>
+            <a href="${ch.link}" class="test-badge" target="_blank">Test</a>
+          </div>
+        `;
+      }
+    }
+    
+    document.getElementById("chapterList").innerHTML = html;
+  }
+
+  renderChapters();
+</script>
+</body>
+</html>

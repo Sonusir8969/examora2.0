@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Mathematics Chapter 9 Differential Equations</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <div class="main-container">
+
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Mathematics Chapter 9 Differential Equations</h1>
+
+            <p>NCERT Solutions for Class 12 Mathematics Chapter 9 Differential Equations covers the basic terminology of differential equations (order and degree), methods for solving them &mdash; variable separable, homogeneous, and linear differential equations &mdash; and their use in modeling real-world situations.</p>
+
+            <h2>Overview of Topics &amp; Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Basic Concepts: Order and Degree</a></li>
+                    <li><a href="#topic2">2. Variable Separable and Homogeneous Equations</a></li>
+                    <li><a href="#topic3">3. Linear Differential Equations</a></li>
+                </ul>
+            </div>
+
+            <div id="topic1">
+                <h2>1. Basic Concepts: Order and Degree</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; The <strong>order</strong> of a differential equation is the order of the highest derivative present, while the <strong>degree</strong> is the power of that highest order derivative, once the equation is free of radicals and fractions involving derivatives.</p>
+                    <p>&bull; A general solution contains arbitrary constants equal in number to the order of the differential equation, while a particular solution is obtained by assigning specific values to these constants using given conditions.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Variable Separable and Homogeneous Equations</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; In a variable separable differential equation of the form dy/dx = f(x)g(y), the variables can be separated onto opposite sides of the equation and integrated independently.</p>
+                    <p>&bull; A homogeneous differential equation, where dy/dx is a function of y/x alone, is solved using the substitution y = vx, which converts it into a variable separable form in v and x.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Linear Differential Equations</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; A first order linear differential equation has the standard form dy/dx + Py = Q, where P and Q are functions of x (or constants).</p>
+                    <p>&bull; Such equations are solved by first finding the integrating factor (I.F.) = e^(&int;P dx), multiplying throughout by it, and then integrating both sides.</p>
+                </div>
+            </div>
+
+            <h2>NCERT Textbook Exercise Questions</h2>
+
+            <div class="question">Define the order and degree of a differential equation with an example.</div>
+            <div class="answer">
+                <strong>Answer:</strong> The order of a differential equation refers to the order of the highest derivative appearing in it, while the degree refers to the power of that highest order derivative, provided the equation is expressed as a polynomial in its derivatives. For example, in the equation (d&sup2;y/dx&sup2;)&sup3; + dy/dx = 0, the order is 2 (since the highest derivative is the second derivative) and the degree is 3 (since that derivative is raised to the third power).
+            </div>
+
+            <div class="question">Solve the differential equation dy/dx = y.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Separating the variables gives dy/y = dx, and integrating both sides yields ln|y| = x + C, where C is an arbitrary constant. Simplifying further, this can be rewritten in the exponential form y = Ae^x, where A = e^C is another arbitrary constant, representing exponential growth.
+            </div>
+
+            <div class="question">What substitution is used to solve a homogeneous differential equation, and why?</div>
+            <div class="answer">
+                <strong>Answer:</strong> A homogeneous differential equation is solved by substituting y = vx, where v is treated as a new function of x, so that dy/dx = v + x(dv/dx). This substitution converts the original equation, which is a function of y/x, into a new equation that is separable in terms of v and x, making it possible to integrate and solve.
+            </div>
+
+            <div class="question">What is an integrating factor, and how is it used to solve a linear differential equation?</div>
+            <div class="answer">
+                <strong>Answer:</strong> The integrating factor (I.F.) for a linear differential equation dy/dx + Py = Q is calculated as e^(&int;P dx). Multiplying the entire differential equation by this integrating factor transforms the left-hand side into the exact derivative of a product, d/dx(y &middot; I.F.), which can then be integrated directly to obtain the general solution.
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Mathematics Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 math notes1.html">Ch 1: Relations and Functions</a></li>
+                    <li><a href="class 12 math notes2.html">Ch 2: Inverse Trigonometric Functions</a></li>
+                    <li><a href="class 12 math notes3.html">Ch 3: Matrices</a></li>
+                    <li><a href="class 12 math notes4.html">Ch 4: Determinants</a></li>
+                    <li><a href="class 12 math notes5.html">Ch 5: Continuity and Differentiability</a></li>
+                    <li><a href="class 12 math notes6.html">Ch 6: Application of Derivatives</a></li>
+                    <li><a href="class 12 math notes7.html">Ch 7: Integrals</a></li>
+                    <li><a href="class 12 math notes8.html">Ch 8: Application of Integrals</a></li>
+                    <li class="active"><a href="class 12 math notes9.html">Ch 9: Differential Equations</a></li>
+                    <li><a href="class 12 math notes10.html">Ch 10: Vector Algebra</a></li>
+                    <li><a href="class 12 math notes11.html">Ch 11: Three Dimensional Geometry</a></li>
+                    <li><a href="class 12 math notes12.html">Ch 12: Linear Programming</a></li>
+                    <li><a href="class 12 math notes13.html">Ch 13: Probability</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

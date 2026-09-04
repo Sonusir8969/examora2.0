@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Math Ch-10: Conic Sections</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation (As per Screenshot) --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer (As per Screenshot) --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="#" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Math Ch-10: Conic Sections</h1>
+
+            <p>NCERT Solutions for Class 11 Maths Chapter 10 Conic Sections covers the standard equations and properties of circles, parabolas, ellipses, and hyperbolas formed by the intersection of a plane with a double-napped cone.</p>
+
+            <h2>Overview of Topics & Subtopics</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#">Circle: Standard Equation and General Form</a></li>
+                    <li><a href="#">Parabola: Standard Equations and Latus Rectum</a></li>
+                    <li><a href="#">Ellipse: Standard Equation, Eccentricity, and Foci</a></li>
+                    <li><a href="#">Hyperbola: Standard Equation and Eccentricity</a></li>
+                </ul>
+            </div>
+
+            <h2>Important Questions and Answers</h2>
+            <div class="question">Q1: What is the standard equation of a circle with centre (h, k) and radius r?</div>
+            <div class="answer">Answer: The standard equation of a circle with centre (h, k) and radius r is given by (x − h)² + (y − k)² = r². When the centre is at the origin, this simplifies to x² + y² = r².</div>
+            <div class="question">Q2: What is the standard equation of a parabola that opens to the right, and what is its latus rectum?</div>
+            <div class="answer">Answer: The standard equation of a rightward-opening parabola with vertex at the origin is y² = 4ax, where a > 0. Its latus rectum (the chord through the focus perpendicular to the axis) has a length of 4a.</div>
+            <div class="question">Q3: What is the standard equation of an ellipse, and how is its eccentricity defined?</div>
+            <div class="answer">Answer: The standard equation of an ellipse with the major axis along the x-axis is x²/a² + y²/b² = 1, where a > b. Its eccentricity is defined as e = c/a, where c² = a² − b², and it measures how much the ellipse deviates from being circular (0 < e < 1).</div>
+            <div class="question">Q4: What is the standard equation of a hyperbola, and what is its eccentricity range?</div>
+            <div class="answer">Answer: The standard equation of a hyperbola with the transverse axis along the x-axis is x²/a² − y²/b² = 1. Its eccentricity is given by e = c/a, where c² = a² + b², and for a hyperbola, the eccentricity is always greater than 1 (e > 1).</div>
+            <div class="question">Q5: How does a conic section's type depend on the angle at which a plane intersects a double-napped cone?</div>
+            <div class="answer">Answer: A circle is formed when the plane is perpendicular to the axis of the cone; an ellipse is formed when the plane cuts one nappe at an angle to the axis but not parallel to a generator; a parabola is formed when the plane is parallel to a generator of the cone; and a hyperbola is formed when the plane cuts through both nappes of the cone.</div>
+
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Math Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 math notes1.html">Ch-1: Sets</a></li>
+                    <li><a href="class 11 math notes2.html">Ch-2: Relations and Functions</a></li>
+                    <li><a href="class 11 math notes3.html">Ch-3: Trigonometric Functions</a></li>
+                    <li><a href="class 11 math notes4.html">Ch-4: Complex Numbers and Quadratic Equations</a></li>
+                    <li><a href="class 11 math notes5.html">Ch-5: Linear Inequalities</a></li>
+                    <li><a href="class 11 math notes6.html">Ch-6: Permutations and Combinations</a></li>
+                    <li><a href="class 11 math notes7.html">Ch-7: Binomial Theorem</a></li>
+                    <li><a href="class 11 math notes8.html">Ch-8: Sequences and Series</a></li>
+                    <li><a href="class 11 math notes9.html">Ch-9: Straight Lines</a></li>
+                    <li class="active"><a href="class 11 math notes10.html">Ch-10: Conic Sections</a></li>
+                    <li><a href="class 11 math notes11.html">Ch-11: Introduction to Three Dimensional Geometry</a></li>
+                    <li><a href="class 11 math notes12.html">Ch-12: Limits and Derivatives</a></li>
+                    <li><a href="class 11 math notes13.html">Ch-13: Statistics</a></li>
+                    <li><a href="class 11 math notes14.html">Ch-14: Probability</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 10 Economics Chapter 4 Globalisation and the Indian Economy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f8ff;
+        }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="class 10 all subjects notes.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 10 Economics Chapter 4 Globalisation and the Indian Economy</h1>
+
+            <p>NCERT Solutions for Class 10 Economics Chapter 4 covers Multinational Corporations (MNCs), Integration of Production and Markets across countries, Factors Enabling Globalisation, World Trade Organisation (WTO), Foreign Investment Policy, Trade Barriers, and Fair Globalisation.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Multinational Corporations (MNCs) & Production Across Countries</a></li>
+                    <li><a href="#topic2">2. Foreign Trade and Integration of Markets</a></li>
+                    <li><a href="#topic3">3. What is Globalisation & Factors Enabling It</a></li>
+                    <li><a href="#topic4">4. World Trade Organisation (WTO) & Liberalisation in India</a></li>
+                    <li><a href="#topic5">5. Impact of Globalisation & The Struggle for Fair Globalisation</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Multinational Corporations (MNCs) & Production Across Countries</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>MNC (Multinational Corporation):</strong> A company that owns or controls production in more than one nation to lower costs and maximize profits.</p>
+                    <p>• <strong>Interlinking Production:</strong> MNCs set up production jointly with local companies, buy local firms, or place orders with small producers in developing nations.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Foreign Trade and Integration of Markets</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Foreign Trade:</strong> Creates an opportunity for producers to reach markets beyond domestic boundaries and provides consumers with wider choices.</p>
+                    <p>• <strong>Market Integration:</strong> Foreign trade connects markets in different countries through the movement of goods, capital, and technology.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. What is Globalisation & Factors Enabling It</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Globalisation:</strong> The process of rapid integration or interconnection between countries through greater trade, investment, and movement of people.</p>
+                    <p>• <strong>Enabling Factors:</strong> Rapid improvements in Telecommunication, Internet, and Containerized Transport technology along with trade liberalisation policies.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. World Trade Organisation (WTO) & Liberalisation in India</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Liberalisation:</strong> Removing barriers or restrictions set by the government on trade and foreign investments (adopted in India in 1991).</p>
+                    <p>• <strong>WTO:</strong> An international organization aimed at liberalising international trade and enforcing trade agreements among member nations.</p>
+                </div>
+            </div>
+
+            <div id="topic5">
+                <h2>5. Impact of Globalisation & The Struggle for Fair Globalisation</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Impact:</strong> Benefited urban consumers, large companies, and skilled workers, but posed severe challenges to small-scale industries and unorganized workers.</p>
+                    <p>• <strong>Fair Globalisation:</strong> Ensures that benefits are shared equally and government policy protects the interests of workers and small producers alongside big investors.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: What are trade barriers? Why did the Indian government put trade barriers after Independence?</div>
+            <div class="answer">
+                1. <strong>Trade Barriers:</strong> Restrictions imposed by governments on international trade, such as import duties or quotas.<br>
+                2. <strong>Reason:</strong> Post-independence, trade barriers were necessary to protect domestic infant industries from fierce foreign competition until they grew strong enough.
+            </div>
+
+            <div class="question">Q2: What was the New Economic Policy of 1991 in India?</div>
+            <div class="answer">
+                1. In 1991, India removed major restrictions on foreign trade and investment to liberalise the economy.<br>
+                2. The objective was to make Indian producers compete globally to improve product quality and efficiency.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: What do you understand by globalisation? Explain in your own words.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Globalisation is the process of rapid integration and interconnection among various countries of the world. It involves the free flow of goods, services, technology, capital, and labor across international borders, driven primarily by Multinational Corporations (MNCs) and supported by modern communication and transport systems.
+            </div>
+
+            <div class="question">Q2: What is the role of MNCs in the globalisation process?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. <strong>Foreign Direct Investment:</strong> MNCs invest capital in multiple countries, bringing advanced production technologies.<br>
+                2. <strong>Global Production Networks:</strong> They manufacture parts in low-cost countries and assemble them elsewhere, linking global economies.<br>
+                3. <strong>Market Expansion:</strong> MNCs increase global trade volumes and offer greater choice of quality goods at competitive prices worldwide.
+            </div>
+
+            <div class="question">Q3: How can the government ensure that globalisation becomes fairer?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. <strong>Labor Laws:</strong> Enforce strict labor laws to protect workers' rights and ensure fair wages and job security.<br>
+                2. <strong>Support Small Producers:</strong> Provide financial credit, subsidies, and infrastructure to small-scale industries to help them compete against MNCs.<br>
+                3. <strong>Use Trade Barriers Responsibly:</strong> Use targeted trade and investment barriers when necessary to safeguard vulnerable domestic sectors.<br>
+                4. <strong>Negotiations at WTO:</strong> Join forces with other developing nations to negotiate fairer rules at international forums like the WTO.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 10 SST Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 10 sst notes1.html">Ch 1: Rise of Nationalism in Europe</a></li>
+                    <li><a href="class 10 sst notes2.html">Ch 2: Nationalism in India</a></li>
+                    <li><a href="class 10 sst notes3.html">Ch 3: Making of a Global World</a></li>
+                    <li><a href="class 10 sst notes4.html">Ch 4: Age of Industrialisation</a></li>
+                    <li><a href="class 10 sst notes5.html">Ch 5: Print Culture & Modern World</a></li>
+                    <li><a href="class 10 sst notes6.html">Ch 6: Resources and Development</a></li>
+                    <li><a href="class 10 sst notes7.html">Ch 7: Forest & Wildlife Resources</a></li>
+                    <li><a href="class 10 sst notes8.html">Ch 8: Water Resources</a></li>
+                    <li><a href="class 10 sst notes9.html">Ch 9: Agriculture</a></li>
+                    <li><a href="class 10 sst notes10.html">Ch 10: Minerals & Energy Resources</a></li>
+                    <li><a href="class 10 sst notes11.html">Ch 11: Manufacturing Industries</a></li>
+                    <li><a href="class 10 sst notes12.html">Ch 12: Lifelines of National Economy</a></li>
+                    <li><a href="class 10 sst notes13.html">Ch 13: Power Sharing</a></li>
+                    <li><a href="class 10 sst notes14.html">Ch 14: Federalism</a></li>
+                    <li><a href="class 10 sst notes15.html">Ch 15: Gender, Religion & Caste</a></li>
+                    <li><a href="class 10 sst notes16.html">Ch 16: Political Parties</a></li>
+                    <li><a href="class 10 sst notes17.html">Ch 17: Outcomes of Democracy</a></li>
+                    <li><a href="class 10 sst notes18.html">Ch 18: Development</a></li>
+                    <li><a href="class 10 sst notes19.html">Ch 19: Sectors of Indian Economy</a></li>
+                    <li><a href="class 10 sst notes20.html">Ch 20: Money and Credit</a></li>
+                    <li class="active"><a href="class 10 sst notes21.html">Ch 21: Globalisation & Indian Economy</a></li>
+                    <li><a href="class 10 sst notes22.html">Ch 22: Consumer Rights</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

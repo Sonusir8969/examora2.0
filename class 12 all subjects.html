@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Class 12 PCB - JAC Board</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .header {
+      background: white;
+      padding: 28px 0;
+      border-bottom: 3px solid #1e4a76;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      color: #1e4a76;
+      letter-spacing: -0.5px;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .header-sub {
+      color: #4a5b6e;
+      font-size: 1rem;
+      margin-top: 4px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #2f855a;
+    }
+
+    .content {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 20px 28px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    .content-header p {
+      color: #4a5b6e;
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .chapter-list {
+      padding: 4px 0;
+    }
+
+    .chapter-row {
+      display: flex;
+      align-items: center;
+      padding: 14px 28px;
+      border-bottom: 1px solid #f0f4f8;
+      transition: background 0.2s;
+      gap: 16px;
+    }
+
+    .chapter-row:hover {
+      background: #f8fafc;
+    }
+
+    .chapter-num {
+      width: 100px;
+      min-width: 100px;
+      font-weight: 600;
+      color: #1e4a76;
+      font-size: 0.85rem;
+      background: #eef2ff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .chapter-link {
+      flex: 1;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 4px 0;
+      font-size: 0.95rem;
+    }
+
+    .chapter-link:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    .test-badge {
+      font-size: 0.75rem;
+      background: #e6f0ff;
+      padding: 6px 18px;
+      border-radius: 30px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .test-badge:hover {
+      background: #1e4a76;
+      color: white;
+    }
+
+    .section-label {
+      background: #f1f5f9;
+      padding: 10px 28px;
+      font-weight: 700;
+      color: #0f2b3d;
+      border-bottom: 2px solid #e2e8f0;
+      font-size: 0.85rem;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .stats-bar {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      padding: 20px 28px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .stats-bar .stat-item {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .stats-bar .stat-item strong {
+      color: #1e4a76;
+      font-size: 1.1rem;
+    }
+
+    .stats-bar .stat-item span {
+      color: #4a5b6e;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 48px 0 24px;
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-col p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 6px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 24px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .header h1 {
+        font-size: 1.6rem;
+      }
+
+      .content-header {
+        padding: 16px 18px;
+      }
+
+      .content-header h2 {
+        font-size: 1.2rem;
+      }
+
+      .chapter-row {
+        padding: 12px 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .chapter-num {
+        width: 100%;
+        min-width: auto;
+        text-align: left;
+        font-size: 0.8rem;
+        padding: 2px 12px;
+        display: inline-block;
+        width: fit-content;
+      }
+
+      .chapter-link {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 2px 0;
+      }
+
+      .test-badge {
+        font-size: 0.7rem;
+        padding: 4px 14px;
+      }
+
+      .section-label {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+      }
+
+      .stats-bar {
+        padding: 16px 18px;
+        gap: 16px;
+      }
+
+      .stats-bar .stat-item {
+        flex-wrap: wrap;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.3rem;
+      }
+
+      .chapter-row {
+        padding: 10px 14px;
+      }
+
+      .chapter-link {
+        font-size: 0.85rem;
+      }
+
+      .test-badge {
+        font-size: 0.65rem;
+        padding: 3px 12px;
+      }
+
+      .content-header h2 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 12 <span>PCB</span> | JAC Board</h1>
+    <div class="header-sub">Physics · Chemistry · Biology</div>
+    <a href="examora.html" class="back-link">← Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="stats-bar">
+    <div class="stat-item"><strong>14</strong> <span>Physics Chapters</span></div>
+    <div class="stat-item"><strong>16</strong> <span>Chemistry Chapters</span></div>
+    <div class="stat-item"><strong>16</strong> <span>Biology Chapters</span></div>
+    <div class="stat-item"><strong>46</strong> <span>Total Chapters</span></div>
+  </div>
+
+  <div class="content">
+    <div class="content-header">
+      <h2>PCB - All Chapters</h2>
+      <p>Click on any chapter to start test</p>
+    </div>
+    <div class="chapter-list" id="chapterList12">
+      <!-- chapters will load here -->
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html">About Us</a>
+        <a href="contact us examora.html">Contact Us</a>
+        <a href="privacy policies examora.html">Privacy Policy</a>
+        <a href="term and conditions.html">Terms & Conditions</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://whatsapp.com/channel/0029VanoIcGEquiN0b5u9x3M" target="_blank">WhatsApp</a>
+        <a href="https://youtube.com/@sonusir8969?si=Rh0UO_wlG07Dcyiw" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/sonu_____study_8969?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const class12Chapters = [
+    // Physics
+    { num: "Phy-1", name: "Electric Charges and Fields", link: "electric charges and field.html" },
+    { num: "Phy-2", name: "Electrostatic Potential and Capacitance", link: "electrostatic potential and capacitance.html" },
+    { num: "Phy-3", name: "Current Electricity", link: "current electricity.html" },
+    { num: "Phy-4", name: "Moving Charges and Magnetism", link: "moving charges and magnetism.html" },
+    { num: "Phy-5", name: "Magnetism and Matter", link: "magnetism and matter.html" },
+    { num: "Phy-6", name: "Electromagnetic Induction", link: "electromagnetic introduction.html" },
+    { num: "Phy-7", name: "Alternating Current", link: "alternating current.html" },
+    { num: "Phy-8", name: "Electromagnetic Waves", link: "electromagnetic waves.html" },
+    { num: "Phy-9", name: "Ray Optics and Optical Instruments", link: "ray optics and optical.html" },
+    { num: "Phy-10", name: "Wave Optics", link: "waves optics.html" },
+    { num: "Phy-11", name: "Dual Nature of Radiation and Matter", link: "dual nature of radiation and matter.html" },
+    { num: "Phy-12", name: "Atoms", link: "atom12.html" },
+    { num: "Phy-13", name: "Nuclei", link: "nuclie.html"},
+    { num: "Phy-14", name: "Semiconductor Electronics", link: "semiconducter electronics.html" },
+
+    // Chemistry
+    { num: "Chem-1", name: "Solutions", link: "solution.html" },
+    { num: "Chem-2", name: "Electrochemistry", link: "electrochemestry.html" },
+    { num: "Chem-3", name: "Chemical Kinetics", link: "chemical kinetics.html" },
+    { num: "Chem-4", name: "The d and f Block Elements", link: "the d and f block elements.html" },
+    { num: "Chem-5", name: "Coordination Compounds", link: "coordination compounds.html" },
+    { num: "Chem-6", name: "Haloalkanes and Haloarenes", link: "haloalkanes and haloarrenes.html" },
+    { num: "Chem-7", name: "Alcohols, Phenols and ethers", link: "alcohols phenols and ethers.html.html" },
+    { num: "Chem-8", name: "Aldehydes, Ketones and Carboxylic Acids", link: "aldehhydes ketones and carboxylic acids.html" },
+    { num: "Chem-9", name: "Amines", link: "amines.html" },
+    { num: "Chem-10", name: "Biomolecules", link: "biomolecules12.html" },
+    { num: "Chem-11", name: "Polymers", link: "polymers.html" },
+    { num: "Chem-12", name: "Chemistry in Everyday Life", link: "chemestry in everyday life.html" },
+    { num: "Chem-13", name: "Solid State", link: "solid state.html" },
+    { num: "Chem-14", name: "Surface Chemistry", link: "surface chemestry.html" },
+    { num: "Chem-15", name: "General Principles of Isolation of Elements", link: "general priniple of isolation of elements.html" },
+    { num: "Chem-16", name: "Environmental Chemistry", link: "environmental chemestry.html" },
+
+    // Biology
+    { num: "Bio-1", name: "Reproduction in Organisms", link:"reproduction in organism.html" },
+    { num: "Bio-2", name: "Sexual Reproduction in Flowering Plants", link: "sexual reproduction in flowering plant.html" },
+    { num: "Bio-3", name: "Human Reproduction", link: "human reproduction.html" },
+    { num: "Bio-4", name: "Reproductive Health", link: "reproductive health.html" },
+    { num: "Bio-5", name: "Principles of Inheritance and Variation", link: "principle of inheritance and variation.html" },
+    { num: "Bio-6", name: "Molecular Basis of Inheritance", link: "molecular basic of inheritance.html" },
+    { num: "Bio-7", name: "Evolution", link: "evolution.html" },
+    { num: "Bio-8", name: "Human Health and Disease", link: "human health and disease.html" },
+    { num: "Bio-9", name: "Strategies for Enhancement in Food Production", link: "strategies for enhancement in food production.html" },
+    { num: "Bio-10", name: "Microbes in Human Welfare", link: "microbes in human welfare.html" },
+    { num: "Bio-11", name: "Biotechnology - Principles and Processes", link: "biotechnology principle and processes.html" },
+    { num: "Bio-12", name: "Biotechnology and its Applications", link: "biotechnology and its applications.html" },
+    { num: "Bio-13", name: "Organisms and Populations", link: "organisms and populations.html" },
+    { num: "Bio-14", name: "Ecosystem", link: "Ecosystem.html" },
+    { num: "Bio-15", name: "Biodiversity and Conservation", link: "biodiversity and conservation.html" },
+    { num: "Bio-16", name: "Environmental Issues", link: "environmental issues.html" }
+  ];
+
+  function renderClass12() {
+    let html = "";
+    const sections = [
+      { label: "Physics", start: 0, end: 13 },
+      { label: "Chemistry", start: 14, end: 29 },
+      { label: "Biology", start: 30, end: 45 }
+    ];
+
+    for (let s = 0; s < sections.length; s++) {
+      const section = sections[s];
+      let sectionHtml = "";
+
+      for (let i = section.start; i <= section.end; i++) {
+        const ch = class12Chapters[i];
+        
+        // Skip chapters without a valid link or with "#"
+        if (!ch || !ch.link || ch.link.trim() === "#") continue;
+
+        sectionHtml += `
+          <div class="chapter-row">
+            <div class="chapter-num">${ch.num}</div>
+            <a href="${ch.link.trim()}" class="chapter-link" target="_blank">${ch.name}</a>
+            <a href="${ch.link.trim()}" class="test-badge" target="_blank">Test</a>
+          </div>
+        `;
+      }
+
+      if (sectionHtml !== "") {
+        html += `<div class="section-label">${section.label}</div>` + sectionHtml;
+      }
+    }
+    
+    document.getElementById("chapterList12").innerHTML = html;
+  }
+
+  renderClass12();
+</script>
+</body>
+</html>

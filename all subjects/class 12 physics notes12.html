@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Physics Chapter 12 Atoms</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Physics Chapter 12 Atoms</h1>
+
+            <p>NCERT Solutions for Class 12 Physics Chapter 12 Atoms provides detailed coverage of Rutherford's alpha-particle scattering experiment, Bohr's model of the hydrogen atom, spectral series of hydrogen, and de Broglie's explanation of Bohr's second postulate.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Alpha-Particle Scattering Experiment & Rutherford's Atomic Model</a></li>
+                    <li><a href="#topic2">2. Bohr's Model of the Hydrogen Atom</a></li>
+                    <li><a href="#topic3">3. Line Spectra of Hydrogen & De Broglie's Explanation</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Alpha-Particle Scattering Experiment & Rutherford's Atomic Model</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Geiger-Marsden Experiment:</strong> Alpha particles (He²⁺) directed at a thin gold foil. Observations showed most α-particles pass un-deviated, while a tiny fraction (~1 in 8000) bounce back by > 90°.</p>
+                    <p>• <strong>Key Inferences:</strong> Entire positive charge and almost all mass of the atom are concentrated in a tiny central region called the <strong>nucleus</strong> (size ~ 10⁻¹⁵ m to 10⁻¹⁴ m), while atom size is ~ 10⁻¹⁰ m.</p>
+                    <p>• <strong>Distance of Closest Approach (r₀):</strong> Estimated size of nucleus: <em>r₀ = (1 / 4πε₀) × (2 Z e² / K)</em>, where <em>K</em> is the initial kinetic energy of the α-particle.</p>
+                    <p>• <strong>Impact Parameter (b):</strong> Perpendicular distance of the velocity vector of α-particle from the central nucleus line. Small <em>b</em> leads to large deflection angle <em>θ</em>.</p>
+                    <p>• <strong>Limitations of Rutherford Model:</strong> Could not explain the electrical stability of an orbiting accelerating electron radiating continuous energy, nor the discrete line spectrum of atoms.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Bohr's Model of the Hydrogen Atom</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Bohr's Postulates:</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>Stationary Orbits:</em> Electrons revolve around the nucleus only in certain non-radiating, stable circular orbits.</p>
+
+                    <p>&nbsp;&nbsp;2. <em>Quantization of Angular Momentum:</em> Orbital angular momentum is an integral multiple of <em>h / (2π)</em>: <em>L = m v r = (n h) / (2π)</em>, where <em>n = 1, 2, 3...</em> is the principal quantum number.</p>
+
+                    <p>&nbsp;&nbsp;3. <em>Frequency Condition:</em> Energy is emitted or absorbed as a photon only during transition between orbits: <em>h ν = E₂ - E₁</em>.</p>
+                    <p>• <strong>Radius of n-th Orbit:</strong> <em>r_n = (n² h² ε₀) / (π m e²) = n² × r₁</em> (Bohr radius <em>a₀ = r₁ ≈ 0.53 Å = 0.053 nm</em>).</p>
+                    <p>• <strong>Velocity of Electron in n-th Orbit:</strong> <em>v_n = e² / (2 ε₀ n h) ≈ c / (137 n)</em>.</p>
+                    <p>• <strong>Energy of Electron in n-th Orbit:</strong></p>
+
+                    <p>&nbsp;&nbsp;- Kinetic Energy: <em>K = -E_total = 13.6 / n² eV</em></p>
+                    <p>&nbsp;&nbsp;- Potential Energy: <em>U = 2 E_total = -27.2 / n² eV</em></p>
+                    <p>&nbsp;&nbsp;- Total Energy: <em>E_n = -13.6 / n² eV</em> (Negative sign confirms electron is bound to nucleus).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Line Spectra of Hydrogen & De Broglie's Explanation</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Rydberg Formula for Hydrogen Wavelength:</strong> <em>1 / λ = R × (1 / n₁² - 1 / n₂²)</em>, where <em>R</em> is Rydberg constant (<em>R ≈ 1.097 × 10⁷ m⁻¹</em>).</p>
+                    <p>• <strong>Spectral Series Summary:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Lyman Series:</em> <em>n₁ = 1, n₂ = 2, 3, 4...</em> (Ultraviolet Region)</p>
+                    <p>&nbsp;&nbsp;- <em>Balmer Series:</em> <em>n₁ = 2, n₂ = 3, 4, 5...</em> (Visible Region)</p>
+                    <p>&nbsp;&nbsp;- <em>Paschen Series:</em>  stream <em>n₁ = 3, n₂ = 4, 5, 6...</em> (Near Infrared Region)</p>
+                    <p>&nbsp;&nbsp;- <em>Brackett Series:</em> <em>n₁ = 4, n₂ = 5, 6, 7...</em> (Infrared Region)</p>
+                    <p>&nbsp;&nbsp;- <em>Pfund Series:</em> <em>n₁ = 5, n₂ = 6, 7, 8...</em> (Far Infrared Region)</p>
+                    <p>• <strong>De Broglie's Explanation of Quantization:</strong> Standing wave condition for an electron wave along a circular orbit requires circumference to equal integer number of wavelengths: <em>2π r = n λ = n (h / m v)  =>  m v r = (n h) / (2π)</em>.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: State Bohr's quantization condition for angular momentum of an electron. How did de Broglie explain this postulate?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Bohr's Postulate:</strong> Bohr postulated that electrons in an atom revolve only in those non-radiating stationary orbits for which the total orbital angular momentum (L) is an integral multiple of <em>h / (2π)</em>:<br>
+                <em>L = m v r = (n h) / (2π)</em>, where <em>n = 1, 2, 3...</em><br><br>
+                • <strong>De Broglie's Explanation:</strong> De Broglie proposed that an electron revolving in a circular orbit behaves as a matter wave. For a stable stationary orbit, the electron wave must form a <strong>constructive standing wave</strong> around the circular path, meaning the total perimeter of the orbit must equal an integral number of de Broglie wavelengths:<br>
+                <em>2π r = n λ</em><br>
+                Substituting de Broglie wavelength <em>λ = h / (m v)</em> into the equation:<br>
+                <em>2π r = n (h / m v)  =>  m v r = (n h) / (2π)</em><br>
+                Thus, de Broglie's wave hypothesis provided a theoretical derivation for Bohr's empirical quantization rule.
+            </div>
+
+            <div class="question">Q2: Distinguish between the Lyman series and Balmer series of the hydrogen spectrum.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Lyman Series</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Balmer Series</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Lower Orbit (n₁)</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">n₁ = 1 (Ground State)</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">n₁ = 2 (First Excited State)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Upper Orbits (n₂)</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">n₂ = 2, 3, 4, 5...</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">n₂ = 3, 4, 5, 6...</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Spectral Region</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Ultraviolet (UV) Region</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Visible Light Region</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Energy Transition</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Higher energy transitions (larger frequency)</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Moderate energy transitions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Calculate the shortest and longest wavelengths present in the Balmer series of the hydrogen spectrum. (Rydberg constant R = 1.097 × 10⁷ m⁻¹)</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                For Balmer series, the lower quantum level is <em>n₁ = 2</em>.<br>
+                Rydberg Formula: <em>1 / λ = R × (1 / 2² - 1 / n₂²) = R × (1 / 4 - 1 / n₂²)</em><br><br>
+                <strong>Part (a): Longest Wavelength (λ_max)</strong><br>
+                Longest wavelength corresponds to the minimum energy photon transition, which occurs when <em>n₂ = 3</em>:<br>
+                <em>1 / λ_max = R × (1 / 4 - 1 / 9) = R × (5 / 36)</em><br>
+                <em>λ_max = 36 / (5 × R) = 36 / (5 × 1.097 × 10⁷) ≈ 656.3 nm</em><br><br>
+                <strong>Part (b): Shortest Wavelength (λ_min)</strong><br>
+                Shortest wavelength corresponds to the maximum energy photon transition (series limit), which occurs when <em>n₂ = ∞</em>:<br>
+                <em>1 / λ_min = R × (1 / 4 - 0) = R / 4</em><br>
+                <em>λ_min = 4 / R = 4 / (1.097 × 10⁷) ≈ 364.6 nm</em><br><br>
+                • Longest wavelength = <strong>656.3 nm</strong> (H-alpha line)<br>
+                • Shortest wavelength = <strong>364.6 nm</strong> (Balmer limit)
+            </div>
+
+            <div class="question">Q2: According to Bohr's model, calculate the speed of an electron in a hydrogen atom in the ground state level (n = 1) and find its orbital time period.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given for Hydrogen (Z = 1, n = 1):<br>
+                • Charge of electron (e) = 1.6 × 10⁻¹⁹ C<br>
+                • Planck's constant (h) = 6.63 × 10⁻³⁴ J s<br>
+                • Permittivity of free space (ε₀) = 8.854 × 10⁻¹² F/m<br><br>
+                <strong>Step 1: Calculate Electron Velocity (v₁)</strong><br>
+                <em>v₁ = e² / (2 ε₀ h)</em><br>
+                <em>v₁ = (1.6 × 10⁻¹⁹)² / (2 × 8.854 × 10⁻¹² × 6.63 × 10⁻³⁴)</em><br>
+                <em>v₁ ≈ 2.18 × 10⁶ m/s</em> (roughly 1/137 of light speed <em>c</em>)<br><br>
+                <strong>Step 2: Calculate Radius of Ground Orbit (r₁)</strong><br>
+                <em>r₁ = 0.53 Å = 0.53 × 10⁻¹⁰ m</em><br><br>
+                <strong>Step 3: Calculate Orbital Period (T)</strong><br>
+                <em>T = (2π r₁) / v₁ = (2 × 3.1416 × 0.53 × 10⁻¹⁰) / (2.18 × 10⁶) ≈ 1.53 × 10⁻¹⁶ s</em><br><br>
+                • Speed of electron in n = 1 level = <strong>2.18 × 10⁶ m/s</strong><br>
+                • Orbital time period = <strong>1.53 × 10⁻¹⁶ s</strong>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Physics</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 physics notes1">Ch 1: Electric Charges and Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatic Potential & Capacitance</a></li>
+                    <li><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges and Magnetism</a></li>
+                    <li><a href="class 12 physics notes5">Ch 5: Magnetism and Matter</a></li>
+                    <li><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics and Optical Instruments</a></li>
+                    <li><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li><a href="class 12 physics notes11">Ch 11: Dual Nature of Radiation & Matter</a></li>
+                    <li class="active"><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Biology Chapter 18 Neural Control and Coordination</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Biology Chapter 18 Neural Control and Coordination</h1>
+
+            <p>NCERT Solutions for Class 11 Biology Chapter 18 Neural Control and Coordination provides revision notes and step-by-step textbook solutions detailing neural system organization, structure of neurons, conduction of nerve impulses, synaptic transmission, central nervous system (human brain), reflex action, and sensory organs (eye and ear).</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Neural System & Structure of Neuron</a></li>
+                    <li><a href="#topic2">2. Generation & Conduction of Nerve Impulse & Synapse</a></li>
+                    <li><a href="#topic3">3. Central Nervous System (Human Brain Structure)</a></li>
+                    <li><a href="#topic4">4. Reflex Action, Reflex Arc & Sensory Organs (Eye & Ear)</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Neural System & Structure of Neuron</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Human Neural System Organization:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Central Nervous System (CNS):</em> Includes Brain and Spinal Cord (site of information processing and control).</p>
+                    <p>&nbsp;&nbsp;- <em>Peripheral Nervous System (PNS):</em> Comprises all nerves connecting body parts to CNS. Divided into <strong>Somatic Neural System</strong> (relays impulses from CNS to skeletal muscles) and <strong>Autonomic Neural System</strong> (relays impulses from CNS to involuntary organs/smooth muscles; split into Sympathetic and Parasympathetic systems).</p>
+                    <p>• <strong>Structure of Neuron:</strong> Functional and structural unit composed of three major parts:</p>
+                    <p>&nbsp;&nbsp;- <em>Cell Body (Cyton):</em> Contains cytoplasm, cell organelles, and Nissl's granules.</p>
+                    <p>&nbsp;&nbsp;- <em>Dendrites:</em> Short, branched fibers radiating out from cyton; transmit impulses <strong>towards</strong> cell body.</p>
+                    <p>&nbsp;&nbsp;- <em>Axon:</em> Long fiber carrying impulses <strong>away</strong> from cell body. Terminated by synaptic knobs containing synaptic vesicles with neurotransmitters.</p>
+                    <p>• <strong>Types of Neurons:</strong> Unipolar (embryonic stage), Bipolar (retina of eye), Multipolar (cerebral cortex).</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Generation & Conduction of Nerve Impulse & Synapse</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Resting Potential (Polarized State):</strong> Membrane of resting axon is more permeable to K⁺ and almost impermeable to Na⁺. Maintained by Na⁺/K⁺ ATPase pump (pumps 3 Na⁺ outwards for 2 K⁺ indoors). Inside becomes negatively charged relative to outside (-70 mV).</p>
+                    <p>• <strong>Action Potential (Depolarization):</strong> Application of stimulus increases membrane permeability to Na⁺ &rarr; rapid influx of Na⁺ &rarr; reversal of polarity (inside becomes positive). This wave of depolarization forms the <strong>nerve impulse</strong>.</p>
+                    <p>• <strong>Repolarization:</strong> Na⁺ permeability drops quickly; permeability to K⁺ increases &rarr; K⁺ flows outward restoring resting potential.</p>
+                    <p>• <strong>Synaptic Transmission:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Electrical Synapse:</em> Membranes of pre- and post-synaptic neurons are in very close proximity; impulse jumps directly and rapidly.</p>
+                    <p>&nbsp;&nbsp;- <em>Chemical Synapse:</em> Separated by fluid-filled <strong>synaptic cleft</strong>. Action potential at presynaptic terminal triggers release of <strong>neurotransmitters</strong> (e.g., Acetylcholine) from vesicles into cleft, binding to receptors on post-synaptic membrane.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Central Nervous System (Human Brain Structure)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• Brain is protected inside cranial cavity and covered by cranial meninges (outer <em>Dura mater</em>, middle <em>Arachnoid</em>, inner <em>Pia mater</em>).</p>
+                    <p>• <strong>Forebrain:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Cerebrum:</em> Largest part, divided into right and left cerebral hemispheres connected by <strong>Corpus Callosum</strong>. Outer layer (Cerebral cortex/grey matter) controls memory, sensory processing, and voluntary actions.</p>
+                    <p>&nbsp;&nbsp;- <em>Thalamus:</em> Major relay station for sensory and motor signaling.</p>
+                    <p>&nbsp;&nbsp;- <em>Hypothalamus:</em> Regulates body temperature, urge for eating and drinking, and controls pituitary hormone secretions.</p>
+                    <p>• <strong>Midbrain:</strong> Located between thalamus/hypothalamus and pons. Contains four round swellings called <strong>Corpora Quadrigemina</strong> (visual and auditory reflexes).</p>
+                    <p>• <strong>Hindbrain:</strong> Consists of <em>Pons</em> (fiber tracts interconnecting regions), <em>Cerebellum</em> (convoluted surface for motor coordination & balance), and <em>Medulla Oblongata</em> (controls respiration, cardiovascular reflexes, gastric secretions).</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Reflex Action, Reflex Arc & Sensory Organs (Eye & Ear)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Reflex Action:</strong> Entirely involuntary response to a peripheral nervous stimulus without conscious thought. Path followed is <strong>Reflex Arc</strong>: Receptor &rarr; Afferent neuron &rarr; Interneuron (CNS) &rarr; Efferent neuron &rarr; Effector (muscle/gland).</p>
+                    <p>• <strong>Human Eye (Organ of Vision):</strong></p>
+                    <p>&nbsp;&nbsp;- Wall consists of <em>Sclera</em> (outer, anterior forms cornea), <em>Choroid</em> (middle vascular layer forming ciliary body & iris), and <em>Retina</em> (innermost layer containing photoreceptors: Rods for twilight vision, Cones for daylight/color vision).</p>
+                    <p>&nbsp;&nbsp;- <em>Fovea:</em> Point of highest visual acuity (contains closely packed cones only).</p>
+                    <p>• <strong>Human Ear (Organ of Hearing & Balance):</strong></p>
+                    <p>&nbsp;&nbsp;- <em>External & Middle Ear:</em> Pinna, auditory meatus, tympanic membrane, and 3 ear ossicles (Malleus, Incus, Stapes).</p>
+                    <p>&nbsp;&nbsp;- <em>Inner Ear (Labyrinth):</em> Contains coiled <strong>Cochlea</strong> (hearing unit with Organ of Corti containing hair cells) and <strong>Vestibular Apparatus</strong> (saccule, utricle, and 3 semicircular canals for body balance).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Describe the mechanism of generation and conduction of a nerve impulse across an axon.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. <strong>Polarization (Resting State):</strong> In a resting neuron, the axon membrane is more permeable to K⁺ and impermeable to Na⁺. The active Na⁺/K⁺ pump pumps 3 Na⁺ out for every 2 K⁺ in, maintaining a negative charge inside (-70 mV).<br>
+                2. <strong>Depolarization (Action Potential):</strong> When a threshold stimulus is applied, voltage-gated Na⁺ channels open, causing a rapid influx of Na⁺. The inner surface becomes positively charged (+30 mV), generating an action potential.<br>
+                3. <strong>Propagation:</strong> The action potential creates a current flow to the adjacent resting region, depolarizing it and propagating the impulse down the length of the axon.<br>
+                4. <strong>Repolarization:</strong> Na⁺ channels close and voltage-gated K⁺ channels open, allowing K⁺ to flow out of the cell, restoring the negative resting potential inside.
+            </div>
+
+            <div class="question">Q2: What is the role of the Hypothalamus in the human body?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                The <strong>Hypothalamus</strong> plays a critical role in maintaining homeostasis. Major functions include:<br>
+                1. <strong>Thermoregulation:</strong> Acts as the body's thermostat to regulate body temperature.<br>
+                2. <strong>Control of Autonomic Functions:</strong> Regulates hunger, thirst, satiety, and sleep-wake cycles.<br>
+                3. <strong>Endocrine Control:</strong> Produces hypothalamic releasing and inhibiting hormones that control the anterior pituitary gland, as well as synthesizing Oxytocin and Vasopressin (ADH).
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Distinguish between Chemical Synapse and Electrical Synapse.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Chemical Synapse</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Electrical Synapse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Synaptic Cleft</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Fluid-filled synaptic cleft is present between pre- and post-synaptic membranes.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Pre- and post-synaptic membranes are in direct physical contact (gap junctions).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Mediator</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Transmission occurs via chemical messengers called neurotransmitters.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Transmission occurs directly via electrical current flow.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Speed of Transmission</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Relatively slower due to synaptic delay in chemical release.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Extremely rapid, instantaneous signal conduction.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Occurrence</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Most common type of synapse in human nervous system.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Rare in human system (found in specific cardiac & nerve circuits).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: Distinguish between Rods and Cones.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Rods</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Cones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Vision Type</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Responsible for twilight / dim-light vision (scotopic vision).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Responsible for daylight / bright-light and color vision (photopic vision).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Visual Pigment</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Contain purple-red protein pigment called <strong>Rhodopsin</strong> (Vitamin A derivative).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Contain iodopsin / photopsin pigments sensitive to Red, Green, and Blue light.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Distribution on Retina</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Distributed abundantly throughout peripheral retina; absent at fovea.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Densely concentrated in the central region (macula lutea and fovea centralis).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Biology</h3>
+                <ul class="sidebar-links">
+                    <li class="active"><a href="class 11 biology notes1.html">Ch 1: The Living World</a></li>
+                    <li><a href="class 11 biology notes2.html">Ch 2: Biological Classification</a></li>
+                    <li><a href="class 11 biology notes3.html">Ch 3: Plant Kingdom</a></li>
+                    <li><a href="class 11 biology notes4.html">Ch 4: Animal Kingdom</a></li>
+                    <li><a href="class 11 biology notes5.html">Ch 5: Morphology of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes6.html">Ch 6: Anatomy of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes7.html">Ch 7: Structural Organisation in Animals</a></li>
+                    <li><a href="class 11 biology notes8.html">Ch 8: Cell: The Unit of Life</a></li>
+                    <li><a href="class 11 biology notes9.html">Ch 9: Biomolecules</a></li>
+                    <li><a href="class 11 biology notes10.html">Ch 10: Cell Cycle and Cell Division</a></li>
+                    <li><a href="class 11 biology notes11.html">Ch 11: Photosynthesis in Higher Plants</a></li>
+                    <li><a href="class 11 biology notes12.html">Ch 12: Respiration in Plants</a></li>
+                    <li class="active"><a href="class 11 biology notes13.html">Ch 13: Plant Growth and Development</a></li>
+                    <li class="active"><a href="class 11 biology notes14.html">Ch 13: Plant Growth and Development</a></li>
+                    <li class="active"><a href="class 11 biology notes15.html">Ch 15: Body Fluids and Circulation</a></li>
+                    <li><a href="class 11 biology notes16.html">Ch 16: Excretory Products and Their Elimination</a></li>
+                    <li><a href="class 11 biology notes17.html">Ch 17: Locomotion and Movement</a></li>
+                    <li class="active"><a href="class 11 biology notes18.html">Ch 18: Neural Control and Coordination</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

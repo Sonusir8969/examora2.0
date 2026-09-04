@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrostatic Potential · Class 12 Physics</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Roboto, sans-serif; 
+      background: #f0f2f5; 
+      color: #1e2a3e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+    .header { 
+      background: white; 
+      padding: 18px 0; 
+      border-bottom: 3px solid #1e4a76; 
+      margin-bottom: 30px; 
+    }
+    .header h1 { font-size: 1.5rem; color: #1e4a76; }
+    .header h1 span { color: #2d6a4f; }
+    .back-link { 
+      display: inline-block; 
+      margin-top: 8px; 
+      color: #1e4a76; 
+      text-decoration: none; 
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .test-info {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .test-info .subject { font-weight: 600; color: #1e4a76; }
+    .test-info .total-q { background: #e6f0ff; padding: 4px 14px; border-radius: 30px; font-size: 0.85rem; }
+
+    .progress-container {
+      background: #e9ecef;
+      border-radius: 30px;
+      height: 10px;
+      margin-bottom: 25px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #2d6a4f;
+      border-radius: 30px;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    .question-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .q-number {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 12px;
+    }
+    .q-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .option {
+      background: #f8fafc;
+      border: 2px solid #e8ecf0;
+      padding: 14px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .option:hover {
+      background: #eef2ff;
+      border-color: #1e4a76;
+    }
+    .option.selected {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.correct-answer {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.wrong-answer {
+      background: #fee2e2;
+      border-color: #b91c1c;
+    }
+    .option.disabled {
+      pointer-events: none;
+      opacity: 0.85;
+    }
+
+    .feedback-box {
+      margin-top: 20px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      display: none;
+    }
+    .feedback-box.show {
+      display: block;
+    }
+    .feedback-box.correct {
+      background: #dcfce7;
+      border-left: 4px solid #2d6a4f;
+    }
+    .feedback-box.wrong {
+      background: #fee2e2;
+      border-left: 4px solid #b91c1c;
+    }
+    .feedback-box .exp {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 6px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+    .btn {
+      padding: 12px 32px;
+      border: none;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary {
+      background: #1e4a76;
+      color: white;
+    }
+    .btn-primary:hover { background: #163a5c; }
+    .btn-success {
+      background: #2d6a4f;
+      color: white;
+    }
+    .btn-success:hover { background: #1f4d39; }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #333;
+    }
+    .btn-secondary:hover { background: #cbd5e1; }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .result-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      padding: 35px;
+      text-align: center;
+      display: none;
+    }
+    .result-card.show { display: block; }
+    .result-score {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #1e4a76;
+      margin: 10px 0;
+    }
+    .result-percent {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2d6a4f;
+    }
+    .result-msg {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 12px;
+      margin: 20px 0;
+      font-size: 1rem;
+    }
+    .result-detail {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .result-detail .stat {
+      background: #f8fafc;
+      padding: 12px;
+      border-radius: 12px;
+    }
+    .result-detail .stat .num { font-size: 1.4rem; font-weight: 700; }
+    .result-detail .stat.correct .num { color: #2d6a4f; }
+    .result-detail .stat.wrong .num { color: #b91c1c; }
+    .result-detail .stat.skip .num { color: #f59e0b; }
+
+    .other-tests {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      padding: 20px 25px;
+      margin-top: 25px;
+      margin-bottom: 30px;
+    }
+    .other-tests h3 { color: #1e4a76; margin-bottom: 12px; font-size: 1rem; }
+    .test-links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .test-links a {
+      background: #e6f0ff;
+      padding: 8px 18px;
+      border-radius: 30px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .test-links a:hover { background: #1e4a76; color: white; }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 30px 0 18px;
+      margin-top: auto;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .question-card { padding: 20px; }
+      .result-detail { grid-template-columns: 1fr; }
+      .nav-buttons { flex-direction: column; }
+      .btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 12 <span>Physics</span></h1>
+    <a href="class 12 all subjects.html" class="back-link">← Back to Physics Chapters</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="test-info">
+    <span class="subject">Electrostatic Potential and Capacitance</span>
+    <span class="total-q">10 Questions</span>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="question-card" id="questionCard">
+    <div class="q-number" id="qNumber">Question 1 of 10</div>
+    <div class="q-text" id="qText">Loading question...</div>
+    <div class="options" id="optionsContainer"></div>
+    <div class="feedback-box" id="feedbackBox">
+      <div id="feedbackText"></div>
+      <div class="exp" id="feedbackExp"></div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+      <button class="btn btn-primary" id="nextBtn">Next</button>
+      <button class="btn btn-success" id="submitBtn" style="display:none;">Submit Test</button>
+    </div>
+  </div>
+
+  <div class="result-card" id="resultCard">
+    <h2>Test Completed</h2>
+    <div class="result-score" id="resultScore">0/10</div>
+    <div class="result-percent" id="resultPercent">0%</div>
+    <div class="result-msg" id="resultMsg">Keep practicing!</div>
+    <div class="result-detail">
+      <div class="stat correct"><div class="num" id="correctCount">0</div><div>Correct</div></div>
+      <div class="stat wrong"><div class="num" id="wrongCount">0</div><div>Wrong</div></div>
+      <div class="stat skip"><div class="num" id="skipCount">0</div><div>Not Answered</div></div>
+    </div>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <button class="btn btn-success" onclick="location.reload()">Retake Test</button>
+      <button class="btn btn-primary" onclick="location.href='class 12 all subjects.html'">Back to Chapters</button>
+    </div>
+  </div>
+
+  <div class="other-tests">
+    <h3>Other Physics Tests</h3>
+    <div class="test-links">
+      <a href="electric charges and field.html">Electric Charges and Fields</a>
+      <a href="current electricity.html">Current Electricity</a>
+      <a href="moving charges and magnetism.html">Moving Charges and Magnetism</a>
+      <a href="magnetism and matter.html">Magnetism and Matter</a>
+      <a href="electromagnetic introduction.html">Electromagnetic Induction</a>
+      <a href="alternating current.html">Alternating Current</a>
+      <a href="electromagnetic waves.html">Electromagnetic Waves</a>
+      <a href="ray optics and optical.html">Ray Optics</a>
+      <a href="waves optics.html">Wave Optics</a>
+      <a href="dual nature of radiation and matter.html">Dual Nature</a>
+      <a href="atoms12.html">Atoms</a>
+      <a href="nuclie.html">Nuclei</a>
+      <a href="semiconducter electronics.html">Semiconductor Electronics</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">© 2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+</footer>
+
+<script>
+  const questions = [
+    { text: "The SI unit of electric potential is:", options: ["Volt", "Coulomb", "Newton", "Joule"], correct: 0, explanation: "Volt (V) is the SI unit of electric potential." },
+    { text: "The work done in moving a charge in an electric field is equal to:", options: ["qV", "qE", "V/q", "E/q"], correct: 0, explanation: "Work done = qV (charge × potential difference)." },
+    { text: "The electric potential at a point due to a point charge is:", options: ["kQ/r", "kQ/r²", "kQ/r³", "kQ"], correct: 0, explanation: "V = kQ/r, where k = 1/4πε₀." },
+    { text: "The capacitance of a parallel plate capacitor is:", options: ["ε₀A/d", "ε₀d/A", "A/ε₀d", "d/ε₀A"], correct: 0, explanation: "C = ε₀A/d for a parallel plate capacitor." },
+    { text: "The unit of capacitance is:", options: ["Farad", "Coulomb", "Volt", "Ohm"], correct: 0, explanation: "Farad (F) is the unit of capacitance." },
+    { text: "The electric potential inside a conductor is:", options: ["Constant", "Variable", "Zero", "Maximum"], correct: 0, explanation: "Electric potential is constant inside a conductor." },
+    { text: "The dielectric constant of a material is:", options: ["K = ε/ε₀", "K = ε₀/ε", "K = ε", "K = 1/ε"], correct: 0, explanation: "K = ε/ε₀, where ε is permittivity of the material." },
+    { text: "The energy stored in a capacitor is:", options: ["½CV²", "CV²", "½QV", "Both ½CV² and ½QV"], correct: 3, explanation: "Energy = ½CV² = ½QV." },
+    { text: "The potential difference between two points is defined as:", options: ["Work done per unit charge", "Force per unit charge", "Charge per unit work", "Force per unit length"], correct: 0, explanation: "Potential difference = Work done / Charge." },
+    { text: "The capacitance of a spherical conductor is:", options: ["4πε₀R", "4πε₀R²", "ε₀/R", "R/ε₀"], correct: 0, explanation: "C = 4πε₀R for an isolated spherical conductor." }
+  ];
+
+  let currentIndex = 0;
+  let userAnswers = new Array(questions.length).fill(null);
+  let answered = new Array(questions.length).fill(false);
+
+  const qNumber = document.getElementById('qNumber');
+  const qText = document.getElementById('qText');
+  const optionsContainer = document.getElementById('optionsContainer');
+  const feedbackBox = document.getElementById('feedbackBox');
+  const feedbackText = document.getElementById('feedbackText');
+  const feedbackExp = document.getElementById('feedbackExp');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const submitBtn = document.getElementById('submitBtn');
+  const progressBar = document.getElementById('progressBar');
+  const questionCard = document.getElementById('questionCard');
+  const resultCard = document.getElementById('resultCard');
+
+  function renderQuestion(index) {
+    const q = questions[index];
+    qNumber.textContent = `Question ${index + 1} of ${questions.length}`;
+    qText.textContent = q.text;
+
+    optionsContainer.innerHTML = '';
+    feedbackBox.className = 'feedback-box';
+    feedbackBox.classList.remove('show', 'correct', 'wrong');
+
+    q.options.forEach((opt, optIndex) => {
+      const optionDiv = document.createElement('div');
+      optionDiv.className = 'option';
+      optionDiv.textContent = opt;
+
+      if (answered[index]) {
+        optionDiv.classList.add('disabled');
+        if (optIndex === q.correct) {
+          optionDiv.classList.add('correct-answer');
+        }
+        if (userAnswers[index] === optIndex && optIndex !== q.correct) {
+          optionDiv.classList.add('wrong-answer');
+        }
+      } else {
+        optionDiv.onclick = () => selectOption(optIndex);
+      }
+
+      optionsContainer.appendChild(optionDiv);
+    });
+
+    if (answered[index]) {
+      const isCorrect = userAnswers[index] === q.correct;
+      feedbackBox.classList.add('show', isCorrect ? 'correct' : 'wrong');
+      feedbackText.innerHTML = isCorrect ? '<strong>Correct!</strong>' : '<strong>Incorrect!</strong>';
+      feedbackExp.textContent = q.explanation;
+    }
+
+    // Update Progress Bar
+    const progressPercent = ((index + 1) / questions.length) * 100;
+    progressBar.style.width = `${progressPercent}%`;
+
+    // Navigation Buttons State
+    prevBtn.disabled = index === 0;
+
+    if (index === questions.length - 1) {
+      nextBtn.style.display = 'none';
+      submitBtn.style.display = 'inline-block';
+    } else {
+      nextBtn.style.display = 'inline-block';
+      submitBtn.style.display = 'none';
+    }
+  }
+
+  function selectOption(optIndex) {
+    if (answered[currentIndex]) return;
+
+    userAnswers[currentIndex] = optIndex;
+    answered[currentIndex] = true;
+
+    renderQuestion(currentIndex);
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      renderQuestion(currentIndex);
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < questions.length - 1) {
+      currentIndex++;
+      renderQuestion(currentIndex);
+    }
+  });
+
+  submitBtn.addEventListener('click', showResult);
+
+  function showResult() {
+    let correct = 0;
+    let wrong = 0;
+    let skip = 0;
+
+    questions.forEach((q, i) => {
+      if (userAnswers[i] === null) {
+        skip++;
+      } else if (userAnswers[i] === q.correct) {
+        correct++;
+      } else {
+        wrong++;
+      }
+    });
+
+    const scorePercent = Math.round((correct / questions.length) * 100);
+
+    document.getElementById('correctCount').textContent = correct;
+    document.getElementById('wrongCount').textContent = wrong;
+    document.getElementById('skipCount').textContent = skip;
+    document.getElementById('resultScore').textContent = `${correct}/${questions.length}`;
+    document.getElementById('resultPercent').textContent = `${scorePercent}%`;
+
+    let msg = "";
+    if (scorePercent === 100) {
+      msg = "Outstanding! Perfect Score!";
+    } else if (scorePercent >= 70) {
+      msg = "Great Job! Keep up the good work!";
+    } else if (scorePercent >= 40) {
+      msg = "Good effort! Practice a bit more.";
+    } else {
+      msg = "Keep practicing! Review the concepts and try again.";
+    }
+    document.getElementById('resultMsg').textContent = msg;
+
+    questionCard.style.display = 'none';
+    resultCard.classList.add('show');
+  }
+
+  // Initialize First Question
+  renderQuestion(0);
+</script>
+</body>
+</html>

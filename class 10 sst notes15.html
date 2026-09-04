@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 10 Political Science Chapter 4 Political Parties</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f8ff;
+        }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="class 10 all subjects notes.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 10 Political Science Chapter 4 Political Parties</h1>
+
+            <p>NCERT Solutions for Class 10 Civics Chapter 4 covers Meaning and Functions of Political Parties, Party Systems (One-party, Two-party, Multi-party), National and State Recognized Parties, Challenges to Political Parties, and Electoral Reforms.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Meaning & Key Functions of Political Parties</a></li>
+                    <li><a href="#topic2">2. Party Systems: One-Party, Two-Party & Multi-Party</a></li>
+                    <li><a href="#topic3">3. National vs State Parties in India</a></li>
+                    <li><a href="#topic4">4. Challenges to Parties & Steps for Reform</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Meaning & Key Functions of Political Parties</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Political Party:</strong> A group of people who come together to contest elections and hold power in the government. It has three components: <em>The Leaders</em>, <em>The Active Members</em>, and <em>The Followers</em>.</p>
+                    <p>• <strong>Key Functions:</strong> Contest elections, put forward policies and programmes, make laws, form and run governments, play the role of opposition, shape public opinion, and provide access to government machinery.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Party Systems: One-Party, Two-Party & Multi-Party</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>One-Party System:</strong> Only one party is allowed to control and run the government (e.g., China). Not a democratic option.</p>
+                    <p>• <strong>Two-Party System:</strong> Power alternates between two main parties (e.g., USA, UK).</p>
+                    <p>• <strong>Multi-Party System:</strong> Several parties compete and have a reasonable chance of coming to power on their own or in coalition (e.g., India). Reflects political and social diversity.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. National vs State Parties in India</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>National Party Criteria:</strong> Secure at least 6% of total votes in Lok Sabha elections or Assembly elections in 4 states, AND win at least 4 seats in the Lok Sabha.</p>
+                    <p>• <strong>State (Regional) Party Criteria:</strong> Secure at least 6% of total votes in State Legislative Assembly election, AND win at least 2 seats in the State Assembly.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Challenges to Parties & Steps for Reform</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Key Challenges:</strong> Lack of internal democracy, dynastic succession, growing influence of money and muscle power, and lack of meaningful choice for voters.</p>
+                    <p>• <strong>Reforms Taken:</strong> Anti-Defection Law, mandatory affidavit of assets and criminal cases, mandatory organizational elections and IT returns for political parties.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: What are the three main components of a Political Party?</div>
+            <div class="answer">
+                1. <strong>The Leaders:</strong> Formulate policies and lead the party's election campaigns.<br>
+                2. <strong>The Active Members:</strong> Work at ground level to organize meetings and promote party agendas.<br>
+                3. <strong>The Followers:</strong> Voters and supporters who align with the party's ideology and vote for its candidates.
+            </div>
+
+            <div class="question">Q2: What is the 'Anti-Defection Law'?</div>
+            <div class="answer">
+                1. The Anti-Defection Law prevents elected MPs and MLAs from changing political parties after winning an election.<br>
+                2. If an elected representative changes parties without fulfilling legal provisions, they lose their seat in the legislature.<br>
+                3. This law was brought to curb political corruption and bring stability to governments.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: What are the main functions of a Political Party in a democracy?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. <strong>Contesting Elections:</strong> Nominate candidates to compete for political office.<br>
+                2. <strong>Formulating Policies:</strong> Present various policies and programs for voters to choose from.<br>
+                3. <strong>Making Laws:</strong> Elected members play a decisive role in passing legislation in parliament and assemblies.<br>
+                4. <strong>Forming and Running Government:</strong> Executive leaders are chosen from the ruling party to run state machinery.<br>
+                5. <strong>Role of Opposition:</strong> Criticize wrong government policies and keep the ruling power in check.
+            </div>
+
+            <div class="question">Q2: What are the major challenges faced by political parties in modern times?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. <strong>Lack of Internal Democracy:</strong> Concentration of power in the hands of one or top few leaders.<br>
+                2. <strong>Dynastic Succession:</strong> Top positions are often controlled by members of a single family.<br>
+                3. <strong>Money and Muscle Power:</strong> Parties tend to nominate rich candidates or criminals who can win elections using wealth and force.<br>
+                4. <strong>Lack of Meaningful Choice:</strong> Ideological differences among major parties have significantly reduced.
+            </div>
+
+            <div class="question">Q3: Suggest some reforms to strengthen political parties so that they perform their functions well.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. A law should be made to regulate internal affairs and force parties to hold regular organizational elections.<br>
+                2. It should be mandatory to reserve at least one-third (33%) of candidate tickets for women.<br>
+                3. State funding of elections should be introduced to reduce the role of money power.<br>
+                4. People and civil society groups should put pressure on parties through petitions, publicity, and peaceful agitations.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 10 SST Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 10 sst notes1.html">Ch 1: Rise of Nationalism in Europe</a></li>
+                    <li><a href="class 10 sst notes2.html">Ch 2: Nationalism in India</a></li>
+                    <li><a href="class 10 sst notes3.html">Ch 3: Making of a Global World</a></li>
+                    <li><a href="class 10 sst notes4.html">Ch 4: Age of Industrialisation</a></li>
+                    <li><a href="class 10 sst notes5.html">Ch 5: Print Culture & Modern World</a></li>
+                    <li><a href="class 10 sst notes6.html">Ch 6: Resources and Development</a></li>
+                    <li><a href="class 10 sst notes7.html">Ch 7: Forest & Wildlife Resources</a></li>
+                    <li><a href="class 10 sst notes8.html">Ch 8: Water Resources</a></li>
+                    <li><a href="class 10 sst notes9.html">Ch 9: Agriculture</a></li>
+                    <li><a href="class 10 sst notes10.html">Ch 10: Minerals & Energy Resources</a></li>
+                    <li><a href="class 10 sst notes11.html">Ch 11: Manufacturing Industries</a></li>
+                    <li><a href="class 10 sst notes12.html">Ch 12: Lifelines of National Economy</a></li>
+                    <li><a href="class 10 sst notes13.html">Ch 13: Power Sharing</a></li>
+                    <li><a href="class 10 sst notes14.html">Ch 14: Federalism</a></li>
+                    <li><a href="class 10 sst notes15.html">Ch 15: Gender, Religion & Caste</a></li>
+                    <li class="active"><a href="class 10 sst notes16.html">Ch 16: Political Parties</a></li>
+                    <li><a href="class 10 sst notes17.html">Ch 17: Outcomes of Democracy</a></li>
+                    <li><a href="class 10 sst notes18.html">Ch 18: Development</a></li>
+                    <li><a href="class 10 sst notes19.html">Ch 19: Sectors of Indian Economy</a></li>
+                    <li><a href="class 10 sst notes20.html">Ch 20: Money and Credit</a></li>
+                    <li><a href="class 10 sst notes21.html">Ch 21: Globalisation & Indian Economy</a></li>
+                    <li><a href="class 10 sst notes22.html">Ch 22: Consumer Rights</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

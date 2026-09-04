@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 10 Science Chapter 3 Metals and Non-metals</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 10 Science Chapter 3 Metals and Non-metals</h1>
+
+            <p>NCERT Solutions for Class 10 Science Chapter 3 Metals and Non-metals provides structured solutions and chemical equations covering physical and chemical properties of metals, reactivity series, ionic bonding, metallurgy, and corrosion prevention methods.</p>
+
+            <h2>Overview of Topics & Subtopics</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#">Physical Properties of Metals and Non-metals</a></li>
+                    <li><a href="#">Chemical Properties of Metals</a></li>
+                    <li><a href="#">How do Metals and Non-metals React?</a></li>
+                    <li><a href="#">Occurrence of Metals & Extraction</a></li>
+                    <li><a href="#">Corrosion and Its Prevention</a></li>
+                </ul>
+            </div>
+
+            <h2>Intext Questions - Page Number: 40</h2>
+
+            <div class="question">Q1: Give an example of a metal which:</div>
+            <div class="answer">
+                <p>(i) <strong>Is a liquid at room temperature:</strong> Mercury (Hg)</p>
+                <p>(ii) <strong>Can be easily cut with a knife:</strong> Sodium (Na) / Potassium (K)</p>
+                <p>(iii) <strong>Is the best conductor of heat:</strong> Silver (Ag) / Copper (Cu)</p>
+                <p>(iv) <strong>Is a poor conductor of heat:</strong> Lead (Pb) / Mercury (Hg)</p>
+            </div>
+
+            <div class="question">Q2: Explain the meanings of malleable and ductile.</div>
+            <div class="answer">
+                <p><strong>Malleable:</strong> The property of metals that allows them to be beaten or hammered into thin sheets without breaking. Example: Gold and Aluminium.</p>
+                <p><strong>Ductile:</strong> The property of metals that allows them to be drawn or stretched into thin wires. Example: Gold and Copper.</p>
+            </div>
+
+            <h2>Intext Questions - Page Number: 46</h2>
+
+            <div class="question">Q1: Why is sodium kept immersed in kerosene oil?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Sodium is a highly reactive alkali metal that reacts vigorously with oxygen and moisture present in air, generating extreme heat and potentially catching fire. To prevent accidental fires and unwanted oxidation, it is stored submerged in kerosene oil.
+            </div>
+
+            <div class="question">Q2: Write equations for the reactions of:</div>
+            <div class="answer">
+                <p>(i) <strong>Iron with steam:</strong><br>
+                3Fe (s) + 4H<sub>2</sub>O (g) &rarr; Fe<sub>3</sub>O<sub>4</sub> (s) + 4H<sub>2</sub> (g)</p>
+                <p>(ii) <strong>Calcium with water:</strong><br>
+                Ca (s) + 2H<sub>2</sub>O (l) &rarr; Ca(OH)<sub>2</sub> (aq) + H<sub>2</sub> (g)</p>
+            </div>
+
+            <h2>Intext Questions - Page Number: 49</h2>
+
+            <div class="question">Q1: What are amphoteric oxides? Give two examples of amphoteric oxides.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Metal oxides that react with both acidic and basic substances to produce salt and water are known as amphoteric oxides.<br>
+                <em>Examples:</em> Aluminium oxide (Al<sub>2</sub>O<sub>3</sub>) and Zinc oxide (ZnO).<br><br>
+                <strong>Reaction with Acid:</strong> Al<sub>2</sub>O<sub>3</sub> + 6HCl &rarr; 2AlCl<sub>3</sub> + 3H<sub>2</sub>O<br>
+                <strong>Reaction with Base:</strong> Al<sub>2</sub>O<sub>3</sub> + 2NaOH &rarr; 2NaAlO<sub>2</sub> + H<sub>2</sub>O
+            </div>
+
+            <h2>Intext Questions - Page Number: 53</h2>
+
+            <div class="question">Q1: Define the following terms: (i) Mineral (ii) Ore (iii) Gangue.</div>
+            <div class="answer">
+                <p><strong>(i) Mineral:</strong> Naturally occurring elements or chemical compounds found in the Earth's crust.</p>
+                <p><strong>(ii) Ore:</strong> Minerals from which a specific metal can be extracted conveniently and profitably.</p>
+                <p><strong>(iii) Gangue:</strong> Unwanted impurities such as soil, sand, and rocky matter associated with extracted ores.</p>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Which of the following pairs will give displacement reaction?</div>
+            <div class="answer">
+                <p>(a) NaCl solution and copper metal<br>
+                (b) MgCl<sub>2</sub> solution and aluminium metal<br>
+                (c) FeSO<sub>4</sub> solution and silver metal<br>
+                (d) AgNO<sub>3</sub> solution and copper metal</p>
+                <p><strong>Correct Answer:</strong> (d) AgNO<sub>3</sub> solution and copper metal (Copper is more reactive than silver and displaces silver from its solution).</p>
+            </div>
+
+            <div class="question">Q2: Which of the following methods is suitable for preventing an iron frying pan from rusting?</div>
+            <div class="answer">
+                <p>(a) Applying grease<br>(b) Applying paint<br>(c) Applying a coating of zinc<br>(d) All of the above</p>
+                <p><strong>Correct Answer:</strong> (c) Applying a coating of zinc (Galvanisation is suitable for food-contact cooking containers where paint or grease is non-viable).</p>
+            </div>
+
+            <div class="question">Q3: What are the general properties of ionic compounds?</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p>1. <strong>Physical Nature:</strong> Ionic compounds are hard, brittle solids due to strong electrostatic attraction between oppositely charged ions.</p>
+                <p>2. <strong>High Melting & Boiling Points:</strong> A high amount of heat energy is required to break the strong ionic bonds.</p>
+                <p>3. <strong>Solubility:</strong> Generally soluble in polar solvents like water, but insoluble in non-polar solvents like kerosene or petrol.</p>
+                <p>4. <strong>Electrical Conductivity:</strong> Conduct electricity in molten state or aqueous solution due to mobile ions, but do not conduct in the solid state.</p>
+            </div>
+
+            <div class="question">Q4: Give reasons why copper is used to make hot water tanks and not steel (an alloy of iron).</div>
+            <div class="answer">
+                <strong>Answer:</strong> Copper does not react with water or steam at any temperature, whereas iron reacts with steam to form iron oxide, causing structural corrosion and rusting over time. Furthermore, copper is a significantly better conductor of heat than steel.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 10 Science Chapters</h3>
+                <ul class="sidebar-links">
+                   <li><a href="class 10 science notes1.html">Ch 1: Chemical Reactions & Equations</a></li>
+                    <li><a href="class 10 science notes2.html">Ch 2: Acids, Bases and Salts</a></li>
+                    <li><a href="class 10 science notes3.html">Ch 3: Metals and Non-metals</a></li>
+                    <li><a href="class 10 science notes4.html">Ch 4: Carbon and its Compounds</a></li>
+                    <li><a href="class 10 science notes5.html">Ch 5: Life Processes</a></li>
+                    <li><a href="class 10 science notes6.html">Ch 6: Control and Coordination</a></li>
+                    <li><a href="class 10 science notes7.html">Ch 7: How do Organisms Reproduce?</a></li>
+                    <li><a href="class 10 science notes8.html">Ch 8: Heredity</a></li>
+                    <li><a href="class 10 science notes9.html">Ch 9: Light – Reflection and Refraction</a></li>
+                    <li><a href="class 10 science notes10.html">Ch 10: The Human Eye and Colourful World</a></li>
+                    <li><a href="class 10 science notes11.html">Ch 11: Electricity</a></li>
+                    <li><a href="class 10 science notes12.html">Ch 12: Magnetic Effects of Electric Current</a></li>
+                    <li class="active"><a href="class 10 science notes13.html">Ch 13: Our Environment</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

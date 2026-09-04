@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Class 9 English - JAC Board</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header {
+      background: white;
+      padding: 20px 0;
+      border-bottom: 2px solid #1e4a76;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      color: #1e4a76;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 18px 22px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.4rem;
+    }
+
+    .chapter-list {
+      padding: 10px 0;
+    }
+
+    .chapter-row {
+      display: flex;
+      align-items: center;
+      padding: 12px 22px;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+    }
+
+    .chapter-row:hover {
+      background: #f8fafc;
+    }
+
+    .chapter-num {
+      width: 70px;
+      font-weight: 600;
+      color: #555;
+      font-size: 0.85rem;
+    }
+
+    .chapter-link {
+      flex: 1;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 6px 0;
+    }
+
+    .chapter-link:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    .test-badge {
+      font-size: 0.7rem;
+      background: #e6f0ff;
+      padding: 4px 14px;
+      border-radius: 20px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .test-badge:hover {
+      background: #1e4a76;
+      color: white;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 40px 0 20px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 20px;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 600px) {
+      .chapter-row {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chapter-num {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 9 <span>English</span> | JAC Board</h1>
+    <a href="examora.html" class="back-link" id="backHome">Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="content-header">
+      <h2>English - All Chapters</h2>
+    </div>
+    <div class="chapter-list" id="chapterList">
+      <!-- chapters will load here -->
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html" id="aboutLink">About Us</a>
+        <a href="contact us examora.html" id="contactLink">Contact Us</a>
+        <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+        <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://whatsapp.com/channel/0029VanoIcGEquiN0b5u9x3M">WhatsApp</a>
+        <a href="www.youtube.com/@Sonusir8969">youtube</a>
+        <a href="https://www.instagram.com/sonu_____study_8969?igsh=a2NtODRsd2U4N29q">Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Class 9 JAC Board English Syllabus - Based on NCERT/JAC Curriculum
+  const englishChapters = [
+    { num: "Ch-1", name: "The Fun They Had", link: "the fun they had.html" },
+    { num: "Ch-2", name: "The Sound of Music", link: "the sound of music.html" },
+    { num: "Ch-3", name: "The Little Girl", link: "the little girl.html" },
+    { num: "Ch-4", name: "A Truly Beautiful Mind", link: "a truly beautiful mind.html" },
+    { num: "Ch-5", name: "The Snake and the Mirror", link: "the snake and the mirror.html" },
+    { num: "Ch-6", name: "My Childhood", link: "my childhood.html" },
+    { num: "Ch-7", name: "Reach for the Top", link: "reach for the top.html" },
+    { num: "Ch-8", name: "Kathmandu", link: "kathmandu.html" },
+    { num: "Ch-9", name: "If I Were You", link: "if i  were you,html" },
+    { num: "Poem-1", name: "The Road Not Taken", link: "the road not taken.html" },
+    { num: "Poem-2", name: "Wind", link: "wind.html" },
+    { num: "Poem-3", name: "Rain on the Roof", link: "rain on the roof.html" },
+    { num: "Poem-4", name: "The Lake Isle of Innisfree", link: "the lake isle of innisfree.html" },
+    { num: "Poem-5", name: "A Legend of the Northland", link: "a legen of the northland.html" },
+    { num: "Poem-6", name: "No Men Are Foreign", link: "no men are foreign.html" },
+    { num: "Poem-7", name: "The Duck and the Kangaroo", link: "the duck and the kangaroo.html" },
+    { num: "Poem-8", name: "On Killing a Tree", link: "on killing a tree.html" },
+    { num: "Poem-9", name: "The Snake Trying", link: "the snake trying,html" },
+    { num: "Poem-10", name: "A Slumber Did My Spirit Seal", link: "a slumber did my spirit.html" },
+  ];
+
+  function renderChapters() {
+    let html = "";
+    for (let i = 0; i < englishChapters.length; i++) {
+      const ch = englishChapters[i];
+      html += `
+        <div class="chapter-row">
+          <div class="chapter-num">${ch.num}</div>
+          <a href="${ch.link}" class="chapter-link" target="_blank">${ch.name}</a>
+          <a href="${ch.link}" class="test-badge" target="_blank">Test</a>
+        </div>
+      `;
+    }
+    document.getElementById("chapterList").innerHTML = html;
+  }
+
+  document.getElementById("final selected home page.html")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Return to Examora main page.");
+  });
+
+  document.getElementById("about us examora.html")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Examora - JAC Board preparation platform.");
+  });
+
+  document.getElementById("contact us examora.html")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Email: support@examora.com");
+  });
+
+  document.getElementById("privacy policy examora,html")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Privacy policy: Data is secure.");
+  });
+
+  document.getElementById("term and condition.html")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Terms and conditions apply.");
+  });
+
+  renderChapters();
+</script>
+</body>
+</html>

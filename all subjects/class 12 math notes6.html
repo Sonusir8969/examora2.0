@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Mathematics Chapter 6 Application of Derivatives</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <div class="main-container">
+
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Mathematics Chapter 6 Application of Derivatives</h1>
+
+            <p>NCERT Solutions for Class 12 Mathematics Chapter 6 Application of Derivatives covers the rate of change of quantities, increasing and decreasing functions, tangents and normals to curves, and finding maxima and minima using derivatives.</p>
+
+            <h2>Overview of Topics &amp; Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Rate of Change and Monotonicity</a></li>
+                    <li><a href="#topic2">2. Tangents and Normals</a></li>
+                    <li><a href="#topic3">3. Maxima, Minima and Optimization</a></li>
+                </ul>
+            </div>
+
+            <div id="topic1">
+                <h2>1. Rate of Change and Monotonicity</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; Derivatives measure the instantaneous rate of change of one quantity with respect to another, useful in problems involving a changing radius, volume, or other physical quantities over time.</p>
+                    <p>&bull; A function is increasing on an interval where f'(x) &ge; 0 throughout, and decreasing on an interval where f'(x) &le; 0 throughout.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Tangents and Normals</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; The slope of the tangent to a curve y = f(x) at a point (x1, y1) is given by f'(x1), and the tangent line's equation is y - y1 = f'(x1)(x - x1).</p>
+                    <p>&bull; The normal to the curve at the same point is perpendicular to the tangent, with slope -1/f'(x1) (when f'(x1) &ne; 0).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Maxima, Minima and Optimization</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; Critical points, where f'(x) = 0 or f'(x) is undefined, are candidates for local maxima or minima and are analyzed using the first or second derivative test.</p>
+                    <p>&bull; Optimization problems (maximizing area, minimizing cost, etc.) are solved by expressing the quantity as a function of a single variable and applying derivative tests to find the optimal value.</p>
+                </div>
+            </div>
+
+            <h2>NCERT Textbook Exercise Questions</h2>
+
+            <div class="question">How do you determine whether a function is increasing or decreasing on a given interval?</div>
+            <div class="answer">
+                <strong>Answer:</strong> A function f(x) is said to be increasing on an interval if its derivative f'(x) is greater than or equal to zero throughout that interval, meaning the function's values do not decrease as x increases. Conversely, the function is decreasing on an interval if f'(x) is less than or equal to zero throughout, indicating the function's values do not increase as x increases.
+            </div>
+
+            <div class="question">Find the equation of the tangent to the curve y = x&sup2; at the point (2, 4).</div>
+            <div class="answer">
+                <strong>Answer:</strong> First, differentiate y = x&sup2; to get dy/dx = 2x, so the slope of the tangent at x = 2 is 2(2) = 4. Using the point-slope form of a line, the equation of the tangent is y - 4 = 4(x - 2), which simplifies to y = 4x - 4.
+            </div>
+
+            <div class="question">Explain the second derivative test for finding local maxima and minima.</div>
+            <div class="answer">
+                <strong>Answer:</strong> After finding the critical points where f'(x) = 0, the second derivative test evaluates f''(x) at each of these points. If f''(x) is positive, the critical point corresponds to a local minimum; if f''(x) is negative, it corresponds to a local maximum; and if f''(x) equals zero, the test is inconclusive and a different method must be used.
+            </div>
+
+            <div class="question">How are derivatives used to solve related rates problems?</div>
+            <div class="answer">
+                <strong>Answer:</strong> In related rates problems, two or more quantities are connected by an equation, and both quantities are changing with respect to time. By differentiating the connecting equation implicitly with respect to time, a relationship between the rates of change (derivatives) of the quantities is obtained, which can then be solved for the unknown rate using the given values at a specific instant.
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Mathematics Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 math notes1.html">Ch 1: Relations and Functions</a></li>
+                    <li><a href="class 12 math notes2.html">Ch 2: Inverse Trigonometric Functions</a></li>
+                    <li><a href="class 12 math notes3.html">Ch 3: Matrices</a></li>
+                    <li><a href="class 12 math notes4.html">Ch 4: Determinants</a></li>
+                    <li><a href="class 12 math notes5.html">Ch 5: Continuity and Differentiability</a></li>
+                    <li class="active"><a href="class 12 math notes6.html">Ch 6: Application of Derivatives</a></li>
+                    <li><a href="class 12 math notes7.html">Ch 7: Integrals</a></li>
+                    <li><a href="class 12 math notes8.html">Ch 8: Application of Integrals</a></li>
+                    <li><a href="class 12 math notes9.html">Ch 9: Differential Equations</a></li>
+                    <li><a href="class 12 math notes10.html">Ch 10: Vector Algebra</a></li>
+                    <li><a href="class 12 math notes11.html">Ch 11: Three Dimensional Geometry</a></li>
+                    <li><a href="class 12 math notes12.html">Ch 12: Linear Programming</a></li>
+                    <li><a href="class 12 math notes13.html">Ch 13: Probability</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

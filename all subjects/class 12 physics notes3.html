@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Physics Chapter 3 Current Electricity</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Physics Chapter 3 Current Electricity</h1>
+
+            <p>NCERT Solutions for Class 12 Physics Chapter 3 Current Electricity provides detailed revision notes, formulas, derivations, and step-by-step textbook solutions covering electric current, Ohm's law, drift velocity, resistivity, cells, Kirchhoff's laws, and Wheatstone bridge.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Electric Current, Drift Velocity & Ohm's Law</a></li>
+                    <li><a href="#topic2">2. Electrical Energy, Power & Temperature Dependence of Resistivity</a></li>
+                    <li><a href="#topic3">3. EMF, Internal Resistance & Combination of Cells</a></li>
+                    <li><a href="#topic4">4. Kirchhoff's Laws & Wheatstone Bridge</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Electric Current, Drift Velocity & Ohm's Law</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Electric Current (I):</strong> The rate of flow of charge across any cross-section of a conductor: <em>I = dQ / dt</em>. SI unit is Ampere (A).</p>
+                    <p>• <strong>Drift Velocity (v_d):</strong> Average velocity with which free electrons drift towards the positive terminal under an applied electric field: <em>v_d = (e E / m) × τ</em> (where τ is relaxation time).</p>
+                    <p>• <strong>Relation between Current & Drift Velocity:</strong> <em>I = n e A v_d</em>, where n is charge carrier density and A is cross-sectional area.</p>
+                    <p>• <strong>Current Density (J):</strong> Current per unit area: <em>J = I / A = n e v_d</em>. Vector form of Ohm's Law: <em>J = σ E</em> (where σ is electrical conductivity).</p>
+                    <p>• <strong>Ohm's Law:</strong> Current flowing through a conductor is directly proportional to potential difference applied across its ends provided physical conditions (temperature, pressure) remain constant: <em>V = IR</em>.</p>
+                    <p>• <strong>Resistance (R):</strong> Opposition offered to the flow of current: <em>R = ρ L / A</em>, where ρ is electrical resistivity.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Electrical Energy, Power & Temperature Dependence of Resistivity</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Electrical Power (P):</strong> Rate at which electrical energy is consumed or dissipated in a circuit: <em>P = VI = I²R = V² / R</em>. SI unit is Watt (W).</p>
+                    <p>• <strong>Electrical Energy (W):</strong> Total work done by charge carriers: <em>W = P × t = V I t = I² R t</em>. SI unit is Joule (J); commercial unit is kWh (1 kWh = 3.6 × 10⁶ J).</p>
+                    <p>• <strong>Temperature Dependence of Resistivity:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Metallic Conductors:</em> Resistivity increases with temperature: <em>ρ_T = ρ₀ [1 + α(T - T₀)]</em>, where α is temperature coefficient of resistivity (+ve for metals).</p>
+                    <p>&nbsp;&nbsp;- <em>Semiconductors & Insulators:</em> Resistivity decreases exponentially as temperature increases (α is negative).</p>
+                    <p>&nbsp;&nbsp;- <em>Alloys (e.g., Manganin, Constantan):</em> Resistivity is very high and almost independent of temperature (very small α).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. EMF, Internal Resistance & Combination of Cells</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Electromotive Force (EMF, E):</strong> Maximum potential difference between cell terminals when no current is drawn from it (open circuit).</p>
+                    <p>• <strong>Terminal Potential Difference (V):</strong> Potential difference across terminals when current is drawn (closed circuit): <em>V = E - I r</em> (during discharge) and <em>V = E + I r</em> (during charging).</p>
+                    <p>• <strong>Internal Resistance (r):</strong> Opposition offered by electrolyte and electrodes to internal current flow: <em>r = R (E / V - 1)</em>.</p>
+                    <p>• <strong>Combination of Cells:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Series Combination:</em> <em>E_eq = E₁ + E₂</em>, <em>r_eq = r₁ + r₂</em>.</p>
+                    <p>&nbsp;&nbsp;- <em>Parallel Combination:</em> <em>E_eq / r_eq = E₁ / r₁ + E₂ / r₂</em> and <em>1 / r_eq = 1 / r₁ + 1 / r₂</em>.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Kirchhoff's Laws & Wheatstone Bridge</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Kirchhoff's First Law / Junction Rule (KCL):</strong> Algebraic sum of currents meeting at any junction in a closed circuit is zero (<em>∑ I = 0</em>). Based on <strong>Conservation of Charge</strong>.</p>
+                    <p>• <strong>Kirchhoff's Second Law / Loop Rule (KVL):</strong> Algebraic sum of potential changes around any closed loop is zero (<em>∑ ΔV = 0</em> or <em>∑ E = ∑ IR</em>). Based on <strong>Conservation of Energy</strong>.</p>
+                    <p>• <strong>Wheatstone Bridge:</strong> An arrangement of four resistors (P, Q, R, S) used to determine an unknown resistance.</p>
+                    <p>&nbsp;&nbsp;- <em>Balanced Condition:</em> When no current flows through galvanometer (I_g = 0): <em>P / Q = R / S</em>.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Why does the resistance of a conductor increase with an increase in temperature, whereas that of a semiconductor decreases?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Conductors:</strong> Resistivity is given by <em>ρ = m / (n e² τ)</em>. In metallic conductors, the free electron density (n) is already very high and stays nearly constant with temperature. As temperature increases, thermal vibrations of lattice ions increase, causing more frequent collisions. This decreases the relaxation time (τ), thereby increasing resistance.<br>
+                • <strong>Semiconductors:</strong> As temperature increases, more covalent bonds break, generating a significant number of additional charge carriers (electron-hole pairs). The exponential increase in charge carrier density (n) dominates over the decrease in relaxation time (τ), resulting in a net decrease in resistance.
+            </div>
+
+            <div class="question">Q2: Differentiate between Electromotive Force (EMF) and Terminal Potential Difference of a cell.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Electromotive Force (EMF)</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Terminal Potential Difference (V)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Circuit State</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Measured in an <strong>open circuit</strong> (when no current flows).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Measured in a <strong>closed circuit</strong> (when current flows).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Internal Resistance Effect</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Independent of internal resistance and external load.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Depends on internal resistance and external load resistance.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Magnitude Relation</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Always greater than terminal voltage during cell discharge (E > V).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Less than EMF during discharge (V = E - Ir).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Source vs Effect</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">It is the cause/source of potential difference.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">It is the effect observed across circuit components.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: A storage battery of emf 8.0 V and internal resistance 0.5 Ω is being charged by a 120 V dc supply using a series resistor of 15.5 Ω. What is the terminal voltage of the battery during charging? What is the purpose of having a series resistor in the charging circuit?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • EMF of battery (E) = 8.0 V<br>
+                • Internal resistance of battery (r) = 0.5 Ω<br>
+                • DC supply voltage (V_supply) = 120 V<br>
+                • Series resistor (R) = 15.5 Ω<br><br>
+                <strong>Step 1: Net Effective Voltage in circuit during charging</strong><br>
+                <em>V_net = V_supply - E = 120 V - 8.0 V = 112 V</em><br><br>
+                <strong>Step 2: Total resistance of circuit</strong><br>
+                <em>R_total = R + r = 15.5 + 0.5 = 16.0 Ω</em><br><br>
+                <strong>Step 3: Charging Current (I)</strong><br>
+                <em>I = V_net / R_total = 112 / 16 = 7.0 A</em><br><br>
+                <strong>Step 4: Terminal Voltage during charging</strong><br>
+                <em>V = E + I r = 8.0 + (7.0 × 0.5) = 8.0 + 3.5 = 11.5 V</em><br><br>
+                <strong>Purpose of Series Resistor:</strong> The series resistor limits the heavy charging current. Without it, high current would flow, damaging the battery and supply unit due to excessive heating.
+            </div>
+
+            <div class="question">Q2: Distinguish between Ohmic Conductors and Non-Ohmic Conductors.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Ohmic Conductors</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Non-Ohmic Conductors</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ohm's Law Validity</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Obey Ohm's law (V ∝ I) at all voltages.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Do not obey Ohm's law; V/I ratio is non-constant.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>V-I Graph Characteristic</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Linear straight line passing through origin.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Non-linear curve or non-symmetric behavior.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Resistance Value</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Constant resistance independent of current.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Dynamic resistance depends on current/voltage.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Examples</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Copper wire, Silver wire, Metallic resistors.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Semiconductor diodes, Transistors, Vacuum tubes, Electrolytes.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Physics</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 physics notes1">Ch 1: Electric Charges and Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatic Potential & Capacitance</a></li>
+                    <li class="active"><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges and Magnetism</a></li>
+                    <li><a href="class 12 physics notes5">Ch 5: Magnetism and Matter</a></li>
+                    <li><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics and Optical Instruments</a></li>
+                    <li><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li><a href="class 12 physics notes11">Ch 11: Dual Nature of Radiation & Matter</a></li>
+                    <li><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

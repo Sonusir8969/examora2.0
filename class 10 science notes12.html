@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 10 Science Chapter 12 Magnetic Effects of Electric Current</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 10 Science Chapter 12 Magnetic Effects of Electric Current</h1>
+
+            <p>NCERT Solutions for Class 10 Science Chapter 12 Magnetic Effects of Electric Current covers magnetic field lines, magnetic field due to current-carrying conductors, solenoid properties, Fleming's Left-Hand Rule, force on current conductors, and domestic circuit safety devices.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Magnetic Field and Field Lines</a></li>
+                    <li><a href="#topic2">2. Field due to a Current-Carrying Conductor & Solenoid</a></li>
+                    <li><a href="#topic3">3. Force on a Conductor in a Magnetic Field & Fleming's Left-Hand Rule</a></li>
+                    <li><a href="#topic4">4. Domestic Electric Circuits & Safety Features</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Magnetic Field and Field Lines</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Magnetic Field:</strong> The region surrounding a magnet where its magnetic force can be experienced by other magnets or magnetic substances.</p>
+                    <p>• <strong>Properties of Field Lines:</strong></p>
+                    <p>&nbsp;&nbsp;1. Emerge from the North pole and enter at the South pole outside a magnet; travel South to North inside.</p>
+                    <p>&nbsp;&nbsp;2. Field lines form continuous, closed loops.</p>
+                    <p>&nbsp;&nbsp;3. Degree of closeness of lines indicates strength of the magnetic field.</p>
+                    <p>&nbsp;&nbsp;4. Two magnetic field lines <strong>never intersect</strong> because a compass needle cannot point in two different directions at one point.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Field due to a Current-Carrying Conductor & Solenoid</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Right-Hand Thumb Rule:</strong> Imagine holding a current-carrying conductor in your right hand with the thumb pointing in the direction of current; your curled fingers point in the direction of the magnetic field lines.</p>
+                    <p>• <strong>Straight Wire:</strong> Magnetic field lines are concentric circles around the wire.</p>
+                    <p>• <strong>Solenoid:</strong> A long coil of many circular turns of insulated copper wire. The magnetic field inside a uniform solenoid is uniform and resembles that of a bar magnet.</p>
+                    <p>• <strong>Electromagnet:</strong> Formed when a soft iron core is placed inside a current-carrying solenoid.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Force on a Conductor in a Magnetic Field & Fleming's Left-Hand Rule</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• A current-carrying conductor experiences a mechanical force when placed in a magnetic field.</p>
+                    <p>• The force is maximum when the direction of current is perpendicular (at 90 degrees) to the magnetic field.</p>
+                    <p>• <strong>Fleming's Left-Hand Rule:</strong> Stretch the thumb, forefinger, and middle finger of your left hand mutually perpendicular to each other:</p>
+                    <p>&nbsp;&nbsp;- <strong>Forefinger:</strong> Magnetic Field</p>
+                    <p>&nbsp;&nbsp;- <strong>Middle Finger:</strong> Electric Current</p>
+                    <p>&nbsp;&nbsp;- <strong>Thumb:</strong> Direction of Motion / Force on the conductor.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Domestic Electric Circuits & Safety Features</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Wires in Supply:</strong> Live Wire (Red insulation, 220 V), Neutral Wire (Black insulation, 0 V), Earth Wire (Green insulation, safety grounding).</p>
+                    <p>• <strong>Earth Wire:</strong> Provides a low-resistance conducting path for leakage currents, protecting users from severe electric shocks.</p>
+
+                    <p>• <strong>Short Circuiting:</strong> Occurs when live and neutral wires come in direct contact due to damaged insulation, causing an abrupt increase in current.</p>
+                    <p>• <strong>Overloading:</strong> Occurs when too many electrical appliances are connected to a single socket simultaneously.</p>
+                    <p>• <strong>Electric Fuse:</strong> A safety device made of a low melting point alloy that melts and breaks the circuit during high current surges.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext Questions - Page Number: 224</h2>
+
+            <div class="question">Q1: Why does a compass needle get deflected when brought near a bar magnet?</div>
+            <div class="answer">
+                <strong>Answer:</strong> A compass needle is a small bar magnet. When brought near another bar magnet, the magnetic field of the bar magnet exerts a magnetic force on the poles of the compass needle, causing it to deflect.
+            </div>
+
+            <h2>Intext Questions - Page Number: 228</h2>
+
+            <div class="question">Q1: Draw magnetic field lines around a bar magnet.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Continuous closed loops emerging from the North pole (N) and entering the South pole (S) externally, while moving from South (S) to North (N) internally. The field lines are crowded near the poles where the magnetic field is strongest.
+            </div>
+
+            <div class="question">Q2: List the properties of magnetic lines of force.</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p>1. They originate at the North pole and terminate at the South pole outside the magnet.</p>
+                <p>2. They are continuous closed curves.</p>
+                <p>3. Closer field lines indicate a stronger magnetic field.</p>
+                <p>4. No two magnetic field lines ever cross or intersect each other.</p>
+            </div>
+
+            <div class="question">Q3: Why don't two magnetic lines of force intersect each other?</div>
+            <div class="answer">
+                <strong>Answer:</strong> If two field lines crossed each other, it would mean that at the point of intersection, a magnetic compass needle would point in two different directions simultaneously, which is physically impossible.
+            </div>
+
+            <h2>Intext Questions - Page Number: 231</h2>
+
+            <div class="question">Q1: State Fleming’s left-hand rule.</div>
+            <div class="answer">
+                <strong>Answer:</strong> According to Fleming’s Left-Hand Rule, stretch the thumb, forefinger, and middle finger of your left hand mutually perpendicular to each other. If the <strong>forefinger</strong> points in the direction of the magnetic field and the <strong>middle finger</strong> in the direction of current, then the <strong>thumb</strong> points in the direction of motion or force acting on the conductor.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Which of the following correctly describes the magnetic field near a long straight wire?</div>
+            <div class="answer">
+                <p>(a) The field consists of straight lines perpendicular to the wire.<br>
+                (b) The field consists of straight lines parallel to the wire.<br>
+                (c) The field consists of radial lines originating from the wire.<br>
+                (d) The field consists of concentric circles centred on the wire.</p>
+                <p><strong>Correct Answer:</strong> (d) The field consists of concentric circles centred on the wire.</p>
+            </div>
+
+            <div class="question">Q2: The phenomenon of electromagnetic induction is:</div>
+            <div class="answer">
+                <p>(a) the process of charging a body.<br>
+                (b) the process of generating magnetic field due to a current passing through a coil.<br>
+                (c) producing induced current in a coil due to relative motion between a magnet and the coil.<br>
+                (d) the process of rotating a coil of an electric motor.</p>
+                <p><strong>Correct Answer:</strong> (c) producing induced current in a coil due to relative motion between a magnet and the coil.</p>
+            </div>
+
+            <div class="question">Q3: What is the function of an earth wire? Why is it necessary to earth metallic appliances?</div>
+            <div class="answer">
+                <strong>Answer:</strong> The earth wire connects the metallic casing of an appliance to a metal plate buried deep inside the Earth. If electric current leaks to the metallic body due to faulty insulation, the earth wire provides a zero-resistance path for the current to flow into the earth. This prevents the potential of the appliance body from rising and protects the user from severe electric shocks.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 10 Science Chapters</h3>
+                <ul class="sidebar-links">
+                     <li><a href="class 10 science notes1.html">Ch 1: Chemical Reactions & Equations</a></li>
+                    <li><a href="class 10 science notes2.html">Ch 2: Acids, Bases and Salts</a></li>
+                    <li><a href="class 10 science notes3.html">Ch 3: Metals and Non-metals</a></li>
+                    <li><a href="class 10 science notes4.html">Ch 4: Carbon and its Compounds</a></li>
+                    <li><a href="class 10 science notes5.html">Ch 5: Life Processes</a></li>
+                    <li><a href="class 10 science notes6.html">Ch 6: Control and Coordination</a></li>
+                    <li><a href="class 10 science notes7.html">Ch 7: How do Organisms Reproduce?</a></li>
+                    <li><a href="class 10 science notes8.html">Ch 8: Heredity</a></li>
+                    <li><a href="class 10 science notes9.html">Ch 9: Light – Reflection and Refraction</a></li>
+                    <li><a href="class 10 science notes10.html">Ch 10: The Human Eye and Colourful World</a></li>
+                    <li><a href="class 10 science notes11.html">Ch 11: Electricity</a></li>
+                    <li><a href="class 10 science notes12.html">Ch 12: Magnetic Effects of Electric Current</a></li>
+                    <li class="active"><a href="class 10 science notes13.html">Ch 13: Our Environment</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

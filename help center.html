@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - Examora</title>
+    <style>
+        :root {
+            --primary-blue: #1e4a76;
+            --accent-green: #2f855a;
+            --body-bg: #f0f2f5;
+            --main-text: #1e2a3e;
+            --secondary-text: #4a5b6e;
+            --light-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --footer-bg: #0f2b3d;
+            --footer-text: #cddfe7;
+            --footer-link: #cbd5e1;
+            --white: #ffffff;
+            --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+            --radius-main: 16px;
+            --radius-small: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--body-bg);
+            color: var(--main-text);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button, input {
+            font-family: inherit;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 28px 0;
+            border-bottom: 3px solid var(--primary-blue);
+            box-shadow: var(--shadow-subtle);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .brand-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-blue);
+            text-decoration: none;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-dot {
+            color: var(--accent-green);
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: var(--secondary-text);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            padding: 8px 16px;
+            background-color: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-small);
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            text-decoration: none;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 40px 0;
+        }
+
+        .main-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-main);
+            box-shadow: var(--shadow-subtle);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        /* Page Header Area */
+        .page-header-area {
+            background-color: var(--light-bg);
+            padding: 40px 32px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .page-header-area h1 {
+            color: var(--primary-blue);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .page-header-area p {
+            color: var(--secondary-text);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 24px auto;
+        }
+
+        /* Search Section */
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            width: 20px;
+            height: 20px;
+            fill: var(--secondary-text);
+            pointer-events: none;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 16px 14px 48px;
+            font-size: 16px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-small);
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            background-color: var(--white);
+            color: var(--main-text);
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(30, 74, 118, 0.15);
+        }
+
+        .content-body {
+            padding: 40px 32px;
+        }
+
+        /* Section Headings */
+        .section-title {
+            color: var(--primary-blue);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-bg);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Quick Help Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .help-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-small);
+            padding: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .help-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+            border-color: #cbd5e1;
+        }
+
+        .help-card h2 {
+            font-size: 18px;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .help-card ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .help-card li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 8px;
+            color: var(--secondary-text);
+            font-size: 14px;
+        }
+
+        .help-card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .help-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        /* FAQ Accordion Section */
+        .faq-section {
+            margin-bottom: 48px;
+        }
+
+        .accordion-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-small);
+            overflow: hidden;
+            background-color: var(--white);
+            transition: border-color 0.2s ease;
+        }
+
+        .faq-item:hover {
+            border-color: #cbd5e1;
+        }
+
+        .faq-header {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 18px 24px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--main-text);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .faq-header:hover {
+            background-color: var(--light-bg);
+            color: var(--primary-blue);
+        }
+
+        .faq-header:focus-visible {
+            outline: 2px solid var(--primary-blue);
+            outline-offset: -2px;
+        }
+
+        .faq-icon {
+            width: 20px;
+            height: 20px;
+            fill: var(--secondary-text);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            fill: var(--primary-blue);
+        }
+
+        .faq-item.active .faq-header {
+            background-color: var(--light-bg);
+            color: var(--primary-blue);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background-color: var(--white);
+        }
+
+        .faq-body {
+            padding: 0 24px 20px 24px;
+            color: var(--secondary-text);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Two Column Support Section */
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .support-card {
+            background-color: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-small);
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .support-card h2 {
+            font-size: 20px;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+        }
+
+        .support-card p {
+            color: var(--secondary-text);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btn-support {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 15px;
+            padding: 12px 24px;
+            border-radius: var(--radius-small);
+            border: 1px solid var(--primary-blue);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            width: fit-content;
+        }
+
+        .btn-support:hover {
+            background-color: #163758;
+            border-color: #163758;
+            text-decoration: none;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .contact-details {
+            margin-top: 12px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: var(--main-text);
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .contact-item span {
+            color: var(--secondary-text);
+            font-weight: normal;
+        }
+
+        /* No Results State */
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--light-bg);
+            border-radius: var(--radius-small);
+            border: 1px dashed var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .no-results p {
+            color: var(--secondary-text);
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .reset-search-btn {
+            background: none;
+            border: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 48px 0 24px 0;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+        }
+
+        .footer-brand .tagline {
+            color: var(--footer-link);
+        }
+
+        .footer-brand p {
+            margin-top: 12px;
+            font-size: 14px;
+            color: var(--footer-link);
+            max-width: 400px;
+        }
+
+        .footer-links-title {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: var(--footer-link);
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 13px;
+            color: var(--footer-link);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            header {
+                padding: 20px 0;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .back-link {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .page-header-area {
+                padding: 28px 20px;
+            }
+
+            .page-header-area h1 {
+                font-size: 26px;
+            }
+
+            .page-header-area p {
+                font-size: 16px;
+            }
+
+            .content-body {
+                padding: 24px 16px;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .support-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .faq-header {
+                padding: 16px;
+                font-size: 15px;
+            }
+
+            .faq-body {
+                padding: 0 16px 16px 16px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 19px;
+            }
+
+            .support-card {
+                padding: 20px;
+            }
+
+            .btn-support {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="brand-container">
+                    <a href="index.html" class="logo">Examora<span class="logo-dot">.</span></a>
+                    <span class="tagline">Practice. Perform. Progress.</span>
+                </div>
+                <a href="index.html" class="back-link">
+                    &#8592; Back to Examora Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="main-card">
+                
+                <div class="page-header-area">
+                    <h1>Help Center</h1>
+                    <p>How can we help you?</p>
+                    
+                    <div class="search-container">
+                        <div class="search-input-wrapper">
+                            <svg class="search-icon" viewBox="0 0 24 24">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                            </svg>
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                class="search-input" 
+                                placeholder="Search Help Center (e.g. notes, test, login, download, result)..." 
+                                aria-label="Search Help Center"
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-body">
+
+                    <div id="noResults" class="no-results">
+                        <p>No help topics or questions matched your search query.</p>
+                        <button id="resetSearch" class="reset-search-btn">View all help topics</button>
+                    </div>
+
+                    <div id="quickHelpSection">
+                        <h2 class="section-title">Quick Help Topics</h2>
+                        <div class="cards-grid">
+                            
+                            <div class="help-card" data-keywords="notes study material class 9 class 10 class 11 class 12 chapter wise pdf download resources">
+                                <h2>📚 Notes &amp; Study Material</h2>
+                                <ul>
+                                    <li>Access Class 9, 10, 11, and 12 curated study material</li>
+                                    <li>Explore chapter-wise structured notes for quick revision</li>
+                                    <li>Download official syllabus-mapped PDF resources</li>
+                                    <li>Use offline study resources directly on your device</li>
+                                </ul>
+                            </div>
+
+                            <div class="help-card" data-keywords="tests mcqs quiz start test select class subject answer questions submit test practice exam">
+                                <h2>📝 Tests &amp; MCQs</h2>
+                                <ul>
+                                    <li>Select your current class and target subject from dashboard</li>
+                                    <li>Choose chapter-wise or full-length mock tests</li>
+                                    <li>Navigate through multiple-choice questions easily</li>
+                                    <li>Submit tests safely and instantly review responses</li>
+                                </ul>
+                            </div>
+
+                            <div class="help-card" data-keywords="results performance score correct answers wrong answers progress track report card accuracy">
+                                <h2>📊 Results &amp; Performance</h2>
+                                <ul>
+                                    <li>View detailed instant scores after test submission</li>
+                                    <li>Check detailed breakdown of correct and wrong answers</li>
+                                    <li>Review full step-by-step solutions and explanations</li>
+                                    <li>Track continuous academic progress over time</li>
+                                </ul>
+                            </div>
+
+                            <div class="help-card" data-keywords="login account signup google login forgot password sign in register profile credentials issue password reset">
+                                <h2>🔐 Login &amp; Account</h2>
+                                <ul>
+                                    <li>Simple email sign up and secure login processes</li>
+                                    <li>One-click fast login using your Google account</li>
+                                    <li>Reset forgotten passwords securely via email</li>
+                                    <li>Manage account settings and student profile details</li>
+                                </ul>
+                            </div>
+
+                            <div class="help-card" data-keywords="downloads pdf resources opening study material open file error failure direct link">
+                                <h2>📥 Downloads</h2>
+                                <ul>
+                                    <li>Open and read high-quality PDF study materials</li>
+                                    <li>Download resources directly for offline access</li>
+                                    <li>Troubleshoot blocked pop-ups or stalled PDF downloads</li>
+                                    <li>Verify file viewer compatibility for mobile devices</li>
+                                </ul>
+                            </div>
+
+                            <div class="help-card" data-keywords="technical problem error bug page not opening button not working broken link test not loading notes not opening loading issue slow site website problem">
+                                <h2>🐛 Technical Problem</h2>
+                                <ul>
+                                    <li>Fixes for pages failing to open or load completely</li>
+                                    <li>Solutions for non-responsive buttons or broken links</li>
+                                    <li>Troubleshoot frozen test modules or missing graphics</li>
+                                    <li>Clear cache and update browser settings for optimal performance</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="faqSection" class="faq-section">
+                        <h2 class="section-title">Frequently Asked Questions</h2>
+                        <div class="accordion-container">
+
+                            <div class="faq-item" data-keywords="notes access class 9 10 11 12 study material pdf chapter wise">
+                                <button class="faq-header" aria-expanded="false">
+                                    <span>1. How do I access Notes?</span>
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                                </button>
+                                <div class="faq-content">
+                                    <div class="faq-body">
+                                        You can access study notes by navigating to the "Notes" section from the top navigation bar or homepage. From there, select your specific Class (Class 9, 10, 11, or 12), choose the subject, and pick the chapter you want to study. All notes are organized systematically and can be viewed directly online or downloaded as PDFs.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-keywords="start test mcq practice quiz select subject exam submission">
+                                <button class="faq-header" aria-expanded="false">
+                                    <span>2. How do I start a test?</span>
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                                </button>
+                                <div class="faq-content">
+                                    <div class="faq-body">
+                                        To start a test, go to the "Tests & MCQs" section. Choose your class and subject, then click on the specific topic or chapter test you wish to take. Click the "Start Test" button to begin. Select your answers for each question and click "Submit Test" when finished to view your immediate score and performance analysis.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-keywords="which classes available class 9 class 10 class 11 class 12 courses offerings board">
+                                <button class="faq-header" aria-expanded="false">
+                                    <span>3. Which classes are available on Examora?</span>
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                                </button>
+                                <div class="faq-content">
+                                    <div class="faq-body">
+                                        Examora currently provides comprehensive study materials, chapter-wise notes, and practice tests for Class 9, Class 10, Class 11, and Class 12. Content is tailored to cover key core subjects in alignment with updated educational board standards.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-keywords="notes page not opening loading error page refresh browser cache issue technical">
+                                <button class="faq-header" aria-expanded="false">
+                                    <span>4. What should I do if a Notes page does not open?</span>
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                                </button>
+                                <div class="faq-content">
+                                    <div class="faq-body">
+                                        If a notes page fails to open, try refreshing the web page (F5 or swipe down on mobile). If the issue persists, clear your browser cache and cookies or check your internet connection. You can also try using a different web browser. If the page still doesn't open, please report it via our "Report a Problem" link.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-keywords="test not loading stuck quiz frozen start button error issue technical">
+                                <button class="faq-header" aria-expanded="false">
+                                    <span>5. What should I do if a test is not loading?</span>
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                                </button>
+                                <div class="faq-content">
+                                    <div class="faq-body">
+                                        Ensure you have a stable internet connection. Try refreshing the page or reopening the test link in an Incognito/Private window. Make sure JavaScript is enabled in your web browser. If the test screen remains blank or stuck on loading, please inform us through the support form or contact details provided below.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-keywords="download study material pdf save offline resources notes button mobile browser">
+                                <button class="faq-header" aria-expanded="false">
+                                    <span>6. How can I download study material?</span>
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                                </button>
+                                <div class="faq-content">
+                                    <div class="faq-body">
+                                        Look for the "Download PDF" or "Download Notes" button available on the respective study material or notes page. Clicking this will open or download the document directly to your device. Ensure your browser is allowed to download files and popup blockers are disabled for Examora.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-keywords="button link not working unclickable dead link broken redirection technical">
+                                <button class="faq-header" aria-expanded="false">
+                                    <span>7. What should I do if a button or link is not working?</span>
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                                </button>
+                                <div class="faq-content">
+                                    <div class="faq-body">
+                                        First, check if your internet connection is active and reload the page. If a specific button or link is unresponsive, disable any ad-blockers or extensions that might interfere with page scripts. If it remains broken, please drop us a message using our support mail so we can fix it immediately.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-keywords="report technical problem submit bug error form support contact mail">
+                                <button class="faq-header" aria-expanded="false">
+                                    <span>8. How can I report a technical problem?</span>
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                                </button>
+                                <div class="faq-content">
+                                    <div class="faq-body">
+                                        You can report technical bugs or glitches directly by clicking the "Report a Problem" button on this Help Center page. It will open an email template addressed to our tech support team (ansarisir210@gmail.com). Kindly describe the problem and mention which page or test you were accessing.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-keywords="contact support email phone reach out help team helpdesk mobile number">
+                                <button class="faq-header" aria-expanded="false">
+                                    <span>9. How can I contact Examora?</span>
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                                </button>
+                                <div class="faq-content">
+                                    <div class="faq-body">
+                                        You can reach out to us directly via email at <strong>ansarisir210@gmail.com</strong> or call us at <strong>6200821665</strong>. Our support team is available to assist you with academic, account, or site-related queries.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-keywords="mobile friendly tablet smartphone responsive user experience chrome safari app site">
+                                <button class="faq-header" aria-expanded="false">
+                                    <span>10. Is Examora mobile friendly?</span>
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                                </button>
+                                <div class="faq-content">
+                                    <div class="faq-body">
+                                        Yes! Examora is fully responsive and optimized for seamless use across desktop computers, laptops, tablets, and smartphones. You don't need a dedicated app—simply open Examora in your mobile browser to study and give practice tests easily.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="support-grid">
+                        
+                        <div class="support-card">
+                            <div>
+                                <h2>Report a Problem</h2>
+                                <p>Found a broken link, missing page, test issue, or any other technical problem? Let us know so we can improve Examora.</p>
+                            </div>
+                            <a href="mailto:ansarisir210@gmail.com?subject=Examora%20Website%20Problem" class="btn-support">
+                                Report a Problem
+                            </a>
+                        </div>
+
+                        <div class="support-card">
+                            <div>
+                                <h2>Contact Support</h2>
+                                <p>For any queries, technical issues, or feedback, please feel free to reach out to us.</p>
+                                <div class="contact-details">
+                                    <div class="contact-item">
+                                        <span>Email:</span> ansarisir210@gmail.com
+                                    </div>
+                                    <div class="contact-item">
+                                        <span>Phone:</span> 6200821665
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Examora<span class="logo-dot">.</span></a>
+                    <div class="tagline">Practice. Perform. Progress.</div>
+                    <p>Empowering students with quality study resources, mock tests, and structured learning tools for academic success.</p>
+                </div>
+                <div>
+                    <div class="footer-links-title">Quick Links</div>
+                    <ul class="footer-links">
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact Us</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Examora Education Pvt. Ltd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            /* --- 1. FAQ Accordion Logic --- */
+            const faqHeaders = document.querySelectorAll('.faq-header');
+
+            faqHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const item = this.parentElement;
+                    const content = this.nextElementSibling;
+                    const isOpen = item.classList.contains('active');
+
+                    // Smooth toggle transition
+                    if (isOpen) {
+                        item.classList.remove('active');
+                        this.setAttribute('aria-expanded', 'false');
+                        content.style.maxHeight = null;
+                    } else {
+                        item.classList.add('active');
+                        this.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+
+            /* --- 2. Dynamic Live Search / Filter Logic --- */
+            const searchInput = document.getElementById('searchInput');
+            const helpCards = document.querySelectorAll('.help-card');
+            const faqItems = document.querySelectorAll('.faq-item');
+            const noResults = document.getElementById('noResults');
+            const resetSearchBtn = document.getElementById('resetSearch');
+            const quickHelpSection = document.getElementById('quickHelpSection');
+            const faqSection = document.getElementById('faqSection');
+
+            function performSearch() {
+                const query = searchInput.value.toLowerCase().trim();
+                let visibleCardsCount = 0;
+                let visibleFaqsCount = 0;
+
+                // Filter Quick Help Cards
+                helpCards.forEach(card => {
+                    const cardText = card.textContent.toLowerCase();
+                    const cardKeywords = card.getAttribute('data-keywords') || '';
+                    
+                    if (query === '' || cardText.includes(query) || cardKeywords.includes(query)) {
+                        card.style.display = 'flex';
+                        visibleCardsCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Filter FAQ Items
+                faqItems.forEach(item => {
+                    const itemText = item.textContent.toLowerCase();
+                    const itemKeywords = item.getAttribute('data-keywords') || '';
+
+                    if (query === '' || itemText.includes(query) || itemKeywords.includes(query)) {
+                        item.style.display = 'block';
+                        visibleFaqsCount++;
+                        
+                        // Automatically expand matching FAQ items when searching
+                        if (query !== '') {
+                            item.classList.add('active');
+                            const header = item.querySelector('.faq-header');
+                            const content = item.querySelector('.faq-content');
+                            if (header && content) {
+                                header.setAttribute('aria-expanded', 'true');
+                                content.style.maxHeight = content.scrollHeight + "px";
+                            }
+                        }
+                    } else {
+                        item.style.display = 'none';
+                        // Collapse hidden FAQ items
+                        item.classList.remove('active');
+                        const header = item.querySelector('.faq-header');
+                        const content = item.querySelector('.faq-content');
+                        if (header && content) {
+                            header.setAttribute('aria-expanded', 'false');
+                            content.style.maxHeight = null;
+                        }
+                    }
+                });
+
+                // Manage Section Display and No Results state
+                const totalVisible = visibleCardsCount + visibleFaqsCount;
+
+                if (totalVisible === 0) {
+                    noResults.style.display = 'block';
+                    quickHelpSection.style.display = 'none';
+                    faqSection.style.display = 'none';
+                } else {
+                    noResults.style.display = 'none';
+                    quickHelpSection.style.display = visibleCardsCount > 0 ? 'block' : 'none';
+                    faqSection.style.display = visibleFaqsCount > 0 ? 'block' : 'none';
+                }
+            }
+
+            // Bind Search Input Event
+            searchInput.addEventListener('input', performSearch);
+
+            // Reset Search Handler
+            resetSearchBtn.addEventListener('click', function() {
+                searchInput.value = '';
+                performSearch();
+                searchInput.focus();
+            });
+
+        });
+    </script>
+</body>
+</html>

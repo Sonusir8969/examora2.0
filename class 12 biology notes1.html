@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Biology Chapter 1 Sexual Reproduction in Flowering Plants</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f8ff;
+        }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="index.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Biology Chapter 1 Sexual Reproduction in Flowering Plants</h1>
+
+            <p>NCERT Solutions for Class 12 Biology Chapter 1 Sexual Reproduction in Flowering Plants covers the complete process of reproduction in Angiosperms. Key topics include Flower structure, Microsporogenesis, Megasporogenesis, Pollination types & agents, Outbreeding devices, Double Fertilization, Endosperm & Embryo development, Seed formation, Apomixis, and Polyembryony.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Pre-Fertilization Structures & Events (Micro- & Megasporogenesis)</a></li>
+                    <li><a href="#topic2">2. Pollination Types, Agents & Outbreeding Devices</a></li>
+                    <li><a href="#topic3">3. Double Fertilization, Post-Fertilization Events & Special Modes</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Pre-Fertilization Structures & Events</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Stamen & Microsporangium:</strong> Stamen consists of a long slender stalk (filament) and a terminal bilobed structure (anther). A typical angiosperm anther is dithecous and tetrasporangiate. Anther wall consists of 4 layers: Epidermis, Endothecium, Middle layers, and <strong>Tapetum</strong> (innermost layer that nourishes developing pollen grains).</p>
+                    <p>• <strong>Microsporogenesis:</strong> Process of formation of microspores from Pollen Mother Cell (PMC) through meiosis. Each pollen grain has two layers: <em>Exine</em> (made of highly resistant Sporopollenin) and <em>Intine</em> (cellulose and pectin).</p>
+                    <p>• <strong>Pistil & Megasporogenesis:</strong> Pistil consists of Stigma, Style, and Ovary. Inside ovary is placenta attached to ovule (megasporangium). Megasporogenesis is the formation of megaspores from Megaspore Mother Cell (MMC).</p>
+                    <p>• <strong>Female Gametophyte (Embryo Sac):</strong> Typical mature angiosperm embryo sac is <strong>7-celled and 8-nucleate</strong> (3 Antipodals at chalazal end, 2 Synergids + 1 Egg cell at micropylar end forming Egg Apparatus, and 1 Central cell with 2 polar nuclei).</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Pollination Types, Agents & Outbreeding Devices</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Pollination Types:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Autogamy:</em> Transfer of pollen grains from anther to stigma of the same flower (e.g., Viola, Oxalis - produce Chasmogamous and Cleistogamous flowers).</p>
+                    <p>&nbsp;&nbsp;- <em>Geitonogamy:</em> Transfer of pollen grains from anther of one flower to stigma of another flower on the same plant (Functionally cross-pollination, genetically autogamy).</p>
+                    <p>&nbsp;&nbsp;- <em>Xenogamy:</em> Transfer of pollen grains from anther to stigma of a different plant (Brings genetically different pollen grains).</p>
+                    <p>• <strong>Agents of Pollination:</strong> Abiotic (Wind - Anemophily, Water - Hydrophily like Vallisneria/Hydrilla) and Biotic (Insects - Entomophily, Birds, Bats).</p>
+                    <p>• <strong>Outbreeding Devices:</strong> Mechanisms to prevent self-pollination and encourage cross-pollination: Non-synchrony of pollen release and stigma receptivity, placement of anther and stigma at different positions, self-incompatibility (genetic mechanism), and production of unisexual flowers.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Double Fertilization, Post-Fertilization Events & Special Modes</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Double Fertilization (Unique to Angiosperms):</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>Syngamy:</em> One male gamete (n) fuses with egg cell (n) &rarr; Zygote (2n).</p>
+                    <p>&nbsp;&nbsp;2. <em>Triple Fusion:</em> Second male gamete (n) fuses with two polar nuclei (2n) in central cell &rarr; Primary Endosperm Nucleus (PEN, 3n).</p>
+                    <p>• <strong>Post-Fertilization Development:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Endosperm Development:</em> PEN divides repeatedly to form triploid endosperm tissue to nourish the embryo (Free-nuclear vs Cellular endosperm; e.g., Coconut water is free-nuclear endosperm).</p>
+                    <p>&nbsp;&nbsp;- <em>Embryo Development:</em> Zygote develops at micropylar end into Proembryo &rarr; Globular &rarr; Heart-shaped &rarr; Mature Embryo.</p>
+                    <p>&nbsp;&nbsp;- <em>Seed & Fruit:</em> Ovule matures into Seed, Ovary matures into Fruit.</p>
+                    <p>• <strong>Apomixis & Polyembryony:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Apomixis:</em> Development of seeds without fertilization (Form of asexual reproduction that mimics sexual reproduction; e.g., Asteraceae, Grasses).</p>
+                    <p>&nbsp;&nbsp;- <em>Polyembryony:</em> Presence of more than one embryo in a seed (e.g., Citrus, Mango).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: What is the function of Tapetum in a microsporangium?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Tapetum is the innermost wall layer of a microsporangium. Its main functions are:<br>
+                1. <strong>Nourishment:</strong> It provides essential nutrition to the developing pollen grains (microspores).<br>
+                2. <strong>Secretion of Ubisch bodies:</strong> It produces sporopollenin precursors required for exine formation of pollen grains.<br>
+                3. <strong>Enzyme and Hormone Secretion:</strong> Secretes callase enzyme to degrade callose wall surrounding microspore tetrad.
+            </div>
+
+            <div class="question">Q2: Differentiate between Microsporogenesis and Megasporogenesis.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Microsporogenesis</th>
+                            <th>Megasporogenesis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Definition</strong></td>
+                            <td>Process of formation of microspores (pollen grains) from Pollen Mother Cell (PMC).</td>
+                            <td>Process of formation of megaspores from Megaspore Mother Cell (MMC).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Location</strong></td>
+                            <td>Occurs inside Microsporangium (Anther).</td>
+                            <td>Occurs inside Megasporangium (Ovule).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Functional Products</strong></td>
+                            <td>All 4 microspores formed from meiosis are functional.</td>
+                            <td>Only 1 megaspore remains functional (3 degenerate).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: What is Double Fertilization? Name the two events involved in it.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Double Fertilization</strong> is a unique feature of angiosperms in which two types of nuclear fusions take place inside the embryo sac by two male gametes released from a single pollen tube.<br><br>
+                <strong>The Two Events Involved Are:</strong><br>
+                1. <strong>Syngamy (Generative Fertilization):</strong> One male gamete (haploid, n) fuses with the egg cell (haploid, n) to form a diploid Zygote (2n), which eventually develops into an embryo.<br><br>
+                2. <strong>Triple Fusion (Vegetative Fertilization):</strong> The second male gamete (haploid, n) fuses with two polar nuclei (diploid/secondary nucleus, 2n) located in the central cell to form a triploid Primary Endosperm Nucleus (PEN, 3n), which develops into endosperm to provide nourishment.
+            </div>
+
+            <div class="question">Q2: Explain Apomixis and its importance in agriculture.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Apomixis:</strong> Apomixis is a form of asexual reproduction in plants that mimics sexual reproduction, where seeds are formed without fertilization or meiosis (e.g., in grasses and Asteraceae family).<br><br>
+                <strong>Importance in Agriculture:</strong><br>
+                • <strong>Preservation of Hybrid Traits:</strong> Hybrid varieties of crops offer high yields, but their seeds segregate character traits in subsequent generations. If hybrid plants are converted into apomicts, farmers can sow the seeds year after year without losing desirable hybrid characters.<br>
+                • <strong>Cost Reduction:</strong> Farmers do not need to purchase expensive hybrid seeds every year.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Biology</h3>
+                <ul class="sidebar-links">
+                    <li class="active"><a href="class-12-biology-notes1.html">Ch 1: Sexual Reproduction in Flowering Plants</a></li>
+                    <li><a href="class-12-biology-notes2.html">Ch 2: Human Reproduction</a></li>
+                    <li><a href="class-12-biology-notes3.html">Ch 3: Reproductive Health</a></li>
+                    <li><a href="class-12-biology-notes4.html">Ch 4: Principles of Inheritance & Variation</a></li>
+                    <li><a href="class-12-biology-notes5.html">Ch 5: Molecular Basis of Inheritance</a></li>
+                    <li><a href="class-12-biology-notes6.html">Ch 6: Evolution</a></li>
+                    <li><a href="class-12-biology-notes7.html">Ch 7: Human Health & Disease</a></li>
+                    <li><a href="class-12-biology-notes8.html">Ch 8: Microbes in Human Welfare</a></li>
+                    <li><a href="class-12-biology-notes9.html">Ch 9: Biotechnology: Principles & Processes</a></li>
+                    <li><a href="class-12-biology-notes10.html">Ch 10: Biotechnology & Its Applications</a></li>
+                    <li><a href="class-12-biology-notes11.html">Ch 11: Organisms & Populations</a></li>
+                    <li><a href="class-12-biology-notes12.html">Ch 12: Ecosystem</a></li>
+                    <li><a href="class-12-biology-notes13.html">Ch 13: Biodiversity & Conservation</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

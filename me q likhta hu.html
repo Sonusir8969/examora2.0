@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Kyon Likhta Hoon - Class 10 Hindi Test</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', 'Noto Sans Devanagari', Roboto, sans-serif; 
+      background: #f0f2f5; 
+      color: #1e2a3e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+    .header { 
+      background: white; 
+      padding: 18px 0; 
+      border-bottom: 3px solid #c0392b; 
+      margin-bottom: 30px; 
+    }
+    .header h1 { font-size: 1.5rem; color: #c0392b; }
+    .header h1 span { color: #2d6a4f; }
+    .back-link { 
+      display: inline-block; 
+      margin-top: 8px; 
+      color: #c0392b; 
+      text-decoration: none; 
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .test-info {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .test-info .subject { font-weight: 600; color: #c0392b; }
+    .test-info .total-q { background: #fff0e6; padding: 4px 14px; border-radius: 30px; font-size: 0.85rem; }
+
+    .progress-container {
+      background: #e9ecef;
+      border-radius: 30px;
+      height: 10px;
+      margin-bottom: 25px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #c0392b;
+      border-radius: 30px;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    .question-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .q-number {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 12px;
+    }
+    .q-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .option {
+      background: #f8fafc;
+      border: 2px solid #e8ecf0;
+      padding: 14px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .option:hover {
+      background: #fff0e6;
+      border-color: #c0392b;
+    }
+    .option.selected {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.correct-answer {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.wrong-answer {
+      background: #fee2e2;
+      border-color: #b91c1c;
+    }
+    .option.disabled {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .feedback-box {
+      margin-top: 20px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      display: none;
+    }
+    .feedback-box.show {
+      display: block;
+    }
+    .feedback-box.correct {
+      background: #dcfce7;
+      border-left: 4px solid #2d6a4f;
+    }
+    .feedback-box.wrong {
+      background: #fee2e2;
+      border-left: 4px solid #b91c1c;
+    }
+    .feedback-box .exp {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 6px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .btn {
+      padding: 12px 32px;
+      border: none;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary {
+      background: #c0392b;
+      color: white;
+    }
+    .btn-primary:hover { background: #a93226; }
+    .btn-success {
+      background: #2d6a4f;
+      color: white;
+    }
+    .btn-success:hover { background: #1f4d39; }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #333;
+    }
+    .btn-secondary:hover { background: #cbd5e1; }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .result-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      padding: 35px;
+      text-align: center;
+      display: none;
+    }
+    .result-card.show { display: block; }
+    .result-score {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #c0392b;
+      margin: 10px 0;
+    }
+    .result-percent {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2d6a4f;
+    }
+    .result-msg {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 12px;
+      margin: 20px 0;
+      font-size: 1rem;
+    }
+    .result-detail {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .result-detail .stat {
+      background: #f8fafc;
+      padding: 12px;
+      border-radius: 12px;
+    }
+    .result-detail .stat .num { font-size: 1.4rem; font-weight: 700; }
+    .result-detail .stat.correct .num { color: #2d6a4f; }
+    .result-detail .stat.wrong .num { color: #b91c1c; }
+    .result-detail .stat.skip .num { color: #f59e0b; }
+
+    .other-tests {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      padding: 20px 25px;
+      margin-top: 25px;
+    }
+    .other-tests h3 { color: #c0392b; margin-bottom: 12px; font-size: 1rem; }
+    .test-links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .test-links a {
+      background: #fff0e6;
+      padding: 8px 18px;
+      border-radius: 30px;
+      color: #c0392b;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .test-links a:hover { background: #c0392b; color: white; }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 30px 0 18px;
+      margin-top: auto;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .question-card { padding: 20px; }
+      .result-detail { grid-template-columns: 1fr; }
+      .nav-buttons { flex-direction: column; }
+      .btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 10 <span>Hindi (Course A)</span></h1>
+    <a href="classs 10 hindi.html" class="back-link">Back to Hindi Chapters</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="test-info">
+    <span class="subject">Main Kyon Likhta Hoon (Kritika - Prose Section)</span>
+    <span class="total-q">10 Questions</span>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="question-card" id="questionCard">
+    <div class="q-number" id="qNumber">Question 1 of 10</div>
+    <div class="q-text" id="qText">Loading question...</div>
+    <div class="options" id="optionsContainer"></div>
+    <div class="feedback-box" id="feedbackBox">
+      <div id="feedbackText"></div>
+      <div class="exp" id="feedbackExp"></div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+      <button class="btn btn-primary" id="nextBtn">Next</button>
+      <button class="btn btn-success" id="submitBtn" style="display:none;">Submit Test</button>
+    </div>
+  </div>
+
+  <div class="result-card" id="resultCard">
+    <h2>Test Completed</h2>
+    <div class="result-score" id="resultScore">0/10</div>
+    <div class="result-percent" id="resultPercent">0%</div>
+    <div class="result-msg" id="resultMsg">Keep practicing!</div>
+    <div class="result-detail">
+      <div class="stat correct"><div class="num" id="correctCount">0</div><div>Correct</div></div>
+      <div class="stat wrong"><div class="num" id="wrongCount">0</div><div>Wrong</div></div>
+      <div class="stat skip"><div class="num" id="skipCount">0</div><div>Not Answered</div></div>
+    </div>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <button class="btn btn-success" onclick="location.reload()">Retake Test</button>
+      <button class="btn btn-primary" onclick="location.href='#'">Back to Chapters</button>
+    </div>
+  </div>
+
+  <div class="other-tests">
+    <h3>Other Hindi Tests</h3>
+    <div class="test-links">
+      <a href="sanskriti.html">Sanskriti</a>
+      <a href="maata ka aanchal.html">Mata Ka Anchal</a>
+      <a href="sana sana hath jodi.html">Sana-Sana Haath Jodi</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    Copyright 2026 Examora Education Private Limited. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  const questions = [
+    {
+      text: "'मैं क्यों लिखता हूँ' पाठ के लेखक कौन हैं?",
+      options: ["अज्ञेय", "शिव प्रसाद मिश्र", "जगदीश चंद्र माथुर", "हजारी प्रसाद द्विवेदी"],
+      correct: 0,
+      explanation: "'मैं क्यों लिखता हूँ' पाठ अज्ञेय (सच्चिदानंद हीरानंद वात्स्यायन) द्वारा रचित है।"
+    },
+    {
+      text: "लेखक के अनुसार 'आभ्यंतर लाचारी' क्या है?",
+      options: ["आर्थिक विवशता", "संपादक का दबाव", "मन की आंतरिक बेचैनी और संवेदनात्मक आवश्यकता", "प्रसिद्धि पाने की इच्छा"],
+      correct: 2,
+      explanation: "आभ्यंतर लाचारी वह आंतरिक बेचैनी और संवेदनात्मक आवश्यकता है जिसके कारण लेखक लिखने को बाध्य होता है। यह सच्चे रचनाकार की पहचान है।"
+    },
+    {
+      text: "लेखक किस विषय के विद्यार्थी रहे हैं?",
+      options: ["कला", "विज्ञान", "वास्तुकला", "साहित्य"],
+      correct: 1,
+      explanation: "अज्ञेय जी विज्ञान के विद्यार्थी रहे हैं।"
+    },
+    {
+      text: "हिरोशिमा किस देश में है?",
+      options: ["चीन", "अमेरिका", "जापान", "दक्षिण कोरिया"],
+      correct: 2,
+      explanation: "हिरोशिमा जापान का शहर है जिस पर द्वितीय विश्वयुद्ध के दौरान परमाणु बम गिराया गया था।"
+    },
+    {
+      text: "लेखक के अनुसार 'अनुभव' और 'अनुभूति' में क्या अंतर है?",
+      options: ["दोनों एक ही हैं", "अनुभव प्रत्यक्ष घटना है, अनुभूति उसकी आंतरिक प्रतिक्रिया है", "अनुभव आंतरिक है, अनुभूति बाहरी है", "इनमें कोई अंतर नहीं"],
+      correct: 1,
+      explanation: "अनुभव किसी घटना का प्रत्यक्ष सामना है, जबकि अनुभूति उस अनुभव की आंतरिक भावनात्मक प्रतिक्रिया है। सच्चा लेखन अनुभूति से जन्म लेता है।"
+    },
+    {
+      text: "लेखक ने हिरोशिमा में क्या देखा जिससे वह प्रभावित हुए?",
+      options: ["खंडहर", "जले हुए पत्थर पर मानव छाया", "बम गिरने का गड्ढा", "रेडियम पीड़ित लोग"],
+      correct: 1,
+      explanation: "लेखक ने हिरोशिमा में एक जले हुए पत्थर पर मानव छाया देखी, जो विस्फोट का स्थायी निशान थी। इस दृश्य ने उन्हें गहराई से प्रभावित किया।"
+    },
+    {
+      text: "लेखक के अनुसार सभी लेखक रचनाकार क्यों नहीं होते?",
+      options: ["वे पढ़े-लिखे नहीं होते", "सच्चा रचनाकार आंतरिक संवेदनाओं से लिखता है, बाहरी कारणों से लिखा गया लेखन रचनात्मक नहीं होता", "उनके पास समय नहीं होता", "वे लिखना नहीं जानते"],
+      correct: 1,
+      explanation: "अज्ञेय के अनुसार सिर्फ लिखना पर्याप्त नहीं है। सच्चा रचनाकार वह है जिसकी रचनाएँ आंतरिक संवेदनाओं, पीड़ा और अनुभव से जन्म लेती हैं। बाहरी कारणों से किया गया लेखन केवल कर्मगत होता है, रचनात्मक नहीं।"
+    },
+    {
+      text: "लेखक ने हिरोशिमा पर कविता किस वाहन में बैठकर लिखी?",
+      options: ["बैलगाड़ी", "हवाई जहाज", "जहाज", "रेलगाड़ी"],
+      correct: 3,
+      explanation: "लेखक ने हिरोशिमा पर कविता रेलगाड़ी में बैठकर लिखी।"
+    },
+    {
+      text: "लेखन को आत्म-मुक्ति का साधन क्यों माना गया है?",
+      options: ["इससे पैसा मिलता है", "इससे प्रसिद्धि मिलती है", "लेखन के माध्यम से मन की आंतरिक बेचैनी को शब्दों में ढालकर मन की शांति मिलती है", "इससे नौकरी मिलती है"],
+      correct: 2,
+      explanation: "लेखक मानते हैं कि लेखन के माध्यम से अपने मन की आंतरिक बेचैनी, संवेदना और द्वंद्व को शब्दों में ढालकर मन की शांति और संतुष्टि मिलती है, जिससे मन का भार हल्का होता है।"
+    },
+    {
+      text: "हिरोशिमा और नागासाकी पर किस विश्वयुद्ध के दौरान एटम बम गिराए गए थे?",
+      options: ["प्रथम विश्वयुद्ध", "द्वितीय विश्वयुद्ध", "शीत युद्ध", "इनमें से कोई नहीं"],
+      correct: 1,
+      explanation: "द्वितीय विश्वयुद्ध के दौरान अमेरिका ने जापान के हिरोशिमा और नागासाकी पर परमाणु बम गिराए थे।"
+    }
+  ];
+
+  let currentIndex = 0;
+  let userAnswers = new Array(questions.length).fill(null);
+  let answered = new Array(questions.length).fill(false);
+  let testCompleted = false;
+
+  const qNumber = document.getElementById('qNumber');
+  const qText = document.getElementById('qText');
+  const optionsContainer = document.getElementById('optionsContainer');
+  const feedbackBox = document.getElementById('feedbackBox');
+  const feedbackText = document.getElementById('feedbackText');
+  const feedbackExp = document.getElementById('feedbackExp');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const submitBtn = document.getElementById('submitBtn');
+  const progressBar = document.getElementById('progressBar');
+  const questionCard = document.getElementById('questionCard');
+  const resultCard = document.getElementById('resultCard');
+
+  function renderQuestion(index) {
+    const q = questions[index];
+    qNumber.textContent = `Question ${index + 1} of ${questions.length}`;
+    qText.textContent = q.text;
+
+    let optHtml = '';
+    for (let i = 0; i < q.options.length; i++) {
+      let cls = 'option';
+      if (answered[index]) {
+        cls += ' disabled';
+        if (i === q.correct) cls += ' correct-answer';
+        if (userAnswers[index] === i && i !== q.correct) cls += ' wrong-answer';
+        if (userAnswers[index] === i) cls += ' selected';
+      }
+      const label = ['(क) ', '(ख) ', '(ग) ', '(घ) '][i] || '';
+      optHtml += `<div class="${cls}" data-opt="${i}">${label}${q.options[i]}</div>`;
+    }
+    optionsContainer.innerHTML = optHtml;
+
+    if (answered[index]) {
+      showFeedback(index);
+    } else {
+      feedbackBox.classList.remove('show', 'correct', 'wrong');
+    }
+
+    prevBtn.disabled = (index === 0);
+    if (index === questions.length - 1) {
+      nextBtn.style.display = 'none';
+      submitBtn.style.display = 'inline-block';
+    } else {
+      nextBtn.style.display = 'inline-block';
+      submitBtn.style.display = 'none';
+    }
+
+    let answeredCount = answered.filter(a => a === true).length;
+    let progress = (answeredCount / questions.length) * 100;
+    progressBar.style.width = progress + '%';
+
+    if (!answered[index]) {
+      document.querySelectorAll('.option').forEach(opt => {
+        opt.addEventListener('click', function() {
+          if (answered[currentIndex]) return;
+          const selected = parseInt(this.dataset.opt);
+          userAnswers[currentIndex] = selected;
+          answered[currentIndex] = true;
+          renderQuestion(currentIndex);
+        });
+      });
+    }
+  }
+
+  function showFeedback(index) {
+    const q = questions[index];
+    const ans = userAnswers[index];
+    const isCorrect = (ans === q.correct);
+    
+    feedbackBox.className = 'feedback-box show';
+    if (isCorrect) {
+      feedbackBox.classList.add('correct');
+      feedbackText.textContent = 'Correct. Well done.';
+    } else {
+      feedbackBox.classList.add('wrong');
+      feedbackText.textContent = 'Incorrect. The correct answer is: ' + ['(क)', '(ख)', '(ग)', '(घ)'][q.correct];
+    }
+    feedbackExp.textContent = 'Explanation: ' + q.explanation;
+  }
+
+  function goToNext() {
+    if (currentIndex < questions.length - 1) {
+      currentIndex++;
+      renderQuestion(currentIndex);
+      document.getElementById('questionCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function goToPrev() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      renderQuestion(currentIndex);
+    }
+  }
+
+  function submitTest() {
+    let allAnswered = answered.every(a => a === true);
+    let skipCount = answered.filter(a => a === false).length;
+
+    if (!allAnswered) {
+      if (!confirm(`You have ${skipCount} question(s) not answered. Are you sure you want to submit?`)) {
+        return;
+      }
+    }
+
+    testCompleted = true;
+    let correct = 0;
+    let wrong = 0;
+    let skipped = 0;
+
+    for (let i = 0; i < questions.length; i++) {
+      if (!answered[i]) {
+        skipped++;
+      } else if (userAnswers[i] === questions[i].correct) {
+        correct++;
+      } else {
+        wrong++;
+      }
+    }
+
+    questionCard.style.display = 'none';
+    resultCard.classList.add('show');
+    document.getElementById('resultScore').textContent = `${correct}/${questions.length}`;
+    let percent = Math.round((correct / questions.length) * 100);
+    document.getElementById('resultPercent').textContent = percent + '%';
+    document.getElementById('correctCount').textContent = correct;
+    document.getElementById('wrongCount').textContent = wrong;
+    document.getElementById('skipCount').textContent = skipped;
+
+    let msg = '';
+    if (percent >= 80) msg = 'Excellent. You have a strong understanding of this autobiographical essay.';
+    else if (percent >= 60) msg = 'Good performance. Review the questions you got wrong.';
+    else if (percent >= 40) msg = 'Need more practice. Read the chapter carefully.';
+    else msg = 'Read the chapter again and try this test once more.';
+    document.getElementById('resultMsg').textContent = msg;
+
+    resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  prevBtn.addEventListener('click', goToPrev);
+  nextBtn.addEventListener('click', goToNext);
+  submitBtn.addEventListener('click', submitTest);
+
+  document.addEventListener('keydown', (e) => {
+    if (testCompleted) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      if (currentIndex === questions.length - 1) {
+        submitTest();
+      } else {
+        goToNext();
+      }
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      goToPrev();
+    }
+  });
+
+  renderQuestion(0);
+</script>
+</body>
+</html>

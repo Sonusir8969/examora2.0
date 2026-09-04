@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 9 Geography Chapter 2 Physical Features of India</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f8ff;
+        }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="class 9 all subjects notes.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 9 Geography Chapter 2 Physical Features of India</h1>
+
+            <p>NCERT Solutions for Class 9 Geography Chapter 2 covers Plate Tectonics, The Himalayan Mountains, The Northern Plains, The Peninsular Plateau, The Indian Desert, Coastal Plains, and Islands.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Major Physiographic Divisions & Plate Tectonics</a></li>
+                    <li><a href="#topic2">2. The Himalayan Mountains & The Northern Plains</a></li>
+                    <li><a href="#topic3">3. Peninsular Plateau, Coastal Plains & Islands</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Major Physiographic Divisions & Plate Tectonics</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Theory of Plate Tectonics:</strong> The Earth's crust is divided into seven major and several minor tectonic plates that move, causing folding, faulting, and volcanic activity.</p>
+                    <p>• <strong>Plate Boundaries:</strong> <em>Convergent</em> (move towards each other), <em>Divergent</em> (move away from each other), and <em>Transform</em> (slide past each other horizontally).</p>
+                    <p>• <strong>Gondwanaland:</strong> The ancient southern supercontinent from which the Indo-Australian plate drifted northward, colliding with the Eurasian plate to form the Himalayas.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. The Himalayan Mountains & The Northern Plains</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Three Himalayan Ranges:</strong></p>
+                    <ul>
+                        <li><em>Himadri (Inner/Great Himalayas):</em> Northernmost, highest range with continuous peaks (average height 6,000m).</li>
+                        <li><em>Himachal (Lesser Himalayas):</em> Middle range, highly compressed and altered rocks; home to popular hill stations.</li>
+                        <li><em>Shiwaliks (Outer Himalayas):</em> Southernmost range made of unconsolidated sediments (height 900-1100m). Longitudinal valleys between Himachal and Shiwaliks are called <em>Duns</em> (e.g., Dehradun).</li>
+                    </ul>
+                    <br>
+                    <p>• <strong>Northern Plains:</strong> Formed by the alluvial deposits of three major river systems: Indus, Ganga, and Brahmaputra. Divided into <em>Bhabar</em> (pebble belt), <em>Terai</em> (marshy region), <em>Bhangar</em> (older alluvium), and <em>Khadar</em> (newer alluvium).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Peninsular Plateau, Coastal Plains & Islands</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Peninsular Plateau:</strong> Composed of old crystalline, igneous, and metamorphic rocks. Comprises two broad divisions: <em>Central Highlands</em> and <em>Deccan Plateau</em>.</p>
+                    <p>• <strong>Western vs. Eastern Ghats:</strong> Western Ghats are continuous and higher in elevation; Eastern Ghats are discontinuous and dissected by east-flowing rivers.</p>
+                    <p>• <strong>Coastal Plains:</strong> Western Coast (Konkan, Kannad, Malabar) is narrow; Eastern Coast (Northern Circar, Coromandel) is broad with large river deltas.</p>
+                    <p>• <strong>Islands:</strong> Lakshadweep (coral origin in Arabian Sea) and Andaman & Nicobar (volcanic/tectonic origin in Bay of Bengal).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Distinguish between Bhangar and Khadar.</div>
+            <div class="answer">
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Bhangar</th>
+                        <th>Khadar</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Age & Soil</strong></td>
+                        <td>Older alluvial soil found above floodplains.</td>
+                        <td>Newer, younger alluvial soil deposited in floodplains.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fertility</strong></td>
+                        <td>Less fertile, contains calcareous deposits (Kankar).</td>
+                        <td>Highly fertile, renewed every year by floods.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Agriculture</strong></td>
+                        <td>Suitable for less water-intensive crops.</td>
+                        <td>Ideal for intensive agriculture and crops like paddy.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="question">Q2: Distinguish between Western Ghats and Eastern Ghats.</div>
+            <div class="answer">
+                <table>
+                    <tr>
+                        <th>Western Ghats</th>
+                        <th>Eastern Ghats</th>
+                    </tr>
+                    <tr>
+                        <td>Form the western boundary of Deccan Plateau along the Arabian Sea.</td>
+                        <td>Form the eastern boundary of Deccan Plateau along the Bay of Bengal.</td>
+                    </tr>
+                    <tr>
+                        <td>Continuous range; can be crossed through passes only (Thal, Bhor, Pal Ghats).</td>
+                        <td>Discontinuous and irregular, cut through by major rivers.</td>
+                    </tr>
+                    <tr>
+                        <td>Higher elevation (Average height: 900–1600m). Highest peak: Anamudi.</td>
+                        <td>Lower elevation (Average height: 600m). Highest peak: Mahendragiri.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Choose the correct answer from the options given below:</div>
+            <div class="answer">
+                <strong>(i) A landmass bounded by sea on three sides is referred to as:</strong><br>
+                (a) Coast &nbsp;&nbsp;(b) Island &nbsp;&nbsp;(c) Peninsula &nbsp;&nbsp;(d) None of the above<br>
+                <strong>Answer:</strong> (c) Peninsula<br><br>
+
+                <strong>(ii) Mountain ranges in the eastern part of India forming its boundary with Myanmar are collectively called:</strong><br>
+                (a) Himachal &nbsp;&nbsp;(b) Uttarakhand &nbsp;&nbsp;(c) Purvachal &nbsp;&nbsp;(d) None of the above<br>
+                <strong>Answer:</strong> (c) Purvachal<br><br>
+
+                <strong>(iii) The western coastal strip south of Goa is referred to as:</strong><br>
+                (a) Coromandel &nbsp;&nbsp;(b) Konkan &nbsp;&nbsp;(c) Kannad &nbsp;&nbsp;(d) Northern Circar<br>
+                <strong>Answer:</strong> (c) Kannad<br><br>
+
+                <strong>(iv) The highest peak in the Eastern Ghats is:</strong><br>
+                (a) Anai Mudi &nbsp;&nbsp;(b) Kanchenjunga &nbsp;&nbsp;(c) Mahendragiri &nbsp;&nbsp;(d) Khasi<br>
+                <strong>Answer:</strong> (c) Mahendragiri
+            </div>
+
+            <div class="question">Q2: Briefly describe how the Himalayas were formed.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. Millions of years ago, the Indo-Australian plate separated from the supercontinent Gondwanaland and drifted northwards.<br>
+                2. This northward collision resulted in the plate colliding with the much larger Eurasian Plate.<br>
+                3. Due to this high-impact collision, the sedimentary rocks deposited in the ancient sea known as Tethys folded to form the mountain system of Western Asia and the Himalayas.
+            </div>
+
+            <div class="question">Q3: How do the major physiographic units of India complement each other to make the country rich in natural resources?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. <strong>Himalayas:</strong> Act as major water source for perennial rivers and provide vast forest and wildlife wealth.<br>
+                2. <strong>Northern Plains:</strong> Serve as the granaries of the country, providing food security for the nation.<br>
+                3. <strong>Peninsular Plateau:</strong> Storehouse of rich minerals playing a central role in India’s industrialization.<br>
+                4. <strong>Coastal Plains & Islands:</strong> Provide strategic sites for fishing, maritime trade, and port activities.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 9 SST Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 9 sst notes1.html">Ch 1: The French Revolution</a></li>
+                    <li><a href="class 9 sst notes2.html">Ch 2: Socialism in Europe & Russian Revolution</a></li>
+                    <li><a href="class 9 sst notes3.html">Ch 3: Nazism and the Rise of Hitler</a></li>
+                    <li><a href="class 9 sst notes4.html">Ch 4: Forest Society & Colonialism</a></li>
+                    <li><a href="class 9 sst notes5.html">Ch 5: Pastoralists in Modern World</a></li>
+                    <li><a href="class 9 sst notes6.html">Ch 6: India – Size and Location</a></li>
+                    <li class="active"><a href="class 9 sst notes7.html">Ch 7: Physical Features of India</a></li>
+                    <li><a href="class 9 sst notes8.html">Ch 8: Drainage</a></li>
+                    <li><a href="class 9 sst notes9.html">Ch 9: Climate</a></li>
+                    <li><a href="class 9 sst notes10.html">Ch 10: Natural Vegetation & Wildlife</a></li>
+                    <li><a href="class 9 sst notes11.html">Ch 11: Population</a></li>
+                    <li><a href="class 9 sst notes12.html">Ch 12: What is Democracy? Why Democracy?</a></li>
+                    <li><a href="class 9 sst notes13.html">Ch 13: Constitutional Design</a></li>
+                    <li><a href="class 9 sst notes14.html">Ch 14: Electoral Politics</a></li>
+                    <li><a href="class 9 sst notes15.html">Ch 15: Working of Institutions</a></li>
+                    <li><a href="class 9 sst notes16.html">Ch 16: Democratic Rights</a></li>
+                    <li><a href="class 9 sst notes17.html">Ch 17: Story of Village Palampur</a></li>
+                    <li><a href="class 9 sst notes18.html">Ch 18: People as Resource</a></li>
+                    <li><a href="class 9 sst notes19.html">Ch 19: Poverty as a Challenge</a></li>
+                    <li><a href="class 9 sst notes20.html">Ch 20: Food Security in India</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

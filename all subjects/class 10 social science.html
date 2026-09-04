@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Class 10 Social Science - JAC Board</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header {
+      background: white;
+      padding: 20px 0;
+      border-bottom: 2px solid #1e4a76;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      color: #1e4a76;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 18px 22px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.4rem;
+    }
+
+    .chapter-list {
+      padding: 10px 0;
+    }
+
+    .chapter-row {
+      display: flex;
+      align-items: center;
+      padding: 12px 22px;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+    }
+
+    .chapter-row:hover {
+      background: #f8fafc;
+    }
+
+    .chapter-num {
+      width: 80px;
+      font-weight: 600;
+      color: #555;
+      font-size: 0.85rem;
+    }
+
+    .chapter-link {
+      flex: 1;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 6px 0;
+    }
+
+    .chapter-link:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    .test-badge {
+      font-size: 0.7rem;
+      background: #e6f0ff;
+      padding: 4px 14px;
+      border-radius: 20px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .test-badge:hover {
+      background: #1e4a76;
+      color: white;
+    }
+
+    .section-label {
+      background: #f1f5f9;
+      padding: 8px 22px;
+      font-weight: 600;
+      color: #1e4a76;
+      border-bottom: 1px solid #ddd;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 40px 0 20px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 20px;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 600px) {
+      .chapter-row {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chapter-num {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 10 <span>Social Science</span> | JAC Board</h1>
+    <a href="examora.html" class="back-link" id="backHome">Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="content-header">
+      <h2>Social Science - All Chapters</h2>
+    </div>
+    <div class="chapter-list" id="chapterList">
+      <!-- chapters will load here -->
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html" id="aboutLink">About Us</a>
+        <a href="contact us examora.html" id="contactLink">Contact Us</a>
+        <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+        <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://www.instagram.com/sonu_____study_8969?igsh=a2NtODRsd2U4N29q" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/@Sonusir8969" target="_blank">YouTube</a>
+        <a href="https://whatsapp.com/channel/0029VanoIcGEquiN0b5u9x3M" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+    <div class="copyright">2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Class 10 JAC Board Social Science Syllabus - Based on NCERT/JAC Curriculum
+  const socialChapters = [
+    // History (0 to 2)
+    { num: "History-1", name: "The Rise of Nationalism in Europe", link: "the rise of nationalism.html" },
+    { num: "History-2", name: "Nationalism in India", link: "nationalism in india.html" },
+    { num: "History-3", name: "The Making of a Global World", link: "making of global world.html" },
+    
+    // Geography (3 to 7)
+    { num: "Geo-1", name: "Resources and Development", link: "resources and deplopment.html" },
+    { num: "Geo-2", name: "Forest and Wildlife Resources", link: "forest and wild life.html" },
+    { num: "Geo-3", name: "Water Resources", link: "water resourcess.html" },
+    { num: "Geo-4", name: "Agriculture", link: "agriculture.html" },
+    { num: "Geo-5", name: "Minerals and Energy Resources", link: "mineral and energy.html" },
+    
+    // Civics / Political Science (8 to 11)
+    { num: "Civics-1", name: "Power Sharing", link: "power sharing.html" },
+    { num: "Civics-2", name: "Democracy and Diversity", link: "democracy and diversity.html" },
+    { num: "Civics-3", name: "Political Parties", link: "political parties.html" },
+    { num: "Civics-4", name: "Outcomes of Democracy", link: "outcomes of democracy.html" },
+    
+    // Economics (12 to 14)
+    { num: "Eco-1", name: "Development", link: "deplopment.html" },
+    { num: "Eco-2", name: "Sectors of the Indian Economy", link: "sectors of indian economy.html" },
+    { num: "Eco-3", name: "Money and Credit", link: "money and credit.html" },
+  ];
+
+  function renderChapters() {
+    let html = "";
+    
+    // Sections array mapped directly to socialChapters indices
+    const sections = [
+      { label: "History (India and the Contemporary World - II)", start: 0, end: 2 },
+      { label: "Geography (Contemporary India - II)", start: 3, end: 7 },
+      { label: "Civics / Political Science (Democratic Politics - II)", start: 8, end: 11 },
+      { label: "Economics (Understanding Economic Development)", start: 12, end: 14 }
+    ];
+
+    for (let s = 0; s < sections.length; s++) {
+      const section = sections[s];
+      html += `<div class="section-label">${section.label}</div>`;
+      
+      for (let i = section.start; i <= section.end; i++) {
+        const ch = socialChapters[i];
+        if (!ch) continue;
+        html += `
+          <div class="chapter-row">
+            <div class="chapter-num">${ch.num}</div>
+            <a href="${ch.link}" class="chapter-link">${ch.name}</a>
+            <a href="${ch.link}" class="test-badge">Test</a>
+          </div>
+        `;
+      }
+    }
+    
+    document.getElementById("chapterList").innerHTML = html;
+  }
+
+  renderChapters();
+</script>
+</body>
+</html>

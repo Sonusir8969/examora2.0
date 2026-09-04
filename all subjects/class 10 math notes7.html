@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 10 Maths Chapter 7 Coordinate Geometry</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 10 Maths Chapter 7 Coordinate Geometry</h1>
+
+            <p>NCERT Solutions for Class 10 Maths Chapter 7 Coordinate Geometry covers the distance formula, section formula, and the formula for the area of a triangle formed by three given points.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Distance Formula</a></li>
+                    <li><a href="#topic2">2. Section Formula</a></li>
+                    <li><a href="#topic3">3. Area of a Triangle</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Distance Formula</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; The distance between two points P(x<sub>1</sub>, y<sub>1</sub>) and Q(x<sub>2</sub>, y<sub>2</sub>) is <strong>PQ = &radic;[(x<sub>2</sub>&minus;x<sub>1</sub>)&sup2; + (y<sub>2</sub>&minus;y<sub>1</sub>)&sup2;]</strong>.</p>
+                    <p>&bull; Distance of a point P(x, y) from the origin O(0,0) is OP = &radic;(x&sup2; + y&sup2;).</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Section Formula</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; The coordinates of the point P(x, y) which divides the line segment joining A(x<sub>1</sub>,y<sub>1</sub>) and B(x<sub>2</sub>,y<sub>2</sub>) internally in the ratio m<sub>1</sub>:m<sub>2</sub> are: x = (m<sub>1</sub>x<sub>2</sub>+m<sub>2</sub>x<sub>1</sub>)/(m<sub>1</sub>+m<sub>2</sub>), y = (m<sub>1</sub>y<sub>2</sub>+m<sub>2</sub>y<sub>1</sub>)/(m<sub>1</sub>+m<sub>2</sub>).</p>
+                    <p>&bull; <strong>Mid-point Formula</strong> (special case with ratio 1:1): Mid-point = [(x<sub>1</sub>+x<sub>2</sub>)/2, (y<sub>1</sub>+y<sub>2</sub>)/2].</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Area of a Triangle</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; The area of a triangle formed by the points (x<sub>1</sub>,y<sub>1</sub>), (x<sub>2</sub>,y<sub>2</sub>), (x<sub>3</sub>,y<sub>3</sub>) is Area = &frac12; |x<sub>1</sub>(y<sub>2</sub>&minus;y<sub>3</sub>) + x<sub>2</sub>(y<sub>3</sub>&minus;y<sub>1</sub>) + x<sub>3</sub>(y<sub>1</sub>&minus;y<sub>2</sub>)|.</p>
+                    <p>&bull; If the area of a triangle formed by three points is 0, the points are <strong>collinear</strong>.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>NCERT Textbook Exercise Questions</h2>
+
+            <div class="question">Find the distance between the points (2, 3) and (4, 1).</div>
+            <div class="answer">
+                <strong>Answer:</strong> Distance = &radic;[(4&minus;2)&sup2; + (1&minus;3)&sup2;] = &radic;[4 + 4] = &radic;8 = 2&radic;2 units.
+            </div>
+
+            <div class="question">Find the coordinates of the point which divides the line segment joining (4, &minus;3) and (8, 5) in the ratio 3:1 internally.</div>
+            <div class="answer">
+                <strong>Answer:</strong> x = (3&times;8 + 1&times;4)/4 = 28/4 = 7; y = (3&times;5 + 1&times;(&minus;3))/4 = 12/4 = 3. So the point is (7, 3).
+            </div>
+
+            <div class="question">Find the ratio in which the line segment joining (&minus;3, 10) and (6, &minus;8) is divided by (&minus;1, 6).</div>
+            <div class="answer">
+                <strong>Answer:</strong> Let the ratio be k:1. Using x-coordinate: &minus;1 = (6k&minus;3)/(k+1) &rArr; &minus;k&minus;1 = 6k&minus;3 &rArr; 7k = 2 &rArr; k = 2/7, so the ratio is 2:7.
+            </div>
+
+            <div class="question">Find the area of the triangle whose vertices are (2, 3), (&minus;1, 0) and (2, &minus;4).</div>
+            <div class="answer">
+                <strong>Answer:</strong> Area = &frac12; |2(0&minus;(&minus;4)) + (&minus;1)((&minus;4)&minus;3) + 2(3&minus;0)| = &frac12; |8 + 7 + 6| = &frac12; &times; 21 = 10.5 square units.
+            </div>
+
+            <div class="question">Find a relation between x and y such that the point (x, y) is equidistant from (3, 6) and (&minus;3, 4).</div>
+            <div class="answer">
+                <strong>Answer:</strong> Setting distances equal and squaring: (x&minus;3)&sup2;+(y&minus;6)&sup2; = (x+3)&sup2;+(y&minus;4)&sup2;. Expanding and simplifying gives 3x + y &minus; 5 = 0.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 10 Maths Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 10 math notes1.html">Ch 1: Real Numbers</a></li>
+                    <li><a href="class 10 math notes2.html">Ch 2: Polynomials</a></li>
+                    <li><a href="class 10 math notes3.html">Ch 3: Pair of Linear Equations</a></li>
+                    <li><a href="class 10 math notes4.html">Ch 4: Quadratic Equations</a></li>
+                    <li><a href="class 10 math notes5.html">Ch 5: Arithmetic Progressions</a></li>
+                    <li><a href="class 10 math notes6.html">Ch 6: Triangles</a></li>
+                    <li class="active"><a href="class 10 math notes7.html">Ch 7: Coordinate Geometry</a></li>
+                    <li><a href="class 10 math notes8.html">Ch 8: Introduction to Trigonometry</a></li>
+                    <li><a href="class 10 math notes9.html">Ch 9: Applications of Trigonometry</a></li>
+                    <li><a href="class 10 math notes10.html">Ch 10: Circles</a></li>
+                    <li><a href="class 10 math notes11.html">Ch 11: Areas Related to Circles</a></li>
+                    <li><a href="class 10 math notes12.html">Ch 12: Surface Areas and Volumes</a></li>
+                    <li><a href="class 10 math notes13.html">Ch 13: Statistics</a></li>
+                    <li><a href="class 10 math notes14.html">Ch 14: Probability</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

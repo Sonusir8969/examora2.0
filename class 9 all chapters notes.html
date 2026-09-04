@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Class 9 Notes Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f4f7fb;
+      color: #1e2a3e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Section */
+    .header {
+      background: #ffffff;
+      padding: 16px 40px;
+      border-bottom: 2px solid #1e4a76;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+
+    .header h1 {
+      font-size: 1.6rem;
+      color: #1e4a76;
+    }
+
+    .header h1 span {
+      color: #2f855a;
+    }
+
+    .back-link {
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: #0f2b3d;
+      text-decoration: underline;
+    }
+
+    /* Banner / Hero Section */
+    .hero-banner {
+      background: linear-gradient(135deg, #1e4a76 0%, #0f2b3d 100%);
+      color: white;
+      padding: 35px 40px;
+      width: 100%;
+    }
+
+    .hero-banner h2 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .hero-banner p {
+      font-size: 1.05rem;
+      color: #d1e3f8;
+      max-width: 800px;
+    }
+
+    /* Sticky Full-Width Subject Navigation Bar */
+    .nav-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      width: 100%;
+    }
+
+    .subject-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 40px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .subject-nav::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    .nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 30px;
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      color: #334155;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+
+    .nav-btn:hover {
+      background: #e2e8f0;
+      border-color: #94a3b8;
+    }
+
+    .nav-btn.active {
+      background: #1e4a76;
+      color: #ffffff;
+      border-color: #1e4a76;
+      box-shadow: 0 4px 12px rgba(30, 74, 118, 0.25);
+    }
+
+    /* Search & Main Layout Container */
+    .main-wrapper {
+      width: 100%;
+      padding: 30px 40px;
+      flex: 1;
+    }
+
+    .control-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .section-title h3 {
+      font-size: 1.5rem;
+      color: #1e4a76;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title span {
+      font-size: 0.85rem;
+      background: #e2e8f0;
+      color: #475569;
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 280px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 10px 16px;
+      border-radius: 30px;
+      border: 1px solid #cbd5e1;
+      outline: none;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+
+    .search-box input:focus {
+      border-color: #1e4a76;
+      box-shadow: 0 0 0 3px rgba(30, 74, 118, 0.1);
+    }
+
+    /* Chapter List - Full Width Modern Cards/Rows */
+    .chapter-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .chapter-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 16px 24px;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    }
+
+    .chapter-card:hover {
+      border-color: #1e4a76;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(30, 74, 118, 0.08);
+    }
+
+    .chapter-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .chapter-badge {
+      background: #f0f4fe;
+      color: #1e4a76;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 8px;
+      min-width: 75px;
+      text-align: center;
+    }
+
+    .chapter-name {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1e2a3e;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .chapter-card:hover .chapter-name {
+      color: #1e4a76;
+    }
+
+    .chapter-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .note-tag {
+      font-size: 0.75rem;
+      background: #e6f4ea;
+      color: #137333;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .btn-read {
+      background: #1e4a76;
+      color: #ffffff;
+      padding: 8px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+
+    .btn-read:hover {
+      background: #123a5e;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 40px 0 20px;
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .footer-container {
+      width: 100%;
+      padding: 0 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 20px;
+      font-size: 0.75rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header, .hero-banner, .subject-nav, .main-wrapper, .footer-container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .control-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .search-box {
+        width: 100%;
+      }
+
+      .chapter-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .chapter-actions {
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar Header -->
+  <header class="header">
+    <h1>Examora <span>| Class 9 Notes</span></h1>
+    <a href="examora.html" class="back-link" id="backHome">← Back to Home</a>
+  </header>
+
+  <!-- Full-Width Hero Section -->
+  <section class="hero-banner">
+    <h2>Class 9 Revision Notes & Practice Material</h2>
+    <p>Comprehensive chapter-wise revision notes, essential practice sheets, and key concepts tailored strictly for JAC Board & NCERT Curriculum 2026.</p>
+  </section>
+
+  <!-- Sticky Horizontal Subject Navigation -->
+  <div class="nav-wrapper">
+    <nav class="subject-nav">
+      <button class="nav-btn active" data-sub="science">🔬 Science</button>
+      <button class="nav-btn" data-sub="maths">📐 Mathematics</button>
+      <button class="nav-btn" data-sub="english">📖 English</button>
+      <button class="nav-btn" data-sub="hindi">📙 Hindi</button>
+      <button class="nav-btn" data-sub="social">🌍 Social Science</button>
+    </nav>
+  </div>
+
+  <!-- Main Content Layout -->
+  <main class="main-wrapper">
+    <div class="control-bar">
+      <div class="section-title">
+        <h3 id="subTitle">Science <span id="chapterCount">15 Chapters</span></h3>
+      </div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search chapter name..." onkeyup="filterChapters()" />
+      </div>
+    </div>
+
+    <!-- Full-Width Dynamic Chapter List Container -->
+    <div class="chapter-container" id="chapterList"></div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Examora Education</h4>
+          <p style="color:#cddfe7; margin-top:6px; font-size:0.85rem;">Practice. Perform. Progress.</p>
+        </div>
+        <div class="footer-col">
+          <a href="about us examora.html" id="aboutLink">About Us</a>
+          <a href="contact us examora.html" id="contactLink">Contact Us</a>
+          <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+          <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+        </div>
+        <div class="footer-col">
+          <a href="https://chat.whatsapp.com/KNPN6o3tUAh8IDWgI3bqY6" target="_blank">WhatsApp Group</a>
+          <a href="https://www.youtube.com/@Sonusir8969" target="_blank">YouTube Channel</a>
+          <a href="https://www.instagram.com/sonu_____study_8969?igsh=a2NtODRsd2U4N29q" target="_blank">Instagram</a>
+        </div>
+      </div>
+      <div class="copyright">© 2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+    </div>
+  </footer>
+
+<script>
+  // Chapter Data Structures mapped with subject HTML filenames
+  const scienceChapters = [
+    { num: "Ch-1", name: "Matter in Our Surroundings", link: "class 9 science notes1.html" },
+    { num: "Ch-2", name: "Is Matter Around Us Pure", link: "class 9 science notes2.html" },
+    { num: "Ch-3", name: "Atoms and Molecules", link: "class 9 science notes3.html" },
+    { num: "Ch-4", name: "Structure of the Atom", link: "class 9 science notes4.html" },
+    { num: "Ch-5", name: "The Fundamental Unit of Life", link: "class 9 science notes5.html" },
+    { num: "Ch-6", name: "Tissues", link: "class 9 science notes6.html" },
+    { num: "Ch-7", name: "Diversity in Living Organisms", link: "class 9 science notes7.html" },
+    { num: "Ch-8", name: "Motion", link: "class 9 science notes8.html" },
+    { num: "Ch-9", name: "Force and Laws of Motion", link: "class 9 science notes9.html" },
+    { num: "Ch-10", name: "Gravitation", link: "class 9 science notes10.html" },
+    { num: "Ch-11", name: "Work and Energy", link: "class 9 science notes11.html" },
+    { num: "Ch-12", name: "Sound", link: "class 9 science notes12.html" },
+    { num: "Ch-13", name: "Why Do We Fall Ill", link: "class 9 science notes13.html" },
+    { num: "Ch-14", name: "Natural Resources", link: "class 9 science notes14.html" },
+    { num: "Ch-15", name: "Improvement in Food Resources", link: "class 9 science notes15.html" }
+  ];
+
+  const mathsChapters = [
+    { num: "Ch-1", name: "Number Systems", link: "class 9 maths notes1.html" },
+    { num: "Ch-2", name: "Polynomials", link: "class 9 maths notes2.html" },
+    { num: "Ch-3", name: "Coordinate Geometry", link: "class 9 maths notes3.html" },
+    { num: "Ch-4", name: "Linear Equations in Two Variables", link: "class 9 maths notes4.html" },
+    { num: "Ch-5", name: "Introduction to Euclid's Geometry", link: "class 9 maths notes5.html" },
+    { num: "Ch-6", name: "Lines and Angles", link: "class 9 maths notes6.html" },
+    { num: "Ch-7", name: "Triangles", link: "class 9 maths notes7.html" },
+    { num: "Ch-8", name: "Quadrilaterals", link: "class 9 maths notes8.html" },
+    { num: "Ch-9", name: "Areas of Parallelograms and Triangles", link: "class 9 maths notes9.html" },
+    { num: "Ch-10", name: "Circles", link: "class 9 maths notes10.html" },
+    { num: "Ch-11", name: "Constructions", link: "class 9 maths notes11.html" },
+    { num: "Ch-12", name: "Heron's Formula", link: "class 9 maths notes12.html" },
+    { num: "Ch-13", name: "Surface Areas and Volumes", link: "class 9 maths notes13.html" },
+    { num: "Ch-14", name: "Statistics", link: "class 9 maths notes14.html" },
+    { num: "Ch-15", name: "Probability", link: "class 9 maths notes15.html" }
+  ];
+
+  const englishChapters = [
+    { num: "Ch-1", name: "The Fun They Had", link: "class 9 english notes1.html" },
+    { num: "Ch-2", name: "The Sound of Music", link: "class 9 english notes2.html" },
+    { num: "Ch-3", name: "The Little Girl", link: "class 9 english notes3.html" },
+    { num: "Ch-4", name: "A Truly Beautiful Mind", link: "class 9 english notes4.html" },
+    { num: "Ch-5", name: "The Snake and the Mirror", link: "class 9 english notes5.html" },
+    { num: "Ch-6", name: "My Childhood", link: "class 9 english notes6.html" },
+    { num: "Ch-7", name: "Reach for the Top", link: "class 9 english notes7.html" },
+    { num: "Ch-8", name: "Kathmandu", link: "class 9 english notes8.html" },
+    { num: "Ch-9", name: "If I Were You", link: "class 9 english notes9.html" },
+    { num: "Poem-1", name: "The Road Not Taken", link: "class 9 english notes10.html" },
+    { num: "Poem-2", name: "Wind", link: "class 9 english notes11.html" },
+    { num: "Poem-3", name: "Rain on the Roof", link: "class 9 english notes12.html" },
+    { num: "Poem-4", name: "The Lake Isle of Innisfree", link: "class 9 english notes13.html" },
+    { num: "Poem-5", name: "A Legend of the Northland", link: "class 9 english notes14.html" },
+    { num: "Poem-6", name: "No Men Are Foreign", link: "class 9 english notes15.html" },
+    { num: "Poem-7", name: "The Duck and the Kangaroo", link: "class 9 english notes16.html" },
+    { num: "Poem-8", name: "On Killing a Tree", link: "class 9 english notes17.html" },
+    { num: "Poem-9", name: "The Snake Trying", link: "class 9 english notes18.html" },
+    { num: "Poem-10", name: "A Slumber Did My Spirit Seal", link: "class 9 english notes19.html" }
+  ];
+
+  const hindiChapters = [
+    { num: "Ch-1", name: "Do Bailon Ki Katha", link: "class 9 hindi notes1.html" },
+    { num: "Ch-2", name: "Lhasa Ki Aur", link: "class 9 hindi notes2.html" },
+    { num: "Ch-3", name: "Upbhoktawad Ki Sanskriti", link: "class 9 hindi notes3.html" },
+    { num: "Ch-4", name: "Saanwale Sapno Ki Yaad", link: "class 9 hindi notes4.html" },
+    { num: "Ch-5", name: "Pratyay", link: "class 9 hindi notes5.html" },
+    { num: "Ch-6", name: "Prem Chand Ke Phate Joote", link: "class 9 hindi notes6.html" },
+    { num: "Ch-7", name: "Mere Sang Ki Auratein", link: "class 9 hindi notes7.html" },
+    { num: "Ch-8", name: "Hazar Varsh", link: "class 9 hindi notes8.html" },
+    { num: "Poem-1", name: "Gadhya Khand", link: "class 9 hindi notes9.html" },
+    { num: "Poem-2", name: "Rahim Ke Dohe", link: "class 9 hindi notes10.html" },
+    { num: "Poem-3", name: "Raidas Ke Pad", link: "class 9 hindi notes11.html" },
+    { num: "Grammar", name: "Vyakaran - Sandhi, Samas, Alankar", link: "class 9 hindi notes12.html" },
+    { num: "Writing", name: "Nibandh, Patra, Anuched Lekhan", link: "class 9 hindi notes13.html" }
+  ];
+
+  const socialChapters = [
+    { num: "Ch-1", name: "The French Revolution", link: "class 9 sst notes1.html" },
+    { num: "Ch-2", name: "Socialism in Europe and the Russian Revolution", link: "class 9 sst notes2.html" },
+    { num: "Ch-3", name: "Nazism and the Rise of Hitler", link: "class 9 sst notes3.html" },
+    { num: "Ch-4", name: "Forest Society and Colonialism", link: "class 9 sst notes4.html" },
+    { num: "Ch-5", name: "Pastoralists in the Modern World", link: "class 9 sst notes5.html" },
+    { num: "Ch-6", name: "India-Size and Location", link: "class 9 sst notes6.html" },
+    { num: "Ch-7", name: "Physical Features of India", link: "class 9 sst notes7.html" },
+    { num: "Ch-8", name: "Drainge", link: "class 9 sst notes8.html" },
+    { num: "Ch-9", name: "Climate", link: "class 9 sst notes9.html" },
+    { num: "Ch-10", name: "Natural Vegetation and Wildlife", link: "class 9 sst notes10.html" },
+    { num: "Ch-11", name: "Population", link: "class 9 sst notes11.html" },
+    { num: "Ch-12", name: "What is Democracy? Why Democracy?", link: "class 9 sst notes12.html" },
+    { num: "Ch-13", name: "Constitutional Design", link: "class 9 sst notes13.html" },
+    { num: "Ch-14", name: "Constitutional Design", link: "class 9 sst notes14.html" },
+    { num: "Ch-15", name: "Electoral Politics", link: "class 9 sst notes15.html" },
+    { num: "Ch-16", name: "Working of Institutions", link: "class 9 sst notes16.html" },
+    { num: "Ch-17", name: "Democratic Rights ", link: "class 9 sst notes17.html" },
+    { num: "Ch-18", name: "The Story of Village Palampur (Economics)", link: "class 9 sst notes18.html" },
+    { num: "Ch-19", name: "People as Resource Palampur (Econimics)", link: "class 9 sst notes19.html" },
+    { num: "Ch-20", name: "Poverty as a Challenge (Economics)", link: "class 9 sst notes20.html" },
+    { num: "Ch-21", name: "Food Security in India (Economics)", link: "class 9 sst notes21.html" }   
+  ];
+
+  const subjects = {
+    science: { name: "Science Notes", chapters: scienceChapters },
+    maths: { name: "Mathematics Notes", chapters: mathsChapters },
+    english: { name: "English Notes", chapters: englishChapters },
+    hindi: { name: "Hindi Notes", chapters: hindiChapters },
+    social: { name: "Social Science Notes", chapters: socialChapters }
+  };
+
+  // Render Full-Width Chapter Cards
+  function renderChapters(subjectKey) {
+    const subject = subjects[subjectKey];
+    if (!subject) return;
+
+    document.getElementById("subTitle").childNodes[0].nodeValue = subject.name + " ";
+    document.getElementById("chapterCount").textContent = `${subject.chapters.length} Chapters`;
+    document.getElementById("searchInput").value = ""; // Clear search box
+
+    let html = "";
+    if (subject.chapters && subject.chapters.length > 0) {
+      subject.chapters.forEach(function(ch) {
+        html += `
+          <div class="chapter-card">
+            <div class="chapter-info">
+              <span class="chapter-badge">${ch.num}</span>
+              <a href="${ch.link}" class="chapter-name">${ch.name}</a>
+            </div>
+            <div class="chapter-actions">
+              <span class="note-tag">Notes & Test</span>
+              <a href="${ch.link}" class="btn-read">Open Notes</a>
+            </div>
+          </div>
+        `;
+      });
+    } else {
+      html = '<div style="padding: 30px; text-align: center; color: #64748b;">No notes found in this section.</div>';
+    }
+
+    document.getElementById("chapterList").innerHTML = html;
+  }
+
+  // Filter Chapters Real-time
+  function filterChapters() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.chapter-card');
+
+    cards.forEach(card => {
+      const title = card.querySelector('.chapter-name').textContent.toLowerCase();
+      if (title.includes(input)) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  // Active Tab Setter
+  function setActiveSubject(subjectKey) {
+    document.querySelectorAll(".nav-btn").forEach(function(btn) {
+      btn.classList.remove("active");
+      if (btn.getAttribute("data-sub") === subjectKey) {
+        btn.classList.add("active");
+      }
+    });
+
+    try {
+      localStorage.setItem('examora_active_notes_class9', subjectKey);
+    } catch(e) {}
+
+    renderChapters(subjectKey);
+  }
+
+  // Listeners
+  document.querySelectorAll(".nav-btn").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      const subjectKey = this.getAttribute("data-sub");
+      setActiveSubject(subjectKey);
+    });
+  });
+
+  // Initialization
+  document.addEventListener('DOMContentLoaded', function() {
+    let savedSubject = null;
+    try {
+      savedSubject = localStorage.getItem('examora_active_notes_class9');
+    } catch(e) {}
+
+    if (savedSubject && subjects[savedSubject]) {
+      setActiveSubject(savedSubject);
+    } else {
+      setActiveSubject('science');
+    }
+  });
+</script>
+</body>
+</html>

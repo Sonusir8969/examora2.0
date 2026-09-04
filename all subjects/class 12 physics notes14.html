@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Physics Chapter 14 Semiconductor Electronics</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Physics Chapter 14 Semiconductor Electronics: Materials, Devices and Simple Circuits</h1>
+
+            <p>NCERT Solutions for Class 12 Physics Chapter 14 Semiconductor Electronics provides comprehensive coverage of energy band theory, intrinsic and extrinsic semiconductors, p-n junction formation, diode characteristics under biasing, and its practical application as rectifiers.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Classification of Solids & Energy Band Theory</a></li>
+                    <li><a href="#topic2">2. Intrinsic & Extrinsic Semiconductors (n-type and p-type)</a></li>
+                    <li><a href="#topic3">3. p-n Junction Diode, Biasing & Application as Rectifier</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Classification of Solids & Energy Band Theory</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Energy Bands:</strong> When atoms come together to form a solid, discrete electronic energy levels split into continuous energy bands—<strong>Valence Band (VB)</strong> and <strong>Conduction Band (CB)</strong>, separated by an <strong>Energy Band Gap ($E_g$)</strong>.</p>
+
+                    <p>• <strong>Classifications Based on $E_g$:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Conductors (Metals):</em> VB and CB overlap or CB is partially filled ($E_g \approx 0$). High density of free electrons.</p>
+                    <p>&nbsp;&nbsp;- <em>Insulators:</em> Very large energy gap ($E_g > 3\text{ eV}$). VB is completely filled, CB is completely empty at room temperature.</p>
+                    <p>&nbsp;&nbsp;- <em>Semiconductors:</em> Small energy gap ($E_g < 3\text{ eV}$; Silicon $E_g = 1.1\text{ eV}$, Germanium $E_g = 0.72\text{ eV}$). Thermal agitation can excite electrons across the gap.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Intrinsic & Extrinsic Semiconductors (n-type and p-type)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Intrinsic Semiconductors:</strong> Pure semiconductors (Si, Ge) with equal numbers of free electrons ($n_e$) and holes ($n_h$). Total charge carrier concentration: $n_i = n_e = n_h$.</p>
+                    <p>• <strong>Extrinsic Semiconductors:</strong> Doped semiconductors to increase conductivity drastically.</p>
+
+                    <p>&nbsp;&nbsp;- <em>n-type Semiconductor:</em> Doped with <strong>pentavalent impurities</strong> (As, Sb, P). Majority carriers are electrons ($n_e \gg n_h$). Impurity atom is a <strong>donor</strong>.</p>
+
+                    <p>&nbsp;&nbsp;- <em>p-type Semiconductor:</em> Doped with <strong>trivalent impurities</strong> (B, Al, In, Ga). Majority carriers are holes ($n_h \gg n_e$). Impurity atom is an <strong>acceptor</strong>.</p>
+                    <p>• <strong>Mass Action Law:</strong> Under thermal equilibrium, $n_e \cdot n_h = n_i^2$.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. p-n Junction Diode, Biasing & Application as Rectifier</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>p-n Junction Formation:</strong> Diffusion of majority carriers creates a neutral boundary layer devoid of free carriers called the <strong>depletion region</strong> and establishes a <strong>barrier potential ($V_0$)</strong> (~0.7 V for Si, ~0.3 V for Ge).</p>
+
+                    <p>• <strong>Biasing Modes:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Forward Bias:</em> p-side to positive terminal, n-side to negative terminal. Reduces barrier height; large current flows in $\text{mA}$.</p>
+                    <p>&nbsp;&nbsp;- <em>Reverse Bias:</em> p-side to negative terminal, n-side to positive terminal. Increases barrier height; negligible reverse saturation current flows in $\mu\text{A}$.</p>
+                    <p>• <strong>Diode as Rectifier:</strong> Converts Alternating Current (AC) to Direct Current (DC) due to unidirectional conduction property.</p>
+
+                    <p>&nbsp;&nbsp;- <em>Half-Wave Rectifier:</em> Conducts during positive half cycles only. Output ripple frequency equals input frequency ($f_{out} = f_{in}$).</p>
+                    <p>&nbsp;&nbsp;- <em>Full-Wave Rectifier:</em> Uses two center-tapped diodes or bridge circuit. Conducts during both half cycles. Output ripple frequency is double the input ($f_{out} = 2 f_{in}$).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Distinguish between n-type and p-type semiconductors based on doping, majority carriers, and energy levels.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Property</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">n-type Semiconductor</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">p-type Semiconductor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Dopant Material</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Doped with Pentavalent impurities (e.g., Phosphorus, Arsenic, Antimony).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Doped with Trivalent impurities (e.g., Boron, Aluminum, Indium).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Charge Carriers</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Majority carriers are Electrons ($n_e \gg n_h$), minority are Holes.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Majority carriers are Holes ($n_h \gg n_e$), minority are Electrons.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Energy Level</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Donor energy level ($E_d$) lies just below the bottom of the conduction band.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Acceptor energy level ($E_a$) lies just above the top of the valence band.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Overall Electrical Neutrality</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Electrically neutral as a whole.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Electrically neutral as a whole.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: Why is a photo-diode operated in reverse bias mode to detect optical signals?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • When light of energy $h\nu > E_g$ falls on a photodiode, electron-hole pairs are created in or near the depletion region.<br>
+                • In <strong>forward bias</strong>, the initial majority current ($I$) is very high ($\text{mA}$). The fractional change in current due to light-generated minority carriers $(\Delta I / I)$ is extremely small and very difficult to detect.<br>
+                • In <strong>reverse bias</strong>, the baseline current is only a minute reverse saturation current ($I_0$) in $\mu\text{A}$. Thus, the fractional change in current $(\Delta I / I_0)$ caused by incident photons is very large and easily measurable.<br>
+                • Therefore, photodiodes are operated in <strong>reverse bias</strong> for high sensitivity optical detection.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: If the input frequency to a rectifier circuit is 50 Hz, what is the output ripple frequency of (a) a half-wave rectifier, and (b) a full-wave rectifier?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given Input AC frequency $f_{in} = 50\text{ Hz}$.<br><br>
+                <strong>(a) For Half-Wave Rectifier:</strong><br>
+                A half-wave rectifier allows only one half-cycle of the input AC to pass through per cycle.<br>
+                <em>Output Frequency $f_{out} = f_{in} = 50\text{ Hz}$</em><br><br>
+                <strong>(b) For Full-Wave Rectifier:</strong><br>
+                A full-wave rectifier rectifies both positive and negative half-cycles of the input AC into positive pulses.<br>
+                <em>Output Frequency $f_{out} = 2 \times f_{in} = 2 \times 50 = 100\text{ Hz}$</em><br><br>
+                • Half-wave output ripple frequency = <strong>50 Hz</strong><br>
+                • Full-wave output ripple frequency = <strong>100 Hz</strong>
+            </div>
+
+            <div class="question">Q2: A semiconductor has an energy band gap of 2.8 eV. Can it detect a wavelength of 6000 Å? (Take h = 6.63 × 10⁻³⁴ J s, c = 3 × 10⁸ m/s)</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Band gap energy $E_g = 2.8\text{ eV} = 2.8 \times 1.6 \times 10^{-19}\text{ J} = 4.48 \times 10^{-19}\text{ J}$<br>
+                • Wavelength of incident light $\lambda = 6000\text{ \AA} = 6000 \times 10^{-10}\text{ m} = 6 \times 10^{-7}\text{ m}$<br><br>
+                <strong>Step 1: Calculate Energy of Incident Photon (E)</strong><br>
+                <em>E = (h c) / \lambda</em><br>
+                <em>E = (6.63 \times 10^{-34} \times 3 \times 10^8) / (6 \times 10^{-7})\text{ Joules}</em><br>
+                <em>E = 3.315 \times 10^{-19}\text{ J}</em><br><br>
+                <strong>Step 2: Convert Energy to eV</strong><br>
+                <em>E = (3.315 \times 10^{-19}) / (1.6 \times 10^{-19})\text{ eV} \approx 2.07\text{ eV}</em><br><br>
+                <strong>Conclusion:</strong><br>
+                To excite electrons across the energy gap and detect light, the photon energy $E$ must be <strong>greater than or equal to</strong> the band gap $E_g$ ($E \ge E_g$).<br>
+                Here, $E = 2.07\text{ eV} < E_g = 2.8\text{ eV}$.<br>
+                Hence, the semiconductor <strong>cannot detect</strong> the wavelength of 6000 Å.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Physics</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 physics notes1">Ch 1: Electric Charges and Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatic Potential & Capacitance</a></li>
+                    <li><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges and Magnetism</a></li>
+                    <li><a href="class 12 physics notes5">Ch 5: Magnetism and Matter</a></li>
+                    <li><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics and Optical Instruments</a></li>
+                    <li><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li><a href="class 12 physics notes11">Ch 11: Dual Nature of Radiation & Matter</a></li>
+                    <li><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li class="active"><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

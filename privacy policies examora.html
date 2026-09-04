@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Privacy Policy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .header {
+      background: white;
+      padding: 28px 0;
+      border-bottom: 3px solid #1e4a76;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      color: #1e4a76;
+      letter-spacing: -0.5px;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .header-sub {
+      color: #4a5b6e;
+      font-size: 1rem;
+      margin-top: 4px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #2f855a;
+    }
+
+    .content {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 24px 28px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .content-header .last-updated {
+      color: #4a5b6e;
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+
+    .content-body {
+      padding: 32px 28px;
+    }
+
+    .content-body h3 {
+      color: #1e4a76;
+      font-size: 1.2rem;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    .content-body h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .content-body p {
+      color: #4a5b6e;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .content-body ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+
+    .content-body ul li {
+      padding: 6px 0 6px 24px;
+      color: #4a5b6e;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    .content-body ul li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 14px;
+      width: 8px;
+      height: 8px;
+      background: #2f855a;
+      border-radius: 50%;
+    }
+
+    .highlight-box {
+      background: #f8fafc;
+      border-left: 4px solid #1e4a76;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-ref {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-top: 20px;
+    }
+
+    .contact-ref p {
+      margin-bottom: 4px;
+    }
+
+    .contact-ref a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .contact-ref a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 48px 0 24px;
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-col p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 6px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 24px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .header h1 {
+        font-size: 1.6rem;
+      }
+
+      .content-header {
+        padding: 16px 18px;
+      }
+
+      .content-header h2 {
+        font-size: 1.3rem;
+      }
+
+      .content-body {
+        padding: 20px 18px;
+      }
+
+      .content-body h3 {
+        font-size: 1.05rem;
+      }
+
+      .content-body p {
+        font-size: 0.9rem;
+      }
+
+      .content-body ul li {
+        font-size: 0.9rem;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.3rem;
+      }
+
+      .highlight-box {
+        padding: 12px 14px;
+      }
+
+      .contact-ref {
+        padding: 14px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Examora<span>.</span></h1>
+    <div class="header-sub">Practice. Perform. Progress.</div>
+    <a href="examora.html" class="back-link" id="backHome">← Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="content-header">
+      <h2>Privacy Policy</h2>
+      <div class="last-updated">Last Updated: 1 January 2025</div>
+    </div>
+    <div class="content-body">
+      <p>
+        At Examora, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+      </p>
+
+      <h3>1. Information We Collect</h3>
+      <p>We may collect the following types of information:</p>
+      <ul>
+        <li>Personal identification information such as name, email address, phone number</li>
+        <li>Academic information including class, subject preferences, and test scores</li>
+        <li>Usage data including pages visited, time spent, and test performance</li>
+        <li>Device information including IP address, browser type, and operating system</li>
+      </ul>
+
+      <h3>2. How We Use Your Information</h3>
+      <p>We use the collected information for the following purposes:</p>
+      <ul>
+        <li>To provide and maintain our test preparation services</li>
+        <li>To personalize your learning experience</li>
+        <li>To track your progress and performance</li>
+        <li>To send you important updates and notifications</li>
+        <li>To improve our website and services</li>
+        <li>To respond to your queries and support requests</li>
+      </ul>
+
+      <h3>3. Data Protection</h3>
+      <div class="highlight-box">
+        <p>
+          We implement appropriate security measures to protect your personal information. Your data is stored securely and access is restricted to authorized personnel only. We do not sell, rent, or trade your personal information to third parties.
+        </p>
+      </div>
+
+      <h3>4. Cookies and Tracking</h3>
+      <p>
+        We use cookies and similar tracking technologies to enhance your browsing experience. Cookies help us understand how you use our platform and enable us to provide personalized content. You can control cookie preferences through your browser settings.
+      </p>
+
+      <h3>5. Third-Party Services</h3>
+      <p>
+        We may use third-party services for analytics and performance monitoring. These services have their own privacy policies and we encourage you to review them. We ensure that all third-party services we use are compliant with data protection standards.
+      </p>
+
+      <h3>6. Data Retention</h3>
+      <p>
+        We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy. You may request deletion of your account and associated data at any time by contacting us.
+      </p>
+
+      <h3>7. Your Rights</h3>
+      <p>You have the following rights regarding your personal data:</p>
+      <ul>
+        <li>Right to access your personal information</li>
+        <li>Right to correct inaccurate or incomplete data</li>
+        <li>Right to request deletion of your data</li>
+        <li>Right to withdraw consent at any time</li>
+        <li>Right to data portability</li>
+      </ul>
+
+      <h3>8. Children's Privacy</h3>
+      <p>
+        Our services are intended for students preparing for JAC board examinations. We do not knowingly collect personal information from children under 13 years of age. If you believe we have collected information from a child under 13, please contact us immediately.
+      </p>
+
+      <h3>9. Changes to This Policy</h3>
+      <p>
+        We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page with an updated date. We encourage you to review this policy periodically.
+      </p>
+
+      <h3>10. Contact Us</h3>
+      <div class="contact-ref">
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <p><strong>Email:</strong> <a href="mailto:ansarisir210@gmail.com">ansarisir210@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:6200821665">6200821665</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html" id="aboutLink">About Us</a>
+        <a href="contact us examora.html" id="contactLink">Contact Us</a>
+        <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+        <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+      </div>
+    </div>
+    <div class="copyright">2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll to top when clicking "Privacy Policy" while already on this page
+  document.getElementById("privacyLink")?.addEventListener("click", function(e) {
+    if (window.location.pathname.endsWith("privacy%20policies%20examora.html") || window.location.pathname.endsWith("privacy policies examora.html")) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+</script>
+</body>
+</html>

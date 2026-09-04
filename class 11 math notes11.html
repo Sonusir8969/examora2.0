@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Math Ch-11: Introduction to Three Dimensional Geometry</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation (As per Screenshot) --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer (As per Screenshot) --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="#" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Math Ch-11: Introduction to Three Dimensional Geometry</h1>
+
+            <p>NCERT Solutions for Class 11 Maths Chapter 11 Introduction to Three Dimensional Geometry covers the coordinate system in three-dimensional space, the distance formula, and the section formula for points in 3D.</p>
+
+            <h2>Overview of Topics & Subtopics</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#">Coordinate Axes and Coordinate Planes in Three-Dimensional Space</a></li>
+                    <li><a href="#">Coordinates of a Point in Space (Octants)</a></li>
+                    <li><a href="#">Distance Formula between Two Points in 3D</a></li>
+                    <li><a href="#">Section Formula for Internal and External Division</a></li>
+                </ul>
+            </div>
+
+            <h2>Important Questions and Answers</h2>
+            <div class="question">Q1: How many coordinate planes and octants are there in three-dimensional space?</div>
+            <div class="answer">Answer: In three-dimensional space, there are three coordinate planes (the XY-plane, YZ-plane, and ZX-plane), and these three planes divide the space into eight octants.</div>
+            <div class="question">Q2: What is the distance formula between two points (x1, y1, z1) and (x2, y2, z2) in three-dimensional space?</div>
+            <div class="answer">Answer: The distance between two points in 3D space is given by d = √[(x2 − x1)² + (y2 − y1)² + (z2 − z1)²].</div>
+            <div class="question">Q3: What is the section formula for finding the coordinates of a point dividing a line segment internally in the ratio m:n?</div>
+            <div class="answer">Answer: If a point P divides the line segment joining (x1, y1, z1) and (x2, y2, z2) internally in the ratio m:n, its coordinates are given by [(mx2 + nx1)/(m+n), (my2 + ny1)/(m+n), (mz2 + nz1)/(m+n)].</div>
+            <div class="question">Q4: What are the coordinates of the midpoint of a line segment joining two points in 3D space?</div>
+            <div class="answer">Answer: The coordinates of the midpoint of the segment joining (x1, y1, z1) and (x2, y2, z2) are given by [(x1+x2)/2, (y1+y2)/2, (z1+z2)/2], which is a special case of the section formula where the ratio m:n is 1:1.</div>
+            <div class="question">Q5: What are the coordinates of any point lying on the x-axis in three-dimensional space?</div>
+            <div class="answer">Answer: Any point lying on the x-axis in three-dimensional space has coordinates of the form (x, 0, 0), since both its y-coordinate and z-coordinate must be zero.</div>
+
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Math Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 math notes1.html">Ch-1: Sets</a></li>
+                    <li><a href="class 11 math notes2.html">Ch-2: Relations and Functions</a></li>
+                    <li><a href="class 11 math notes3.html">Ch-3: Trigonometric Functions</a></li>
+                    <li><a href="class 11 math notes4.html">Ch-4: Complex Numbers and Quadratic Equations</a></li>
+                    <li><a href="class 11 math notes5.html">Ch-5: Linear Inequalities</a></li>
+                    <li><a href="class 11 math notes6.html">Ch-6: Permutations and Combinations</a></li>
+                    <li><a href="class 11 math notes7.html">Ch-7: Binomial Theorem</a></li>
+                    <li><a href="class 11 math notes8.html">Ch-8: Sequences and Series</a></li>
+                    <li><a href="class 11 math notes9.html">Ch-9: Straight Lines</a></li>
+                    <li><a href="class 11 math notes10.html">Ch-10: Conic Sections</a></li>
+                    <li class="active"><a href="class 11 math notes11.html">Ch-11: Introduction to Three Dimensional Geometry</a></li>
+                    <li><a href="class 11 math notes12.html">Ch-12: Limits and Derivatives</a></li>
+                    <li><a href="class 11 math notes13.html">Ch-13: Statistics</a></li>
+                    <li><a href="class 11 math notes14.html">Ch-14: Probability</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

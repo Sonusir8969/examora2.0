@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Chemistry Chapter 2 Structure of Atom</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="#" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Chemistry Chapter 2 Structure of Atom</h1>
+
+            <p>NCERT Solutions for Class 11 Chemistry Chapter 2 Structure of Atom covers the discovery of subatomic particles, atomic models (Thomson, Rutherford, Bohr), electromagnetic spectrum, photoelectric effect, Planck's quantum theory, dual behavior of matter, Heisenberg's uncertainty principle, quantum mechanical model of atom, quantum numbers, orbital shapes, and electronic configurations (Aufbau principle, Pauli exclusion principle, Hund's rule).</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Subatomic Particles & Early Atomic Models</a></li>
+                    <li><a href="#topic2">2. Electromagnetic Radiation, Planck's Quantum Theory & Bohr's Model</a></li>
+                    <li><a href="#topic3">3. Dual Nature of Matter & Heisenberg's Uncertainty Principle</a></li>
+                    <li><a href="#topic4">4. Quantum Mechanical Model, Quantum Numbers & Electronic Configuration</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Subatomic Particles & Early Atomic Models</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Subatomic Particles:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Electron (e<sup>-</sup>):</em> Discovered by J.J. Thomson (Cathode Ray Tube experiment). Charge = -1.602 × 10<sup>-19</sup> C, Mass = 9.1 × 10<sup>-31</sup> kg.</p>
+                    <p>&nbsp;&nbsp;- <em>Proton (p<sup>+</sup>):</em> Discovered by E. Goldstein (Anode Ray experiment). Charge = +1.602 × 10<sup>-19</sup> C, Mass = 1.672 × 10<sup>-27</sup> kg.</p>
+                    <p>&nbsp;&nbsp;- <em>Neutron (n<sup>0</sup>):</em> Discovered by James Chadwick. Neutral, Mass = 1.674 × 10<sup>-27</sup> kg.</p>
+                    <p>• <strong>Rutherford's α-Particle Scattering Experiment:</strong> Established that an atom consists of a tiny, dense, positively charged nucleus surrounded by electrons revolving in circular paths. Failed to explain atomic stability and line spectrum of hydrogen.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Electromagnetic Radiation, Planck's Quantum Theory & Bohr's Model</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Electromagnetic Radiation:</strong> Characterized by frequency (ν), wavelength (λ), and wave number (ν̄). Equation: <em>c = ν λ</em> and <em>ν̄ = 1 / λ</em>.</p>
+                    <p>• <strong>Planck's Quantum Theory:</strong> Radiant energy is absorbed or emitted discontinuously in small packets of energy called quanta (or photons for light): <em>E = h ν = h c / λ</em>, where h = 6.626 × 10<sup>-34</sup> J·s.</p>
+                    <p>• <strong>Photoelectric Effect:</strong> Ejection of electrons from metal surface when light of suitable frequency (ν ≥ ν<sub>0</sub>) strikes it. Kinetic Energy K.E. = h ν - h ν<sub>0</sub>.</p>
+                    <p>• <strong>Bohr's Atomic Model for Hydrogen:</strong></p>
+                    <p>&nbsp;&nbsp;- Electrons revolve in non-radiating stationary orbits where angular momentum <em>L = m v r = n h / (2π)</em>.</p>
+                    <p>&nbsp;&nbsp;- Radius of n-th orbit: r<sub>n</sub> = 0.529 × (n<sup>2</sup> / Z) Å.</p>
+                    <p>&nbsp;&nbsp;- Energy of electron in n-th orbit: E<sub>n</sub> = -2.18 × 10<sup>-18</sup> × (Z<sup>2</sup> / n<sup>2</sup>) Joules/atom = -13.6 × (Z<sup>2</sup> / n<sup>2</sup>) eV.</p>
+                    <p>&nbsp;&nbsp;- Rydberg formula for hydrogen spectrum: <em>ν̄ = 1/λ = R<sub>H</sub> [ (1/n<sub>1</sub><sup>2</sup>) - (1/n<sub>2</sub><sup>2</sup>) ]</em>, where R<sub>H</sub> = 109,677 cm<sup>-1</sup>.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Dual Nature of Matter & Heisenberg's Uncertainty Principle</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>de Broglie Dual Behaviour of Matter:</strong> Every moving microscopic particle possesses wave property. De Broglie wavelength: <em>λ = h / p = h / (m v)</em>.</p>
+                    <p>• <strong>Heisenberg's Uncertainty Principle:</strong> It is impossible to determine simultaneously both the exact position and momentum (velocity) of a microscopic particle like an electron with absolute accuracy.</p>
+                    <p>&nbsp;&nbsp;- Mathematical relation: <em>Δx · Δp ≥ h / (4π)</em> or <em>Δx · (m Δv) ≥ h / (4π)</em>.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Quantum Mechanical Model, Quantum Numbers & Electronic Configuration</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Quantum Numbers:</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>Principal Quantum Number (n):</em> Shell number / energy level (n = 1, 2, 3...). Determines orbital size and energy.</p>
+                    <p>&nbsp;&nbsp;2. <em>Azimuthal / Angular Momentum Quantum Number (l):</em> Subshell / orbital shape (l = 0 to n-1). s (l=0, spherical), p (l=1, dumbbell), d (l=2, double dumbbell), f (l=3).</p>
+                    <p>&nbsp;&nbsp;3. <em>Magnetic Quantum Number (m<sub>l</sub>):</em> Orbital orientation in space (m<sub>l</sub> = -l to +l). Total orbitals in subshell = 2l + 1.</p>
+                    <p>&nbsp;&nbsp;4. <em>Spin Quantum Number (m<sub>s</sub>):</em> Direction of electron spin (+1/2 or -1/2).</p>
+                    <p>• <strong>Rules for Filling Orbitals:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Aufbau Principle:</em> Orbitals are filled in order of increasing energy (determined by lowest (n + l) value).</p>
+                    <p>&nbsp;&nbsp;- <em>Pauli Exclusion Principle:</em> No two electrons in an atom can have the same set of four quantum numbers. Maximum 2 electrons per orbital with opposite spins.</p>
+                    <p>&nbsp;&nbsp;- <em>Hund's Rule of Maximum Multiplicity:</em> Electron pairing in degenerate orbitals (p, d, f) does not take place until each available orbital is singly occupied with parallel spins.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Why are half-filled and fully-filled subshells extra stable? Give two main reasons.</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p><strong>Explanation:</strong></p>
+                <p>1. <strong>Symmetrical Distribution of Electrons:</strong> Electrons in half-filled or fully-filled subshells are symmetrically distributed in space, which leads to lower energy and greater stability.</p>
+                <p>2. <strong>Maximum Exchange Energy:</strong> Electrons with parallel spins in degenerate orbitals can exchange their positions. Each exchange releases energy called <em>exchange energy</em>. Since half-filled and fully-filled configurations have the maximum number of possible exchanges, the total exchange energy released is maximum, making the system extra stable (e.g., Cr: [Ar] 3d<sup>5</sup> 4s<sup>1</sup> and Cu: [Ar] 3d<sup>10</sup> 4s<sup>1</sup>).</p>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Calculate the energy of one mole of photons of radiation whose frequency is 5 × 10<sup>14</sup> Hz.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                Frequency (ν) = 5 × 10<sup>14</sup> Hz<br>
+                Planck's constant (h) = 6.626 × 10<sup>-34</sup> J·s<br>
+                Avogadro's constant (N<sub>A</sub>) = 6.022 × 10<sup>23</sup> mol<sup>-1</sup><br><br>
+
+                <strong>Step 1: Energy of one photon (E):</strong><br>
+                E = h ν<br>
+                E = 6.626 × 10<sup>-34</sup> J·s × 5 × 10<sup>14</sup> s<sup>-1</sup><br>
+                E = 3.313 × 10<sup>-19</sup> Joules<br><br>
+
+                <strong>Step 2: Energy of one mole of photons (E<sub>total</sub>):</strong><br>
+                E<sub>total</sub> = E × N<sub>A</sub><br>
+                E<sub>total</sub> = 3.313 × 10<sup>-19</sup> J × 6.022 × 10<sup>23</sup> mol<sup>-1</sup><br>
+                E<sub>total</sub> = 1.995 × 10<sup>5</sup> J/mol = <strong>199.51 kJ/mol</strong>.<br><br>
+
+                The energy of one mole of photons is <strong>199.51 kJ/mol</strong>.
+            </div>
+
+            <div class="question">Q2: What is the de Broglie wavelength associated with an electron moving with a velocity of 2.05 × 10<sup>7</sup> m/s?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                Mass of electron (m) = 9.1 × 10<sup>-31</sup> kg<br>
+                Velocity (v) = 2.05 × 10<sup>7</sup> m/s<br>
+                Planck's constant (h) = 6.626 × 10<sup>-34</sup> kg·m<sup>2</sup>/s<br><br>
+
+                De Broglie relation:<br>
+                λ = h / (m v)<br>
+                λ = (6.626 × 10<sup>-34</sup>) / (9.1 × 10<sup>-31</sup> × 2.05 × 10<sup>7</sup>)<br>
+                λ = (6.626 × 10<sup>-34</sup>) / (1.8655 × 10<sup>-23</sup>)<br>
+                λ = <strong>3.55 × 10<sup>-11</sup> m</strong> = <strong>0.0355 nm</strong> (or <strong>0.355 Å</strong>).<br><br>
+
+                The de Broglie wavelength associated with the electron is <strong>3.55 × 10<sup>-11</sup> m</strong>.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Chemistry</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 chemistry notes1">Ch 1: Some Basic Concepts of Chemistry</a></li>
+                    <li class="active"><a href="class 11 chemistry notes2">Ch 2: Structure of Atom</a></li>
+                    <li><a href="class 11 chemistry notes3">Ch 3: Classification of Elements & Periodicity</a></li>
+                    <li><a href="class 11 chemistry notes4">Ch 4: Chemical Bonding & Molecular Structure</a></li>
+                    <li><a href="class 11 chemistry notes5">Ch 5: Chemical Thermodynamics</a></li>
+                    <li><a href="class 11 chemistry notes6">Ch 6: Equilibrium</a></li>
+                    <li><a href="class 11 chemistry notes7">Ch 7: Redox Reactions</a></li>
+                    <li><a href="class 11 chemistry notes8">Ch 8: Organic Chemistry - Basic Principles</a></li>
+                    <li><a href="class 11 chemistry notes9">Ch 9: Hydrocarbons</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

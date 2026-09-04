@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Chemistry Chapter 9 Hydrocarbons</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="#" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Chemistry Chapter 9 Hydrocarbons</h1>
+
+            <p>NCERT Solutions for Class 11 Chemistry Chapter 9 Hydrocarbons provides comprehensive coverage of aliphatic hydrocarbons (alkanes, alkenes, alkynes) and aromatic hydrocarbons (benzene). Key topics include IUPAC nomenclature, physical properties, conformational analysis of ethane, addition mechanisms (Markovnikov & Anti-Markovnikov rules), acidic nature of alkynes, aromaticity (Hückel's Rule), electrophilic substitution reactions in benzene, directive influences of functional groups, and environmental impacts of polynuclear hydrocarbons.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Alkanes: Structure, Nomenclature, Preparation, Reactions & Conformations</a></li>
+                    <li><a href="#topic2">2. Alkenes & Alkynes: Preparation, Geometrical Isomerism, Addition Reactions & Ozonolysis</a></li>
+                    <li><a href="#topic3">3. Aromatic Hydrocarbons: Benzene, Aromaticity (Hückel's Rule) & Electrophilic Substitution</a></li>
+                    <li><a href="#topic4">4. Directive Influence of Groups, Carcinogenicity & Toxicity</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Alkanes: Structure, Nomenclature, Preparation, Reactions & Conformations</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Saturated Hydrocarbons (C<sub>n</sub>H<sub>2n+2</sub>):</strong> Carbon atoms are sp<sup>3</sup> hybridized forming single C-C and C-H sigma bonds.</p>
+                    <p>• <strong>Methods of Preparation:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>From Alkyl Halides:</em> Wurtz Reaction: 2R-X + 2Na (dry ether) → R-R + 2NaX.</p>
+                    <p>&nbsp;&nbsp;- <em>Decarboxylation:</em> R-COONa + NaOH (CaO, heat) → R-H + Na<sub>2</sub>CO<sub>3</sub>.</p>
+                    <p>&nbsp;&nbsp;- <em>Kolbe's Electrolytic Method:</em> 2R-COOK + 2H<sub>2</sub>O (electrolysis) → R-R + 2CO<sub>2</sub> + H<sub>2</sub> + 2KOH.</p>
+                    <p>• <strong>Conformations of Ethane:</strong> Infinite spatial arrangements due to free rotation around C-C single bond.</p>
+                    <p>&nbsp;&nbsp;- <em>Eclipsed Conformation:</em> Hydrogen atoms on both carbons are directly behind each other (Maximum torsional strain, least stable).</p>
+                    <p>&nbsp;&nbsp;- <em>Staggered Conformation:</em> Hydrogen atoms are as far apart as possible (Minimum torsional strain, most stable by 12.5 kJ/mol).</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Alkenes & Alkynes: Preparation, Addition Reactions & Ozonolysis</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Alkenes (C<sub>n</sub>H<sub>2n</sub>):</strong> Contain at least one C=C double bond (sp<sup>2</sup> hybridized carbon). Exhibit <em>Geometrical Isomerism</em> (cis/trans) due to restricted rotation about C=C.</p>
+                    <p>• <strong>Electrophilic Addition Reactions:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Markovnikov's Rule:</em> When an unsymmetrical reagent (e.g., HBr) adds to an unsymmetrical alkene, the negative part adds to the carbon with fewer hydrogen atoms.</p>
+                    <p>&nbsp;&nbsp;- <em>Peroxide Effect (Kharasch Effect):</em> Addition of HBr in the presence of organic peroxide follows <strong>Anti-Markovnikov's Rule</strong> via a free radical mechanism.</p>
+                    <p>&nbsp;&nbsp;- <em>Ozonolysis:</em> Cleavage of C=C by ozone (O<sub>3</sub> followed by Zn/H<sub>2</sub>O) to form aldehydes and/or ketones (used to locate double bond positions).</p>
+                    <p>• <strong>Alkynes (C<sub>n</sub>H<sub>2n-2</sub>):</strong> Contain C≡C triple bond (sp hybridized carbon). Terminal alkynes are acidic in nature due to high s-character (50%) of sp hybridized carbon (e.g., react with Na or NaNH<sub>2</sub> to release H<sub>2</sub> gas).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Aromatic Hydrocarbons: Benzene, Aromaticity & Electrophilic Substitution</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Aromaticity (Hückel's Rule):</strong> A compound is aromatic if it is cyclic, planar, completely conjugated, and possesses <strong>(4n + 2) π electrons</strong> (where n = 0, 1, 2, 3...).</p>
+                    <p>• <strong>Structure of Benzene:</strong> Planar ring of 6 sp<sup>2</sup> hybridized carbon atoms with a delocalized π-electron cloud above and below the ring plane.</p>
+                    <p>• <strong>Electrophilic Aromatic Substitution (SE) Mechanisms:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Nitration:</em> Benzene + Conc. HNO<sub>3</sub> + Conc. H<sub>2</sub>SO<sub>4</sub> → Nitrobenzene + H<sub>2</sub>O (Electrophile: NO<sub>2</sub><sup>+</sup>).</p>
+                    <p>&nbsp;&nbsp;- <em>Halogenation:</em> Benzene + Cl<sub>2</sub> (Anhydrous FeCl<sub>3</sub>) → Chlorobenzene + HCl (Electrophile: Cl<sup>+</sup>).</p>
+                    <p>&nbsp;&nbsp;- <em>Sulfonation:</em> Benzene + Fuming H<sub>2</sub>SO<sub>4</sub> (SO<sub>3</sub>) → Benzenesulfonic acid (Electrophile: SO<sub>3</sub>).</p>
+                    <p>&nbsp;&nbsp;- <em>Friedel-Crafts Alkylation:</em> Benzene + CH<sub>3</sub>Cl (Anhydrous AlCl<sub>3</sub>) → Toluene + HCl (Electrophile: CH<sub>3</sub><sup>+</sup>).</p>
+
+                    <p>&nbsp;&nbsp;- <em>Friedel-Crafts Acylation:</em> Benzene + CH<sub>3</sub>COCl (Anhydrous AlCl<sub>3</sub>) → Acetophenone + HCl (Electrophile: CH<sub>3</sub>C<sup>+</sup>=O).</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Directive Influence of Groups, Carcinogenicity & Toxicity</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Directive Influence in Monosubstituted Benzene:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Ortho and Para Directors (Activating Groups):</em> Groups that increase electron density at ortho/para positions through +R/+I effects (e.g., -OH, -NH<sub>2</sub>, -OCH<sub>3</sub>, -CH<sub>3</sub>). <em>Halogens (-X)</em> are ortho/para directing due to +R, but deactivating due to strong -I effect.</p>
+                    <p>&nbsp;&nbsp;- <em>Meta Directors (Deactivating Groups):</em> Electron-withdrawing groups that decrease electron density overall, especially at ortho/para positions through -R/-I effects, directing coming electrophiles to meta position (e.g., -NO<sub>2</sub>, -COOH, -CHO, -CN, -SO<sub>3</sub>H).</p>
+                    <p>• <strong>Carcinogenicity & Toxicity:</strong> Polynuclear aromatic hydrocarbons containing more than two fused benzene rings (e.g., 1,2-benzanthracene, 3,4-benzopyrene) are toxic and carcinogenic. Formed during incomplete combustion of organic materials (coal, tobacco, petroleum).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Predict the major product formed when propene (CH<sub>3</sub>-CH=CH<sub>2</sub>) reacts with HBr in: (a) absence of peroxide, (b) presence of peroxide. Explain the rules applied.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>(a) In the absence of peroxide:</strong><br>
+                Reaction follows <strong>Markovnikov's Rule</strong>. The hydrogen ion (H<sup>+</sup>) adds to C-3 to form the more stable secondary carbocation (CH<sub>3</sub>-CH<sup>+</sup>-CH<sub>3</sub>).<br>
+                • <em>Major Product:</em> <strong>2-Bromopropane</strong> (CH<sub>3</sub>-CH(Br)-CH<sub>3</sub>).<br><br>
+
+                <strong>(b) In the presence of organic peroxide:</strong><br>
+                Reaction follows <strong>Anti-Markovnikov's Rule</strong> (Peroxide / Kharasch Effect) via a free radical mechanism. Bromine radical (Br<sup>•</sup>) adds to C-3 to yield the more stable secondary free radical.<br>
+                • <em>Major Product:</em> <strong>1-Bromopropane</strong> (CH<sub>3</sub>-CH<sub>2</sub>-CH<sub>2</sub>Br).
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: What are the necessary conditions for a compound to be aromatic according to Hückel's Rule? State whether Cyclooctatetraene is aromatic or non-aromatic.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Conditions for Aromaticity (Hückel's Rule):</strong><br>
+                1. The molecule must be <strong>cyclic</strong>.<br>
+                2. The molecule must be <strong>planar</strong> (all carbon atoms in the ring must be sp<sup>2</sup> hybridized).<br>
+                3. There must be complete <strong>delocalization of π-electrons</strong> throughout the ring.<br>
+                4. The ring must contain <strong>(4n + 2) π electrons</strong>, where n is a non-negative integer (n = 0, 1, 2, 3...).<br><br>
+
+                <strong>Analysis of Cyclooctatetraene (C<sub>8</sub>H<sub>8</sub>):</strong><br>
+                • Cyclooctatetraene contains 4 double bonds, meaning it has <strong>8 π electrons</strong>.<br>
+                • Setting 4n + 2 = 8 gives 4n = 6 ⇒ n = 1.5 (not an integer).<br>
+                • Additionally, cyclooctatetraene adopts a non-planar <em>tub-shaped structure</em> to avoid anti-aromatic instability.<br><br>
+
+                <strong>Conclusion:</strong> Cyclooctatetraene is <strong>non-aromatic</strong>.
+            </div>
+
+            <div class="question">Q2: Draw the Sawhorse and Newman projections for the staggered and eclipsed conformations of ethane. Explain why the staggered conformation is more stable.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Conformations of Ethane (C<sub>2</sub>H<sub>6</sub>):</strong><br><br>
+
+                • <strong>Sawhorse Projections:</strong><br>
+                - <em>Eclipsed:</em> C-H bonds on both carbon atoms are parallel and aligned in the same plane.<br>
+                - <em>Staggered:</em> C-H bonds on the rear carbon are rotated by 60° relative to those on the front carbon.<br><br>
+
+                • <strong>Newman Projections:</strong><br>
+                - <em>Eclipsed:</em> Hydrogen atoms on the rear carbon (represented by the outer circle) are directly hidden behind hydrogen atoms on the front carbon (represented by the central vertex).<br>
+                - <em>Staggered:</em> Hydrogen atoms are evenly spaced at 60° dihedral angles (dihedral angle = 60°).<br><br>
+
+                <strong>Reason for Higher Stability of Staggered Conformation:</strong><br>
+                1. <strong>Minimum Torsional Strain:</strong> In the staggered conformation, electron clouds of C-H sigma bonds are as far apart as possible, leading to minimum electrostatic repulsion.<br>
+                2. In contrast, in the eclipsed conformation, electron pairs of C-H bonds are directly facing each other, creating strong repulsive interactions (torsional strain of ~12.5 kJ/mol).<br><br>
+
+                Therefore, the <strong>staggered conformation</strong> possesses lower potential energy and is more stable than the eclipsed conformation.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Chemistry</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 chemistry notes1">Ch 1: Some Basic Concepts of Chemistry</a></li>
+                    <li><a href="class 11 chemistry notes2">Ch 2: Structure of Atom</a></li>
+                    <li><a href="class 11 chemistry notes3">Ch 3: Classification of Elements & Periodicity</a></li>
+                    <li><a href="class 11 chemistry notes4">Ch 4: Chemical Bonding & Molecular Structure</a></li>
+                    <li><a href="class 11 chemistry notes5">Ch 5: Chemical Thermodynamics</a></li>
+                    <li><a href="class 11 chemistry notes6">Ch 6: Equilibrium</a></li>
+                    <li><a href="class 11 chemistry notes7">Ch 7: Redox Reactions</a></li>
+                    <li><a href="class 11 chemistry notes8">Ch 8: Organic Chemistry - Basic Principles</a></li>
+                    <li class="active"><a href="class 11 chemistry notes9">Ch 9: Hydrocarbons</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

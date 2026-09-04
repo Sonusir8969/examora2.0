@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Examora · JAC Board Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #1e2a3e;
+      line-height: 1.5;
+    }
+
+    :root {
+      --primary-blue: #1e4a76;
+      --primary-teal: #2c7a7b;
+      --primary-green: #2f855a;
+      --light-bg: #f8fafc;
+      --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
+      --hover-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+      --border-light: #e9eef3;
+      --text-muted: #4a5b6e;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-size: 1.85rem;
+      margin-bottom: 1.25rem;
+      color: #0f2b3d;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 64px;
+      height: 3px;
+      background: var(--primary-teal);
+      margin: 0.75rem auto 0;
+      border-radius: 3px;
+    }
+
+    /* Navigation */
+    .navbar {
+      background: white;
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255,255,255,0.98);
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 16px 32px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
+      border-radius: 8px;
+    }
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+      line-height: 1.2;
+    }
+    .logo span {
+      color: var(--primary-green);
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2c3e50;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary-teal);
+    }
+    .mobile-menu-btn {
+      display: none;
+      font-size: 1.6rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--primary-blue);
+      padding: 4px 8px;
+    }
+
+    /* ===== FULL-WIDTH HERO SLIDER ===== */
+    .hero-slider {
+      width: 100%;
+      height: 92vh;
+      min-height: 480px;
+      max-height: 700px;
+      position: relative;
+      overflow: hidden;
+      background: #0f2b3d;
+    }
+
+    .hero-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.7s ease-in-out;
+    }
+
+    .hero-slide {
+      min-width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-slide::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
+    .hero-slide-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding: 0 24px;
+      max-width: 820px;
+    }
+
+    .hero-slide-content h1 {
+      font-size: 3.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .hero-slide-content h1 span {
+      color: #7dd3fc;
+    }
+
+    .hero-slide-content .hero-sub {
+      font-size: 1.25rem;
+      opacity: 0.92;
+      font-weight: 400;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .hero-slide-content .slide-badge {
+      display: inline-block;
+      margin-top: 18px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      padding: 8px 28px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid rgba(255,255,255,0.2);
+      letter-spacing: 0.3px;
+    }
+
+    .hero-slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: white;
+      padding: 16px 22px;
+      border-radius: 50%;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: 0.3s;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+    }
+    .hero-slider-btn:hover {
+      background: rgba(255,255,255,0.35);
+      transform: translateY(-50%) scale(1.05);
+    }
+    .hero-slider-btn.prev { left: 20px; }
+    .hero-slider-btn.next { right: 20px; }
+
+    .hero-dots {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 10;
+    }
+    .hero-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      padding: 0;
+    }
+    .hero-dot.active {
+      background: white;
+      transform: scale(1.2);
+    }
+
+    /* Class Cards */
+    .class-section {
+      padding: 72px 0 64px;
+      background: white;
+    }
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 16px;
+    }
+    .class-card {
+      background: white;
+      border-radius: 24px;
+      padding: 24px 22px 28px;
+      box-shadow: var(--card-shadow);
+      transition: all 0.25s ease;
+      border: 1px solid var(--border-light);
+    }
+    .class-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--hover-shadow);
+      border-color: #d0e0ea;
+    }
+    .class-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      border-left: 4px solid var(--primary-green);
+      padding-left: 16px;
+      margin-bottom: 20px;
+    }
+    .feature-list {
+      list-style: none;
+      margin: 16px 0 22px;
+    }
+    .feature-list li {
+      padding: 8px 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #f0f4f8;
+    }
+    .feature-list li::before {
+      content: "✓";
+      color: var(--primary-green);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .explore-btn {
+      width: 100%;
+      background: transparent;
+      border: 1px solid var(--primary-teal);
+      padding: 10px 0;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--primary-teal);
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 8px;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .explore-btn:hover {
+      background: var(--primary-teal);
+      color: white;
+      border-color: var(--primary-teal);
+    }
+
+    /* Subject Preview */
+    .subject-preview {
+      background: var(--light-bg);
+      padding: 72px 0;
+    }
+    .subject-group {
+      margin-bottom: 48px;
+    }
+    .subject-group h3 {
+      font-size: 1.5rem;
+      color: var(--primary-blue);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .subject-badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .subject-badge {
+      background: white;
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #2c3e50;
+      border: 1px solid #dee7ef;
+      transition: 0.2s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .subject-badge:hover {
+      border-color: var(--primary-teal);
+      color: var(--primary-teal);
+      transform: translateY(-2px);
+      background: #f0f7fc;
+    }
+
+    /* Features */
+    .features-section {
+      padding: 72px 0;
+      background: white;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+    .feature-item h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--primary-blue);
+    }
+    .feature-item p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Statistics */
+    .stats-section {
+      background: var(--light-bg);
+      padding: 56px 0;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .stats-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 32px;
+      text-align: center;
+    }
+    .stat-block h3 {
+      font-size: 2rem;
+      color: var(--primary-blue);
+      font-weight: 700;
+    }
+    .stat-block p {
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    /* ===== OUR CREATIONS - CIRCLE LOGOS ===== */
+    .creations-section {
+      padding: 60px 0;
+      background: white;
+      border-top: 1px solid var(--border-light);
+    }
+    .creations-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px 60px;
+      margin-top: 20px;
+    }
+    .creation-item {
+      text-align: center;
+      transition: 0.25s;
+    }
+    .creation-item:hover {
+      transform: translateY(-4px);
+    }
+    .creation-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--border-light);
+      background: white;
+      box-shadow: var(--card-shadow);
+      transition: 0.3s;
+    }
+    .creation-item:hover img {
+      border-color: var(--primary-teal);
+      box-shadow: 0 8px 24px rgba(44, 122, 123, 0.2);
+    }
+    .creation-item p {
+      margin-top: 10px;
+      font-weight: 500;
+      color: var(--primary-blue);
+    }
+    .creation-item a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .creation-item a:hover p {
+      color: var(--primary-teal);
+    }
+
+    /* Footer */
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 48px 0 28px;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover {
+      color: white;
+    }
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 28px;
+      font-size: 0.8rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px 0 12px;
+        gap: 14px;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .container {
+        padding: 0 20px;
+      }
+      .hero-slide-content h1 {
+        font-size: 2.4rem;
+      }
+      .hero-slide-content .hero-sub {
+        font-size: 1rem;
+      }
+      .hero-slider-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.4rem;
+        padding: 10px 14px;
+      }
+      .hero-slider-btn.prev { left: 10px; }
+      .hero-slider-btn.next { right: 10px; }
+      .stats-grid {
+        justify-content: center;
+      }
+      .hero-slider {
+        height: 70vh;
+        min-height: 400px;
+        max-height: 600px;
+      }
+      .creation-item img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section-title {
+        font-size: 1.7rem;
+      }
+      .features-grid {
+        gap: 28px;
+      }
+      .creations-grid {
+        gap: 30px;
+      }
+      .creation-item img {
+        width: 70px;
+        height: 70px;
+      }
+      .hero-slide-content h1 {
+        font-size: 1.8rem;
+      }
+      .hero-slider {
+        height: 60vh;
+        min-height: 340px;
+        max-height: 500px;
+      }
+    }
+
+    a, button, .explore-btn, .subject-badge, .nav-links a, .footer-col a {
+      cursor: pointer;
+    }
+
+    /* ----- NEW: Study Resources Section ----- */
+    .study-resources-section {
+      padding: 64px 0 72px;
+      background: white;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 32px;
+      margin-top: 12px;
+    }
+
+    .resource-card {
+      background: white;
+      border-radius: 24px;
+      padding: 28px 22px 26px;
+      box-shadow: var(--card-shadow);
+      transition: all 0.25s ease;
+      border: 1px solid var(--border-light);
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+    }
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--hover-shadow);
+      border-color: #d0e0ea;
+    }
+
+    .resource-card h3 {
+      font-size: 1.4rem;
+      color: var(--primary-blue);
+      margin-bottom: 8px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .resource-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 22px;
+      flex: 1;
+    }
+
+    .resource-btn {
+      width: 100%;
+      background: transparent;
+      border: 1px solid var(--primary-teal);
+      padding: 10px 0;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--primary-teal);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .resource-btn:hover {
+      background: var(--primary-teal);
+      color: white;
+      border-color: var(--primary-teal);
+    }
+
+    @media (max-width: 600px) {
+      .resources-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    /* ----- end new styles ----- */
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo-wrapper">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPhZlK5fXaN8Zjchi_BXD1Xr4h_wxU5cihY_bd3qXGAalk9tMYmfFTmrmpfwiKm3X4HWrHknh-RI1uN51agzU-fbTFwLFDFFOka3ZFFTTCbCY5UtYrNenSFAek1FJ3jMDJmUfe4SMmhthsYRHZZgoCZHEO8eg0rpguSlMSguqIvcq23ZS8aZgiJNEmPbw/s1600/examora.png" alt="Examora logo" class="logo-img" />
+      <span class="logo">Examora<span>.</span></span>
+    </a>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="https://jac.jharkhand.gov.in/" class="active">JAC Board</a></li>
+      <li><a href="about us examora.html">About</a></li>
+      <li><a href="contact us examora.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== FULL-WIDTH HERO SLIDER ===== -->
+<section class="hero-slider">
+  <div class="hero-track" id="heroTrack">
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80');">
+      <div class="hero-slide-content">
+        <h1>JAC Board <span>Study & Test</span> Portal</h1>
+        <p class="hero-sub">Chapter-wise tests, subject MCQs and previous year papers for Jharkhand Academic Council board students.</p>
+        <span class="slide-badge">📘 Class 9 · Science · Maths · English</span>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1400&q=80');">
+      <div class="hero-slide-content">
+        <h1>JAC Board <span>Study & Test</span> Portal</h1>
+        <p class="hero-sub">Chapter-wise tests, subject MCQs and previous year papers for Jharkhand Academic Council board students.</p>
+        <span class="slide-badge">📗 Class 10 · Science · Maths · Social Science</span>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=1400&q=80');">
+      <div class="hero-slide-content">
+        <h1>JAC Board <span>Study & Test</span> Portal</h1>
+        <p class="hero-sub">Chapter-wise tests, subject MCQs and previous year papers for Jharkhand Academic Council board students.</p>
+        <span class="slide-badge">📙 Class 11 · Physics · Chemistry · Biology · Maths</span>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1400&q=80');">
+      <div class="hero-slide-content">
+        <h1>JAC Board <span>Study & Test</span> Portal</h1>
+        <p class="hero-sub">Chapter-wise tests, subject MCQs and previous year papers for Jharkhand Academic Council board students.</p>
+        <span class="slide-badge">📕 Class 12 · Physics · Chemistry · Biology · Maths</span>
+      </div>
+    </div>
+  </div>
+
+  <button class="hero-slider-btn prev" id="heroPrev">‹</button>
+  <button class="hero-slider-btn next" id="heroNext">›</button>
+
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot active" data-index="0"></button>
+    <button class="hero-dot" data-index="1"></button>
+    <button class="hero-dot" data-index="2"></button>
+    <button class="hero-dot" data-index="3"></button>
+  </div>
+</section>
+
+<!-- Class Cards -->
+<section class="class-section">
+  <div class="container">
+    <h2 class="section-title">Select Your Class</h2>
+    <div class="class-grid">
+      <div class="class-card">
+        <div class="class-title">Class 9</div>
+        <ul class="feature-list">
+          <li>Subjects Available</li>
+          <li>MCQ Practice</li>
+          <li>Chapter Tests</li>
+          <li>Previous Year Questions</li>
+          <li>Progress Tracking</li>
+        </ul>
+        <a href="class 9 all subject.html" class="explore-btn">Start Test</a>
+      </div>
+      <div class="class-card">
+        <div class="class-title">Class 10</div>
+        <ul class="feature-list">
+          <li>Subjects Available</li>
+          <li>MCQ Practice</li>
+          <li>Chapter Tests</li>
+          <li>Previous Year Questions</li>
+          <li>Progress Tracking</li>
+        </ul>
+        <a href="class 10 all subjects 2.0.html" class="explore-btn">Start Test</a>
+      </div>
+      <div class="class-card">
+        <div class="class-title">Class 11</div>
+        <ul class="feature-list">
+          <li>Subjects Available</li>
+          <li>MCQ Practice</li>
+          <li>Chapter Tests</li>
+          <li>Previous Year Questions</li>
+          <li>Progress Tracking</li>
+        </ul>
+        <a href="class 11 all subjects.html" class="explore-btn">Start Test</a>
+      </div>
+      <div class="class-card">
+        <div class="class-title">Class 12</div>
+        <ul class="feature-list">
+          <li>Subjects Available</li>
+          <li>MCQ Practice</li>
+          <li>Chapter Tests</li>
+          <li>Previous Year Questions</li>
+          <li>Progress Tracking</li>
+        </ul>
+        <a href="class 12 all subjects.html" class="explore-btn">Start Test</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEW:  Study Resources SECTION ===== -->
+<section class="study-resources-section">
+  <div class="container">
+    <h2 class="section-title">📚 Study Resources</h2>
+    <div class="resources-grid">
+      <!-- MCQ Tests -->
+      <div class="resource-card">
+        <h3>📝 MCQ Tests</h3>
+        <p>Practice chapter-wise MCQs with instant results.</p>
+        <a href="mcq.html" class="resource-btn">Start Practice</a>
+      </div>
+      <!-- Notes -->
+      <div class="resource-card">
+        <h3>📖 Notes</h3>
+        <p>Easy notes, revision notes and important concepts.</p>
+        <a href="notes.html" class="resource-btn">View Notes</a>
+      </div>
+      <!-- Previous Year Questions -->
+      <div class="resource-card">
+        <h3>📄 Previous Year Questions</h3>
+        <p>Chapter-wise and subject-wise PYQs.</p>
+        <a href="pyq.html" class="resource-btn">Solve PYQs</a>
+      </div>
+      <!-- Mock Tests -->
+      <div class="resource-card">
+        <h3>🎯 Mock Tests</h3>
+        <p>Full syllabus tests based on exam pattern.</p>
+        <a href="mock-test.html" class="resource-btn">Take Mock Test</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== END NEW SECTION ===== -->
+
+<!-- Subject Preview -->
+<section class="subject-preview">
+  <div class="container">
+    <h2 class="section-title">Choose Your subject</h2>
+    <div class="subject-group">
+      <h3>Class 10</h3>
+      <div class="subject-badge-container">
+        <a href="science all chapters.html" class="subject-badge">Science</a>
+        <a href="class 10 math all cahapter.html" class="subject-badge">Mathematics</a>
+        <a href="class 10 english.html" class="subject-badge">English</a>
+        <a href="classs 10 hindi.html" class="subject-badge">Hindi</a>
+        <a href="class 10 social science.html" class="subject-badge">Social Science</a>
+      </div>
+    </div>
+    
+    <div class="subject-group">
+      <h3>Class 11</h3>
+      <div class="subject-badge-container">
+        <a href="class 11 physics.html" class="subject-badge">Physics</a>
+        <a href="class 11 chemestry.html" class="subject-badge">Chemistry</a>
+        <a href="class 11 biology.html" class="subject-badge">Biology</a>
+        <a href="class 11 mathematics.html" class="subject-badge">Mathematics</a>
+        <a href="class 11 english.html" class="subject-badge">English</a>
+      </div>
+    </div>
+    
+    <div class="subject-group">
+      <h3>Class 12</h3>
+      <div class="subject-badge-container">
+        <a href="CLASS 12 Physics.html" class="subject-badge">Physics</a>
+        <a href="class 12 chemestry.html" class="subject-badge">Chemistry</a>
+        <a href="class 12 biology.html" class="subject-badge">Biology</a>
+        <a href="class 12 mathematics.html" class="subject-badge">Mathematics</a>
+        <a href="class 12 english.html" class="subject-badge">English</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="features-section">
+  <div class="container">
+    <h2 class="section-title">Examora Edge for JAC Board</h2>
+    <div class="features-grid">
+      <div class="feature-item"><h4>Chapter-wise Practice</h4><p>Topic specific MCQs and notes</p></div>
+      <div class="feature-item"><h4>Mock Tests</h4><p>Full syllabus with exam pattern</p></div>
+      <div class="feature-item"><h4>Instant Results</h4><p>Score cards right after submission</p></div>
+      <div class="feature-item"><h4>Performance Analysis</h4><p>Detailed insights and weak areas</p></div>
+      <div class="feature-item"><h4>Mobile Friendly</h4><p>Study on any device</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Statistics -->
+<section class="stats-section">
+  <div class="container stats-grid">
+    <div class="stat-block"><h3>100+</h3><p>Total Tests</p></div>
+    <div class="stat-block"><h3>24</h3><p>Subjects Covered</p></div>
+    <div class="stat-block"><h3>500+</h3><p>Practice Questions</p></div>
+    <div class="stat-block"><h3>100+</h3><p>Active Students</p></div>
+  </div>
+</section>
+
+<!-- ===== OUR CREATIONS - CIRCLE LOGOS ===== -->
+<section class="creations-section">
+  <div class="container">
+    <h2 class="section-title">Our Creations</h2>
+    <div class="creations-grid">
+      <!-- Examora Logo - Circle -->
+      <div class="creation-item">
+        <a href="#" target="_blank">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPhZlK5fXaN8Zjchi_BXD1Xr4h_wxU5cihY_bd3qXGAalk9tMYmfFTmrmpfwiKm3X4HWrHknh-RI1uN51agzU-fbTFwLFDFFOka3ZFFTTCbCY5UtYrNenSFAek1FJ3jMDJmUfe4SMmhthsYRHZZgoCZHEO8eg0rpguSlMSguqIvcq23ZS8aZgiJNEmPbw/s1600/examora.png" alt="Examora Logo" />
+          <p>Examora</p>
+        </a>
+      </div>
+      <!-- Friend's Hub Logo - Circle -->
+      <div class="creation-item">
+        <a href="#" target="_blank">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqCzMKWR3W4XInEJWUwUj2_I3m3dBadGbs0Zf0JPSWGoqNnrdXbzAzeQ1a-0dlG5RLFqjOU3mXE0S54llUq4gghHWXr_nnV6lh-oFu4yIhoMSpY9IoFcx0lSKPAY0fcEKVi5mRqmXHy0-MmDEzmOYlGC4KrPyLATVKpbntwIhK5DF9jmWeRRz1NPMFOb4/s1600/sannu.png" alt="Friend's Hub" />
+          <p>Friend's Hub</p>
+        </a>
+      </div>
+      <!-- Creators Logo - Circle -->
+      <div class="creation-item">
+        <a href="#" target="_blank">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCNtPfs5kUcG4kVYIPUNtI5eua_8hQ0ewSpCi9MTeKmbfSqgRjcLnNsrN7wxD9BSIJvlSKFogQcsoj20PJZGU5Jk08bLapT87c0aSrpxjbito1l4_f_XFk4H9w96LJYVmKZ_7hPEysrbY3j086Ir3dR1MwM4ZFKcbduYGZeeTCB69naUXwkzqFvVk9lRY/s1600/ChatGPT%20Image%20Jun%202,%202026,%2004_15_58%20PM.png" alt="Creators" />
+          <p>Creators</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p style="margin-top: 6px;">Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html">About Us</a>
+        <a href="contact us examora.html">Contact</a>
+        <a href="privacy policies examora.html">Privacy Policy</a>
+        <a href="term and conditions.html">Terms & Conditions</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://jac.jharkhand.gov.in/">JAC Board Portal</a>
+        <a href="">Help Center</a>
+      </div>
+    </div>
+    <div class="copyright">© 2025 Examora Education Platform. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const navLinksEl = document.getElementById('navLinks');
+    if (mobileBtn && navLinksEl) {
+      mobileBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navLinksEl.classList.toggle('show');
+      });
+      navLinksEl.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          navLinksEl.classList.remove('show');
+        });
+      });
+    }
+
+    const track = document.getElementById('heroTrack');
+    const slides = track.querySelectorAll('.hero-slide');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    const prevBtn = document.getElementById('heroPrev');
+    const nextBtn = document.getElementById('heroNext');
+    const dots = document.querySelectorAll('.hero-dot');
+
+    function goToSlide(index) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      currentIndex = index;
+      track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function nextSlide() { goToSlide(currentIndex + 1); }
+    function prevSlide() { goToSlide(currentIndex - 1); }
+
+    if (nextBtn) nextBtn.addEventListener('click', function() { nextSlide(); resetAutoSlide(); });
+    if (prevBtn) prevBtn.addEventListener('click', function() { prevSlide(); resetAutoSlide(); });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', function() {
+        goToSlide(index);
+        resetAutoSlide();
+      });
+    });
+
+    function startAutoSlide() {
+      if (autoSlideInterval) clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoSlide() {
+      if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+      }
+    }
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const sliderWrapper = document.querySelector('.hero-slider');
+    if (sliderWrapper) {
+      sliderWrapper.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      sliderWrapper.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) { nextSlide(); resetAutoSlide(); }
+          else { prevSlide(); resetAutoSlide(); }
+        }
+      }, { passive: true });
+    }
+
+    startAutoSlide();
+  })();
+</script>
+
+</body>
+</html>

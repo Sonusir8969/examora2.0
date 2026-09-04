@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Physics Ch-8: Mechanical Properties of Solids</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation (As per Screenshot) --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer (As per Screenshot) --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="#" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Physics Ch-8: Mechanical Properties of Solids</h1>
+
+            <p>NCERT Solutions for Class 11 Physics Chapter 8 Mechanical Properties of Solids covers the concepts of stress, strain, Hooke's law, elastic moduli, and the elastic behaviour of materials under applied forces.</p>
+
+            <h2>Overview of Topics & Subtopics</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#">Stress and Strain, and Types of Strain</a></li>
+                    <li><a href="#">Hooke's Law and the Stress-Strain Curve</a></li>
+                    <li><a href="#">Young's Modulus, Bulk Modulus, and Shear Modulus</a></li>
+                    <li><a href="#">Elastic Potential Energy in a Stretched Wire</a></li>
+                </ul>
+            </div>
+
+            <h2>Important Questions and Answers</h2>
+            <div class="question">Q1: Define stress and strain, and state their SI units.</div>
+            <div class="answer">Answer: Stress is the internal restoring force developed per unit area of a deformed body, with SI unit N/m² (pascal). Strain is the ratio of change in dimension (length, volume, or shape) to the original dimension, and being a ratio of similar quantities, it has no unit.</div>
+            <div class="question">Q2: State Hooke's Law.</div>
+            <div class="answer">Answer: Hooke's Law states that, within the elastic limit of a material, the stress developed in the body is directly proportional to the strain produced, i.e., stress = k × strain, where k is a constant of proportionality depending on the material and known as its modulus of elasticity.</div>
+            <div class="question">Q3: Define Young's modulus of elasticity.</div>
+            <div class="answer">Answer: Young's modulus is defined as the ratio of longitudinal stress to longitudinal strain within the elastic limit of a material, Y = (F/A)/(ΔL/L), and it is a measure of the stiffness of a solid material.</div>
+            <div class="question">Q4: What is the significance of the elastic limit on a stress-strain curve?</div>
+            <div class="answer">Answer: The elastic limit is the maximum stress up to which a material returns to its original shape and size once the deforming force is removed. Beyond this point, the material undergoes permanent (plastic) deformation and does not fully recover its original dimensions.</div>
+            <div class="question">Q5: Derive the expression for elastic potential energy stored in a stretched wire.</div>
+            <div class="answer">Answer: The elastic potential energy stored in a stretched wire is given by U = (1/2) × stress × strain × volume = (1/2)F·ΔL, obtained by calculating the work done in gradually stretching the wire against the internal restoring force, which increases linearly with extension according to Hooke's Law.</div>
+
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Physics Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 physics notes1.html">Ch-1: Units and Measurements</a></li>
+                    <li><a href="class 11 physics notes2.html">Ch-2: Motion in a Straight Line</a></li>
+                    <li><a href="class 11 physics notes3.html">Ch-3: Motion in a Plane</a></li>
+                    <li><a href="class 11 physics notes4.html">Ch-4: Laws of Motion</a></li>
+                    <li><a href="class 11 physics notes5.html">Ch-5: Work, Energy and Power</a></li>
+                    <li><a href="class 11 physics notes6.html">Ch-6: System of Particles and Rotational Motion</a></li>
+                    <li><a href="class 11 physics notes7.html">Ch-7: Gravitation</a></li>
+                    <li class="active"><a href="class 11 physics notes8.html">Ch-8: Mechanical Properties of Solids</a></li>
+                    <li><a href="class 11 physics notes9.html">Ch-9: Mechanical Properties of Fluids</a></li>
+                    <li><a href="class 11 physics notes10.html">Ch-10: Thermal Properties of Matter</a></li>
+                    <li><a href="class 11 physics notes11.html">Ch-11: Thermodynamics</a></li>
+                    <li><a href="class 11 physics notes12.html">Ch-12: Kinetic Theory</a></li>
+                    <li><a href="class 11 physics notes13.html">Ch-13: Oscillations</a></li>
+                    <li><a href="class 11 physics notes14.html">Ch-14: Waves</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

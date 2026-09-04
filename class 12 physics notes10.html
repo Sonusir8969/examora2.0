@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Physics Chapter 10 Wave Optics</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Physics Chapter 10 Wave Optics</h1>
+
+            <p>NCERT Solutions for Class 12 Physics Chapter 10 Wave Optics covers Huygens' wave theory, wave front construction, refraction and reflection derivations using wave theory, coherent sources, Young's double-slit interference, single-slit diffraction, and polarisation phenomena.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Huygens Principle, Reflection & Refraction of Wavefronts</a></li>
+                    <li><a href="#topic2">2. Coherent Sources & Young's Double Slit Experiment (YDSE)</a></li>
+                    <li><a href="#topic3">3. Diffraction of Light & Polarisation</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Huygens Principle, Reflection & Refraction of Wavefronts</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Wavefront:</strong> The locus of all points in a medium oscillating in the same phase. Types: <em>Spherical wavefront</em> (point source), <em>Cylindrical wavefront</em> (line source), and <em>Plane wavefront</em> (distant source).</p>
+                    <p>• <strong>Huygens' Principle:</strong></p>
+                    <p>&nbsp;&nbsp;1. Every point on a given primary wavefront acts as a fresh source of secondary disturbance called <strong>secondary wavelets</strong>.</p>
+                    <p>&nbsp;&nbsp;2. Secondary wavelets spread out in all directions with the speed of light in that medium.</p>
+                    <p>&nbsp;&nbsp;3. The forward envelope tangent to these secondary wavelets at any later time gives the new position of the wavefront.</p>
+                    <p>• <strong>Refraction using Wave Theory:</strong> Derivation yields Snell's Law: <em>sin i / sin r = v₁ / v₂ = n₂₁</em>. Note that frequency <em>f</em> remains unchanged, but wavelength changes: <em>λ₂ = λ₁ / n</em>.</p>
+                    <p>• <strong>Reflection using Wave Theory:</strong> Derivation yields the law of reflection: <em>angle of incidence (i) = angle of reflection (r)</em>.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Coherent Sources & Young's Double Slit Experiment (YDSE)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Coherent Sources:</strong> Two light sources that emit light waves of the same frequency/wavelength with a constant or zero phase difference over time. Two independent physical sources can never be coherent.</p>
+                    <p>• <strong>Interference of Light:</strong> Redistribution of light energy due to superposition of two coherent light waves.</p>
+                    <p>• <strong>Conditions for Interference:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Constructive Interference (Bright Fringes):</em> Path difference <em>Δx = n λ</em> (where <em>n = 0, 1, 2...</em>). Maximum Intensity <em>I_max = (√I₁ + √I₂)²</em>.</p>
+                    <p>&nbsp;&nbsp;- <em>Destructive Interference (Dark Fringes):</em> Path difference <em>Δx = (2n - 1) (λ / 2)</em> (where <em>n = 1, 2, 3...</em>). Minimum Intensity <em>I_min = (√I₁ - √I₂)²</em>.</p>
+                    <p>• <strong>Fringe Width (β):</strong> Distance between two consecutive bright or dark fringes: <em>β = (λ D) / d</em>, where <em>D</em> is screen distance and <em>d</em> is slit separation.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Diffraction of Light & Polarisation</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Diffraction:</strong> Bending of light waves around corners or obstacles and spreading into the geometrical shadow region.</p>
+                    <p>• <strong>Single Slit Diffraction Pattern:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Minima Condition:</em> <em>a sin θ = n λ</em> (where <em>a</em> is slit width and <em>n = 1, 2, 3...</em>).</p>
+                    <p>&nbsp;&nbsp;- <em>Secondary Maxima Condition:</em> <em>a sin θ = (2n + 1) (λ / 2)</em>.</p>
+                    <p>&nbsp;&nbsp;- <em>Width of Central Maximum:</em> <em>β₀ = (2 λ D) / a</em> (twice the width of secondary fringes).</p>
+                    <p>• <strong>Polarisation:</strong> The phenomenon of restricting the electric field oscillations of light waves to a single plane perpendicular to propagation direction (proves <strong>transverse nature</strong> of light).</p>
+                    <p>• <strong>Malus's Law:</strong> Intensity of polarized light transmitted through an analyzer: <em>I = I₀ cos² θ</em>.</p>
+                    <p>• <strong>Brewster's Law (Polarisation by Reflection):</strong> At Brewster's angle <em>i_B</em>, reflected light is completely plane-polarized and reflected ray is perpendicular to refracted ray: <em>tan i_B = n</em>.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: What are coherent sources of light? Why are two independent sources of light not suitable for producing a sustained interference pattern?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Coherent Sources:</strong> Two sources of light are said to be coherent if they emit light waves having the same frequency, same wavelength, and maintaining a <strong>zero or constant phase difference</strong> between them.<br>
+                • <strong>Why independent sources fail:</strong> Light is emitted by independent sources due to rapid and random atomic transitions lasting about <em>10⁻⁸ s</em>. Independent sources undergo continuous, random phase fluctuations relative to each other. As a result, the interference pattern shifts positions millions of times per second, washing out the fringes and giving an average uniform intensity on the screen.
+            </div>
+
+            <div class="question">Q2: Distinguish between Interference and Diffraction of Light.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Interference</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Diffraction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Source of Origin</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Superposition of waves from two distinct coherent sources.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Superposition of secondary wavelets originating from different parts of the same wavefront.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Width of Fringes</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">All bright and dark fringes are generally of equal width (β).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Fringes are of unequal width; central maximum is twice as wide as secondary maxima.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Intensity distribution</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">All bright fringes have equal intensity.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Central maximum has peak intensity; secondary maxima rapidly decrease in brightness.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Dark Region Contrast</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Dark fringes are usually completely dark (zero intensity).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Minima are not completely dark.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Monochromatic light of wavelength 589 nm is incident from air on a water surface. What are the wavelength, frequency, and speed of refracted light? (Refractive index of water = 1.33)</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Wavelength in air (λ_air) = 589 nm = 589 × 10⁻⁹ m<br>
+                • Refractive index of water (n) = 1.33<br>
+                • Speed of light in vacuum (c) = 3.0 × 10⁸ m/s<br><br>
+                <strong>Part (a): Frequency (f) of Refracted Light</strong><br>
+                Frequency depends strictly on the light source and remains unchanged during refraction.<br>
+                <em>f = c / λ_air = (3.0 × 10⁸) / (589 × 10⁻⁹) ≈ 5.09 × 10¹⁴ Hz</em><br><br>
+                <strong>Part (b): Speed of Refracted Light (v)</strong><br>
+                <em>v = c / n = (3.0 × 10⁸) / 1.33 ≈ 2.26 × 10⁸ m/s</em><br><br>
+                <strong>Part (c): Wavelength of Refracted Light (λ_water)</strong><br>
+                <em>λ_water = λ_air / n = 589 / 1.33 ≈ 442.86 nm</em><br><br>
+                • Frequency = <strong>5.09 × 10¹⁴ Hz</strong><br>
+                • Speed in water = <strong>2.26 × 10⁸ m/s</strong><br>
+                • Wavelength in water = <strong>442.86 nm</strong>
+            </div>
+
+            <div class="question">Q2: In Young's double-slit experiment, the slits are separated by 0.28 mm and the screen is placed 1.4 m away. The distance between the central bright fringe and the fourth bright fringe is measured to be 1.2 cm. Determine the wavelength of light used in the experiment.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Slit separation (d) = 0.28 mm = 0.28 × 10⁻³ m<br>
+                • Distance to screen (D) = 1.4 m<br>
+                • Order of fringe (n) = 4<br>
+                • Distance of 4th bright fringe (y₄) = 1.2 cm = 1.2 × 10⁻² m<br><br>
+                <strong>Step 1: Formula for Position of Bright Fringe</strong><br>
+                <em>y_n = (n λ D) / d</em><br><br>
+                <strong>Step 2: Calculate Wavelength (λ)</strong><br>
+                <em>λ = (y₄ × d) / (4 × D)</em><br>
+                <em>λ = (1.2 × 10⁻² × 0.28 × 10⁻³) / (4 × 1.4)</em><br>
+                <em>λ = (0.336 × 10⁻⁵) / 5.6 = 6.0 × 10⁻⁷ m = 600 nm</em><br><br>
+                The wavelength of light used in the experiment is <strong>600 nm</strong> (or <strong>6.0 × 10⁻⁷ m</strong>).
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Physics</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 physics notes1">Ch 1: Electric Charges and Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatic Potential & Capacitance</a></li>
+                    <li><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges and Magnetism</a></li>
+                    <li><a href="class 12 physics notes5">Ch 5: Magnetism and Matter</a></li>
+                    <li><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics and Optical Instruments</a></li>
+                    <li class="active"><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li><a href="class 12 physics notes11">Ch 11: Dual Nature of Radiation & Matter</a></li>
+                    <li><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

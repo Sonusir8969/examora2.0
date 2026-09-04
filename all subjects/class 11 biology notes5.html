@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Biology Chapter 5 Morphology of Flowering Plants</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Biology Chapter 5 Morphology of Flowering Plants</h1>
+
+            <p>NCERT Solutions for Class 11 Biology Chapter 5 Morphology of Flowering Plants covers the structural features of flowering plants, including root, stem, leaf, inflorescence, flower, fruit, seed, and family descriptions (Solanaceae, Fabaceae, Liliaceae).</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. The Root System & Modifications</a></li>
+                    <li><a href="#topic2">2. The Stem & Modifications</a></li>
+                    <li><a href="#topic3">3. The Leaf (Venable, Phyllotaxy & Types)</a></li>
+                    <li><a href="#topic4">4. Inflorescence & Flower Structure (Aestivation, Placentation)</a></li>
+                    <li><a href="#topic5">5. Fruit, Seed & Plant Families</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. The Root System & Modifications</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Types of Root Systems:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Tap Root System:</em> Primary root develops directly from radicle (e.g., Mustard, Dicot plants).</p>
+                    <p>&nbsp;&nbsp;- <em>Fibrous Root System:</em> Primary root is short-lived, replaced by a large number of roots originating from base of stem (e.g., Wheat, Monocot plants).</p>
+                    <p>&nbsp;&nbsp;- <em>Adventitious Roots:</em> Roots arising from parts of the plant other than radicle (e.g., Grass, Banyan tree, Monstera).</p>
+                    <p>• <strong>Regions of Root:</strong> Root Cap (protection) &rarr; Region of Meristematic Activity (rapid cell division) &rarr; Region of Elongation (length expansion) &rarr; Region of Maturation (bears fine root hairs for water/mineral absorption).</p>
+                    <p>• <strong>Root Modifications:</strong> Storage (Carrot, Turnip, Sweet potato), Support (Prop roots in Banyan, Stilt roots in Maize/Sugarcane), Respiration (Pneumatophores in <em>Rhizophora</em>).</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. The Stem & Modifications</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• Ascending part of the plant axis developed from the plumule of the embryo. Bears nodes and internodes.</p>
+                    <p>• <strong>Stem Modifications:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Underground Stem Storage:</em> Potato (tuber), Ginger (rhizome), Turmeric, Colocasia, Garlic (bulb).</p>
+                    <p>&nbsp;&nbsp;- <em>Stem Tendrils:</em> Slender, spirally coiled structures for climbing (e.g., Gourd, Cucumber, Watermelon, Grapevines).</p>
+                    <p>&nbsp;&nbsp;- <em>Thorns:</em> Woody, straight, pointed structures for defense against herbivores (e.g., <em>Citrus</em>, <em>Bougainvillea</em>).</p>
+                    <p>&nbsp;&nbsp;- <em>Phylloclade:</em> Flattened (<em>Opuntia</em>) or cylindrical (<em>Euphorbia</em>) green stems carrying out photosynthesis in arid regions.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. The Leaf</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• Lateral, generally flattened vegetative organ originating from shoot apical meristem. Consists of 3 parts: Leaf base, Petiole, and Lamina (leaf blade).</p>
+                    <p>• <strong>Venation:</strong> Arrangement of veins in lamina. <em>Reticulate venation</em> (network, characteristic of Dicots) vs. <em>Parallel venation</em> (parallel veins, characteristic of Monocots).</p>
+                    <p>• <strong>Types of Leaves:</strong> <em>Simple Leaf</em> (incision does not touch midrib) vs. <em>Compound Leaf</em> (lamina incision reaches midrib breaking it into leaflets—Pinnately compound e.g. Neem, or Palmately compound e.g. Silk cotton).</p>
+                    <p>• <strong>Phyllotaxy:</strong> Pattern of leaf arrangement on stem or branch. <em>Alternate</em> (Mustard, China rose), <em>Opposite</em> (Calotropis, Guava), <em>Whorled</em> (Alstonia).</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Inflorescence & Flower Structure</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Inflorescence:</strong> Arrangement of flowers on the floral axis. <em>Racemose</em> (main axis continues to grow, acropetal order) vs. <em>Cymose</em> (main axis terminates in flower, basipetal order).</p>
+                    <p>• <strong>Flower Whorls:</strong> Calyx (sepals), Corolla (petals), Androecium (stamens), Gynoecium (carpels).</p>
+
+                      <p>• <strong>Position of Ovary:</strong> Hypogynous (Superior ovary e.g., Mustard), Perigynous (Half-inferior e.g., Rose, Peach), Epigynous (Inferior ovary e.g., Guava, Cucumber).</p>
+                    <p>• <strong>Aestivation:</strong> Arrangement of sepals/petals in floral bud. Types: <em>Valvate</em> (Calotropis), <em>Twisted</em> (China rose), <em>Imbricate</em> (Cassia, Gulmohar), <em>Vexillary</em> (Pea, Bean).</p>
+                    <p>• <strong>Placentation:</strong> Arrangement of ovules within ovary. Types: <em>Marginal</em> (Pea), <em>Axile</em> (Tomato, Lemon), <em>Parietal</em> (Mustard), <em>Free central</em> (Dianthus), <em>Basal</em> (Sunflower, Marigold).</p>
+                </div>
+            </div>
+
+            <div id="topic5">
+                <h2>5. Fruit, Seed & Plant Families</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Fruit:</strong> Mature or ripened ovary after fertilization. <em>Parthenocarpic fruit</em> develops without fertilization (e.g., Banana). Drupe fruit has thin epicarp, mesocarp, and stony endocarp (e.g., Mango, Coconut).</p>
+                    <p>• <strong>Seed:</strong> Made up of seed coat and embryo. Dicots contain 2 cotyledons (Gram, Pea); Monocots contain 1 cotyledon with specialized aleurone layer, scutellum, coleoptile, and coleorhiza (e.g., Maize).</p>
+                    <p>• <strong>Family Characteristics:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Fabaceae:</em> Papilionaceous corolla, diadelphous stamens (9+1), marginal placentation, legume fruit.</p>
+                    <p>&nbsp;&nbsp;- <em>Solanaceae:</em> Persistent calyx, epipetalous stamens, swollen placenta with axile placentation, berry or capsule fruit (Potato, Tomato, Brinjal).</p>
+                    <p>&nbsp;&nbsp;- <em>Liliaceae:</em> Monocot family, perianth (tepals 3+3), epiphyllous stamens (3+3), tricarpellary syncarpous ovary (Onion, Aloe).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: What is placentation? Describe the different types of placentation found in flowering plants with examples.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Placentation</strong> refers to the pattern of arrangement of ovules attached on specialized tissues called placenta inside the ovary.<br><br>
+                <strong>Types of Placentation:</strong><br>
+                1. <strong>Marginal Placentation:</strong> Placenta forms a ridge along the ventral suture of ovary and ovules are borne on two rows (e.g., Pea).<br>
+                2. <strong>Axile Placentation:</strong> Placenta is axial and ovules are attached to it in a multilocular ovary (e.g., Tomato, Lemon, China rose).<br>
+                3. <strong>Parietal Placentation:</strong> Ovules develop on the inner wall of the ovary or peripheral part (e.g., Mustard, Argemone).<br>
+                4. <strong>Free Central Placentation:</strong> Ovules are borne on central axis and septa are absent (e.g., Dianthus, Primrose).<br>
+                5. <strong>Basal Placentation:</strong> Placenta develops at the base of ovary and a single ovule is attached (e.g., Sunflower, Marigold).
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Differentiate between Racemose and Cymose inflorescence.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Racemose Inflorescence</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Cymose Inflorescence</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Main Axis Growth</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Grows indefinitely and does not terminate in a flower.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Growth is limited; main axis terminates in a flower.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Arrangement of Flowers</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Flowers are borne laterally in an <strong>acropetal succession</strong> (older flowers at base).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Flowers are borne in a <strong>basipetal order</strong> (older flower at apex).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Examples</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Radish, Mustard, Lupin.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Jasmine, Bougainvillea, Solanum.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: What is meant by modification of root? What type of modification of root is found in: (a) Banyan tree, (b) Turnip, (c) Mangrove trees?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Roots sometimes change their shape and structure and become modified to perform functions other than absorption and conduction of water and minerals (such as storage, mechanical support, and respiration).<br><br>
+                • <strong>(a) Banyan tree:</strong> <em>Prop roots</em>—hanging structures that arise from heavy aerial stem branches and penetrate the soil to provide mechanical support.<br>
+                • <strong>(b) Turnip:</strong> <em>Fleshy tap root</em>—modified for storage of reserve food material.<br>
+                • <strong>(c) Mangrove trees (Rhizophora):</strong> <em>Pneumatophores</em>—respiratory roots growing vertically upward out of swampy soil to absorb oxygen for respiration.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Biology</h3>
+                <ul class="sidebar-links">
+                    <li class="active"><a href="class 11 biology notes1.html">Ch 1: The Living World</a></li>
+                    <li><a href="class 11 biology notes2.html">Ch 2: Biological Classification</a></li>
+                    <li><a href="class 11 biology notes3.html">Ch 3: Plant Kingdom</a></li>
+                    <li><a href="class 11 biology notes4.html">Ch 4: Animal Kingdom</a></li>
+                    <li><a href="class 11 biology notes5.html">Ch 5: Morphology of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes6.html">Ch 6: Anatomy of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes7.html">Ch 7: Structural Organisation in Animals</a></li>
+                    <li><a href="class 11 biology notes8.html">Ch 8: Cell: The Unit of Life</a></li>
+                    <li><a href="class 11 biology notes9.html">Ch 9: Biomolecules</a></li>
+                    <li><a href="class 11 biology notes10.html">Ch 10: Cell Cycle and Cell Division</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

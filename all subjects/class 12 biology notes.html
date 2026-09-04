@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Biology Chapter 4 Principles of Inheritance and Variation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f8ff;
+        }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="index.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Biology Chapter 4 Principles of Inheritance and Variation</h1>
+
+            <p>NCERT Solutions for Class 12 Biology Chapter 4 Principles of Inheritance and Variation covers Mendelian principles of heredity, deviations from Mendelism (Incomplete Dominance, Co-dominance, Multiple Allelism), Chromosomal Theory of Inheritance, Sex Determination, Linkage, Recombination, and Genetic Disorders.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Mendel Laws of Inheritance & Deviations</a></li>
+                    <li><a href="#topic2">2. Chromosomal Theory, Linkage & Sex Determination</a></li>
+                    <li><a href="#topic3">3. Mutations, Pedigree Analysis & Genetic Disorders</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Mendel Laws of Inheritance & Deviations</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Gregor Mendel:</strong> Known as the Father of Genetics. Worked on Garden Pea (<em>Pisum sativum</em>) for 7 years (1856-1863).</p>
+                    <p>• <strong>Mendel Laws:</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>Law of Dominance:</em> Characters are controlled by discrete units called factors (genes) which occur in pairs. In a dissimilar pair, one expresses itself (Dominant) and the other remains hidden (Recessive).</p>
+                    <p>&nbsp;&nbsp;2. <em>Law of Segregation:</em> Alleles do not show any blending and both characters are recovered in F2 generation. Gametes receive only one allele (Law of Purity of Gametes).</p>
+                    <p>&nbsp;&nbsp;3. <em>Law of Independent Assortment:</em> During dihybrid cross, segregation of one pair of traits is independent of another pair (Phenotypic Ratio 9:3:3:1).</p>
+                    <p>• <strong>Deviations from Mendelism:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Incomplete Dominance:</em> F1 phenotype does not resemble either parent (e.g., <em>Antirrhinum majus</em> / Dog flower: Red x White = Pink, Ratio 1:2:1).</p>
+                    <p>&nbsp;&nbsp;- <em>Co-dominance:</em> F1 progeny resembles both parents equally (e.g., ABO blood groups in humans controlled by gene I).</p>
+                    <p>&nbsp;&nbsp;- <em>Multiple Allelism:</em> Presence of more than two alleles governing the same character (e.g., ABO Blood Group alleles: I<sup>A</sup>, I<sup>B</sup>, i).</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Chromosomal Theory, Linkage & Sex Determination</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Chromosomal Theory of Inheritance:</strong> Proposed by Walter Sutton and Theodore Boveri (1902). Stated that chromosome behavior is parallel to gene behavior during meiosis. Experimentally verified by <strong>T.H. Morgan</strong> using fruit fly <em>Drosophila melanogaster</em>.</p>
+                    <p>• <strong>Linkage & Recombination:</strong> Linkage is the physical association of genes located on the same chromosome. Tightly linked genes show low recombination frequency, whereas loosely linked genes show higher recombination frequency.</p>
+                    <p>• <strong>Sex Determination Types:</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>XX-XY Type:</em> Humans, Drosophila (Male heterogamety: XY, Female homogamety: XX).</p>
+                    <p>&nbsp;&nbsp;2. <em>XX-XO Type:</em> Insects like Grasshopper (Male heterogamety: XO, Female homogamety: XX).</p>
+                    <p>&nbsp;&nbsp;3. <em>ZZ-ZW Type:</em> Birds (Female heterogamety: ZW, Male homogamety: ZZ).</p>
+                    <p>&nbsp;&nbsp;4. <em>Haplodiploidy:</em> Honeybees (Females diploid 2n=32, Males haploid n=16 development via parthenogenesis).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Mutations, Pedigree Analysis & Genetic Disorders</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Mutation:</strong> Sudden inheritable change in genetic material. Point mutation occurs due to a single base pair change (e.g., Sickle cell anemia).</p>
+                    <p>• <strong>Mendelian Disorders:</strong> Determined by alteration or mutation in a single gene.</p>
+                    <p>&nbsp;&nbsp;- <em>Hemophilia:</em> Sex-linked recessive disorder where blood clotting is delayed.</p>
+                    <p>&nbsp;&nbsp;- <em>Sickle-cell Anemia:</em> Autosomal recessive disorder caused by substitution of Glutamic acid by Valine at 6th position of beta-globin chain.</p>
+                    <p>&nbsp;&nbsp;- <em>Phenylketonuria (PKU):</em> Inborn error of metabolism, autosomal recessive disorder.</p>
+                    <p>&nbsp;&nbsp;- <em>Thalassemia:</em> Autosomal recessive blood disorder leading to reduced synthesis of globin chains.</p>
+                    <p>• <strong>Chromosomal Disorders:</strong> Caused by absence, excess, or abnormal arrangement of chromosomes.</p>
+                    <p>&nbsp;&nbsp;- <em>Down Syndrome:</em> Trisomy of 21st chromosome (47 chromosomes).</p>
+                    <p>&nbsp;&nbsp;- <em>Klinefelter Syndrome:</em> Karyotype 47, XXY (Male with feminine development like Gynaecomastia).</p>&nbsp;&nbsp;- <em>Turner Syndrome:</em> Karyotype 45, XO (Sterile female with rudimentary ovaries).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Differentiate between Incomplete Dominance and Co-dominance with suitable examples.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Incomplete Dominance</th>
+                            <th>Co-dominance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Expression in F1</strong></td>
+                            <td>F1 phenotype is an intermediate blending between both parental traits.</td>
+                            <td>F1 phenotype expresses both parental traits fully and simultaneously.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Blending</strong></td>
+                            <td>Effect of both alleles blends to produce a middle variant.</td>
+                            <td>No blending occurs; both alleles manifest independently.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Example</strong></td>
+                            <td>Flower color in Snapdragons / <em>Antirrhinum majus</em> (Red x White = Pink).</td>
+                            <td>ABO Blood Grouping (I<sup>A</sup>I<sup>B</sup> produces AB blood group).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: Why did T.H. Morgan select Drosophila melanogaster for his genetic experiments?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                T.H. Morgan chose <em>Drosophila melanogaster</em> (Fruit fly) because:<br>
+                1. They could easily be grown on simple synthetic medium in laboratory.<br>
+                2. They complete their entire life cycle in about two weeks.<br>
+                3. A single mating could produce a large number of progeny flies.<br>
+                4. There was a clear differentiation of sexes (male and female are easily distinguishable).<br>
+                5. It has many types of hereditary variations that can be seen with low power microscopes.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Explain the Law of Independent Assortment with the help of a Dhybrid Cross.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Law of Independent Assortment:</strong> States that when two pairs of traits are combined in a hybrid, segregation of one pair of characters is independent of the other pair of characters.<br><br>
+                <strong>Dihybrid Cross Example:</strong><br>
+                Cross between Round Yellow seeds (RRYY) and Wrinkled Green seeds (rryy):<br>
+                • <strong>P Generation:</strong> RRYY x rryy<br>
+                • <strong>F1 Generation:</strong> RrYy (All Round Yellow)<br>
+                • <strong>F2 Generation Phenotypic Ratio:</strong> 9 Round Yellow : 3 Round Green : 3 Wrinkled Yellow : 1 Wrinkled Green (9:3:3:1).<br>
+                This 9:3:3:1 ratio proves that seed shape and seed color inherit independently of each other.
+            </div>
+
+            <div class="question">Q2: What is Pedigree Analysis? How is such an analysis useful?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Pedigree Analysis:</strong> The study of inheritance of genetic traits in several generations of a human family represented through a standardized family tree chart using symbols.<br><br>
+                <strong>Significance / Utility:</strong><br>
+                1. Provides a valuable tool in human genetics to trace genetic disorders across generations.<br>
+                2. Helps genetic counselors predict the risk of genetic diseases in offspring.<br>
+                3. Helps identify whether a trait is dominant, recessive, autosomal, or sex-linked.
+            </div>
+
+            <div class="question">Q3: Mention the main features and symptoms of Down's Syndrome and Turner's Syndrome.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Down's Syndrome (Trisomy 21):</strong><br>
+                - <em>Cause:</em> Presence of an additional copy of chromosome number 21 (Total = 47).<br>
+                - <em>Symptoms:</em> Short statured with small round head, furrowed tongue, partially open mouth, broad palm with characteristic palm crease, and physical/mental development is retarded.<br><br>
+                • <strong>Turner's Syndrome (45, XO):</strong><br>
+                - <em>Cause:</em> Absence of one X chromosome in females (Total = 45).<br>
+                - <em>Symptoms:</em> Females are sterile with rudimentary ovaries, webbed neck, lack of secondary sexual characteristics, and short stature.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Biology</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class12biology1.html">Ch 1: Sexual Reproduction in Flowering Plants</a></li>
+                    <li><a href="class12biology2.html">Ch 2: Human Reproduction</a></li>
+                    <li><a href="class12biology3.html">Ch 3: Reproductive Health</a></li>
+                    <li class="active"><a href="class12biology4.html">Ch 4: Principles of Inheritance & Variation</a></li>
+                    <li><a href="class12biology5.html">Ch 5: Molecular Basis of Inheritance</a></li>
+                    <li><a href="class12biology6.html">Ch 6: Evolution</a></li>
+                    <li><a href="class12biology7.html">Ch 7: Human Health & Disease</a></li>
+                    <li><a href="class12biology8.html">Ch 8: Microbes in Human Welfare</a></li>
+                    <li><a href="class12biology9.html">Ch 9: Biotechnology: Principles & Processes</a></li>
+                    <li><a href="class12biology10.html">Ch 10: Biotechnology & Its Applications</a></li>
+                    <li><a href="class12biology11.html">Ch 11: Organisms & Populations</a></li>
+                    <li><a href="class12biology12.html">Ch 12: Ecosystem</a></li>
+                    <li><a href="class12biology13.html">Ch 13: Biodiversity & Conservation</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

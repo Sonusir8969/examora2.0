@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Contact Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .header {
+      background: white;
+      padding: 28px 0;
+      border-bottom: 3px solid #1e4a76;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      color: #1e4a76;
+      letter-spacing: -0.5px;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .header-sub {
+      color: #4a5b6e;
+      font-size: 1rem;
+      margin-top: 4px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #2f855a;
+    }
+
+    .content {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 24px 28px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .content-body {
+      padding: 32px 28px;
+    }
+
+    .content-body p {
+      color: #4a5b6e;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 16px;
+    }
+
+    .contact-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.2s;
+    }
+
+    .contact-card:hover {
+      border-color: #1e4a76;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .contact-card .icon {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1e4a76;
+      margin-bottom: 8px;
+    }
+
+    .contact-card h4 {
+      color: #1e4a76;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .contact-card p {
+      color: #4a5b6e;
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    .contact-card a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-full {
+      grid-column: 1 / -1;
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .quick-link-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px 20px;
+      text-align: center;
+      transition: all 0.2s;
+      text-decoration: none;
+      color: #1e4a76;
+      font-weight: 500;
+    }
+
+    .quick-link-item:hover {
+      background: #1e4a76;
+      color: white;
+      border-color: #1e4a76;
+    }
+
+    .quick-link-item small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: #4a5b6e;
+      margin-top: 4px;
+    }
+
+    .quick-link-item:hover small {
+      color: #cddfe7;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 48px 0 24px;
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-col p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 6px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 24px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .header h1 {
+        font-size: 1.6rem;
+      }
+
+      .content-header {
+        padding: 16px 18px;
+      }
+
+      .content-header h2 {
+        font-size: 1.3rem;
+      }
+
+      .content-body {
+        padding: 20px 18px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-full {
+        grid-column: 1;
+      }
+
+      .quick-links {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.3rem;
+      }
+
+      .quick-links {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Examora<span>.</span></h1>
+    <div class="header-sub">Practice. Perform. Progress.</div>
+    <a href="examora.html" class="back-link" id="backHome">← Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="content-header">
+      <h2>Contact Us</h2>
+    </div>
+    <div class="content-body">
+      <p>
+        We are here to help you. Whether you have a question about our tests, facing any technical issue, or just want to share your feedback, feel free to reach out to us. We will get back to you as soon as possible.
+      </p>
+
+      <div class="contact-grid">
+        <!-- Email -->
+        <div class="contact-card">
+          <div class="icon">Email</div>
+          <h4>Email Us</h4>
+          <p>
+            <a href="mailto:ansarisir210@gmail.com">ansarisir210@gmail.com</a>
+          </p>
+          <p style="font-size:0.85rem; color:#4a5b6e; margin-top:6px;">
+            We respond within 24 hours
+          </p>
+        </div>
+
+        <!-- Phone -->
+        <div class="contact-card">
+          <div class="icon">Phone</div>
+          <h4>Call Us</h4>
+          <p>
+            <a href="tel:6200821665">6200821665</a>
+          </p>
+          <p style="font-size:0.85rem; color:#4a5b6e; margin-top:6px;">
+            Available: Mon-Sat, 9 AM - 6 PM
+          </p>
+        </div>
+
+        <!-- Address -->
+        <div class="contact-card contact-full">
+          <div class="icon">Address</div>
+          <h4>Our Office</h4>
+          <p>
+            Examora Education Platform<br>
+            Jharkhand, India
+          </p>
+          <p style="font-size:0.85rem; color:#4a5b6e; margin-top:6px;">
+            For any queries, please email or call us first
+          </p>
+        </div>
+      </div>
+
+      <h3 style="color:#1e4a76; font-size:1.2rem; margin-top:32px; margin-bottom:12px;">Quick Links</h3>
+      <div class="quick-links">
+        <a href="about us examora.html" class="quick-link-item" id="aboutQuick">
+          About Us
+          <small>Know more about Examora</small>
+        </a>
+        <a href="mailto:ansarisir210@gmail.com" class="quick-link-item" id="helpQuick">
+          Help Center
+          <small>FAQs and support</small>
+        </a>
+        <a href="privacy policies examora.html" class="quick-link-item" id="privacyQuick">
+          Privacy Policy
+          <small>How we protect your data</small>
+        </a>
+        <a href="term and conditions.html" class="quick-link-item" id="termsQuick">
+          Terms & Conditions
+          <small>Terms of use</small>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html" id="aboutLink">About Us</a>
+        <a href="contact us examora.html" id="contactLink">Contact Us</a>
+        <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+        <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+      </div>
+    </div>
+    <div class="copyright">2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll to top when clicking "Contact Us" while already on this page
+  document.getElementById("contactLink")?.addEventListener("click", function(e) {
+    if (window.location.pathname.endsWith("contact%20us%20examora.html") || window.location.pathname.endsWith("contact us examora.html")) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+</script>
+</body>
+</html>

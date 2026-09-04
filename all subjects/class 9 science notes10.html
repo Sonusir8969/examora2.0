@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 9 Science Chapter 10 Work and Energy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="class 9 all chapters notes.html" class="nav-right-link">Back to notes hub</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 9 Science Chapter 10 Work and Energy</h1>
+
+            <p>NCERT Solutions for Class 9 Science Chapter 10 Work and Energy covers scientific concepts of work, positive and negative work, kinetic energy, potential energy, mechanical energy, the law of conservation of energy, rate of doing work (power), and the commercial unit of electrical energy.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Work & Conditions for Work Done</a></li>
+                    <li><a href="#topic2">2. Forms of Energy: Kinetic & Potential Energy</a></li>
+                    <li><a href="#topic3">3. Law of Conservation of Energy</a></li>
+                    <li><a href="#topic4">4. Rate of Doing Work (Power) & Commercial Unit</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Work & Conditions for Work Done</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Work:</strong> Work is said to be done when a force applied on an object produces displacement in the direction of the force.</p>
+                    <p>&nbsp;&nbsp;- Formula: <code>Work Done (W) = Force (F) × Displacement (s)</code></p>
+                    <p>&nbsp;&nbsp;- SI Unit: Joule (J) or Newton-metre (N·m). 1 Joule is the work done when a force of 1 N displaces an object by 1 m in the direction of the force.</p>
+                    <p>• <strong>Conditions for Work to be Done:</strong></p>
+                    <p>&nbsp;&nbsp;1. A force must act on the object.</p>
+                    <p>&nbsp;&nbsp;2. The object must undergo displacement.</p>
+                    <p>• <strong>Types of Work Done:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Positive Work:</em> Force and displacement are in the same direction.</p>
+                    <p>&nbsp;&nbsp;- <em>Negative Work:</em> Force and displacement are in opposite directions (e.g., friction).</p>
+                    <p>&nbsp;&nbsp;- <em>Zero Work:</em> Force and displacement are perpendicular to each other, or displacement is zero.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Forms of Energy: Kinetic & Potential Energy</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Energy:</strong> The capacity of a body to do work. SI Unit: Joule (J). Scalar quantity.</p>
+                    <p>• <strong>Kinetic Energy (Eₖ):</strong> Energy possessed by an object due to its motion.</p>
+                    <p>&nbsp;&nbsp;- Formula: <code>Eₖ = ½ × m × v²</code> (where m = mass, v = velocity).</p>
+                    <p>• <strong>Potential Energy (Eₚ):</strong> Energy possessed by an object due to its position, shape, or configuration.</p>
+                    <p>&nbsp;&nbsp;- <strong>Gravitational Potential Energy:</strong> Energy stored in an object raised to a height (h) above the ground.</p>
+                    <p>&nbsp;&nbsp;- Formula: <code>Eₚ = m × g × h</code> (where m = mass, g = acceleration due to gravity, h = height).</p>
+                    <p>• <strong>Mechanical Energy:</strong> Sum of Kinetic Energy and Potential Energy of a system.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Law of Conservation of Energy</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Law of Conservation of Energy:</strong> Energy can neither be created nor destroyed; it can only be transformed from one form to another. The total energy of an isolated system always remains constant.</p>
+                    <p>&nbsp;&nbsp;- Formula: <code>Potential Energy + Kinetic Energy = Constant (Mechanical Energy)</code></p>
+                    <p>&nbsp;&nbsp;- <em>Free Fall Example:</em> As an object falls, its potential energy gradually decreases while its kinetic energy increases by an equal amount, keeping total mechanical energy constant at every point.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Rate of Doing Work (Power) & Commercial Unit</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Power (P):</strong> The rate of doing work or rate of energy transfer.</p>
+                    <p>&nbsp;&nbsp;- Formula: <code>Power (P) = Work Done (W) / Time (t)</code> or <code>P = Energy / Time</code></p>
+                    <p>&nbsp;&nbsp;- SI Unit: Watt (W) or Joules per second (J/s). 1 Watt = 1 J/s.</p>
+                    <p>&nbsp;&nbsp;- 1 Kilowatt (kW) = 1000 W</p>
+                    <p>• <strong>Commercial Unit of Electrical Energy:</strong> Kilowatt-hour (kWh), commonly called 1 'unit'.</p>
+                    <p>&nbsp;&nbsp;- <code>1 kWh = 1 kW × 1 hour = 1000 W × 3600 s = 3.6 × 10⁶ Joules (J)</code></p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext Questions - Page Number: 115</h2>
+
+            <div class="question">Q1: A force of 7 N acts on an object. The displacement is, say 8 m, in the direction of the force. Let us take it that the force acts on the object through the displacement. What is the work done in this case?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:
+                <p>• Force (F) = 7 N</p>
+                <p>• Displacement (s) = 8 m</p>
+                <p>• Work Done (W) = Force × Displacement = F × s</p>
+                <p>• W = 7 N × 8 m = <strong>56 J</strong></p>
+            </div>
+
+            <h2>Intext Questions - Page Number: 119</h2>
+
+            <div class="question">Q1: What is the kinetic energy of an object? Write an expression for the kinetic energy of an object.</div>
+            <div class="answer">
+                <strong>Answer:</strong> The kinetic energy of an object is the energy possessed by it due to its motion. Moving objects like a running athlete, a blowing wind, or a moving car possess kinetic energy.<br><br>
+                <strong>Expression:</strong> <code>Eₖ = ½ × m × v²</code><br>
+                Where <em>m</em> is the mass of the object and <em>v</em> is its uniform velocity.
+            </div>
+
+            <h2>Intext Questions - Page Number: 125</h2>
+
+            <div class="question">Q1: What is power? Define 1 watt of power.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Power:</strong> Power is defined as the rate of doing work or the rate at which energy is consumed or transferred.<br>
+                • <strong>1 Watt:</strong> Power is said to be 1 Watt when work is done at the rate of 1 Joule per second (i.e., <code>1 W = 1 J/s</code>).
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Look at the activities listed below. Reason whether or not work is done in the light of your understanding of the term 'work':</div>
+            <div class="answer">
+                <p>(a) <strong>Suma is swimming in a pond:</strong> Work is done. She applies force against water to move forward.</p>
+                <p>(b) <strong>A donkey is carrying a load on its back:</strong> No work is done in moving forward against gravity because the lifting force is vertical while displacement is horizontal (force and displacement are perpendicular to each other).</p>
+                <p>(c) <strong>A wind-mill is lifting water from a well:</strong> Work is done. Force acts against gravity in the direction of water movement.</p>
+                <p>(d) <strong>A green plant is carrying out photosynthesis:</strong> No mechanical work is done since there is no displacement of an object.</p>
+                <p>(e) <strong>An engine is pulling a train:</strong> Work is done. Force applied by the engine causes displacement of the train in the direction of force.</p>
+                <p>(f) <strong>Food grains are getting dried in the sun:</strong> No work is done because there is no displacement.</p>
+                <p>(g) <strong>A sailboat is moving due to wind energy:</strong> Work is done. Wind force causes the sailboat to move in the direction of wind.</p>
+            </div>
+
+            <div class="question">Q2: An electric heater is rated 1500 W. How much energy does it use in 10 hours?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:
+                <p>• Power (P) = 1500 W = 1.5 kW</p>
+                <p>• Time (t) = 10 h</p>
+                <p>• Energy consumed = Power × Time</p>
+                <p>• Energy = 1.5 kW × 10 h = <strong>15 kWh (or 15 units)</strong></p>
+                <p>In Joules: 15 × 3.6 × 10⁶ J = <strong>5.4 × 10⁷ Joules</strong></p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 9 Science Chapters</h3>
+                <ul class="sidebar-links">
+                    <li class="active"><a href="class 9 science notes1.html">Ch 1: Matter in Our Surroundings</a></li>
+                    <li><a href="class 9 science notes2.html">Ch 2: Is Matter Around Us Pure?</a></li>
+                    <li><a href="class 9 science notes3.html">Ch 3: Atoms and Molecules</a></li>
+                    <li><a href="class 9 science notes4.html">Ch 4: Structure of the Atom</a></li>
+                    <li><a href="class 9 science notes5.html">Ch 5: The Fundamental Unit of Life</a></li>
+                    <li><a href="class 9 science notes6.html">Ch 6: Tissues</a></li>
+                    <li><a href="class 9 science notes7.html">Ch 7: Motion</a></li>
+                    <li><a href="class 9 science notes8.html">Ch 8: Force and Laws of Motion</a></li>
+                    <li><a href="class 9 science notes9.html">Ch 9: Gravitation</a></li>
+                    <li><a href="class 9 science notes10.html">Ch 10: Work and Energy</a></li>
+                    <li><a href="class 9 science notes11.html">Ch 11: Sound</a></li>
+                    <li><a href="class 9 science notes12.html">Ch 12: Improvement in Food Resources</a></li>
+                    <li><a href="class 9 science notes13.html">Ch 13: Why Do We Fall Ill</a></li>
+                    <li class="active"><a href="class 9 science notes14.html">Ch 14: Natural Resources</a></li>
+                    <li class="active"><a href="class 9 science notes15.html">Ch 15: Improvement in Food Resources</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

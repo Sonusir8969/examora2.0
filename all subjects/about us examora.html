@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | About Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    .header {
+      background: white;
+      padding: 28px 0;
+      border-bottom: 3px solid #1e4a76;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      color: #1e4a76;
+      letter-spacing: -0.5px;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .header-sub {
+      color: #4a5b6e;
+      font-size: 1rem;
+      margin-top: 4px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #2f855a;
+    }
+
+    /* Content */
+    .content {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 24px 28px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .content-body {
+      padding: 32px 28px;
+    }
+
+    .content-body h3 {
+      color: #1e4a76;
+      font-size: 1.3rem;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    .content-body h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .content-body p {
+      color: #4a5b6e;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .content-body ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .content-body ul li {
+      padding: 8px 0;
+      color: #4a5b6e;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #f0f4f8;
+    }
+
+    .content-body ul li::before {
+      content: ">";
+      color: #2f855a;
+      font-weight: 700;
+    }
+
+    .contact-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 16px;
+    }
+
+    .contact-card p {
+      margin-bottom: 6px;
+    }
+
+    .contact-card strong {
+      color: #1e4a76;
+    }
+
+    .contact-card a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .stats-grid-about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+    }
+
+    .stat-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stat-box .number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e4a76;
+    }
+
+    .stat-box .label {
+      color: #4a5b6e;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 48px 0 24px;
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-col p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 6px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 24px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .header h1 {
+        font-size: 1.6rem;
+      }
+
+      .content-header {
+        padding: 16px 18px;
+      }
+
+      .content-header h2 {
+        font-size: 1.3rem;
+      }
+
+      .content-body {
+        padding: 20px 18px;
+      }
+
+      .content-body h3 {
+        font-size: 1.1rem;
+      }
+
+      .content-body p {
+        font-size: 0.9rem;
+      }
+
+      .stats-grid-about {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-box .number {
+        font-size: 1.5rem;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.3rem;
+      }
+
+      .stats-grid-about {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Examora<span>.</span></h1>
+    <div class="header-sub">Practice. Perform. Progress.</div>
+    <a href="examora.html" class="back-link" id="backHome">← Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="content-header">
+      <h2>About Us</h2>
+    </div>
+    <div class="content-body">
+      <h3>Who We Are</h3>
+      <p>
+        Examora is a dedicated online learning platform designed specifically for students preparing for the Jharkhand Academic Council (JAC) board examinations. We provide comprehensive test preparation resources including chapter-wise practice tests, subject MCQs, and previous year question papers.
+      </p>
+      <p>
+        Our mission is to make quality education accessible to every student in Jharkhand. We believe that consistent practice and proper guidance are the keys to academic success. Examora bridges the gap between students and their exam goals by offering a structured and user-friendly learning environment.
+      </p>
+
+      <h3>What We Offer</h3>
+      <ul>
+        <li>Chapter-wise practice tests for Class 9 to Class 12</li>
+        <li>Subject-specific MCQ practice for Science, Mathematics, English, Hindi, and Social Science</li>
+        <li>Previous year question papers for JAC board exams</li>
+        <li>Performance tracking and progress analysis</li>
+        <li>Mobile-friendly platform for learning on the go</li>
+      </ul>
+
+      <h3>Our Vision</h3>
+      <p>
+        To become the most trusted and effective test preparation platform for JAC board students across Jharkhand. We aim to empower every student with the tools and resources they need to achieve their academic goals and build a successful future.
+      </p>
+
+      <h3>Our Impact</h3>
+      <div class="stats-grid-about">
+        <div class="stat-box">
+          <div class="number">480+</div>
+          <div class="label">Total Tests</div>
+        </div>
+        <div class="stat-box">
+          <div class="number">24</div>
+          <div class="label">Subjects Covered</div>
+        </div>
+        <div class="stat-box">
+          <div class="number">10.5K+</div>
+          <div class="label">Practice Questions</div>
+        </div>
+        <div class="stat-box">
+          <div class="number">5K+</div>
+          <div class="label">Active Students</div>
+        </div>
+      </div>
+
+      <h3>Contact Us</h3>
+      <div class="contact-card">
+        <p><strong>Email:</strong> <a href="mailto:ansarisir210@gmail.com">ansarisir210@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:6200821665">6200821665</a></p>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: #4a5b6e;">
+          For any queries, technical issues, or feedback, please feel free to reach out to us. We are here to help you.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html" id="aboutLink">About Us</a>
+        <a href="contact us examora.html" id="contactLink">Contact Us</a>
+        <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+        <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+      </div>
+    </div>
+    <div class="copyright">2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll to top when clicking "About Us" while already on this page
+  document.getElementById("aboutLink")?.addEventListener("click", function(e) {
+    if (window.location.pathname.endsWith("about%20us%20examora.html") || window.location.pathname.endsWith("about us examora.html")) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+</script>
+</body>
+</html>

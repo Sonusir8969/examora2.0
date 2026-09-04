@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Snake and the Mirror - Class 9 English Test</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Roboto, sans-serif; 
+      background: #f0f7f4; 
+      color: #1e3a2e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+    .header { 
+      background: white; 
+      padding: 18px 0; 
+      border-bottom: 3px solid #2d6a4f; 
+      margin-bottom: 30px; 
+    }
+    .header h1 { font-size: 1.5rem; color: #2d6a4f; }
+    .header h1 span { color: #1e4a76; }
+    .back-link { 
+      display: inline-block; 
+      margin-top: 8px; 
+      color: #2d6a4f; 
+      text-decoration: none; 
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .test-info {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #c8e6d9;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .test-info .subject { font-weight: 600; color: #2d6a4f; }
+    .test-info .total-q { background: #e6f7ee; padding: 4px 14px; border-radius: 30px; font-size: 0.85rem; }
+
+    .progress-container {
+      background: #e9ecef;
+      border-radius: 30px;
+      height: 10px;
+      margin-bottom: 25px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #2d6a4f;
+      border-radius: 30px;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    .question-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #c8e6d9;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .q-number {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 12px;
+    }
+    .q-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .option {
+      background: #f8fafc;
+      border: 2px solid #e8ecf0;
+      padding: 14px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .option:hover {
+      background: #e6f7ee;
+      border-color: #2d6a4f;
+    }
+    .option.selected {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.correct-answer {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.wrong-answer {
+      background: #fee2e2;
+      border-color: #b91c1c;
+    }
+    .option.disabled {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .feedback-box {
+      margin-top: 20px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      display: none;
+    }
+    .feedback-box.show {
+      display: block;
+    }
+    .feedback-box.correct {
+      background: #dcfce7;
+      border-left: 4px solid #2d6a4f;
+    }
+    .feedback-box.wrong {
+      background: #fee2e2;
+      border-left: 4px solid #b91c1c;
+    }
+    .feedback-box .exp {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 6px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .btn {
+      padding: 12px 32px;
+      border: none;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary {
+      background: #2d6a4f;
+      color: white;
+    }
+    .btn-primary:hover { background: #1f4d39; }
+    .btn-success {
+      background: #1e4a76;
+      color: white;
+    }
+    .btn-success:hover { background: #163a5c; }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #333;
+    }
+    .btn-secondary:hover { background: #cbd5e1; }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .result-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #c8e6d9;
+      padding: 35px;
+      text-align: center;
+      display: none;
+    }
+    .result-card.show { display: block; }
+    .result-score {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #2d6a4f;
+      margin: 10px 0;
+    }
+    .result-percent {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1e4a76;
+    }
+    .result-msg {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 12px;
+      margin: 20px 0;
+      font-size: 1rem;
+    }
+    .result-detail {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .result-detail .stat {
+      background: #f8fafc;
+      padding: 12px;
+      border-radius: 12px;
+    }
+    .result-detail .stat .num { font-size: 1.4rem; font-weight: 700; }
+    .result-detail .stat.correct .num { color: #2d6a4f; }
+    .result-detail .stat.wrong .num { color: #b91c1c; }
+    .result-detail .stat.skip .num { color: #f59e0b; }
+
+    .other-tests {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #c8e6d9;
+      padding: 20px 25px;
+      margin-top: 25px;
+    }
+    .other-tests h3 { color: #2d6a4f; margin-bottom: 12px; font-size: 1rem; }
+    .test-links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .test-links a {
+      background: #e6f7ee;
+      padding: 8px 18px;
+      border-radius: 30px;
+      color: #2d6a4f;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .test-links a:hover { background: #2d6a4f; color: white; }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 30px 0 18px;
+      margin-top: auto;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .question-card { padding: 20px; }
+      .result-detail { grid-template-columns: 1fr; }
+      .nav-buttons { flex-direction: column; }
+      .btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 9 <span>English</span></h1>
+    <a href="class 9 english.html" class="back-link">Back to English Chapters</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="test-info">
+    <span class="subject">The Snake and the Mirror (Beehive)</span>
+    <span class="total-q">10 Questions</span>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="question-card" id="questionCard">
+    <div class="q-number" id="qNumber">Question 1 of 10</div>
+    <div class="q-text" id="qText">Loading question...</div>
+    <div class="options" id="optionsContainer"></div>
+    <div class="feedback-box" id="feedbackBox">
+      <div id="feedbackText"></div>
+      <div class="exp" id="feedbackExp"></div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+      <button class="btn btn-primary" id="nextBtn">Next</button>
+      <button class="btn btn-success" id="submitBtn" style="display:none;">Submit Test</button>
+    </div>
+  </div>
+
+  <div class="result-card" id="resultCard">
+    <h2>Test Completed</h2>
+    <div class="result-score" id="resultScore">0/10</div>
+    <div class="result-percent" id="resultPercent">0%</div>
+    <div class="result-msg" id="resultMsg">Keep practicing!</div>
+    <div class="result-detail">
+      <div class="stat correct"><div class="num" id="correctCount">0</div><div>Correct</div></div>
+      <div class="stat wrong"><div class="num" id="wrongCount">0</div><div>Wrong</div></div>
+      <div class="stat skip"><div class="num" id="skipCount">0</div><div>Not Answered</div></div>
+    </div>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <button class="btn btn-success" onclick="location.reload()">Retake Test</button>
+      <button class="btn btn-primary" onclick="location.href='#'">Back to Chapters</button>
+    </div>
+  </div>
+
+  <div class="other-tests">
+    <h3>Other English Tests</h3>
+    <div class="test-links">
+      <a href="the fun they had.html">The Fun They Had</a>
+      <a href="the sound of music.html">The Sound of Music</a>
+      <a href="the little girl">The Little Girl</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    Copyright 2025 Examora Education Private Limited. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  const questions = [
+    {
+      text: "Who wrote 'The Snake and the Mirror'?",
+      options: ["Vaikom Muhammad Basheer", "Isaac Asimov", "Deborah Cowley", "Ray Bradbury"],
+      correct: 0,
+      explanation: "'The Snake and the Mirror' was written by Vaikom Muhammad Basheer."
+    },
+    {
+      text: "What is the narrator's profession?",
+      options: ["A doctor", "A teacher", "A lawyer", "A writer"],
+      correct: 0,
+      explanation: "The narrator is a doctor."
+    },
+    {
+      text: "What did the narrator see when he looked in the mirror?",
+      options: ["A snake", "His own reflection", "A thief", "A friend"],
+      correct: 1,
+      explanation: "The narrator saw his own reflection in the mirror."
+    },
+    {
+      text: "What happened when the snake fell on the narrator?",
+      options: ["It bit him", "It coiled around his arm", "It looked at him", "It slithered away"],
+      correct: 2,
+      explanation: "The snake coiled around his arm and looked at him."
+    },
+    {
+      text: "What did the narrator think about when the snake was on him?",
+      options: ["His life", "His death", "His family", "His education"],
+      correct: 1,
+      explanation: "The narrator thought about death and his life."
+    },
+    {
+      text: "What was the narrator's physical appearance?",
+      options: ["Tall", "Short", "Handsome", "Ugly"],
+      correct: 2,
+      explanation: "The narrator thought he was handsome."
+    },
+    {
+      text: "What did the snake do in the end?",
+      options: ["It attacked the narrator", "It went to the mirror", "It slithered away", "It coiled on the floor"],
+      correct: 1,
+      explanation: "The snake went to the mirror and looked at its own reflection."
+    },
+    {
+      text: "What is the theme of the story?",
+      options: ["Vanity and fear", "Love and friendship", "Bravery and courage", "Family and relationships"],
+      correct: 0,
+      explanation: "The story explores themes of vanity and fear."
+    },
+    {
+      text: "Where was the narrator's room located?",
+      options: ["In a small town", "In a village", "In a city", "In a forest"],
+      correct: 0,
+      explanation: "The narrator's room was in a small town."
+    },
+    {
+      text: "What was the narrator's room like?",
+      options: ["Large and spacious", "Small and cramped", "Medium-sized", "Empty"],
+      correct: 1,
+      explanation: "The narrator's room was small and cramped."
+    }
+  ];
+
+  let currentIndex = 0;
+  let userAnswers = new Array(questions.length).fill(null);
+  let answered = new Array(questions.length).fill(false);
+  let testCompleted = false;
+
+  const qNumber = document.getElementById('qNumber');
+  const qText = document.getElementById('qText');
+  const optionsContainer = document.getElementById('optionsContainer');
+  const feedbackBox = document.getElementById('feedbackBox');
+  const feedbackText = document.getElementById('feedbackText');
+  const feedbackExp = document.getElementById('feedbackExp');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const submitBtn = document.getElementById('submitBtn');
+  const progressBar = document.getElementById('progressBar');
+  const questionCard = document.getElementById('questionCard');
+  const resultCard = document.getElementById('resultCard');
+
+  function renderQuestion(index) {
+    const q = questions[index];
+    qNumber.textContent = `Question ${index + 1} of ${questions.length}`;
+    qText.textContent = q.text;
+
+    let optHtml = '';
+    for (let i = 0; i < q.options.length; i++) {
+      let cls = 'option';
+      if (answered[index]) {
+        cls += ' disabled';
+        if (i === q.correct) cls += ' correct-answer';
+        if (userAnswers[index] === i && i !== q.correct) cls += ' wrong-answer';
+        if (userAnswers[index] === i) cls += ' selected';
+      }
+      const label = ['(a) ', '(b) ', '(c) ', '(d) '][i] || '';
+      optHtml += `<div class="${cls}" data-opt="${i}">${label}${q.options[i]}</div>`;
+    }
+    optionsContainer.innerHTML = optHtml;
+
+    if (answered[index]) {
+      showFeedback(index);
+    } else {
+      feedbackBox.classList.remove('show', 'correct', 'wrong');
+    }
+
+    prevBtn.disabled = (index === 0);
+    if (index === questions.length - 1) {
+      nextBtn.style.display = 'none';
+      submitBtn.style.display = 'inline-block';
+    } else {
+      nextBtn.style.display = 'inline-block';
+      submitBtn.style.display = 'none';
+    }
+
+    let answeredCount = answered.filter(a => a === true).length;
+    let progress = (answeredCount / questions.length) * 100;
+    progressBar.style.width = progress + '%';
+
+    if (!answered[index]) {
+      document.querySelectorAll('.option').forEach(opt => {
+        opt.addEventListener('click', function() {
+          if (answered[currentIndex]) return;
+          const selected = parseInt(this.dataset.opt);
+          userAnswers[currentIndex] = selected;
+          answered[currentIndex] = true;
+          renderQuestion(currentIndex);
+        });
+      });
+    }
+  }
+
+  function showFeedback(index) {
+    const q = questions[index];
+    const ans = userAnswers[index];
+    const isCorrect = (ans === q.correct);
+    
+    feedbackBox.className = 'feedback-box show';
+    if (isCorrect) {
+      feedbackBox.classList.add('correct');
+      feedbackText.textContent = 'Correct. Well done.';
+    } else {
+      feedbackBox.classList.add('wrong');
+      feedbackText.textContent = 'Incorrect. The correct answer is: ' + ['(a)', '(b)', '(c)', '(d)'][q.correct];
+    }
+    feedbackExp.textContent = 'Explanation: ' + q.explanation;
+  }
+
+  function goToNext() {
+    if (currentIndex < questions.length - 1) {
+      currentIndex++;
+      renderQuestion(currentIndex);
+      document.getElementById('questionCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function goToPrev() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      renderQuestion(currentIndex);
+    }
+  }
+
+  function submitTest() {
+    let allAnswered = answered.every(a => a === true);
+    let skipCount = answered.filter(a => a === false).length;
+
+    if (!allAnswered) {
+      if (!confirm(`You have ${skipCount} question(s) not answered. Are you sure you want to submit?`)) {
+        return;
+      }
+    }
+
+    testCompleted = true;
+    let correct = 0;
+    let wrong = 0;
+    let skipped = 0;
+
+    for (let i = 0; i < questions.length; i++) {
+      if (!answered[i]) {
+        skipped++;
+      } else if (userAnswers[i] === questions[i].correct) {
+        correct++;
+      } else {
+        wrong++;
+      }
+    }
+
+    questionCard.style.display = 'none';
+    resultCard.classList.add('show');
+    document.getElementById('resultScore').textContent = `${correct}/${questions.length}`;
+    let percent = Math.round((correct / questions.length) * 100);
+    document.getElementById('resultPercent').textContent = percent + '%';
+    document.getElementById('correctCount').textContent = correct;
+    document.getElementById('wrongCount').textContent = wrong;
+    document.getElementById('skipCount').textContent = skipped;
+
+    let msg = '';
+    if (percent >= 80) msg = 'Excellent. You have a strong understanding of the story.';
+    else if (percent >= 60) msg = 'Good performance. Review the questions you got wrong.';
+    else if (percent >= 40) msg = 'Need more practice. Read the chapter carefully.';
+    else msg = 'Read the chapter again and try this test once more.';
+    document.getElementById('resultMsg').textContent = msg;
+
+    resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  prevBtn.addEventListener('click', goToPrev);
+  nextBtn.addEventListener('click', goToNext);
+  submitBtn.addEventListener('click', submitTest);
+
+  document.addEventListener('keydown', (e) => {
+    if (testCompleted) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      if (currentIndex === questions.length - 1) {
+        submitTest();
+      } else {
+        goToNext();
+      }
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      goToPrev();
+    }
+  });
+
+  renderQuestion(0);
+</script>
+</body>
+</html>

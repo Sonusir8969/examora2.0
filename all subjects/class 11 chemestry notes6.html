@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Chemistry Chapter 6 Equilibrium</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="#" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Chemistry Chapter 6 Equilibrium</h1>
+
+            <p>NCERT Solutions for Class 11 Chemistry Chapter 6 Equilibrium covers physical and chemical equilibrium, dynamic equilibrium, Law of Mass Action, equilibrium constants (K<sub>c</sub> and K<sub>p</sub>), Le Chatelier's Principle, ionic equilibrium, concepts of acids and bases, pH scale, ionization constants, common ion effect, buffer solutions, and solubility product (K<sub>sp</sub>).</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Equilibrium in Physical & Chemical Processes and Dynamic Nature</a></li>
+                    <li><a href="#topic2">2. Law of Mass Action & Equilibrium Constants (K<sub>c</sub> and K<sub>p</sub>)</a></li>
+                    <li><a href="#topic3">3. Factors Affecting Equilibrium – Le Chatelier's Principle</a></li>
+                    <li><a href="#topic4">4. Ionic Equilibrium: Acids, Bases, pH, Buffers & Solubility Product (K<sub>sp</sub>)</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Equilibrium in Physical & Chemical Processes and Dynamic Nature</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Equilibrium State:</strong> A state in a reversible reaction where the rate of the forward reaction equals the rate of the reverse reaction, making the concentrations of reactants and products constant over time.</p>
+                    <p>• <strong>Dynamic Nature of Equilibrium:</strong> Reactions do not stop at equilibrium; instead, both forward and backward reactions continue at equal speeds.</p>
+                    <p>• <strong>Physical Equilibrium Examples:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Solid-Liquid:</em> Ice ⇌ Water at 0°C.</p>
+                    <p>&nbsp;&nbsp;- <em>Liquid-Vapor:</em> Water ⇌ Water Vapor in a sealed container.</p>
+                    <p>&nbsp;&nbsp;- <em>Solid-Vapor:</em> Iodine (s) ⇌ Iodine (v).</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Law of Mass Action & Equilibrium Constants (K<sub>c</sub> and K<sub>p</sub>)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Law of Chemical Equilibrium:</strong> For a reversible reaction <em>aA + bB ⇌ cC + dD</em>, the equilibrium expression is:</p>
+                    <p>&nbsp;&nbsp;- In terms of concentration: <em>K<sub>c</sub> = [C]<sup>c</sup>[D]<sup>d</sup> / ([A]<sup>a</sup>[B]<sup>b</sup>)</em>.</p>
+                    <p>&nbsp;&nbsp;- In terms of partial pressure: <em>K<sub>p</sub> = (P<sub>C</sub><sup>c</sup> · P<sub>D</sub><sup>d</sup>) / (P<sub>A</sub><sup>a</sup> · P<sub>B</sub><sup>b</sup>)</em>.</p>
+                    <p>• <strong>Relationship between K<sub>p</sub> and K<sub>c</sub>:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>K<sub>p</sub> = K<sub>c</sub> (RT)<sup>Δn<sub>g</sub></sup></em>, where Δn<sub>g</sub> = (moles of gaseous products) - (moles of gaseous reactants).</p>
+                    <p>• <strong>Properties of K:</strong></p>
+                    <p>&nbsp;&nbsp;- If a reaction is reversed, the new equilibrium constant is <em>K' = 1/K</em>.</p>
+                    <p>&nbsp;&nbsp;- If a reaction is multiplied by a factor <em>n</em>, the new equilibrium constant becomes <em>K' = K<sup>n</sup></em>.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Factors Affecting Equilibrium – Le Chatelier's Principle</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Le Chatelier's Principle:</strong> If a system at equilibrium is subjected to a change in concentration, pressure, temperature, or volume, the system adjusts itself to counteract the effect of the change.</p>
+                    <p>• <strong>Effect of Changes:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Concentration:</em> Adding reactant shifts equilibrium forward; adding product shifts it backward.</p>
+                    <p>&nbsp;&nbsp;- <em>Pressure:</em> Increasing pressure shifts equilibrium toward the side with fewer gaseous moles.</p>
+                    <p>&nbsp;&nbsp;- <em>Temperature:</em> Increasing temperature favors endothermic reactions (ΔH &gt; 0); decreasing temperature favors exothermic reactions (ΔH &lt; 0).</p>
+                    <p>&nbsp;&nbsp;- <em>Catalyst:</em> Increases the rates of both forward and reverse reactions equally; does not alter the equilibrium position or value of K.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Ionic Equilibrium: Acids, Bases, pH, Buffers & Solubility Product (K<sub>sp</sub>)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Acids and Bases Concepts:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Arrhenius:</em> Acids give H<sup>+</sup> ions; Bases give OH<sup>-</sup> ions in aqueous solution.</p>
+                    <p>&nbsp;&nbsp;- <em>Brønsted-Lowry:</em> Acids are proton (H<sup>+</sup>) donors; Bases are proton acceptors.</p>
+                    <p>&nbsp;&nbsp;- <em>Lewis:</em> Acids are electron-pair acceptors (e.g., BF<sub>3</sub>, AlCl<sub>3</sub>); Bases are electron-pair donors (e.g., NH<sub>3</sub>, H<sub>2</sub>O).</p>
+                    <p>• <strong>pH Scale:</strong> <em>pH = -log[H<sup>+</sup>]</em> and <em>pOH = -log[OH<sup>-</sup>]</em>. At 25°C, <em>pH + pOH = 14</em>.</p>
+                    <p>• <strong>Buffer Solutions:</strong> Solutions that resist changes in pH upon addition of small amounts of acid or base (e.g., CH<sub>3</sub>COOH + CH<sub>3</sub>COONa).</p>
+                    <p>• <strong>Solubility Product Constant (K<sub>sp</sub>):</strong> For a sparingly soluble salt A<sub>x</sub>B<sub>y</sub>(s) ⇌ xA<sup>y+</sup>(aq) + yB<sup>x-</sup>(aq), <em>K<sub>sp</sub> = [A<sup>y+</sup>]<sup>x</sup> [B<sup>x-</sup>]<sup>y</sup></em>.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Write the expression for the equilibrium constant K<sub>c</sub> for the reaction: N<sub>2</sub>(g) + 3H<sub>2</sub>(g) ⇌ 2NH<sub>3</sub>(g). Find the relationship between K<sub>p</sub> and K<sub>c</sub> for this reaction.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                1. <strong>Concentration Equilibrium Constant Expression (K<sub>c</sub>):</strong><br>
+                <em>K<sub>c</sub> = [NH<sub>3</sub>]<sup>2</sup> / ([N<sub>2</sub>] [H<sub>2</sub>]<sup>3</sup>)</em><br><br>
+
+                2. <strong>Relationship between K<sub>p</sub> and K<sub>c</sub>:</strong><br>
+                Formula: <em>K<sub>p</sub> = K<sub>c</sub> (RT)<sup>Δn<sub>g</sub></sup></em><br>
+                Calculate Δn<sub>g</sub> (moles of gaseous products - moles of gaseous reactants):<br>
+                Δn<sub>g</sub> = 2 - (1 + 3) = 2 - 4 = -2.<br><br>
+                Therefore, <strong>K<sub>p</sub> = K<sub>c</sub> (RT)<sup>-2</sup></strong> or <strong>K<sub>p</sub> = K<sub>c</sub> / (RT)<sup>2</sup></strong>.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: What will be the conjugate base for the Brønsted acids HF, H<sub>2</sub>SO<sub>4</sub>, and HCO<sub>3</sub><sup>-</sup>?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                A conjugate base is formed when a Brønsted acid donates a proton (H<sup>+</sup>):<br><br>
+                • <strong>HF:</strong> HF - H<sup>+</sup> = <strong>F<sup>-</sup></strong> (Fluoride ion)<br>
+                • <strong>H<sub>2</sub>SO<sub>4</sub>:</strong> H<sub>2</sub>SO<sub>4</sub> - H<sup>+</sup> = <strong>HSO<sub>4</sub><sup>-</sup></strong> (Hydrogen sulfate ion)<br>
+                • <strong>HCO<sub>3</sub><sup>-</sup>:</strong> HCO<sub>3</sub><sup>-</sup> - H<sup>+</sup> = <strong>CO<sub>3</sub><sup>2-</sup></strong> (Carbonate ion)
+            </div>
+
+            <div class="question">Q2: The concentration of hydrogen ion in a sample of soft drink is 3.8 × 10<sup>-3</sup> M. What is its pH?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                [H<sup>+</sup>] = 3.8 × 10<sup>-3</sup> M<br><br>
+
+                Formula:<br>
+                pH = -log[H<sup>+</sup>]<br>
+                pH = -log(3.8 × 10<sup>-3</sup>)<br>
+                pH = -[log(3.8) + log(10<sup>-3</sup>)]<br>
+                Since log(3.8) ≈ 0.58 and log(10<sup>-3</sup>) = -3:<br>
+                pH = -[0.58 - 3]<br>
+                pH = -[-2.42] = <strong>2.42</strong>.<br><br>
+
+                The pH of the soft drink is <strong>2.42</strong> (Acidic).
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Chemistry</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 chemistry notes1">Ch 1: Some Basic Concepts of Chemistry</a></li>
+                    <li><a href="class 11 chemistry notes2">Ch 2: Structure of Atom</a></li>
+                    <li><a href="class 11 chemistry notes3">Ch 3: Classification of Elements & Periodicity</a></li>
+                    <li><a href="class 11 chemistry notes4">Ch 4: Chemical Bonding & Molecular Structure</a></li>
+                    <li><a href="class 11 chemistry notes5">Ch 5: Chemical Thermodynamics</a></li>
+                    <li class="active"><a href="class 11 chemistry notes6">Ch 6: Equilibrium</a></li>
+                    <li><a href="class 11 chemistry notes7">Ch 7: Redox Reactions</a></li>
+                    <li><a href="class 11 chemistry notes8">Ch 8: Organic Chemistry - Basic Principles</a></li>
+                    <li><a href="class 11 chemistry notes9">Ch 9: Hydrocarbons</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

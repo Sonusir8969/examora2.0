@@ -1,0 +1,500 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 11 Maths Chapter 1 Sets MCQs - JAC Board</title>
+    <meta name="description" content="JAC Board Class 11 Maths Chapter 1 Sets 30 MCQ Questions with Answers and Explanations.">
+    <meta name="keywords" content="Class 11 Maths, JAC Board, Sets, Subsets, Power Set, Venn Diagrams, Union and Intersection, NCERT Chapter 1">
+    <style>
+        html, body { width: 100%; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; background-color: #f9fafc; color: #222; box-sizing: border-box; overflow-x: hidden; }
+        *, *::before, *::after { box-sizing: inherit; }
+        .page-container { max-width: 100%; padding: 16px 20px 40px 20px; background: #ffffff; }
+        .header-title { font-size: 22px; font-weight: 700; color: #1b5a55; margin: 0 0 8px 0; letter-spacing: -0.5px; }
+        .back-link { display: inline-block; font-size: 14px; color: #0e5a89; text-decoration: none; margin-bottom: 12px; }
+        .back-link:hover { text-decoration: underline; }
+        .divider-line { border: 0; height: 3px; background: #1a4875; margin: 16px 0 24px 0; width: 100%; }
+        .chapter-card { background: #ffffff; border: 1px solid #e5e9f0; border-radius: 10px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .chapter-title { font-size: 16px; font-weight: 600; color: #142c4b; }
+        .badge-questions { background: #e5f1fb; color: #0d6efd; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; white-space: nowrap; }
+        .q-item { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px dashed #e0e4ed; }
+        .q-item:last-child { border-bottom: 0; margin-bottom: 0; }
+        .question { font-size: 15px; font-weight: 600; color: #cc0000; margin: 0 0 6px 0; line-height: 1.4; }
+        .options { list-style: none; padding: 0; margin: 0 0 8px 0; }
+        .options li { font-size: 14px; color: #000000; padding: 2px 0; line-height: 1.5; }
+        .show-answer-btn { background: #e5f1fb; color: #0d6efd; border: none; padding: 6px 16px; border-radius: 14px; font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.2s; margin-top: 4px; display: inline-block; }
+        .show-answer-btn:hover { background: #d0e3fa; }
+        .answer-section { display: none; margin-top: 6px; }
+        .revealed-answer { font-size: 14px; font-weight: 600; color: #198754; margin: 0 0 2px 0; }
+        .revealed-explain { font-size: 13px; font-weight: 400; color: #198754; margin: 0; line-height: 1.4; }
+        .other-links-section { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e9f0; }
+        .other-links-section a { display: block; color: #0e5a89; text-decoration: underline; padding: 6px 0; font-size: 14px; }
+        .other-links-section a:hover { color: #1b5a55; }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <h1 class="header-title">Class 11 Mathematics</h1>
+        <a href="class 11 mcq hub.html" class="back-link">← Back to Class 11 Mathematics Chapters</a>
+        <hr class="divider-line">
+        <div class="chapter-card">
+            <span class="chapter-title">Ch-1: Sets</span>
+            <span class="badge-questions">30 Questions</span>
+        </div>
+        <div class="questions-container">
+            <div class="q-item">
+                <p class="question">1. Which of the following is a well-defined collection of objects?</p>
+                <ul class="options">
+                    <li>A. The collection of all prime numbers less than 20</li>
+                    <li>B. The collection of good students in a class</li>
+                    <li>C. The collection of most difficult chapters in mathematics</li>
+                    <li>D. The collection of talented actors in India</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. The collection of all prime numbers less than 20</p>
+                    <p class="revealed-explain">Explanation: A set must be well-defined. "Prime numbers less than 20" is precise and objective, whereas "good", "difficult", or "talented" are subjective criteria.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">2. The roster form of the set A = {x : x is an integer and -3 &lt; x &lt; 7} is:</p>
+                <ul class="options">
+                    <li>A. {-2, -1, 0, 1, 2, 3, 4, 5, 6}</li>
+                    <li>B. {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7}</li>
+                    <li>C. {-2, -1, 0, 1, 2, 3, 4, 5, 6, 7}</li>
+                    <li>D. {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6}</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. {-2, -1, 0, 1, 2, 3, 4, 5, 6}</p>
+                    <p class="revealed-explain">Explanation: The strict inequalities -3 &lt; x &lt; 7 exclude both -3 and 7, listing all integers strictly between them.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">3. What is the number of elements in the power set P(A) of a set A containing 4 elements?</p>
+                <ul class="options">
+                    <li>A. 16</li>
+                    <li>B. 8</li>
+                    <li>C. 4</li>
+                    <li>D. 32</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 16</p>
+                    <p class="revealed-explain">Explanation: If n(A) = n, then the number of subsets in the power set n(P(A)) = 2ⁿ. Here, 2⁴ = 16.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">4. If set A has 3 elements, then the number of proper subsets of A is:</p>
+                <ul class="options">
+                    <li>A. 7</li>
+                    <li>B. 8</li>
+                    <li>C. 6</li>
+                    <li>D. 9</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 7</p>
+                    <p class="revealed-explain">Explanation: Total number of subsets is 2³ = 8. The number of proper subsets excludes the set itself, yielding 2ⁿ - 1 = 8 - 1 = 7.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">5. Which of the following represents an empty (null) set?</p>
+                <ul class="options">
+                    <li>A. {x : x is an even prime number greater than 2}</li>
+                    <li>B. {x : x² = 4 and x is an integer}</li>
+                    <li>C. {0}</li>
+                    <li>D. {x : x is a natural number less than 5}</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. {x : x is an even prime number greater than 2}</p>
+                    <p class="revealed-explain">Explanation: The only even prime number is 2. Thus, there are no even prime numbers greater than 2, making this an empty set Ø.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">6. If A = {1, 2, 3, 4} and B = {3, 4, 5, 6}, then A ∪ B is:</p>
+                <ul class="options">
+                    <li>A. {1, 2, 3, 4, 5, 6}</li>
+                    <li>B. {3, 4}</li>
+                    <li>C. {1, 2, 5, 6}</li>
+                    <li>D. {1, 2}</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. {1, 2, 3, 4, 5, 6}</p>
+                    <p class="revealed-explain">Explanation: Union (A ∪ B) combines all unique elements present in either set A or set B without duplicate entries.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">7. If A = {1, 2, 3, 4} and B = {3, 4, 5, 6}, then A ∩ B is:</p>
+                <ul class="options">
+                    <li>A. {3, 4}</li>
+                    <li>B. {1, 2, 3, 4, 5, 6}</li>
+                    <li>C. {1, 2}</li>
+                    <li>D. {5, 6}</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. {3, 4}</p>
+                    <p class="revealed-explain">Explanation: Intersection (A ∩ B) consists only of common elements belonging to both sets A and B, which are 3 and 4.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">8. If A = {1, 2, 3, 4} and B = {3, 4, 5}, then the difference A - B is:</p>
+                <ul class="options">
+                    <li>A. {1, 2}</li>
+                    <li>B. {5}</li>
+                    <li>C. {3, 4}</li>
+                    <li>D. {1, 2, 5}</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. {1, 2}</p>
+                    <p class="revealed-explain">Explanation: Set difference A - B contains all elements present in A that are not in B, which leaves {1, 2}.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">9. Two sets A and B are said to be disjoint if:</p>
+                <ul class="options">
+                    <li>A. A ∩ B = Ø</li>
+                    <li>B. A ∪ B = Ø</li>
+                    <li>C. A - B = Ø</li>
+                    <li>D. A = B</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. A ∩ B = Ø</p>
+                    <p class="revealed-explain">Explanation: Disjoint sets have no elements in common, meaning their intersection is the empty set (Ø).</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">10. If U = {1, 2, 3, 4, 5, 6, 7, 8, 9} and A = {2, 4, 6, 8}, then complement A' is:</p>
+                <ul class="options">
+                    <li>A. {1, 3, 5, 7, 9}</li>
+                    <li>B. {2, 4, 6, 8}</li>
+                    <li>C. {1, 2, 3, 4, 5, 6, 7, 8, 9}</li>
+                    <li>D. Ø</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. {1, 3, 5, 7, 9}</p>
+                    <p class="revealed-explain">Explanation: The complement A' = U - A includes all elements of universal set U that are not present in A.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">11. De Morgan's Law states that for any two sets A and B:</p>
+                <ul class="options">
+                    <li>A. (A ∪ B)' = A' ∩ B'</li>
+                    <li>B. (A ∪ B)' = A' ∪ B'</li>
+                    <li>C. (A ∩ B)' = A' ∩ B'</li>
+                    <li>D. A ∪ B = A' ∩ B'</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. (A ∪ B)' = A' ∩ B'</p>
+                    <p class="revealed-explain">Explanation: According to De Morgan's Laws, the complement of the union of two sets is equal to the intersection of their individual complements.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">12. If n(A) = 15, n(B) = 20, and n(A ∩ B) = 5, then n(A ∪ B) is equal to:</p>
+                <ul class="options">
+                    <li>A. 30</li>
+                    <li>B. 35</li>
+                    <li>C. 40</li>
+                    <li>D. 25</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 30</p>
+                    <p class="revealed-explain">Explanation: Using cardinal formula: n(A ∪ B) = n(A) + n(B) - n(A ∩ B) = 15 + 20 - 5 = 30.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">13. The set builder form of A = {1/2, 2/3, 3/4, 4/5, 5/6} is:</p>
+                <ul class="options">
+                    <li>A. {x : x = n/(n+1), where n ∈ N and 1 ≤ n ≤ 5}</li>
+                    <li>B. {x : x = n/(n-1), where n ∈ N and 1 ≤ n ≤ 5}</li>
+                    <li>C. {x : x = (n+1)/n, where n ∈ N and 1 ≤ n ≤ 5}</li>
+                    <li>D. {x : x = n/2n, where n ∈ N}</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. {x : x = n/(n+1), where n ∈ N and 1 ≤ n ≤ 5}</p>
+                    <p class="revealed-explain">Explanation: Substituting natural numbers n = 1, 2, 3, 4, 5 into x = n/(n+1) generates 1/2, 2/3, 3/4, 4/5, 5/6.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">14. Which of the following is a finite set?</p>
+                <ul class="options">
+                    <li>A. The set of months in a year</li>
+                    <li>B. The set of lines parallel to the x-axis</li>
+                    <li>C. The set of prime numbers</li>
+                    <li>D. The set of points on a line segment</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. The set of months in a year</p>
+                    <p class="revealed-explain">Explanation: A finite set contains a countable number of elements; a year contains exactly 12 months.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">15. The interval representation of {x ∈ R : -4 &lt; x ≤ 6} is:</p>
+                <ul class="options">
+                    <li>A. (-4, 6]</li>
+                    <li>B. [-4, 6]</li>
+                    <li>C. (-4, 6)</li>
+                    <li>D. [-4, 6)</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. (-4, 6]</p>
+                    <p class="revealed-explain">Explanation: Strict inequality (-4 &lt; x) uses an open parenthesis '(', while non-strict inequality (x ≤ 6) uses a closed bracket ']'.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">16. If set A = Ø (empty set), then the cardinal number of P(P(A)) is:</p>
+                <ul class="options">
+                    <li>A. 2</li>
+                    <li>B. 1</li>
+                    <li>C. 0</li>
+                    <li>D. 4</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 2</p>
+                    <p class="revealed-explain">Explanation: For A = Ø, n(A) = 0. Then n(P(A)) = 2⁰ = 1. Consequently, n(P(P(A))) = 2¹ = 2.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">17. For any set A, (A')' is equal to:</p>
+                <ul class="options">
+                    <li>A. A</li>
+                    <li>B. A'</li>
+                    <li>C. U</li>
+                    <li>D. Ø</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. A</p>
+                    <p class="revealed-explain">Explanation: The Law of Double Complementation states that taking the complement of a complement yields the original set A.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">18. The symmetric difference of two sets A and B, denoted by A Δ B, is defined as:</p>
+                <ul class="options">
+                    <li>A. (A - B) ∪ (B - A)</li>
+                    <li>B. (A ∩ B) - (A ∪ B)</li>
+                    <li>C. (A - B) ∩ (B - A)</li>
+                    <li>D. (A ∪ B) ∩ (A ∩ B)</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. (A - B) ∪ (B - A)</p>
+                    <p class="revealed-explain">Explanation: Symmetric difference contains elements belonging to set A or set B, but not to both simultaneously.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">19. In a group of 50 people, 30 like tea, 25 like coffee, and 10 like both. How many like neither tea nor coffee?</p>
+                <ul class="options">
+                    <li>A. 5</li>
+                    <li>B. 10</li>
+                    <li>C. 15</li>
+                    <li>D. 20</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 5</p>
+                    <p class="revealed-explain">Explanation: n(T ∪ C) = 30 + 25 - 10 = 45. People who like neither = Total - n(T ∪ C) = 50 - 45 = 5.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">20. If A ⊂ B, then A ∩ B is equal to:</p>
+                <ul class="options">
+                    <li>A. A</li>
+                    <li>B. B</li>
+                    <li>C. Ø</li>
+                    <li>D. U</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. A</p>
+                    <p class="revealed-explain">Explanation: When A is a subset of B, every element of A is inside B, so their common elements form set A.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">21. If A ⊂ B, then A ∪ B is equal to:</p>
+                <ul class="options">
+                    <li>A. B</li>
+                    <li>B. A</li>
+                    <li>C. Ø</li>
+                    <li>D. A ∩ B</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. B</p>
+                    <p class="revealed-explain">Explanation: Since set B contains all elements of set A, combining both sets in union simply yields set B.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">22. Which of the following is correct regarding Universal set U and empty set Ø?</p>
+                <ul class="options">
+                    <li>A. U' = Ø and Ø' = U</li>
+                    <li>B. U' = U and Ø' = Ø</li>
+                    <li>C. U' = U and Ø' = U</li>
+                    <li>D. U' = Ø and Ø' = Ø</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. U' = Ø and Ø' = U</p>
+                    <p class="revealed-explain">Explanation: By law of empty set and universal set, the complement of universal set is empty set and vice versa.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">23. If set A has m elements and set B has n elements, then total number of subsets of A × B is:</p>
+                <ul class="options">
+                    <li>A. 2ᵐⁿ</li>
+                    <li>B. 2ᵐ⁺ⁿ</li>
+                    <li>C. m × n</li>
+                    <li>D. 2ᵐ</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 2ᵐⁿ</p>
+                    <p class="revealed-explain">Explanation: Number of elements in Cartesian product n(A × B) = m × n. Total subsets of A × B = 2ᵐⁿ.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">24. What is the number of elements in set A if A = {x : x ∈ R, x² = -1}?</p>
+                <ul class="options">
+                    <li>A. 0</li>
+                    <li>B. 1</li>
+                    <li>C. 2</li>
+                    <li>D. Infinite</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0</p>
+                    <p class="revealed-explain">Explanation: No real number squared produces a negative value (-1). Thus, set A contains 0 elements (empty set).</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">25. For any sets A and B, A ∩ (A ∪ B) is equal to:</p>
+                <ul class="options">
+                    <li>A. A</li>
+                    <li>B. B</li>
+                    <li>C. Ø</li>
+                    <li>D. A ∪ B</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. A</p>
+                    <p class="revealed-explain">Explanation: By the Absorption Law of set operations, intersecting set A with its union with B returns set A.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">26. If A = {x : x is a letter in the word "ALLOY"} and B = {x : x is a letter in the word "LOYAL"}, then:</p>
+                <ul class="options">
+                    <li>A. A = B</li>
+                    <li>B. A ⊂ B and A ≠ B</li>
+                    <li>C. A and B are disjoint</li>
+                    <li>D. A ∩ B = Ø</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. A = B</p>
+                    <p class="revealed-explain">Explanation: In roster form, A = {A, L, O, Y} and B = {L, O, Y, A}. Repetition does not change set equality, so A = B.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">27. If n(U) = 700, n(A) = 200, n(B) = 300 and n(A ∩ B) = 100, then n(A' ∩ B') is:</p>
+                <ul class="options">
+                    <li>A. 300</li>
+                    <li>B. 400</li>
+                    <li>C. 500</li>
+                    <li>D. 200</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 300</p>
+                    <p class="revealed-explain">Explanation: n(A' ∩ B') = n((A ∪ B)') = n(U) - n(A ∪ B). Here n(A ∪ B) = 200 + 300 - 100 = 400. Thus 700 - 400 = 300.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">28. The set {x ∈ R : 1 ≤ x &lt; 5} expressed as an interval is:</p>
+                <ul class="options">
+                    <li>A. [1, 5)</li>
+                    <li>B. (1, 5]</li>
+                    <li>C. [1, 5]</li>
+                    <li>D. (1, 5)</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. [1, 5)</p>
+                    <p class="revealed-explain">Explanation: Inclusion of 1 requires closed bracket '[' on the left; strict inequality &lt; 5 requires open parenthesis ')' on the right.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">29. If A and B are two sets such that n(A - B) = 24, n(B - A) = 19 and n(A ∩ B) = 11, then n(A ∪ B) is:</p>
+                <ul class="options">
+                    <li>A. 54</li>
+                    <li>B. 43</li>
+                    <li>C. 35</li>
+                    <li>D. 50</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 54</p>
+                    <p class="revealed-explain">Explanation: n(A ∪ B) = n(A - B) + n(B - A) + n(A ∩ B) = 24 + 19 + 11 = 54.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">30. The cardinal number of a singleton set is always:</p>
+                <ul class="options">
+                    <li>A. 1</li>
+                    <li>B. 0</li>
+                    <li>C. 2</li>
+                    <li>D. Infinite</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 1</p>
+                    <p class="revealed-explain">Explanation: By definition, a singleton set is a set containing exactly one element.</p>
+                </div>
+            </div>
+        </div>
+        <div class="other-links-section">
+            <a href="class 11 math mcq2.html">Chapter 2: Relations and Functions</a>
+        </div>
+    </div>
+    <script>function revealAnswer(btn){var section=btn.nextElementSibling;if(section.style.display==="none"||section.style.display===""){section.style.display="block";btn.style.display="none";}else{section.style.display="none";btn.style.display="inline-block";}}</script>
+</body>
+</html>

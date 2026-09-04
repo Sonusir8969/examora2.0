@@ -1,0 +1,500 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 11 Maths Chapter 14 Probability MCQs - JAC Board</title>
+    <meta name="description" content="JAC Board Class 11 Maths Chapter 14 Probability 30 MCQ Questions with Answers and Explanations.">
+    <meta name="keywords" content="Class 11 Maths, JAC Board, Probability, Sample Space, Events, Mutually Exclusive, Exhaustive Events, NCERT Chapter 14">
+    <style>
+        html, body { width: 100%; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; background-color: #f9fafc; color: #222; box-sizing: border-box; overflow-x: hidden; }
+        *, *::before, *::after { box-sizing: inherit; }
+        .page-container { max-width: 100%; padding: 16px 20px 40px 20px; background: #ffffff; }
+        .header-title { font-size: 22px; font-weight: 700; color: #1b5a55; margin: 0 0 8px 0; letter-spacing: -0.5px; }
+        .back-link { display: inline-block; font-size: 14px; color: #0e5a89; text-decoration: none; margin-bottom: 12px; }
+        .back-link:hover { text-decoration: underline; }
+        .divider-line { border: 0; height: 3px; background: #1a4875; margin: 16px 0 24px 0; width: 100%; }
+        .chapter-card { background: #ffffff; border: 1px solid #e5e9f0; border-radius: 10px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .chapter-title { font-size: 16px; font-weight: 600; color: #142c4b; }
+        .badge-questions { background: #e5f1fb; color: #0d6efd; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; white-space: nowrap; }
+        .q-item { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px dashed #e0e4ed; }
+        .q-item:last-child { border-bottom: 0; margin-bottom: 0; }
+        .question { font-size: 15px; font-weight: 600; color: #cc0000; margin: 0 0 6px 0; line-height: 1.4; }
+        .options { list-style: none; padding: 0; margin: 0 0 8px 0; }
+        .options li { font-size: 14px; color: #000000; padding: 2px 0; line-height: 1.5; }
+        .show-answer-btn { background: #e5f1fb; color: #0d6efd; border: none; padding: 6px 16px; border-radius: 14px; font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.2s; margin-top: 4px; display: inline-block; }
+        .show-answer-btn:hover { background: #d0e3fa; }
+        .answer-section { display: none; margin-top: 6px; }
+        .revealed-answer { font-size: 14px; font-weight: 600; color: #198754; margin: 0 0 2px 0; }
+        .revealed-explain { font-size: 13px; font-weight: 400; color: #198754; margin: 0; line-height: 1.4; }
+        .other-links-section { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e9f0; }
+        .other-links-section a { display: block; color: #0e5a89; text-decoration: underline; padding: 6px 0; font-size: 14px; }
+        .other-links-section a:hover { color: #1b5a55; }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <h1 class="header-title">Class 11 Mathematics</h1>
+        <a href="class 11 mcq hub.html" class="back-link">← Back to Class 11 Mathematics Chapters</a>
+        <hr class="divider-line">
+        <div class="chapter-card">
+            <span class="chapter-title">Ch-14: Probability</span>
+            <span class="badge-questions">30 Questions</span>
+        </div>
+        <div class="questions-container">
+            <div class="q-item">
+                <p class="question">1. The set of all possible outcomes of a random experiment is called:</p>
+                <ul class="options">
+                    <li>A. Sample Space</li>
+                    <li>B. Event Space</li>
+                    <li>C. Outcome Set</li>
+                    <li>D. Probability Field</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. Sample Space</p>
+                    <p class="revealed-explain">Explanation: The collection of all possible outcomes of a random experiment is defined as its sample space (S).</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">2. If a coin is tossed 3 times, the number of elements in the sample space is:</p>
+                <ul class="options">
+                    <li>A. 8</li>
+                    <li>B. 6</li>
+                    <li>C. 4</li>
+                    <li>D. 16</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 8</p>
+                    <p class="revealed-explain">Explanation: Total outcomes = 2³ = 8.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">3. An event having only one sample point is called a/an:</p>
+                <ul class="options">
+                    <li>A. Simple Event</li>
+                    <li>B. Compound Event</li>
+                    <li>C. Impossible Event</li>
+                    <li>D. Certain Event</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. Simple Event</p>
+                    <p class="revealed-explain">Explanation: An event containing a single outcome of the sample space is called an elementary or simple event.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">4. Two events A and B are mutually exclusive if:</p>
+                <ul class="options">
+                    <li>A. A ∩ B = ∅</li>
+                    <li>B. A ∪ B = S</li>
+                    <li>C. A ∩ B = S</li>
+                    <li>D. P(A) = P(B)</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. A ∩ B = ∅</p>
+                    <p class="revealed-explain">Explanation: Mutually exclusive events cannot occur simultaneously, meaning their intersection is the empty set (∅).</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">5. Events A₁, A₂, ..., Aₙ are called exhaustive if:</p>
+                <ul class="options">
+                    <li>A. A₁ ∪ A₂ ∪ ... ∪ Aₙ = S</li>
+                    <li>B. A₁ ∩ A₂ ∩ ... ∩ Aₙ = ∅</li>
+                    <li>C. P(A₁) + P(A₂) + ... + P(Aₙ) = 0</li>
+                    <li>D. A₁ ∩ A₂ = ∅</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. A₁ ∪ A₂ ∪ ... ∪ Aₙ = S</p>
+                    <p class="revealed-explain">Explanation: Events are exhaustive if their union equals the entire sample space S.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">6. For any event A, the probability P(A) always satisfies:</p>
+                <ul class="options">
+                    <li>A. 0 ≤ P(A) ≤ 1</li>
+                    <li>B. -1 ≤ P(A) ≤ 1</li>
+                    <li>C. 0 < P(A) < 1</li>
+                    <li>D. P(A) ≥ 1</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0 ≤ P(A) ≤ 1</p>
+                    <p class="revealed-explain">Explanation: Probability of any event lies between 0 and 1 inclusive.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">7. The probability of an impossible event is:</p>
+                <ul class="options">
+                    <li>A. 0</li>
+                    <li>B. 1</li>
+                    <li>C. 1/2</li>
+                    <li>D. -1</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0</p>
+                    <p class="revealed-explain">Explanation: An impossible event contains no sample points (∅), so its probability is 0.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">8. The probability of a certain (sure) event is:</p>
+                <ul class="options">
+                    <li>A. 1</li>
+                    <li>B. 0</li>
+                    <li>C. 1/2</li>
+                    <li>D. Infinity</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 1</p>
+                    <p class="revealed-explain">Explanation: A sure event encompasses the complete sample space S, so P(S) = 1.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">9. If P(A) is the probability of event A, then P(not A) or P(A') is:</p>
+                <ul class="options">
+                    <li>A. 1 - P(A)</li>
+                    <li>B. P(A) - 1</li>
+                    <li>C. 1 / P(A)</li>
+                    <li>D. P(A)</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 1 - P(A)</p>
+                    <p class="revealed-explain">Explanation: Since P(A) + P(A') = 1, P(A') = 1 - P(A).</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">10. For any two events A and B, P(A ∪ B) is given by:</p>
+                <ul class="options">
+                    <li>A. P(A) + P(B) - P(A ∩ B)</li>
+                    <li>B. P(A) + P(B) + P(A ∩ B)</li>
+                    <li>C. P(A) × P(B)</li>
+                    <li>D. P(A) - P(B)</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. P(A) + P(B) - P(A ∩ B)</p>
+                    <p class="revealed-explain">Explanation: General addition theorem of probability: P(A ∪ B) = P(A) + P(B) - P(A ∩ B).</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">11. If A and B are mutually exclusive events, then P(A ∪ B) is equal to:</p>
+                <ul class="options">
+                    <li>A. P(A) + P(B)</li>
+                    <li>B. P(A) × P(B)</li>
+                    <li>C. P(A) - P(B)</li>
+                    <li>D. 0</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. P(A) + P(B)</p>
+                    <p class="revealed-explain">Explanation: For mutually exclusive events, P(A ∩ B) = 0, so P(A ∪ B) = P(A) + P(B).</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">12. A die is thrown once. What is the probability of getting a prime number?</p>
+                <ul class="options">
+                    <li>A. 1/2</li>
+                    <li>B. 1/3</li>
+                    <li>C. 2/3</li>
+                    <li>D. 1/6</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 1/2</p>
+                    <p class="revealed-explain">Explanation: S = {1, 2, 3, 4, 5, 6}. Prime numbers = {2, 3, 5} (3 outcomes). P = 3/6 = 1/2.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">13. Two dice are thrown simultaneously. Number of elements in the sample space is:</p>
+                <ul class="options">
+                    <li>A. 36</li>
+                    <li>B. 12</li>
+                    <li>C. 24</li>
+                    <li>D. 6</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 36</p>
+                    <p class="revealed-explain">Explanation: Total outcomes = 6 × 6 = 36.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">14. Probability of drawing a king from a well-shuffled deck of 52 cards is:</p>
+                <ul class="options">
+                    <li>A. 1/13</li>
+                    <li>B. 1/52</li>
+                    <li>C. 4/13</li>
+                    <li>D. 1/26</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 1/13</p>
+                    <p class="revealed-explain">Explanation: Total kings = 4. P(King) = 4/52 = 1/13.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">15. If P(A) = 0.4, P(B) = 0.7, and P(A ∩ B) = 0.3, then P(A ∪ B) is:</p>
+                <ul class="options">
+                    <li>A. 0.8</li>
+                    <li>B. 0.9</li>
+                    <li>C. 1.1</li>
+                    <li>D. 0.5</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0.8</p>
+                    <p class="revealed-explain">Explanation: P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0.4 + 0.7 - 0.3 = 0.8.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">16. If A and B are mutually exclusive events with P(A) = 0.35 and P(B) = 0.45, then P(A ∪ B) is:</p>
+                <ul class="options">
+                    <li>A. 0.80</li>
+                    <li>B. 0.10</li>
+                    <li>C. 0.1575</li>
+                    <li>D. 0.70</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0.80</p>
+                    <p class="revealed-explain">Explanation: Mutually exclusive means P(A ∩ B) = 0. So, P(A ∪ B) = 0.35 + 0.45 = 0.80.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">17. What is the probability of getting a sum of 8 when two dice are thrown?</p>
+                <ul class="options">
+                    <li>A. 5/36</li>
+                    <li>B. 1/6</li>
+                    <li>C. 4/36</li>
+                    <li>D. 7/36</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 5/36</p>
+                    <p class="revealed-explain">Explanation: Pairs giving sum 8: (2,6), (3,5), (4,4), (5,3), (6,2) = 5 outcomes. P = 5/36.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">18. Three coins are tossed. Probability of getting at least two heads is:</p>
+                <ul class="options">
+                    <li>A. 1/2</li>
+                    <li>B. 3/8</li>
+                    <li>C. 5/8</li>
+                    <li>D. 1/4</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 1/2</p>
+                    <p class="revealed-explain">Explanation: Outcomes with ≥ 2 heads: {HHH, HHT, HTH, THH} = 4 outcomes. Total = 8. P = 4/8 = 1/2.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">19. In a single throw of a die, probability of getting a number greater than 4 is:</p>
+                <ul class="options">
+                    <li>A. 1/3</li>
+                    <li>B. 1/2</li>
+                    <li>C. 2/3</li>
+                    <li>D. 1/6</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 1/3</p>
+                    <p class="revealed-explain">Explanation: Numbers greater than 4 are {5, 6} (2 outcomes). P = 2/6 = 1/3.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">20. Probability of getting 53 Sundays in a non-leap year is:</p>
+                <ul class="options">
+                    <li>A. 1/7</li>
+                    <li>B. 2/7</li>
+                    <li>C. 53/365</li>
+                    <li>D. 0</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 1/7</p>
+                    <p class="revealed-explain">Explanation: Non-leap year = 365 days = 52 weeks + 1 extra day. Probability that extra day is Sunday = 1/7.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">21. Probability of getting 53 Sundays in a leap year is:</p>
+                <ul class="options">
+                    <li>A. 2/7</li>
+                    <li>B. 1/7</li>
+                    <li>C. 53/366</li>
+                    <li>D. 3/7</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 2/7</p>
+                    <p class="revealed-explain">Explanation: Leap year = 366 days = 52 weeks + 2 extra days. Pairs containing Sunday are (Sat, Sun) and (Sun, Mon) = 2/7.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">22. Event "A but not B" in set notation is represented by:</p>
+                <ul class="options">
+                    <li>A. A ∩ B'</li>
+                    <li>B. A' ∩ B</li>
+                    <li>C. A ∪ B'</li>
+                    <li>D. (A ∪ B)'</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. A ∩ B'</p>
+                    <p class="revealed-explain">Explanation: "A but not B" means elements belonging to A and not to B, denoted as A - B or A ∩ B'.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">23. If P(A) = 0.6 and P(A ∩ B) = 0.2, then P(A ∩ B') is:</p>
+                <ul class="options">
+                    <li>A. 0.4</li>
+                    <li>B. 0.8</li>
+                    <li>C. 0.3</li>
+                    <li>D. 0.12</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0.4</p>
+                    <p class="revealed-explain">Explanation: P(A ∩ B') = P(A) - P(A ∩ B) = 0.6 - 0.2 = 0.4.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">24. If a card is drawn from a deck of 52 cards, probability that it is a red card or a king is:</p>
+                <ul class="options">
+                    <li>A. 7/13</li>
+                    <li>B. 1/2</li>
+                    <li>C. 15/26</li>
+                    <li>D. 6/13</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 7/13</p>
+                    <p class="revealed-explain">Explanation: P(Red) = 26/52, P(King) = 4/52, P(Red King) = 2/52. P = (26 + 4 - 2)/52 = 28/52 = 7/13.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">25. If P(A) = 2/11, probability of event 'not A' is:</p>
+                <ul class="options">
+                    <li>A. 9/11</li>
+                    <li>B. 2/11</li>
+                    <li>C. 11/2</li>
+                    <li>D. 1/11</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 9/11</p>
+                    <p class="revealed-explain">Explanation: P(not A) = 1 - P(A) = 1 - 2/11 = 9/11.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">26. Which of the following CANNOT be the probability of an event?</p>
+                <ul class="options">
+                    <li>A. -1.5</li>
+                    <li>B. 0.6</li>
+                    <li>C. 2/3</li>
+                    <li>D. 15%</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. -1.5</p>
+                    <p class="revealed-explain">Explanation: Probability cannot be negative (0 ≤ P(E) ≤ 1).</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">27. A box contains 3 red and 5 black balls. One ball is drawn at random. Probability that it is red is:</p>
+                <ul class="options">
+                    <li>A. 3/8</li>
+                    <li>B. 5/8</li>
+                    <li>C. 3/5</li>
+                    <li>D. 1/8</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 3/8</p>
+                    <p class="revealed-explain">Explanation: Total balls = 8, Red balls = 3. P(Red) = 3/8.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">28. Two events A and B are mutually exclusive and exhaustive. If P(A) = 3/5, then P(B) is:</p>
+                <ul class="options">
+                    <li>A. 2/5</li>
+                    <li>B. 3/5</li>
+                    <li>C. 1/5</li>
+                    <li>D. 0</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 2/5</p>
+                    <p class="revealed-explain">Explanation: Mutually exclusive & exhaustive means P(A) + P(B) = 1 ⇒ P(B) = 1 - 3/5 = 2/5.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">29. In a simultaneous throw of two coins, probability of getting at most one head is:</p>
+                <ul class="options">
+                    <li>A. 3/4</li>
+                    <li>B. 1/2</li>
+                    <li>C. 1/4</li>
+                    <li>D. 2/3</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 3/4</p>
+                    <p class="revealed-explain">Explanation: Outcomes: {HH, HT, TH, TT}. At most one head = {HT, TH, TT} = 3 outcomes. P = 3/4.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">30. If A and B are two events such that P(A ∪ B) = 1, then A and B are:</p>
+                <ul class="options">
+                    <li>A. Exhaustive events</li>
+                    <li>B. Mutually exclusive events</li>
+                    <li>C. Independent events</li>
+                    <li>D. Impossible events</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. Exhaustive events</p>
+                    <p class="revealed-explain">Explanation: By definition, events whose union equals the sample space (P(A ∪ B) = P(S) = 1) are exhaustive events.</p>
+                </div>
+            </div>
+        </div>
+        <div class="other-links-section">
+            <a href="class 11 mcq hub.html">← Back to Class 11 Mathematics Chapters Hub</a>
+        </div>
+    </div>
+    <script>function revealAnswer(btn){var section=btn.nextElementSibling;if(section.style.display==="none"||section.style.display===""){section.style.display="block";btn.style.display="none";}else{section.style.display="none";btn.style.display="inline-block";}}</script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Physics Chapter 5 Magnetism and Matter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Physics Chapter 5 Magnetism and Matter</h1>
+
+            <p>NCERT Solutions for Class 12 Physics Chapter 5 Magnetism and Matter includes quick notes, key formulas, derivations, and step-by-step solutions covering magnetic dipoles, Gauss's law for magnetism, Earth's magnetic field, and magnetic classification of materials (diamagnetic, paramagnetic, and ferromagnetic).</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. The Bar Magnet & Magnetic Dipole Moment</a></li>
+                    <li><a href="#topic2">2. Gauss's Law in Magnetism</a></li>
+                    <li><a href="#topic3">3. Earth's Magnetism & Elements of Terrestrial Magnetism</a></li>
+                    <li><a href="#topic4">4. Magnetic Properties of Materials (Dia, Para & Ferromagnetism)</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. The Bar Magnet & Magnetic Dipole Moment</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Magnetic Dipole Moment (m):</strong> Vector quantity pointing from South pole to North pole. For a bar magnet of pole strength <em>q_m</em> and length <em>2l</em>: <em>m = q_m × 2l</em>. SI unit: A·m² or J/T.</p>
+                    <p>• <strong>Bar Magnet as an Equivalent Solenoid:</strong> A bar magnet creates a magnetic field identical to a finite solenoid with N turns per unit length carrying current I.</p>
+                    <p>• <strong>Magnetic Field due to Bar Magnet (distance r >> l):</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Axial Line:</em> <em>B_axial = (μ₀ / 4π) × (2 m / r³)</em> (along direction of dipole moment <strong>m</strong>).</p>
+                    <p>&nbsp;&nbsp;- <em>Equatorial Line:</em> <em>B_equatorial = (μ₀ / 4π) × (m / r³)</em> (opposite to direction of dipole moment <strong>m</strong>).</p>
+                    <p>• <strong>Torque & Potential Energy in Uniform B-field:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Torque:</em> <em>τ = m × B = m B sin θ</em>.</p>
+                    <p>&nbsp;&nbsp;- <em>Potential Energy:</em> <em>U = -m · B = -m B cos θ</em>.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Gauss's Law in Magnetism</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Statement:</strong> The total magnetic flux through any closed surface is always zero: <em>Φ_B = ∮ B · dA = 0</em>.</p>
+                    <p>• <strong>Physical Significance:</strong> Magnetic monopoles (isolated magnetic N or S poles) <strong>do not exist</strong> in nature. Magnetic field lines always form continuous closed loops.</p>
+                    <p>• <strong>Comparison with Electrostatics:</strong> In electrostatics, <em>∮ E · dA = q_enclosed / ε₀</em> because isolated electric charges exist, whereas magnetic monopoles do not.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Earth's Magnetism & Elements of Terrestrial Magnetism</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Earth's Magnetic Field:</strong> Earth acts as a giant magnetic dipole tilted at an angle of roughly 11.3° to its geographic rotational axis. Magnetic South pole is located near geographic North pole.</p>
+                    <p>• <strong>Elements of Earth's Magnetic Field:</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>Magnetic Declination (D):</em> The angle between geographic meridian and magnetic meridian at a place.</p>
+                    <p>&nbsp;&nbsp;2. <em>Magnetic Dip or Inclination (I or δ):</em> Angle made by total earth's magnetic field vector B with horizontal direction. Dip is <strong>0° at equator</strong> and <strong>90° at magnetic poles</strong>.</p>
+                    <p>&nbsp;&nbsp;3. <em>Horizontal Component (B_H):</em> Component of earth's total field along horizontal direction: <em>B_H = B cos δ</em>; Vertical component <em>B_V = B sin δ</em>.</p>
+                    <p>• <strong>Relation:</strong> <em>tan δ = B_V / B_H</em> and <em>B = √(B_H² + B_V²)</em>.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Magnetic Properties of Materials (Dia, Para & Ferromagnetism)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Key Magnetic Quantities:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Magnetization (M):</em> Magnetic moment per unit volume: <em>M = m / V</em> (SI unit: A/m).</p>
+                    <p>&nbsp;&nbsp;- <em>Magnetic Intensity (H):</em> <em>H = B₀ / μ₀</em> (SI unit: A/m).</p>
+                    <p>&nbsp;&nbsp;- <em>Magnetic Susceptibility (χ_m):</em> Measure of response of material to applied field: <em>χ_m = M / H</em>.</p>
+                    <p>&nbsp;&nbsp;- <em>Relative Permeability (μ_r):</em> <em>μ_r = 1 + χ_m = μ / μ₀</em>.</p>
+                    <p>• <strong>Curie's Law for Paramagnetism:</strong> Susceptibility varies inversely with absolute temperature T: <em>χ_m = C / T</em>.</p>
+                    <p>• <strong>Curie Temperature (T_c):</strong> Critical temperature above which a ferromagnetic material transitions into a paramagnetic material.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: What is Gauss's Law for magnetism? What fundamental property of magnetic poles does it imply?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Statement:</strong> Gauss's law for magnetism states that the net magnetic flux through any closed Gaussian surface is always zero, i.e., <em>∮ B · dA = 0</em>.<br>
+                • <strong>Significance:</strong> It implies that magnetic field lines never originate or terminate on isolated sources; they form continuous closed loops. This confirms that <strong>isolated magnetic monopoles do not exist in nature</strong>. Every magnetic pole always exists as an inseparable north-south pair (dipole).
+            </div>
+
+            <div class="question">Q2: Compare the properties of Diamagnetic, Paramagnetic, and Ferromagnetic substances.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Property</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Diamagnetic</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Paramagnetic</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Ferromagnetic</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Behavior in External Field</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Feebly repelled by magnets; moves towards weaker field.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Feebly attracted by magnets; moves towards stronger field.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Strongly attracted by magnets; moves strongly to stronger field.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Susceptibility (χ_m)</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Small and negative (-1 ≤ χ < 0).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Small and positive (0 < χ < ε).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Very large and positive (χ >> 1000).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Relative Permeability (μ_r)</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Slightly less than 1 (0 ≤ μ_r < 1).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Slightly greater than 1 (μ_r > 1).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Much greater than 1 (μ_r >> 1).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Temperature Effect</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Independent of temperature.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Inversely proportional (χ ∝ 1/T).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Decreases above Curie temperature (T_c).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Examples</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Bismuth, Copper, Water, Gold, Air.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Aluminum, Platinum, Chromium, Oxygen.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Iron, Nickel, Cobalt, Alnico.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: A short bar magnet placed with its axis at 30° with a uniform external magnetic field of 0.25 T experiences a torque of magnitude equal to 4.5 × 10⁻² J. What is the magnitude of magnetic moment of the magnet?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Angle (θ) = 30°<br>
+                • Uniform magnetic field (B) = 0.25 T<br>
+                • Torque (τ) = 4.5 × 10⁻² J<br><br>
+                <strong>Formula:</strong><br>
+                <em>τ = m B sin θ</em><br><br>
+                <strong>Calculation:</strong><br>
+                <em>4.5 × 10⁻² = m × 0.25 × sin(30°)</em><br>
+                <em>4.5 × 10⁻² = m × 0.25 × 0.5</em><br>
+                <em>4.5 × 10⁻² = m × 0.125</em><br>
+                <em>m = (4.5 × 10⁻²) / 0.125 = 0.36 J/T (or A·m²)</em><br><br>
+                The magnitude of the magnetic dipole moment of the magnet is <strong>0.36 J/T</strong> (or <strong>0.36 A·m²</strong>).
+            </div>
+
+            <div class="question">Q2: Distinguish between Soft Iron and Steel for selection in making Electromagnets vs Permanent Magnets.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Property</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Soft Iron (Used for Electromagnets)</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Steel (Used for Permanent Magnets)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Retentivity</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">High retentivity (retains strong field).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">High retentivity.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Coercivity</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Low coercivity</strong> (easily demagnetized when current stops).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>High coercivity</strong> (resists demagnetization).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Hysteresis Loss</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Small hysteresis loop area (low energy dissipation).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Large hysteresis loop area.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Suitability</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Ideal for core of transformers, solenoids & electromagnets.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Ideal for making strong, long-lasting permanent magnets.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Physics</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 physics notes1">Ch 1: Electric Charges and Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatic Potential & Capacitance</a></li>
+                    <li><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges and Magnetism</a></li>
+                    <li class="active"><a href="class 12 physics notes5">Ch 5: Magnetism and Matter</a></li>
+                    <li><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics and Optical Instruments</a></li>
+                    <li><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li><a href="class 12 physics notes11">Ch 11: Dual Nature of Radiation & Matter</a></li>
+                    <li><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

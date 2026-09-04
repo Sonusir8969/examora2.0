@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Biology Chapter 3 Plant Kingdom</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Biology Chapter 3 Plant Kingdom</h1>
+
+            <p>NCERT Solutions for Class 11 Biology Chapter 3 Plant Kingdom covers the classification of plants into major groups: Algae, Bryophytes, Pteridophytes, Gymnosperms, and Angiosperms, alongside life cycle patterns and alternation of generations.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Algae (Chlorophyceae, Phaeophyceae & Rhodophyceae)</a></li>
+                    <li><a href="#topic2">2. Bryophytes (Liverworts & Mosses)</a></li>
+                    <li><a href="#topic3">3. Pteridophytes (Evolution of Seed Habit)</a></li>
+                    <li><a href="#topic4">4. Gymnosperms & Angiosperms</a></li>
+                    <li><a href="#topic5">5. Plant Life Cycles & Alternation of Generations</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Algae</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• Chlorophyll-bearing, simple, thalloid, autotrophic, and largely aquatic (freshwater and marine) organisms.</p>
+                    <p>• <strong>Chlorophyceae (Green Algae):</strong> Dominant pigments: Chlorophyll a and b. Stored food: Starch (in pyrenoids). Cell wall: Cellulose and pectose. Examples: <em>Volvox</em>, <em>Ulothrix</em>, <em>Spirogyra</em>, <em>Chlamydomonas</em>.</p>
+                    <p>• <strong>Phaeophyceae (Brown Algae):</strong> Dominant pigments: Chlorophyll a, c, and Fucoxanthin. Stored food: Laminarin or mannitol. Plant body attached to substrate by holdfast, has a stalk (stipe) and leaf-like frond. Examples: <em>Ectocarpus</em>, <em>Laminaria</em>, <em>Sargassum</em>, <em>Fucus</em>.</p>
+                    <p>• <strong>Rhodophyceae (Red Algae):</strong> Dominant pigments: Chlorophyll a, d, and r-phycoerythrin. Stored food: Floridean starch. Mostly marine, multi-cellular. Non-motile spores and gametes. Examples: <em>Polysiphonia</em>, <em>Porphyra</em>, <em>Gracilaria</em>, <em>Gelidium</em> (agar source).</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Bryophytes</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• Known as <strong>Amphibians of the Plant Kingdom</strong> because they live in soil but depend on water for sexual reproduction (flagellated antherozoids swim in water to reach archegonium).</p>
+                    <p>• Lack true roots, stem, or leaves; attached to substrate by unicellular or multicellular <strong>rhizoids</strong>.</p>
+                    <p>• Dominant phase is <strong>gametophyte</strong> (haploid, produces gametes). Sporophyte is dependent on gametophyte for nourishment.</p>
+                    <p>• <strong>Liverworts:</strong> Thalloid body (e.g., <em>Marchantia</em>). Reproduce asexually by fragmentation or specialized structures called <strong>gemmae</strong> (green, multicellular asexual buds produced in gemma cups).</p>
+                    <p>• <strong>Mosses:</strong> Dominant stage consists of two stages: <em>Protonema stage</em> (creeping, green, branched) and <em>Leafy stage</em> (bears sex organs). Examples: <em>Funaria</em>, <em>Polytrichum</em>, <em>Sphagnum</em> (peat moss used as fuel and packing material).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Pteridophytes</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• First terrestrial plants to possess <strong>vascular tissues (Xylem and Phloem)</strong>. Found in cool, damp, shady places.</p>
+                    <p>• Dominant plant body is a <strong>sporophyte</strong> (diploid) differentiated into true root, stem, and leaves.</p>
+                    <p>• Sporophytes bear sporangia subtended by leaf-like appendages called <strong>sporophylls</strong> (may form compact cones/strobili e.g., <em>Selaginella</em>, <em>Equisetum</em>).</p>
+                    <p>• Spores germinate to form an inconspicuous, small, free-living, photosynthetic thalloid gametophyte called <strong>prothallus</strong>.</p>
+                    <p>• <strong>Heterospory & Seed Habit:</strong> Genera like <em>Selaginella</em> and <em>Salvinia</em> produce two kinds of spores—macro (mega) and micro spores. Development of zygote into embryo inside female gametophyte retained on parent sporophyte is an important precursor to the <strong>seed habit</strong>.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Gymnosperms & Angiosperms</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Gymnosperms:</strong> Seed plants in which ovules are not enclosed by an ovary wall; seeds remain exposed (naked seeds). Includes tall trees (e.g., <em>Sequoia</em> - giant redwood) and medium-sized shrubs. Roots often have fungal association (<strong>Mycorrhiza</strong> in <em>Pinus</em>) or specialized <strong>coralloid roots</strong> fixing nitrogen (in <em>Cycas</em>). Heterosporous (microspores and megaspores).</p>
+                    <p>• <strong>Angiosperms:</strong> Flowering plants where seeds are enclosed inside fruits. Divided into <strong>Dicots</strong> (two cotyledons, reticulate venation, tetramerous/pentamerous flowers) and <strong>Monocots</strong> (single cotyledon, parallel venation, trimerous flowers). Exhibit unique process of <strong>Double Fertilisation</strong> (Syngamy + Triple Fusion producing 3n Endosperm).</p>
+                </div>
+            </div>
+
+            <div id="topic5">
+                <h2>5. Plant Life Cycles & Alternation of Generations</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• Both haploid and diploid cells in plants can divide by mitosis, leading to alternation between gamete-producing haploid gametophyte ($n$) and spore-producing diploid sporophyte ($2n$).</p>
+                    <p>• <strong>Haplontic:</strong> Dominant phase is haploid gametophyte; diploid stage represented only by single-celled zygote (meiosis occurs in zygote). E.g., <em>Volvox</em>, <em>Spirogyra</em>, <em>Chlamydomonas</em>.</p>
+                    <p>• <strong>Diplontic:</strong> Dominant photosynthetic phase is diploid sporophyte; gametophytic phase represented by single- to few-celled stage. E.g., All seed-bearing plants (Gymnosperms & Angiosperms), <em>Fucus</em> (brown alga).</p>
+                    <p>• <strong>Haplo-diplontic:</strong> Both phases are multicellular and prominent. E.g., Bryophytes, Pteridophytes, and algae like <em>Ectocarpus</em>, <em>Polysiphonia</em>, Kelps.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: What is heterospory? Briefly comment on its significance. Give two examples.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>Heterospory</strong> is the phenomenon of producing two morphologically distinct types of spores by the same plant—smaller microspores and larger megaspores.<br><br>
+                <strong>Significance:</strong><br>
+                1. Microspores germinate to give rise to male gametophytes, while megaspores give rise to female gametophytes.<br>
+                2. The female gametophyte is retained on the parent sporophyte for variable periods, providing nourishment to the developing embryo.<br>
+                3. This retention and localized embryo development is considered a crucial evolutionary precursor to the <strong>seed habit</strong> seen in higher plants.<br><br>
+                <strong>Examples:</strong> <em>Selaginella</em> and <em>Salvinia</em>.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Differentiate between Liverworts and Mosses based on their plant body and reproduction.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Liverworts</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Mosses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Plant Body</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Dorsiventrally flattened, thalloid structure (e.g., <em>Marchantia</em>).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Erect structure with stem-like, leaf-like, and root-like rhizoids.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Protonema Stage</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Absent.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Present (juvenile filamentous stage germinating from spore).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Asexual Reproduction</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Takes place via fragmentation or specialized <strong>gemmae</strong> inside gemma cups.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Takes place by fragmentation and budding in the secondary protonema.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: Why are Bryophytes called the "Amphibians of the Plant Kingdom"?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Bryophytes are referred to as the <strong>amphibians of the plant kingdom</strong> because although they inhabit damp, shaded terrestrial land areas, they cannot complete their life cycle without water.<br><br>
+                Water is indispensable for their sexual reproduction: the flagellated male gametes (antherozoids) released by the antheridium require a thin film of liquid water to swim towards the archegonium and fertilize the egg cell to form a zygote.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Biology</h3>
+                <ul class="sidebar-links">
+                   <li class="active"><a href="class 11 biology notes1.html">Ch 1: The Living World</a></li>
+                    <li><a href="class 11 biology notes2.html">Ch 2: Biological Classification</a></li>
+                    <li><a href="class 11 biology notes3.html">Ch 3: Plant Kingdom</a></li>
+                    <li><a href="class 11 biology notes4.html">Ch 4: Animal Kingdom</a></li>
+                    <li><a href="class 11 biology notes5.html">Ch 5: Morphology of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes6.html">Ch 6: Anatomy of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes7.html">Ch 7: Structural Organisation in Animals</a></li>
+                    <li><a href="class 11 biology notes8.html">Ch 8: Cell: The Unit of Life</a></li>
+                    <li><a href="class 11 biology notes9.html">Ch 9: Biomolecules</a></li>
+                    <li><a href="class 11 biology notes10.html">Ch 10: Cell Cycle and Cell Division</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

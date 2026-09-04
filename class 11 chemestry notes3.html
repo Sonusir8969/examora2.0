@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Chemistry Chapter 3 Classification of Elements and Periodicity in Properties</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="#" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Chemistry Chapter 3 Classification of Elements & Periodicity in Properties</h1>
+
+            <p>NCERT Solutions for Class 11 Chemistry Chapter 3 Classification of Elements and Periodicity in Properties covers historical development of periodic tables, Modern Periodic Law, division of elements into s, p, d, and f blocks, IUPAC nomenclature for elements with Z > 100, and comprehensive periodic trends in physical and chemical properties including atomic radius, ionic radius, ionization enthalpy, electron gain enthalpy, electronegativity, and chemical reactivity.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Historical Development & Modern Periodic Law</a></li>
+                    <li><a href="#topic2">2. IUPAC Nomenclature (Z > 100) & Electronic Configuration in Blocks</a></li>
+                    <li><a href="#topic3">3. Periodic Trends in Physical Properties</a></li>
+                    <li><a href="#topic4">4. Periodic Trends in Chemical Properties & Anomalous Behaviors</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Historical Development & Modern Periodic Law</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Dobereiner's Triads & Newlands' Law of Octaves:</strong> Early attempts to classify elements based on atomic masses.</p>
+                    <p>• <strong>Mendeleev's Periodic Law:</strong> Properties of elements are a periodic function of their atomic masses. Arranged elements in periods and groups based on similarities in formula of hydrides and oxides.</p>
+                    <p>• <strong>Modern Periodic Law (Henry Moseley):</strong> Physical and chemical properties of the elements are periodic functions of their <em>atomic numbers (Z)</em>.</p>
+                    <p>• <strong>Long Form of Periodic Table:</strong> Consists of 7 horizontal rows called <strong>Periods</strong> and 18 vertical columns called <strong>Groups</strong>.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. IUPAC Nomenclature (Z > 100) & Electronic Configuration in Blocks</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>IUPAC Nomenclature for Z > 100:</strong> Roots used based on digits: 0=nil, 1=un, 2=bi, 3=tri, 4=quad, 5=pent, 6=hex, 7=sept, 8=oct, 9=enn. Suffix <em>-ium</em> is added (e.g., Z = 101 → Unnilunium, Symbol: Unu; Z = 120 → Unbinilium, Symbol: Ubn).</p>
+                    <p>• <strong>Classification into Blocks:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>s-Block (Groups 1 & 2):</em> Outer configuration ns<sup>1-2</sup>. Reactive metals, low ionization energy.</p>
+                    <p>&nbsp;&nbsp;- <em>p-Block (Groups 13 to 18):</em> Outer configuration ns<sup>2</sup> np<sup>1-6</sup>. Includes metals, non-metals, and metalloids.</p>
+                    <p>&nbsp;&nbsp;- <em>d-Block (Groups 3 to 12):</em> Transition elements, configuration (n-1)d<sup>1-10</sup> ns<sup>1-2</sup>. Form colored ions and exhibit variable oxidation states.</p>
+                    <p>&nbsp;&nbsp;- <em>f-Block (Lanthanoids & Actinoids):</em> Inner transition elements, configuration (n-2)f<sup>1-14</sup> (n-1)d<sup>0-1</sup> ns<sup>2</sup>.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Periodic Trends in Physical Properties</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Atomic & Ionic Radius:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Across a Period:</em> Decreases left to right due to increase in effective nuclear charge (Z<sub>eff</sub>).</p>
+                    <p>&nbsp;&nbsp;- <em>Down a Group:</em> Increases top to bottom due to addition of new energy shells.</p>
+                    <p>&nbsp;&nbsp;- <em>Isoelectronic Species:</em> Cations are smaller than neutral atoms; anions are larger. Higher positive charge = smaller size; higher negative charge = larger size.</p>
+                    <p>• <strong>Ionization Enthalpy (Δ<sub>i</sub>H):</strong> Energy required to remove the most loosely bound electron from an isolated gaseous atom.</p>
+                    <p>&nbsp;&nbsp;- Increases across a period, decreases down a group.</p>
+                    <p>&nbsp;&nbsp;- Anomalies: N > O (due to half-filled stable 2p<sup>3</sup> shell) and Be > B (due to fully-filled stable 2s<sup>2</sup> shell).</p>
+                    <p>• <strong>Electron Gain Enthalpy (Δ<sub>eg</sub>H):</strong> Enthalpy change when an electron is added to a neutral gaseous atom.</p>
+                    <p>&nbsp;&nbsp;- Becomes more negative across a period, less negative down a group.</p>
+                    <p>&nbsp;&nbsp;- Anomaly: Chlorine has a more negative Δ<sub>eg</sub>H than Fluorine due to less inter-electronic repulsion in Chlorine's larger 3p shell.</p>
+                    <p>• <strong>Electronegativity:</strong> Ability of an atom in a compound to attract shared pair of electrons towards itself (Pauling scale: F = 4.0).</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Periodic Trends in Chemical Properties & Anomalous Behaviors</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Valence / Oxidation States:</strong> Valence increases from 1 to 4 and then decreases to 0 across a period for main group elements.</p>
+                    <p>• <strong>Anomalous Properties of Second Period Elements:</strong> Li, Be, B, C, N, O, F differ significantly from rest of their group members due to small size, high electronegativity, high charge/radius ratio, and absence of d-orbitals.</p>
+                    <p>• <strong>Diagonal Relationship:</strong> Similarity in properties between certain elements of period 2 and period 3 placed diagonally (e.g., Li ~ Mg, Be ~ Al, B ~ Si).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Why is the first ionization enthalpy of nitrogen greater than that of oxygen?</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p><strong>Explanation:</strong></p>
+                <p>The electronic configurations of Nitrogen (Z = 7) and Oxygen (Z = 8) are:</p>
+                <p>• Nitrogen (N): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sub>x</sub><sup>1</sup> 2p<sub>y</sub><sup>1</sup> 2p<sub>z</sub><sup>1</sup> (Half-filled 2p subshell)</p>
+                <p>• Oxygen (O): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sub>x</sub><sup>2</sup> 2p<sub>y</sub><sup>1</sup> 2p<sub>z</sub><sup>1</sup></p>
+                <p>Nitrogen has an extra stable half-filled 2p subshell configuration, which requires more energy to remove an electron compared to Oxygen, where removing one electron yields a stable half-filled configuration. Therefore, Nitrogen has a higher first ionization enthalpy than Oxygen.</p>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Consider the following species: N<sup>3-</sup>, O<sup>2-</sup>, F<sup>-</sup>, Na<sup>+</sup>, Mg<sup>2+</sup>, and Al<sup>3+</sup>.<br>(a) What is common in them?<br>(b) Arrange them in order of increasing ionic radii.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <strong>(a) Common Feature:</strong><br>
+                All these species contain 10 electrons each. Therefore, they are <strong>isoelectronic species</strong>.<br><br>
+
+                <strong>(b) Order of Increasing Ionic Radii:</strong><br>
+                For isoelectronic species, as the nuclear charge (atomic number) increases, the attractive force on the valence electrons increases, causing a decrease in ionic radius.<br>
+                Nuclear charges (Z): Al<sup>3+</sup> (13), Mg<sup>2+</sup> (12), Na<sup>+</sup> (11), F<sup>-</sup> (9), O<sup>2-</sup> (8), N<sup>3-</sup> (7).<br><br>
+                Increasing order of ionic radii:<br>
+                <strong>Al<sup>3+</sup> &lt; Mg<sup>2+</sup> &lt; Na<sup>+</sup> &lt; F<sup>-</sup> &lt; O<sup>2-</sup> &lt; N<sup>3-</sup></strong>
+            </div>
+
+            <div class="question">Q2: What would be the IUPAC name and symbol for the element with atomic number 120?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                For atomic number 120:<br>
+                • Digit 1 = un<br>
+                • Digit 2 = bi<br>
+                • Digit 0 = nil<br><br>
+                Combining the roots with the suffix '-ium':<br>
+                IUPAC Name = <strong>Unbinilium</strong><br>
+                IUPAC Symbol = <strong>Ubn</strong>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Chemistry</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 chemistry notes1">Ch 1: Some Basic Concepts of Chemistry</a></li>
+                    <li><a href="class 11 chemistry notes2">Ch 2: Structure of Atom</a></li>
+                    <li class="active"><a href="class 11 chemistry notes3">Ch 3: Classification of Elements & Periodicity</a></li>
+                    <li><a href="class 11 chemistry notes4">Ch 4: Chemical Bonding & Molecular Structure</a></li>
+                    <li><a href="class 11 chemistry notes5">Ch 5: Chemical Thermodynamics</a></li>
+                    <li><a href="class 11 chemistry notes6">Ch 6: Equilibrium</a></li>
+                    <li><a href="class 11 chemistry notes7">Ch 7: Redox Reactions</a></li>
+                    <li><a href="class 11 chemistry notes8">Ch 8: Organic Chemistry - Basic Principles</a></li>
+                    <li><a href="class 11 chemistry notes9">Ch 9: Hydrocarbons</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

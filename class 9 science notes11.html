@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 9 Science Chapter 11 Sound</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="class 9 all chapters notes.html" class="nav-right-link">Back to notes hub</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 9 Science Chapter 11 Sound</h1>
+
+            <p>NCERT Solutions for Class 9 Science Chapter 11 Sound covers the production and propagation of sound, mechanical longitudinal waves, compressions and rarefactions, characteristics of sound waves (frequency, amplitude, wavelength, speed), reflection of sound, echo, reverberation, audible range, applications of ultrasound, SONAR, and human ear structure.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Production & Propagation of Sound Waves</a></li>
+                    <li><a href="#topic2">2. Characteristics of Sound: Pitch, Loudness & Speed</a></li>
+                    <li><a href="#topic3">3. Reflection of Sound: Echo & Reverberation</a></li>
+                    <li><a href="#topic4">4. Range of Hearing, Ultrasound & SONAR</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Production & Propagation of Sound Waves</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Production of Sound:</strong> Sound is produced by vibrating objects. Vibration refers to rapid to-and-fro motion of an object.</p>
+                    <p>• <strong>Propagation of Sound:</strong> Sound needs a material medium (solid, liquid, or gas) to travel. It cannot travel in a vacuum.</p>
+                    <p>• <strong>Nature of Sound Waves:</strong> Sound waves are <strong>mechanical longitudinal waves</strong>. Medium particles vibrate parallel to the direction of wave propagation.</p>
+                    <p>• <strong>Compressions & Rarefactions:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Compression (C):</em> Region of high pressure and high density in the medium.</p>
+                    <p>&nbsp;&nbsp;- <em>Rarefaction (R):</em> Region of low pressure and low density in the medium.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Characteristics of Sound: Pitch, Loudness & Speed</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Wavelength (λ):</strong> Distance between two consecutive compressions or two consecutive rarefactions. SI Unit: Metre (m).</p>
+                    <p>• <strong>Frequency (ν):</strong> Number of complete oscillations or vibrations per second. SI Unit: Hertz (Hz).</p>
+                    <p>• <strong>Time Period (T):</strong> Time taken by two consecutive compressions or rarefactions to cross a fixed point. Formula: <code>T = 1 / ν</code>. SI Unit: Second (s).</p>
+                    <p>• <strong>Pitch:</strong> How the brain interprets the frequency of a sound. Higher frequency = higher pitch (shrill); lower frequency = lower pitch (deep/grave).</p>
+                    <p>• <strong>Loudness:</strong> Measure of response of the ear to sound. Depends on amplitude (Loudness ∝ Amplitude²).</p>
+                    <p>• <strong>Wave Velocity Formula:</strong> <code>Speed (v) = Wavelength (λ) × Frequency (ν)</code> or <code>v = λ / T</code></p>
+                    <p>• <strong>Speed of Sound:</strong> Maximum in solids, lower in liquids, lowest in gases. Increases with temperature increase in air (Speed in air ≈ 344 m/s at 22°C).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Reflection of Sound: Echo & Reverberation</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Laws of Reflection of Sound:</strong> Angle of incidence equals angle of reflection; incident wave, reflected wave, and normal all lie in the same plane.</p>
+                    <p>• <strong>Echo:</strong> The repetition of sound caused by reflection from a distant hard surface (like a wall, mountain, or cliff).</p>
+                    <p>&nbsp;&nbsp;- Persistence of hearing in humans: <code>0.1 seconds</code>.</p>
+                    <p>&nbsp;&nbsp;- Minimum distance to hear a distinct echo in air at 22°C: <code>d = (v × t) / 2 = (344 × 0.1) / 2 = 17.2 metres</code>.</p>
+                    <p>• <strong>Reverberation:</strong> Multiple reflections causing persistent, prolonged sound in big halls or auditoriums.</p>
+                    <p>&nbsp;&nbsp;- Reduced by using sound-absorbent materials like curtains, compressed fiberboards, or cushioned seats.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Range of Hearing, Ultrasound & SONAR</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Audible Range of Humans:</strong> <code>20 Hz to 20,000 Hz (20 kHz)</code>.</p>
+                    <p>&nbsp;&nbsp;- <em>Infrasonic / Infrasound:</em> Sound frequencies below 20 Hz (produced by elephants, whales, earthquakes).</p>
+                    <p>&nbsp;&nbsp;- <em>Ultrasonic / Ultrasound:</em> Sound frequencies above 20 kHz (produced by bats, dolphins, porpoises).</p>
+                    <p>• <strong>Applications of Ultrasound:</strong> Cleaning hard-to-reach parts, detecting cracks/flaws in metal blocks, Echocardiography (heart imaging), Ultrasonography (internal body organ imaging), breaking kidney stones.</p>
+                    <p>• <strong>SONAR (Sound Navigation and Ranging):</strong> Technique using ultrasound waves to measure depth of sea, detect underwater sunken ships, submarines, or icebergs.</p>
+                    <p>&nbsp;&nbsp;- Formula: <code>2d = v × t</code> (where d = depth, v = speed of sound in water, t = time taken for echo return).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext Questions - Page Number: 132</h2>
+
+            <div class="question">Q1: How does the sound produced by a vibrating object reach your ear?</div>
+            <div class="answer">
+                <strong>Answer:</strong> When an object vibrates, it sets the particles of the surrounding medium into vibration. These particles push neighboring particles, creating alternating regions of compression and rarefaction that travel through the medium as a mechanical longitudinal wave until it reaches the ear drum.
+            </div>
+
+            <h2>Intext Questions - Page Number: 135</h2>
+
+            <div class="question">Q1: Explain how compressions and rarefactions are produced in air near a source of sound.</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p>• When a vibrating object moves forward, it pushes and compresses the air in front of it, creating a region of high pressure and density called a <strong>compression (C)</strong>.</p>
+                <p>• When the vibrating object moves backwards, it leaves a region of low pressure and density called a <strong>rarefaction (R)</strong>.</p>
+                <p>As the object moves back and forth rapidly, a series of compressions and rarefactions are produced and propagated through air.</p>
+            </div>
+
+            <h2>Intext Questions - Page Number: 138</h2>
+
+            <div class="question">Q1: Which wave property determines (a) loudness, (b) pitch?</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p>(a) <strong>Loudness</strong> is determined by the <strong>amplitude</strong> of the sound wave (Loudness ∝ Amplitude²).</p>
+                <p>(b) <strong>Pitch</strong> is determined by the <strong>frequency</strong> of the sound wave.</p>
+            </div>
+
+            <div class="question">Q2: A sound wave has a frequency of 2 kHz and wavelength 35 cm. How long will it take to travel 1.5 km?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:
+                <p>• Frequency (ν) = 2 kHz = 2000 Hz</p>
+                <p>• Wavelength (λ) = 35 cm = 0.35 m</p>
+                <p>• Speed of sound (v) = ν × λ = 2000 × 0.35 = <strong>700 m/s</strong></p>
+                <p>• Distance (s) = 1.5 km = 1500 m</p>
+                <p>• Time taken (t) = Distance / Speed = 1500 / 700 = <strong>2.14 seconds</strong></p>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: What is sound and how is it produced?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Sound is a form of energy that produces the sensation of hearing in our ears. It is produced by vibrating objects (such as plucked guitar strings, vibrating vocal cords, or struck drum membranes).
+            </div>
+
+            <div class="question">Q2: An echo is heard in 3 s. What is the distance of the reflecting surface from the source, given that the speed of sound is 342 m/s?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:
+                <p>• Speed of sound (v) = 342 m/s</p>
+                <p>• Time taken for echo return (t) = 3 s</p>
+                <p>• Total distance traveled by sound = v × t = 342 × 3 = 1026 m</p>
+                <p>• Distance of reflecting surface (d) = Total distance / 2 = 1026 / 2 = <strong>513 metres</strong></p>
+            </div>
+
+            <div class="question">Q3: What is SONAR and write its main principle?</div>
+            <div class="answer">
+                <strong>Answer:</strong> <strong>SONAR</strong> stands for <em>Sound Navigation and Ranging</em>. It is a device used to measure the distance, direction, and speed of underwater objects using ultrasonic waves.<br><br>
+                <strong>Principle:</strong> It works on the principle of echo reflection. Ultrasonic sound pulses transmitted from a boat travel through water, strike underwater objects or sea bed, get reflected back, and are received by a detector.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 9 Science Chapters</h3>
+                <ul class="sidebar-links">
+                    <li class="active"><a href="class 9 science notes1.html">Ch 1: Matter in Our Surroundings</a></li>
+                    <li><a href="class 9 science notes2.html">Ch 2: Is Matter Around Us Pure?</a></li>
+                    <li><a href="class 9 science notes3.html">Ch 3: Atoms and Molecules</a></li>
+                    <li><a href="class 9 science notes4.html">Ch 4: Structure of the Atom</a></li>
+                    <li><a href="class 9 science notes5.html">Ch 5: The Fundamental Unit of Life</a></li>
+                    <li><a href="class 9 science notes6.html">Ch 6: Tissues</a></li>
+                    <li><a href="class 9 science notes7.html">Ch 7: Motion</a></li>
+                    <li><a href="class 9 science notes8.html">Ch 8: Force and Laws of Motion</a></li>
+                    <li><a href="class 9 science notes9.html">Ch 9: Gravitation</a></li>
+                    <li><a href="class 9 science notes10.html">Ch 10: Work and Energy</a></li>
+                    <li><a href="class 9 science notes11.html">Ch 11: Sound</a></li>
+                    <li><a href="class 9 science notes12.html">Ch 12: Improvement in Food Resources</a></li>
+                    <li><a href="class 9 science notes13.html">Ch 13: Why Do We Fall Ill</a></li>
+                    <li class="active"><a href="class 9 science notes14.html">Ch 14: Natural Resources</a></li>
+                    <li class="active"><a href="class 9 science notes15.html">Ch 15: Improvement in Food Resources</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ray Optics · Class 12 Physics</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Roboto, sans-serif; 
+      background: #f0f2f5; 
+      color: #1e2a3e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+    .header { 
+      background: white; 
+      padding: 18px 0; 
+      border-bottom: 3px solid #1e4a76; 
+      margin-bottom: 30px; 
+    }
+    .header h1 { font-size: 1.5rem; color: #1e4a76; }
+    .header h1 span { color: #2d6a4f; }
+    .back-link { 
+      display: inline-block; 
+      margin-top: 8px; 
+      color: #1e4a76; 
+      text-decoration: none; 
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .test-info {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .test-info .subject { font-weight: 600; color: #1e4a76; }
+    .test-info .total-q { background: #e6f0ff; padding: 4px 14px; border-radius: 30px; font-size: 0.85rem; }
+
+    .progress-container {
+      background: #e9ecef;
+      border-radius: 30px;
+      height: 10px;
+      margin-bottom: 25px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #2d6a4f;
+      border-radius: 30px;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    .question-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .q-number {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 12px;
+    }
+    .q-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .option {
+      background: #f8fafc;
+      border: 2px solid #e8ecf0;
+      padding: 14px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .option:hover {
+      background: #eef2ff;
+      border-color: #1e4a76;
+    }
+    .option.selected {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.correct-answer {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.wrong-answer {
+      background: #fee2e2;
+      border-color: #b91c1c;
+    }
+    .option.disabled {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .feedback-box {
+      margin-top: 20px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      display: none;
+    }
+    .feedback-box.show {
+      display: block;
+    }
+    .feedback-box.correct {
+      background: #dcfce7;
+      border-left: 4px solid #2d6a4f;
+    }
+    .feedback-box.wrong {
+      background: #fee2e2;
+      border-left: 4px solid #b91c1c;
+    }
+    .feedback-box .exp {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 6px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .btn {
+      padding: 12px 32px;
+      border: none;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary {
+      background: #1e4a76;
+      color: white;
+    }
+    .btn-primary:hover { background: #163a5c; }
+    .btn-success {
+      background: #2d6a4f;
+      color: white;
+    }
+    .btn-success:hover { background: #1f4d39; }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #333;
+    }
+    .btn-secondary:hover { background: #cbd5e1; }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .result-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      padding: 35px;
+      text-align: center;
+      display: none;
+    }
+    .result-card.show { display: block; }
+    .result-score {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #1e4a76;
+      margin: 10px 0;
+    }
+    .result-percent {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2d6a4f;
+    }
+    .result-msg {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 12px;
+      margin: 20px 0;
+      font-size: 1rem;
+    }
+    .result-detail {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .result-detail .stat {
+      background: #f8fafc;
+      padding: 12px;
+      border-radius: 12px;
+    }
+    .result-detail .stat .num { font-size: 1.4rem; font-weight: 700; }
+    .result-detail .stat.correct .num { color: #2d6a4f; }
+    .result-detail .stat.wrong .num { color: #b91c1c; }
+    .result-detail .stat.skip .num { color: #f59e0b; }
+
+    .other-tests {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      padding: 20px 25px;
+      margin-top: 25px;
+    }
+    .other-tests h3 { color: #1e4a76; margin-bottom: 12px; font-size: 1rem; }
+    .test-links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .test-links a {
+      background: #e6f0ff;
+      padding: 8px 18px;
+      border-radius: 30px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .test-links a:hover { background: #1e4a76; color: white; }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 30px 0 18px;
+      margin-top: auto;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .question-card { padding: 20px; }
+      .result-detail { grid-template-columns: 1fr; }
+      .nav-buttons { flex-direction: column; }
+      .btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 12 <span>Physics</span></h1>
+    <a href="class 12 all subjects.html" class="back-link">← Back to Physics Chapters</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="test-info">
+    <span class="subject">Ray Optics and Optical Instruments</span>
+    <span class="total-q">10 Questions</span>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="question-card" id="questionCard">
+    <div class="q-number" id="qNumber">Question 1 of 10</div>
+    <div class="q-text" id="qText">Loading question...</div>
+    <div class="options" id="optionsContainer"></div>
+    <div class="feedback-box" id="feedbackBox">
+      <div id="feedbackText"></div>
+      <div class="exp" id="feedbackExp"></div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+      <button class="btn btn-primary" id="nextBtn">Next</button>
+      <button class="btn btn-success" id="submitBtn" style="display:none;">Submit Test</button>
+    </div>
+  </div>
+
+  <div class="result-card" id="resultCard">
+    <h2>Test Completed</h2>
+    <div class="result-score" id="resultScore">0/10</div>
+    <div class="result-percent" id="resultPercent">0%</div>
+    <div class="result-msg" id="resultMsg">Keep practicing!</div>
+    <div class="result-detail">
+      <div class="stat correct"><div class="num" id="correctCount">0</div><div>Correct</div></div>
+      <div class="stat wrong"><div class="num" id="wrongCount">0</div><div>Wrong</div></div>
+      <div class="stat skip"><div class="num" id="skipCount">0</div><div>Not Answered</div></div>
+    </div>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <button class="btn btn-success" onclick="location.reload()">Retake Test</button>
+      <button class="btn btn-primary" onclick="location.href='#'">Back to Chapters</button>
+    </div>
+  </div>
+
+  <div class="other-tests">
+    <h3>Other Physics Tests</h3>
+    <div class="test-links">
+      <a href="electric charges and field.html">Electric Charges and Fields</a>
+      <a href="current electricity.html">Current Electricity</a>
+      <a href="moving charges and magnetism.html">Moving Charges and Magnetism</a>
+      <a href="magnetism and matter.html">Magnetism and Matter</a>
+      <a href="electromagnetic introduction.html">Electromagnetic Induction</a>
+      <a href="alternating current.html">Alternating Current</a>
+      <a href="electromagnetic waves.html">Electromagnetic Waves</a>
+      <a href="ray optics and optical.html">Ray Optics</a>
+      <a href="waves optics.html">Wave Optics</a>
+      <a href="dual nature of radiation and matter.html">Dual Nature</a>
+      <a href="atoms12.html">Atoms</a>
+      <a href="nuclie.html">Nuclei</a>
+      <a href="semiconducter electronics.html">Semiconductor Electronics</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">© 2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+</footer>
+
+<script>
+  const questions = [
+    { text: "The speed of light in vacuum is:", options: ["3×10⁸ m/s", "3×10⁶ m/s", "3×10¹⁰ m/s", "3×10⁴ m/s"], correct: 0, explanation: "Speed of light in vacuum is 3×10⁸ m/s." },
+    { text: "The refractive index of a medium is defined as:", options: ["c/v", "v/c", "c²/v", "v²/c"], correct: 0, explanation: "Refractive index μ = c/v." },
+    { text: "The lens formula is:", options: ["1/f = 1/v - 1/u", "1/f = 1/v + 1/u", "1/f = 1/u - 1/v", "f = uv/(u+v)"], correct: 0, explanation: "Lens formula: 1/f = 1/v - 1/u." },
+    { text: "The power of a lens is measured in:", options: ["Dioptre", "Meter", "Cm⁻¹", "Both Dioptre and m⁻¹"], correct: 3, explanation: "Power is measured in Dioptre (D) which is m⁻¹." },
+    { text: "The focal length of a convex lens is:", options: ["Positive", "Negative", "Zero", "Infinite"], correct: 0, explanation: "Focal length of convex lens is positive." },
+    { text: "The focal length of a concave lens is:", options: ["Positive", "Negative", "Zero", "Infinite"], correct: 1, explanation: "Focal length of concave lens is negative." },
+    { text: "The magnification of a lens is defined as:", options: ["m = v/u", "m = u/v", "m = f/u", "m = v/f"], correct: 0, explanation: "Magnification m = v/u." },
+    { text: "Total internal reflection occurs when light goes from:", options: ["Denser to rarer medium", "Rarer to denser medium", "Same medium", "None"], correct: 0, explanation: "TIR occurs when light goes from denser to rarer medium at angle > critical angle." },
+    { text: "The critical angle is given by:", options: ["sin C = μ₂/μ₁", "sin C = μ₁/μ₂", "cos C = μ₂/μ₁", "tan C = μ₂/μ₁"], correct: 0, explanation: "sin C = μ₂/μ₁ where μ₁ > μ₂." },
+    { text: "The compound microscope uses:", options: ["Two convex lenses", "Two concave lenses", "One convex and one concave", "Only one lens"], correct: 0, explanation: "Compound microscope uses two convex lenses (objective and eyepiece)." }
+  ];
+
+  let currentIndex = 0, userAnswers = new Array(questions.length).fill(null), answered = new Array(questions.length).fill(false), testCompleted = false;
+
+  const qNumber = document.getElementById('qNumber'), qText = document.getElementById('qText'), optionsContainer = document.getElementById('optionsContainer');
+  const feedbackBox = document.getElementById('feedbackBox'), feedbackText = document.getElementById('feedbackText'), feedbackExp = document.getElementById('feedbackExp');
+  const prevBtn = document.getElementById('prevBtn'), nextBtn = document.getElementById('nextBtn'), submitBtn = document.getElementById('submitBtn');
+  const progressBar = document.getElementById('progressBar'), questionCard = document.getElementById('questionCard'), resultCard = document.getElementById('resultCard');
+
+  function renderQuestion(index) {
+    const q = questions[index];
+    qNumber.textContent = `Question ${index + 1} of ${questions.length}`;
+    qText.textContent = q.text;
+    let optHtml = '';
+    for (let i = 0; i < q.options.length; i++) {
+      let cls = 'option';
+      if (answered[index]) {
+        cls += ' disabled';
+        if (i === q.correct) cls += ' correct-answer';
+        if (userAnswers[index] === i && i !== q.correct) cls += ' wrong-answer';
+        if (userAnswers[index] === i) cls += ' selected';
+      }
+      optHtml += `<div class="${cls}" data-opt="${i}">${String.fromCharCode(65 + i)}. ${q.options[i]}</div>`;
+    }
+    optionsContainer.innerHTML = optHtml;
+    if (answered[index]) showFeedback(index);
+    else feedbackBox.classList.remove('show', 'correct', 'wrong');
+    prevBtn.disabled = (index === 0);
+    if (index === questions.length - 1) { nextBtn.style.display = 'none'; submitBtn.style.display = 'inline-block'; }
+    else { nextBtn.style.display = 'inline-block'; submitBtn.style.display = 'none'; }
+    let answeredCount = answered.filter(a => a === true).length;
+    progressBar.style.width = (answeredCount / questions.length * 100) + '%';
+    if (!answered[index]) {
+      document.querySelectorAll('.option').forEach(opt => {
+        opt.addEventListener('click', function() {
+          if (answered[currentIndex]) return;
+          const selected = parseInt(this.dataset.opt);
+          userAnswers[currentIndex] = selected;
+          answered[currentIndex] = true;
+          renderQuestion(currentIndex);
+        });
+      });
+    }
+  }
+
+  function showFeedback(index) {
+    const q = questions[index], ans = userAnswers[index], isCorrect = (ans === q.correct);
+    feedbackBox.className = 'feedback-box show';
+    if (isCorrect) { feedbackBox.classList.add('correct'); feedbackText.textContent = '✓ Correct! Well done.'; }
+    else { feedbackBox.classList.add('wrong'); feedbackText.textContent = '✗ Incorrect. The correct answer is ' + String.fromCharCode(65 + q.correct) + '.'; }
+    feedbackExp.textContent = q.explanation;
+  }
+
+  function goToNext() { if (currentIndex < questions.length - 1) { currentIndex++; renderQuestion(currentIndex); document.getElementById('questionCard').scrollIntoView({ behavior: 'smooth', block: 'start' }); } }
+  function goToPrev() { if (currentIndex > 0) { currentIndex--; renderQuestion(currentIndex); } }
+  function submitTest() {
+    let allAnswered = answered.every(a => a === true), skipCount = answered.filter(a => a === false).length;
+    if (!allAnswered && !confirm(`You have ${skipCount} question(s) not answered. Are you sure you want to submit?`)) return;
+    testCompleted = true;
+    let correct = 0, wrong = 0, skipped = 0;
+    for (let i = 0; i < questions.length; i++) {
+      if (!answered[i]) skipped++;
+      else if (userAnswers[i] === questions[i].correct) correct++;
+      else wrong++;
+    }
+    questionCard.style.display = 'none';
+    resultCard.classList.add('show');
+    document.getElementById('resultScore').textContent = `${correct}/${questions.length}`;
+    let percent = Math.round((correct / questions.length) * 100);
+    document.getElementById('resultPercent').textContent = percent + '%';
+    document.getElementById('correctCount').textContent = correct;
+    document.getElementById('wrongCount').textContent = wrong;
+    document.getElementById('skipCount').textContent = skipped;
+    let msg = percent >= 80 ? 'Excellent! Strong grasp of ray optics.' : percent >= 60 ? 'Good job! Review lens formula and magnification.' : percent >= 40 ? 'Keep practicing. Focus on lens and mirror formulas.' : 'Need more practice. Read the chapter again.';
+    document.getElementById('resultMsg').textContent = msg;
+    resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  prevBtn.addEventListener('click', goToPrev);
+  nextBtn.addEventListener('click', goToNext);
+  submitBtn.addEventListener('click', submitTest);
+  document.addEventListener('keydown', (e) => {
+    if (testCompleted) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { if (currentIndex === questions.length - 1) submitTest(); else goToNext(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') goToPrev();
+  });
+  renderQuestion(0);
+</script>
+</body>
+</html>

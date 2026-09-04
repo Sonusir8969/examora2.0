@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Biology Chapter 19 Chemical Coordination and Integration</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Biology Chapter 19 Chemical Coordination and Integration</h1>
+
+            <p>NCERT Solutions for Class 11 Biology Chapter 19 Chemical Coordination and Integration provides revision notes and comprehensive textbook solutions covering endocrine glands, hormones, mechanism of hormone action, non-endocrine tissue secretions, and hormonal disorders.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Endocrine Glands & Definition of Hormones</a></li>
+                    <li><a href="#topic2">2. Human Endocrine System (Major Glands & Functions)</a></li>
+                    <li><a href="#topic3">3. Hormones of Non-Endocrine Tissues & Mechanism of Hormone Action</a></li>
+                    <li><a href="#topic4">4. Endocrine Disorders & Hormonal Imbalances</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Endocrine Glands & Definition of Hormones</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Endocrine Glands:</strong> Ductless glands that secrete chemical messengers directly into the bloodstream to reach distant target organs.</p>
+                    <p>• <strong>Definition of Hormones:</strong> Hormones are non-nutrient chemicals produced in trace amounts that act as intercellular messengers.</p>
+                    <p>• <strong>Endocrine vs Exocrine Glands:</strong> Exocrine glands release secretions via ducts to epithelial surfaces (e.g., salivary, sweat, digestive glands), whereas endocrine glands release hormones directly into extracellular fluid/blood without ducts.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Human Endocrine System (Major Glands & Functions)</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Hypothalamus:</strong> Basal part of diencephalon. Secretes Releasing Hormones (e.g., GnRH) and Inhibiting Hormones (e.g., Somatostatin) to control the pituitary gland.</p>
+                    <p>• <strong>Pituitary Gland (Master Gland):</strong> Located in sella turcica of sphenoid bone. Divided into:</p>
+                    <p>&nbsp;&nbsp;- <em>Adenohypophysis (Anterior Pituitary):</em> GH (Growth Hormone), PRL (Prolactin), TSH (Thyroid Stimulating Hormone), ACTH (Adrenocorticotropic Hormone), LH (Luteinizing Hormone), and FSH (Follicle Stimulating Hormone).</p>
+                    <p>&nbsp;&nbsp;- <em>Neurohypophysis (Posterior Pituitary):</em> Stores and releases <strong>Oxytocin</strong> (uterine contractions, milk ejection) and <strong>Vasopressin / ADH</strong> (water reabsorption in kidneys), which are synthesized by the hypothalamus.</p>
+                    <p>• <strong>Pineal Gland:</strong> Secretes <strong>Melatonin</strong>; regulates 24-hour diurnal (circadian) rhythm, sleep-wake cycle, and body temperature.</p>
+                    <p>• <strong>Thyroid Gland:</strong> Secretes <strong>Thyroxine (T₄)</strong>, <strong>Triiodothyronine (T₃)</strong> (regulate basal metabolic rate, BMR), and <strong>Thyrocalcitonin (TCT)</strong> (lowers blood calcium level).</p>
+                    <p>• <strong>Parathyroid Gland:</strong> Secretes <strong>Parathyroid Hormone (PTH)</strong>; hypercalcemic hormone that increases blood calcium levels by reabsorbing Ca²⁺ from bones and kidney tubules.</p>
+                    <p>• <strong>Thymus Gland:</strong> Secretes <strong>Thymosins</strong>; crucial for differentiation of T-lymphocytes (cell-mediated immunity). Degenerates in old age.</p>
+                    <p>• <strong>Adrenal Gland:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Adrenal Cortex:</em> Secretes Glucocorticoids (e.g., Cortisol - gluconeogenesis, anti-inflammatory) and Mineralocorticoids (e.g., Aldosterone - Na⁺ and water reabsorption).</p>
+                    <p>&nbsp;&nbsp;- <em>Adrenal Medulla:</em> Secretes Catecholamines: <strong>Adrenaline / Epinephrine</strong> and <strong>Noradrenaline / Norepinephrine</strong> (emergency / 3F hormones: Fight, Flight, Fright).</p>
+                    <p>• <strong>Pancreas (Composite Gland):</strong> Islets of Langerhans contain <strong>α-cells</strong> (secrete Glucagon - hyperglycemic) and <strong>β-cells</strong> (secrete Insulin - hypoglycemic).</p>
+                    <p>• <strong>Gonads:</strong> <em>Testes</em> (Androgens / Testosterone - male secondary sexual characteristics) and <em>Ovaries</em> (Estrogen and Progesterone - female reproduction & menstrual cycle regulation).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Hormones of Non-Endocrine Tissues & Mechanism of Hormone Action</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Hormones from Non-Endocrine Tissues:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Heart:</em> Atrial walls secrete <strong>Atrial Natriuretic Factor (ANF)</strong> which decreases blood pressure by dilating blood vessels.</p>
+                    <p>&nbsp;&nbsp;- <em>Kidney:</em> Juxtaglomerular (JG) cells produce <strong>Erythropoietin</strong> which stimulates erythropoiesis (RBC formation).</p>
+                    <p>&nbsp;&nbsp;- <em>Gastrointestinal (GI) Tract:</em> Secretes <strong>Gastrin</strong> (HCl secretion), <strong>Secretin</strong> (water and bicarbonate secretion), <strong>CCK / Cholecystokinin</strong> (bile & pancreatic enzyme secretion), and <strong>GIP</strong> (inhibits gastric secretion).</p>
+                    <p>• <strong>Mechanism of Hormone Action:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Water-Soluble Hormones (Protein/Peptide Hormones e.g., Insulin, FSH):</em> Bind to extracellular cell-membrane receptors &rarr; generate second messengers (e.g., cyclic AMP, IP₃, Ca²⁺) &rarr; trigger biochemical response.</p>
+                    <p>&nbsp;&nbsp;- <em>Lipid-Soluble Hormones (Steroid Hormones e.g., Estrogen, Cortisol, Iodothyronines):</em> Pass through plasma membrane &rarr; bind to intracellular receptors inside nucleus &rarr; interact with genome to regulate gene expression.</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Endocrine Disorders & Hormonal Imbalances</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Pituitary Disorders:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Gigantism / Acromegaly:</em> Hypersecretion of Growth Hormone (GH) in childhood / adulthood.</p>
+                    <p>&nbsp;&nbsp;- <em>Pituitary Dwarfism:</em> Hyposecretion of GH during growth years.</p>
+                    <p>&nbsp;&nbsp;- <em>Diabetes Insipidus:</em> Hyposecretion of ADH leading to excessive water loss via urine and severe thirst.</p>
+                    <p>• <strong>Thyroid Disorders:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Goitre:</em> Enlargement of thyroid gland due to iodine deficiency.</p>
+                    <p>&nbsp;&nbsp;- <em>Cretinism:</em> Hypothyroidism during pregnancy causing stunted physical and mental growth in baby.</p>
+                    <p>&nbsp;&nbsp;- <em>Grave's Disease (Exophthalmic Goitre):</em> Hyperthyroidism characterized by enlarged thyroid, protruding eyes, and increased BMR.</p>
+                    <p>• <strong>Adrenal Disorders:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Addison's Disease:</em> Hyposecretion of adrenal cortex hormones causing weakness, skin pigmentation, and low blood pressure.</p>
+                    <p>• <strong>Pancreatic Disorders:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>Diabetes Mellitus:</em> Deficiency or hyposecretion of Insulin leading to prolonged hyperglycemia, glycosuria (glucose in urine), and ketone body formation.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Explain the mechanism of action of peptide/protein hormones versus steroid hormones.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Peptide / Protein Hormones:</strong> These hormones are water-soluble and cannot cross the lipid bilayer of target cell membranes. They bind to specific extracellular receptors on the cell membrane, generating intracellular second messengers (e.g., cAMP, IP₃, Ca²⁺). These second messengers activate cascade enzyme reactions to regulate cellular metabolism.<br>
+                • <strong>Steroid Hormones:</strong> These hormones are lipid-soluble and easily cross the cell membrane. They enter the cell and bind to intracellular receptors (mostly nuclear receptors). The hormone-receptor complex interacts directly with the nuclear DNA to regulate transcription and gene expression.
+            </div>
+
+            <div class="question">Q2: Differentiate between Diabetes Mellitus and Diabetes Insipidus.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Diabetes Mellitus:</strong> Caused by deficiency or hyposecretion of <strong>Insulin</strong> (produced by β-cells of pancreas). Characterized by high blood glucose level (hyperglycemia), presence of glucose in urine (glycosuria), and presence of ketone bodies.<br>
+                • <strong>Diabetes Insipidus:</strong> Caused by deficiency or hyposecretion of <strong>Vasopressin / ADH</strong> (released by posterior pituitary). Characterized by excretion of large volumes of dilute urine (polyuria) and extreme thirst, without high blood sugar levels or glucose in urine.
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Distinguish between Hyperthyroidism and Hypothyroidism.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Hyperthyroidism</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Hypothyroidism</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Secretion Level</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Excessive synthesis and secretion of thyroid hormones (T₃ & T₄).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Deficient synthesis and secretion of thyroid hormones.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Metabolic Rate (BMR)</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Significantly increases Basal Metabolic Rate (BMR).</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Decreases Basal Metabolic Rate (BMR).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Associated Conditions</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Grave's Disease (Exophthalmic Goitre), weight loss, protrusion of eyeballs, rapid heart rate.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Simple Goitre, Cretinism (in infants), Myxedema (in adults), weight gain, lethargy.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="question">Q2: Distinguish between Exocrine Glands and Endocrine Glands.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Exocrine Glands</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Endocrine Glands</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ducts</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Possess ducts to carry secretions to target site.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Ductless glands; secretions released directly into bloodstream.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Secretory Product</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Secrete enzymes, saliva, sweat, mucus, milk, digestive juices.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Secrete non-nutrient chemical messengers called <strong>Hormones</strong>.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Target Location</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Secretions act locally or on near epithelial surfaces.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Hormones travel through blood to act on distant target organs.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Examples</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Salivary glands, Sweat glands, Liver, Gastric glands.</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Pituitary gland, Thyroid gland, Adrenal gland, Parathyroid gland.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Biology</h3>
+                <ul class="sidebar-links">
+                    <li class="active"><a href="class 11 biology notes1.html">Ch 1: The Living World</a></li>
+                    <li><a href="class 11 biology notes2.html">Ch 2: Biological Classification</a></li>
+                    <li><a href="class 11 biology notes3.html">Ch 3: Plant Kingdom</a></li>
+                    <li><a href="class 11 biology notes4.html">Ch 4: Animal Kingdom</a></li>
+                    <li><a href="class 11 biology notes5.html">Ch 5: Morphology of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes6.html">Ch 6: Anatomy of Flowering Plants</a></li>
+                    <li><a href="class 11 biology notes7.html">Ch 7: Structural Organisation in Animals</a></li>
+                    <li><a href="class 11 biology notes8.html">Ch 8: Cell: The Unit of Life</a></li>
+                    <li><a href="class 11 biology notes9.html">Ch 9: Biomolecules</a></li>
+                    <li><a href="class 11 biology notes10.html">Ch 10: Cell Cycle and Cell Division</a></li>
+                    <li><a href="class 11 biology notes11.html">Ch 11: Photosynthesis in Higher Plants</a></li>
+                    <li><a href="class 11 biology notes12.html">Ch 12: Respiration in Plants</a></li>
+                    <li class="active"><a href="class 11 biology notes13.html">Ch 13: Plant Growth and Development</a></li>
+                    <li class="active"><a href="class 11 biology notes14.html">Ch 13: Plant Growth and Development</a></li>
+                    <li class="active"><a href="class 11 biology notes15.html">Ch 15: Body Fluids and Circulation</a></li>
+                    <li><a href="class 11 biology notes16.html">Ch 16: Excretory Products and Their Elimination</a></li>
+                    <li class="active"><a href="class 11 biology notes17.html">Ch 17: Locomotion and Movement</a></li>
+                    <li><a href="class 11 biology notes18.html">Ch 18: Neural Control and Coordination</a></li>
+                    <li class="active"><a href="class 11 biology notes19.html">Ch 19: Chemical Coordination and Integration</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

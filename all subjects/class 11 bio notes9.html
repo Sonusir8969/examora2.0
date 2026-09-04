@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Biology Chapter 9 Biomolecules</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Biology Chapter 9 Biomolecules</h1>
+
+            <p>NCERT Solutions for Class 11 Biology Chapter 9 Biomolecules covers the chemical composition of living tissues, structure and classification of carbohydrates, proteins, lipids, nucleic acids, and the concept of enzymes.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Biomacromolecules</a></li>
+                    <li><a href="#topic2">2. Structure of Proteins</a></li>
+                    <li><a href="#topic3">3. Enzymes</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Biomacromolecules</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; <strong>Carbohydrates:</strong> classified as monosaccharides (e.g., glucose), oligosaccharides (e.g., sucrose), and polysaccharides (e.g., starch, cellulose, glycogen) &mdash; primarily provide energy and structural support.</p>
+                    <p>&bull; <strong>Proteins:</strong> polymers of amino acids linked by peptide bonds; perform structural, enzymatic, transport, hormonal, and defence functions.</p>
+                    <p>&bull; <strong>Lipids:</strong> fats, oils, and phospholipids; primarily used for energy storage and forming cell membranes.</p>
+                    <p>&bull; <strong>Nucleic Acids:</strong> DNA and RNA, polymers of nucleotides, carry and express genetic information.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Structure of Proteins</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; Protein structure is described at four levels: <strong>primary</strong> (linear sequence of amino acids), <strong>secondary</strong> (alpha helix or beta pleated sheet), <strong>tertiary</strong> (3D folding), and <strong>quaternary</strong> (arrangement of multiple polypeptide subunits).</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Enzymes</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; <strong>Enzymes</strong> are biological catalysts, mostly proteins, that speed up biochemical reactions without being consumed, by lowering the activation energy required.</p>
+                    <p>&bull; Enzyme activity is affected by factors such as <strong>temperature, pH, substrate concentration</strong>, and the presence of inhibitors or cofactors.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>NCERT Textbook Exercise Questions</h2>
+
+            <div class="question">What are macromolecules? Give examples.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Macromolecules are large, complex organic molecules formed by the polymerisation of smaller repeating units (monomers), typically having a high molecular weight. Examples include polysaccharides (like starch and cellulose), proteins, and nucleic acids (DNA and RNA).
+            </div>
+
+            <div class="question">Explain the composition of a triglyceride (fat molecule).</div>
+            <div class="answer">
+                <strong>Answer:</strong> A triglyceride (fat) consists of one molecule of glycerol esterified with three molecules of fatty acids, linked via ester bonds; the fatty acids may be saturated (no double bonds) or unsaturated (with one or more double bonds).
+            </div>
+
+            <div class="question">Describe the important properties of enzymes.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Enzymes are highly specific to their substrates, act as catalysts (increase reaction rate without being consumed), function optimally at a particular temperature and pH, can be regulated by activators/inhibitors, and many require non-protein components called cofactors (coenzymes or metal ions) for activity.
+            </div>
+
+            <div class="question">Explain the four levels of the organisation of proteins.</div>
+            <div class="answer">
+                <strong>Answer:</strong> <strong>Primary structure:</strong> the linear sequence of amino acids in a polypeptide chain. <strong>Secondary structure:</strong> the local folding pattern, such as an alpha helix or beta pleated sheet, stabilised by hydrogen bonds. <strong>Tertiary structure:</strong> the overall three-dimensional folding of the polypeptide chain, giving the protein its functional shape. <strong>Quaternary structure:</strong> the arrangement of two or more polypeptide subunits into a single functional protein complex (e.g., haemoglobin).
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Biology Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 bio notes1.html">Ch 1: The Living World</a></li>
+                    <li><a href="class 11 bio notes2.html">Ch 2: Biological Classification</a></li>
+                    <li><a href="class 11 bio notes3.html">Ch 3: Plant Kingdom</a></li>
+                    <li><a href="class 11 bio notes4.html">Ch 4: Animal Kingdom</a></li>
+                    <li><a href="class 11 bio notes5.html">Ch 5: Morphology of Flowering Plants</a></li>
+                    <li><a href="class 11 bio notes6.html">Ch 6: Anatomy of Flowering Plants</a></li>
+                    <li><a href="class 11 bio notes7.html">Ch 7: Structural Organisation in Animals</a></li>
+                    <li><a href="class 11 bio notes8.html">Ch 8: Cell: The Unit of Life</a></li>
+                    <li class="active"><a href="class 11 bio notes9.html">Ch 9: Biomolecules</a></li>
+                    <li><a href="class 11 bio notes10.html">Ch 10: Cell Cycle and Cell Division</a></li>
+                    <li><a href="class 11 bio notes11.html">Ch 11: Photosynthesis in Higher Plants</a></li>
+                    <li><a href="class 11 bio notes12.html">Ch 12: Respiration in Plants</a></li>
+                    <li><a href="class 11 bio notes13.html">Ch 13: Plant Growth and Development</a></li>
+                    <li><a href="class 11 bio notes14.html">Ch 14: Breathing and Exchange of Gases</a></li>
+                    <li><a href="class 11 bio notes15.html">Ch 15: Body Fluids and Circulation</a></li>
+                    <li><a href="class 11 bio notes16.html">Ch 16: Excretory Products and their Elimination</a></li>
+                    <li><a href="class 11 bio notes17.html">Ch 17: Locomotion and Movement</a></li>
+                    <li><a href="class 11 bio notes18.html">Ch 18: Neural Control and Coordination</a></li>
+                    <li><a href="class 11 bio notes19.html">Ch 19: Chemical Coordination and Integration</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

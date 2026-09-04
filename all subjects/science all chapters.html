@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Class 10 Science - JAC Board</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header {
+      background: white;
+      padding: 20px 0;
+      border-bottom: 2px solid #1e4a76;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      color: #1e4a76;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 18px 22px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.4rem;
+    }
+
+    .content-header p {
+      color: #555;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    .chapter-list {
+      padding: 10px 0;
+    }
+
+    .chapter-row {
+      display: flex;
+      align-items: center;
+      padding: 12px 22px;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+    }
+
+    .chapter-row:hover {
+      background: #f8fafc;
+    }
+
+    .chapter-num {
+      width: 65px;
+      font-weight: 600;
+      color: #555;
+      font-size: 0.85rem;
+    }
+
+    .chapter-link {
+      flex: 1;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 8px 0;
+    }
+
+    .chapter-link:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    .test-badge {
+      font-size: 0.7rem;
+      background: #e6f0ff;
+      padding: 4px 14px;
+      border-radius: 20px;
+      color: #1e4a76;
+      text-decoration: none;
+      transition: background 0.2s;
+      font-weight: 600;
+    }
+
+    .test-badge:hover {
+      background: #1e4a76;
+      color: white;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 40px 0 20px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 20px;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 700px) {
+      .chapter-row {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chapter-num {
+        width: 100%;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 10 <span>Science</span> | JAC Board</h1>
+    <a href="examora.html" class="back-link" id="backHome">Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="content-header">
+      <h2>Science - All Chapters</h2>
+      <p>Click on any chapter to start test</p>
+    </div>
+    <div class="chapter-list" id="chapterList">
+      <!-- chapters will load here -->
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html" id="aboutLink">About Us</a>
+        <a href="contact us examora.html" id="contactLink">Contact Us</a>
+        <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+        <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://whatsapp.com/channel/0029VanoIcGEquiN0b5u9x3M">WhatsApp</a>
+        <a href="https://youtube.com/@sonusir8969?si=Rh0UO_wlG07Dcyiw">youTube</a>
+        <a href="https://www.instagram.com/sonu_____study_8969?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // SCIENCE CHAPTERS - JAC BOARD CLASS 10
+  // Replace # with your actual test paper links
+  const scienceChapters = [
+    { num: "Ch-1", name: "Chemical Reactions and Equations", link: "chapter1.html" },
+    { num: "Ch-2", name: "Acids, Bases and Salts", link: "chapter2.html" },
+    { num: "Ch-3", name: "Metals and Non-Metals", link: "chapter3.html" },
+    { num: "Ch-4", name: "Carbon and its Compounds", link: "chapter4.html" },
+    { num: "Ch-5", name: "Life Processes", link: "chapter5.html" },
+    { num: "Ch-6", name: "Control and Coordination", link: "chapter6.html" },
+    { num: "Ch-7", name: "How do Organisms Reproduce?", link: "chapter7.html" },
+    { num: "Ch-8", name: "Heredity and Evolution", link: "chapter8.html" },
+    { num: "Ch-9", name: "Light - Reflection and Refraction", link: "chapter9.html" },
+    { num: "Ch-10", name: "The Human Eye and Colourful World", link: "chapter10.html" },
+    { num: "Ch-11", name: "Electricity", link: "chapter11.html" },
+    { num: "Ch-12", name: "Magnetic Effects of Current", link: "chapter12.html" },
+    { num: "Ch-13", name: "Our Environment", link: "chapter13.html" }
+  ];
+
+  function renderChapters() {
+    let html = "";
+    for (let i = 0; i < scienceChapters.length; i++) {
+      const ch = scienceChapters[i];
+      html += `
+        <div class="chapter-row">
+          <div class="chapter-num">${ch.num}</div>
+          <a href="${ch.link}" class="chapter-link" target="_blank">${ch.name}</a>
+          <a href="${ch.link}" class="test-badge" target="_blank">Test</a>
+        </div>
+      `;
+    }
+    document.getElementById("chapterList").innerHTML = html;
+  }
+
+  // Footer links
+  document.getElementById("aboutLink")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Examora - JAC Board preparation platform.");
+  });
+
+  document.getElementById("contactLink")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Email: support@examora.com");
+  });
+
+  document.getElementById("privacyLink")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Privacy policy: Data is secure.");
+  });
+
+  document.getElementById("termsLink")?.addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Terms and conditions apply.");
+  });
+
+  renderChapters();
+</script>
+</body>
+</html>

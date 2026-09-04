@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Class 11 MCQ Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f4f7fb;
+      color: #1e2a3e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Section */
+    .header {
+      background: #ffffff;
+      padding: 16px 40px;
+      border-bottom: 2px solid #1e4a76;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+
+    .header h1 {
+      font-size: 1.6rem;
+      color: #1e4a76;
+    }
+
+    .header h1 span {
+      color: #2f855a;
+    }
+
+    .back-link {
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: #0f2b3d;
+      text-decoration: underline;
+    }
+
+    /* Banner / Hero Section */
+    .hero-banner {
+      background: linear-gradient(135deg, #1e4a76 0%, #0f2b3d 100%);
+      color: white;
+      padding: 35px 40px;
+      width: 100%;
+    }
+
+    .hero-banner h2 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .hero-banner p {
+      font-size: 1.05rem;
+      color: #d1e3f8;
+      max-width: 800px;
+    }
+
+    /* Sticky Full-Width Subject Navigation Bar */
+    .nav-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      width: 100%;
+    }
+
+    .subject-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 40px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .subject-nav::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    .nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 30px;
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      color: #334155;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+
+    .nav-btn:hover {
+      background: #e2e8f0;
+      border-color: #94a3b8;
+    }
+
+    .nav-btn.active {
+      background: #1e4a76;
+      color: #ffffff;
+      border-color: #1e4a76;
+      box-shadow: 0 4px 12px rgba(30, 74, 118, 0.25);
+    }
+
+    /* Search & Main Layout Container */
+    .main-wrapper {
+      width: 100%;
+      padding: 30px 40px;
+      flex: 1;
+    }
+
+    .control-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .section-title h3 {
+      font-size: 1.5rem;
+      color: #1e4a76;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title span {
+      font-size: 0.85rem;
+      background: #e2e8f0;
+      color: #475569;
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 280px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 10px 16px;
+      border-radius: 30px;
+      border: 1px solid #cbd5e1;
+      outline: none;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+
+    .search-box input:focus {
+      border-color: #1e4a76;
+      box-shadow: 0 0 0 3px rgba(30, 74, 118, 0.1);
+    }
+
+    /* Chapter List - Full Width Modern Cards/Rows */
+    .chapter-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .chapter-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 16px 24px;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    }
+
+    .chapter-card:hover {
+      border-color: #1e4a76;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(30, 74, 118, 0.08);
+    }
+
+    .chapter-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .chapter-badge {
+      background: #f0f4fe;
+      color: #1e4a76;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 8px;
+      min-width: 75px;
+      text-align: center;
+    }
+
+    .chapter-name {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1e2a3e;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .chapter-card:hover .chapter-name {
+      color: #1e4a76;
+    }
+
+    .chapter-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .note-tag {
+      font-size: 0.75rem;
+      background: #e6f4ea;
+      color: #137333;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .btn-read {
+      background: #1e4a76;
+      color: #ffffff;
+      padding: 8px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+
+    .btn-read:hover {
+      background: #123a5e;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 40px 0 20px;
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .footer-container {
+      width: 100%;
+      padding: 0 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 20px;
+      font-size: 0.75rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header, .hero-banner, .subject-nav, .main-wrapper, .footer-container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .control-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .search-box {
+        width: 100%;
+      }
+
+      .chapter-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .chapter-actions {
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar Header -->
+  <header class="header">
+    <h1>Examora <span>| Class 11 MCQs</span></h1>
+    <a href="examora.html" class="back-link" id="backHome">← Back to Home</a>
+  </header>
+
+  <!-- Full-Width Hero Section -->
+  <section class="hero-banner">
+    <h2>Class 11 Science Chapter-wise MCQs</h2>
+    <p>Practice objective questions with detailed solutions, key concepts, and instant answers tailored strictly for JAC Board Examination 2026.</p>
+  </section>
+
+  <!-- Sticky Horizontal Subject Navigation -->
+  <div class="nav-wrapper">
+    <nav class="subject-nav">
+      <button class="nav-btn active" data-sub="physics">⚛️ Physics</button>
+      <button class="nav-btn" data-sub="chemistry">🧪 Chemistry</button>
+      <button class="nav-btn" data-sub="maths">📐 Mathematics</button>
+      <button class="nav-btn" data-sub="biology">🧬 Biology</button>
+      <button class="nav-btn" data-sub="english">📖 English</button>
+    </nav>
+  </div>
+
+  <!-- Main Content Layout -->
+  <main class="main-wrapper">
+    <div class="control-bar">
+      <div class="section-title">
+        <h3 id="subTitle">Physics <span id="chapterCount">15 Chapters</span></h3>
+      </div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search chapter name..." onkeyup="filterChapters()" />
+      </div>
+    </div>
+
+    <!-- Full-Width Dynamic Chapter List Container -->
+    <div class="chapter-container" id="chapterList"></div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Examora Education</h4>
+          <p style="color:#cddfe7; margin-top:6px; font-size:0.85rem;">Practice. Perform. Progress.</p>
+        </div>
+        <div class="footer-col">
+          <a href="about us examora.html" id="aboutLink">About Us</a>
+          <a href="contact us examora.html" id="contactLink">Contact Us</a>
+          <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+          <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+        </div>
+        <div class="footer-col">
+          <a href="https://whatsapp.com/channel/0029VanoIcGEquiN0b5u9x3M" target="_blank">WhatsApp Channel</a>
+          <a href="https://www.youtube.com/@Sonusir8969" target="_blank">YouTube Channel</a>
+          <a href="https://www.instagram.com/sonu_____study_8969?igsh=a2NtODRsd2U4N29q" target="_blank">Instagram</a>
+        </div>
+      </div>
+      <div class="copyright">© 2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+    </div>
+  </footer>
+
+<script>
+  // Complete Class 11 MCQ Chapter Data Structures
+  const physicsChapters = [
+    { num: "Ch-1", name: "Physical World", link: "class 11 physics mcq1.html" },
+    { num: "Ch-2", name: "Units and Measurements", link: "class 11 science mcq2.html" },
+    { num: "Ch-3", name: "Motion in a Straight Line", link: "class 11 science mcq3.html" },
+    { num: "Ch-4", name: "Motion in a Plane", link: "class 11 science mcq4.html" },
+    { num: "Ch-5", name: "Laws of Motion", link: "class 11 science mcq5.html" },
+    { num: "Ch-6", name: "Work, Energy and Power", link: "class 11 science mcq6.html" },
+    { num: "Ch-7", name: "System of Particles and Rotational Motion", link: "class 11 science mcq7.html" },
+    { num: "Ch-8", name: "Gravitation", link: "class 11 science mcq8.html" },
+    { num: "Ch-9", name: "Mechanical Properties of Solids", link: "class 11 physics mcq9.html" },
+    { num: "Ch-10", name: "Mechanical Properties of Fluids", link: "class 11 physics mcq10.html" },
+    { num: "Ch-11", name: "Thermal Properties of Matter", link: "class 11 physics mcq11.html" },
+    { num: "Ch-12", name: "Thermodynamics", link: "class 11 physics mcq12.html" },
+    { num: "Ch-13", name: "Kinetic Theory", link: "class 11 physics mcq13.html" },
+    { num: "Ch-14", name: "Oscillations", link: "class 11 physics mcq14.html" },
+    { num: "Ch-15", name: "Waves", link: "class 11 physics mcq15.html" }
+  ];
+
+  const chemistryChapters = [
+    { num: "Ch-1", name: "Some Basic Concepts of Chemistry", link: "class 11 chemistry mcq1.html" },
+    { num: "Ch-2", name: "Structure of Atom", link: "class 11 chemistry mcq2.html" },
+    { num: "Ch-3", name: "Classification of Elements and Periodicity", link: "class 11 chemistry mcq3.html" },
+    { num: "Ch-4", name: "Chemical Bonding and Molecular Structure", link: "class 11 chemistry mcq4.html" },
+    { num: "Ch-5", name: "Chemical Thermodynamics", link: "class 11 chemistry mcq5.html" },
+    { num: "Ch-6", name: "Equilibrium", link: "class 11 chemistry mc6.html" },
+    { num: "Ch-7", name: "Redox Reactions", link: "class 11 chemistry mcq7.html" },
+    { num: "Ch-8", name: "Organic Chemistry: Basic Principles & Techniques", link: "class 11 chemistry mcq8.html" },
+    { num: "Ch-9", name: "Hydrocarbons", link: "class 11 chemistry mcq9.html" }
+  ];
+
+  const mathsChapters = [
+    { num: "Ch-1", name: "Sets", link: "class 11 math mcq1.html" },
+    { num: "Ch-2", name: "Relations and Functions", link: "class 11 math mcq2.html" },
+    { num: "Ch-3", name: "Trigonometric Functions", link: "class 11 math mcq3.html" },
+    { num: "Ch-4", name: "Complex Numbers and Quadratic Equations", link: "class 11 math mcq4.html" },
+    { num: "Ch-5", name: "Linear Inequalities", link: "class 11 math mcq5.html" },
+    { num: "Ch-6", name: "Permutations and Combinations", link: "class 11 math mcq6.html" },
+    { num: "Ch-7", name: "Binomial Theorem", link: "class 11 math mcq7.html" },
+    { num: "Ch-8", name: "Sequences and Series", link: "class 11 math mcq8.html" },
+    { num: "Ch-9", name: "Straight Lines", link: "class 11 math mcq9.html" },
+    { num: "Ch-10", name: "Conic Sections", link: "class 11 math mcq10.html" },
+    { num: "Ch-11", name: "Introduction to Three Dimensional Geometry", link: "class 11 math mcq11.html" },
+    { num: "Ch-12", name: "Limits and Derivatives", link: "class 11 math mcq12.html" },
+    { num: "Ch-13", name: "Statistics", link: "class 11 math mcq13.html" },
+    { num: "Ch-14", name: "Probability", link: "class 11 math mcq14.html" }
+  ];
+
+  const biologyChapters = [
+    { num: "Ch-1", name: "The Living World", link: "class 11 bio mcq1.html" },
+    { num: "Ch-2", name: "Biological Classification", link: "class 11 bio mcq2.html" },
+    { num: "Ch-3", name: "Plant Kingdom", link: "class 11 bio mcq3.html" },
+    { num: "Ch-4", name: "Animal Kingdom", link: "class 11 bio mcq4.html" },
+    { num: "Ch-5", name: "Morphology of Flowering Plants", link: "class 11 bio mcq5.html" },
+    { num: "Ch-6", name: "Anatomy of Flowering Plants", link: "class 11 bio mcq6.html" },
+    { num: "Ch-7", name: "Structural Organisation in Animals", link: "class 11 bio mcq7.html" },
+    { num: "Ch-8", name: "Cell: The Unit of Life", link: "class 11 bio mcq8.html" },
+    { num: "Ch-9", name: "Biomolecules", link: "class 11 bio mcq9.html" },
+    { num: "Ch-10", name: "Cell Cycle and Cell Division", link: "class 11 bio mcq10.html" }
+  ];
+
+  const englishChapters = [
+    { num: "Ch-1", name: "The Portrait of a Lady", link: "class 11 english mcq1.html" },
+    { num: "Ch-2", name: "We're Not Afraid to Die...", link: "class 11 english mcq2.html" },
+    { num: "Ch-3", name: "Discovering Tut: the Saga Continues", link: "class 11 english mcq3.html" },
+    { num: "Ch-4", name: "The Summer of the Beautiful White Horse", link: "class 11 english mcq4.html" },
+    { num: "Ch-5", name: "The Address", link: "class 11 english mcq5.html" },
+    { num: "Ch-6", name: "Mother's Day", link: "class 11 english mcq6.html" }
+  ];
+
+  const subjects = {
+    physics: { name: "Physics MCQs", chapters: physicsChapters },
+    chemistry: { name: "Chemistry MCQs", chapters: chemistryChapters },
+    maths: { name: "Mathematics MCQs", chapters: mathsChapters },
+    biology: { name: "Biology MCQs", chapters: biologyChapters },
+    english: { name: "English MCQs", chapters: englishChapters }
+  };
+
+  // Render Full-Width Chapter Cards
+  function renderChapters(subjectKey) {
+    const subject = subjects[subjectKey];
+    if (!subject) return;
+
+    document.getElementById("subTitle").childNodes[0].nodeValue = subject.name + " ";
+    document.getElementById("chapterCount").textContent = `${subject.chapters.length} Chapters`;
+    document.getElementById("searchInput").value = ""; // Clear search box
+
+    let html = "";
+    if (subject.chapters && subject.chapters.length > 0) {
+      subject.chapters.forEach(function(ch) {
+        html += `
+          <div class="chapter-card">
+            <div class="chapter-info">
+              <span class="chapter-badge">${ch.num}</span>
+              <a href="${ch.link}" class="chapter-name">${ch.name}</a>
+            </div>
+            <div class="chapter-actions">
+              <span class="note-tag">MCQs Ready</span>
+              <a href="${ch.link}" class="btn-read">Practice MCQs</a>
+            </div>
+          </div>
+        `;
+      });
+    } else {
+      html = '<div style="padding: 30px; text-align: center; color: #64748b;">No MCQs found in this section.</div>';
+    }
+
+    document.getElementById("chapterList").innerHTML = html;
+  }
+
+  // Filter Chapters Real-time
+  function filterChapters() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.chapter-card');
+
+    cards.forEach(card => {
+      const title = card.querySelector('.chapter-name').textContent.toLowerCase();
+      if (title.includes(input)) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  // Active Tab Setter
+  function setActiveSubject(subjectKey) {
+    document.querySelectorAll(".nav-btn").forEach(function(btn) {
+      btn.classList.remove("active");
+      if (btn.getAttribute("data-sub") === subjectKey) {
+        btn.classList.add("active");
+      }
+    });
+
+    try {
+      localStorage.setItem('examora_active_mcq_class11', subjectKey);
+    } catch(e) {}
+
+    renderChapters(subjectKey);
+  }
+
+  // Listeners
+  document.querySelectorAll(".nav-btn").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      const subjectKey = this.getAttribute("data-sub");
+      setActiveSubject(subjectKey);
+    });
+  });
+
+  // Initialization
+  document.addEventListener('DOMContentLoaded', function() {
+    let savedSubject = null;
+    try {
+      savedSubject = localStorage.getItem('examora_active_mcq_class11');
+    } catch(e) {}
+
+    if (savedSubject && subjects[savedSubject]) {
+      setActiveSubject(savedSubject);
+    } else {
+      setActiveSubject('physics');
+    }
+  });
+</script>
+</body>
+</html>

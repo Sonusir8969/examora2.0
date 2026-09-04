@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 11 Chemistry Chapter 4 Chemical Bonding and Molecular Structure</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="#" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Chemistry Chapter 4 Chemical Bonding and Molecular Structure</h1>
+
+            <p>NCERT Solutions for Class 11 Chemistry Chapter 4 Chemical Bonding and Molecular Structure covers octet rule and Kössel-Lewis approach, ionic and covalent bonds, Lewis symbols, formal charge, dipole moment, Resonance, VSEPR Theory, Valence Bond Theory (VBT), orbital overlap, Hybridisation (sp, sp<sup>2</sup>, sp<sup>3</sup>, sp<sup>3</sup>d, sp<sup>3</sup>d<sup>2</sup>), Molecular Orbital Theory (MOT), Bond Order, magnetic properties, and Hydrogen Bonding.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Kössel-Lewis Approach, Octet Rule, Formal Charge & Bond Parameters</a></li>
+                    <li><a href="#topic2">2. VSEPR Theory & Prediction of Molecular Geometries</a></li>
+                    <li><a href="#topic3">3. Valence Bond Theory (VBT) & Concept of Hybridisation</a></li>
+                    <li><a href="#topic4">4. Molecular Orbital Theory (MOT) & Hydrogen Bonding</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Kössel-Lewis Approach, Octet Rule, Formal Charge & Bond Parameters</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Chemical Bond:</strong> Attractive force holding constituent atoms/ions together in different chemical species.</p>
+                    <p>• <strong>Octet Rule:</strong> Atoms gain, lose, or share electrons to attain 8 electrons in their valence shell (noble gas configuration). <em>Limitations:</em> Incomplete octet (e.g., LiCl, BeH<sub>2</sub>, BCl<sub>3</sub>), odd-electron molecules (NO, NO<sub>2</sub>), and expanded octet (PF<sub>5</sub>, SF<sub>6</sub>, H<sub>2</sub>SO<sub>4</sub>).</p>
+                    <p>• <strong>Formal Charge (F.C.):</strong> F.C. = [Total valence e<sup>-</sup> in free atom] - [Total non-bonding (lone pair) e<sup>-</sup>] - 1/2 [Total bonding (shared) e<sup>-</sup>].</p>
+                    <p>• <strong>Dipole Moment (μ):</strong> Product of magnitude of charge (Q) and distance of separation (r): <em>μ = Q × r</em> (expressed in Debye, D). Vector quantity, indicates covalent character polarity.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. VSEPR Theory & Prediction of Molecular Geometries</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>VSEPR Theory (Valence Shell Electron Pair Repulsion):</strong> Shape of a molecule depends upon the number of valence shell electron pairs (bonded and non-bonded) around the central atom.</p>
+                    <p>• <strong>Order of Repulsive Interactions:</strong> Lone Pair - Lone Pair (lp - lp) > Lone Pair - Bond Pair (lp - bp) > Bond Pair - Bond Pair (bp - bp).</p>
+                    <p>• <strong>Common Geometries:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>2 bp, 0 lp:</em> Linear (e.g., BeCl<sub>2</sub>, CO<sub>2</sub>, 180°)</p>
+                    <p>&nbsp;&nbsp;- <em>3 bp, 0 lp:</em> Trigonal Planar (e.g., BF<sub>3</sub>, 120°)</p>
+                    <p>&nbsp;&nbsp;- <em>2 bp, 1 lp:</em> Bent / V-shaped (e.g., SO<sub>2</sub>, &lt;120°)</p>
+                    <p>&nbsp;&nbsp;- <em>4 bp, 0 lp:</em> Tetrahedral (e.g., CH<sub>4</sub>, 109.5°)</p>
+                    <p>&nbsp;&nbsp;- <em>3 bp, 1 lp:</em> Trigonal Pyramidal (e.g., NH<sub>3</sub>, 107°)</p>
+                    <p>&nbsp;&nbsp;- <em>2 bp, 2 lp:</em> Bent / V-shaped (e.g., H<sub>2</sub>O, 104.5°)</p>
+                    <p>&nbsp;&nbsp;- <em>5 bp, 0 lp:</em> Trigonal Bipyramidal (e.g., PF<sub>5</sub>)</p>
+                    <p>&nbsp;&nbsp;- <em>6 bp, 0 lp:</em> Octahedral (e.g., SF<sub>6</sub>)</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Valence Bond Theory (VBT) & Concept of Hybridisation</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Valence Bond Theory:</strong> Chemical bond forms by pairing of electrons with opposite spins through orbital overlap along internuclear axis.</p>
+                    <p>&nbsp;&nbsp;- <em>Sigma (σ) Bond:</em> Head-on (axial) overlap along internuclear axis. Stronger bond.</p>
+                    <p>&nbsp;&nbsp;- <em>Pi (π) Bond:</em> Lateral / sideways overlap perpendicular to internuclear axis. Weaker bond.</p>
+                    <p>• <strong>Hybridisation:</strong> Intermixing of atomic orbitals of slightly different energies to produce a set of equivalent hybridized orbitals equal in number to the mixed atomic orbitals.</p>
+                    <p>&nbsp;&nbsp;- <em>sp:</em> Linear (180°)</p>
+                    <p>&nbsp;&nbsp;- <em>sp<sup>2</sup>:</em> Trigonal Planar (120°)</p>
+                    <p>&nbsp;&nbsp;- <em>sp<sup>3</sup>:</em> Tetrahedral (109.5°)</p>
+                    <p>&nbsp;&nbsp;- <em>sp<sup>3</sup>d:</em> Trigonal Bipyramidal (axial bonds longer than equatorial)</p>
+                    <p>&nbsp;&nbsp;- <em>sp<sup>3</sup>d<sup>2</sup>:</em> Octahedral</p>
+                </div>
+            </div>
+
+            <div id="topic4">
+                <h2>4. Molecular Orbital Theory (MOT) & Hydrogen Bonding</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Molecular Orbital Theory (MOT):</strong> Linear Combination of Atomic Orbitals (LCAO) forms Bonding Molecular Orbitals (BMO, lower energy) and Antibonding Molecular Orbitals (ABMO, higher energy).</p>
+                    <p>• <strong>Bond Order (B.O.):</strong> B.O. = 1/2 (N<sub>b</sub> - N<sub>a</sub>). Higher B.O. means greater bond stability and bond energy, and shorter bond length.</p>
+                    <p>&nbsp;&nbsp;- If B.O. > 0, molecule is stable. If B.O. = 0, molecule does not exist (e.g., He<sub>2</sub>).</p>
+                    <p>&nbsp;&nbsp;- <em>Magnetic Behaviour:</em> Unpaired electrons = Paramagnetic; All electrons paired = Diamagnetic.</p>
+                    <p>• <strong>Hydrogen Bonding:</strong> Electrostatic force of attraction between a hydrogen atom covalently bonded to a highly electronegative atom (F, O, N) and another electronegative atom.</p>
+                    <p>&nbsp;&nbsp;- <em>Intermolecular H-bond:</em> Between different molecules (e.g., H<sub>2</sub>O, HF, NH<sub>3</sub>) - increases boiling point.</p>
+                    <p>&nbsp;&nbsp;- <em>Intramolecular H-bond:</em> Within the same molecule (e.g., o-nitrophenol).</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Use the VSEPR model to predict the shapes of the following species: (i) BeCl<sub>2</sub>, (ii) BCl<sub>3</sub>, (iii) SiCl<sub>4</sub>, (iv) AsF<sub>5</sub>, (v) H<sub>2</sub>S.</div>
+            <div class="answer">
+                <strong>Answer:</strong>
+                <p><strong>(i) BeCl<sub>2</sub>:</strong> Central atom Be has 2 valence electrons, forms 2 bond pairs with Cl and has 0 lone pairs. Geometry: <strong>Linear</strong> (180°).</p>
+                <p><strong>(ii) BCl<sub>3</sub>:</strong> Central atom B has 3 valence electrons, forms 3 bond pairs with Cl and has 0 lone pairs. Geometry: <strong>Trigonal Planar</strong> (120°).</p>
+                <p><strong>(iii) SiCl<sub>4</sub>:</strong> Central atom Si has 4 valence electrons, forms 4 bond pairs with Cl and has 0 lone pairs. Geometry: <strong>Tetrahedral</strong> (109.5°).</p>
+                <p><strong>(iv) AsF<sub>5</sub>:</strong> Central atom As has 5 valence electrons, forms 5 bond pairs with F and has 0 lone pairs. Geometry: <strong>Trigonal Bipyramidal</strong>.</p>
+                <p><strong>(v) H<sub>2</sub>S:</strong> Central atom S has 6 valence electrons, forms 2 bond pairs with H and has 2 lone pairs. Geometry: <strong>Bent / V-shaped</strong> (approx 92.2° due to lone pair repulsion).</p>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: Write the Lewis dot structures for the following atoms and ions: Al, Al<sup>3+</sup>, O, O<sup>2-</sup>, N, and N<sup>3-</sup>.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • <strong>Al (Aluminum, Z=13):</strong> Valence electrons = 3. Lewis structure: <strong>•Al:</strong> (or three dots around Al).<br>
+                • <strong>Al<sup>3+</sup>:</strong> Loses 3 electrons. Symbol: <strong>[Al]<sup>3+</sup></strong> (no dots).<br>
+                • <strong>O (Oxygen, Z=8):</strong> Valence electrons = 6. Lewis structure: <strong>:O:</strong> with 2 lone pairs and 2 single dots.<br>
+                • <strong>O<sup>2-</sup>:</strong> Gains 2 electrons, completing octet. Symbol: <strong>[:O:]<sup>2-</sup></strong> (8 dots inside brackets).<br>
+                • <strong>N (Nitrogen, Z=7):</strong> Valence electrons = 5. Lewis structure: <strong>:N:</strong> with 1 lone pair and 3 single dots.<br>
+                • <strong>N<sup>3-</sup>:</strong> Gains 3 electrons, completing octet. Symbol: <strong>[:N:]<sup>3-</sup></strong> (8 dots inside brackets).
+            </div>
+
+            <div class="question">Q2: Calculate the bond order of O<sub>2</sub>, O<sub>2</sub><sup>+</sup>, O<sub>2</sub><sup>-</sup>, and O<sub>2</sub><sup>2-</sup> using Molecular Orbital Theory and compare their stability.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Total electrons in O<sub>2</sub> = 16.<br>
+                MO Electronic Configuration for O<sub>2</sub> (16 e<sup>-</sup>):<br>
+                σ1s<sup>2</sup> σ*1s<sup>2</sup> σ2s<sup>2</sup> σ*2s<sup>2</sup> σ2p<sub>z</sub><sup>2</sup> (π2p<sub>x</sub><sup>2</sup> = π2p<sub>y</sub><sup>2</sup>) (π*2p<sub>x</sub><sup>1</sup> = π*2p<sub>y</sub><sup>1</sup>)<br><br>
+
+                <strong>Calculation of Bond Orders:</strong><br>
+                • <strong>O<sub>2</sub> (16 e<sup>-</sup>):</strong> N<sub>b</sub> = 10, N<sub>a</sub> = 6 → Bond Order = 1/2 (10 - 6) = <strong>2.0</strong><br>
+                • <strong>O<sub>2</sub><sup>+</sup> (15 e<sup>-</sup>):</strong> Remove 1 e<sup>-</sup> from ABMO → N<sub>b</sub> = 10, N<sub>a</sub> = 5 → Bond Order = 1/2 (10 - 5) = <strong>2.5</strong><br>
+                • <strong>O<sub>2</sub><sup>-</sup> (17 e<sup>-</sup>):</strong> Add 1 e<sup>-</sup> to ABMO → N<sub>b</sub> = 10, N<sub>a</sub> = 7 → Bond Order = 1/2 (10 - 7) = <strong>1.5</strong><br>
+                • <strong>O<sub>2</sub><sup>2-</sup> (18 e<sup>-</sup>):</strong> Add 2 e<sup>-</sup> to ABMO → N<sub>b</sub> = 10, N<sub>a</sub> = 8 → Bond Order = 1/2 (10 - 8) = <strong>1.0</strong><br><br>
+
+                <strong>Order of Stability:</strong><br>
+                Stability is directly proportional to Bond Order:<br>
+                <strong>O<sub>2</sub><sup>+</sup> (2.5) &gt; O<sub>2</sub> (2.0) &gt; O<sub>2</sub><sup>-</sup> (1.5) &gt; O<sub>2</sub><sup>2-</sup> (1.0)</strong>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Chemistry</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 chemistry notes1">Ch 1: Some Basic Concepts of Chemistry</a></li>
+                    <li><a href="class 11 chemistry notes2">Ch 2: Structure of Atom</a></li>
+                    <li><a href="class 11 chemistry notes3">Ch 3: Classification of Elements & Periodicity</a></li>
+                    <li class="active"><a href="class 11 chemistry notes4">Ch 4: Chemical Bonding & Molecular Structure</a></li>
+                    <li><a href="class 11 chemistry notes5">Ch 5: Chemical Thermodynamics</a></li>
+                    <li><a href="class 11 chemistry notes6">Ch 6: Equilibrium</a></li>
+                    <li><a href="class 11 chemistry notes7">Ch 7: Redox Reactions</a></li>
+                    <li><a href="class 11 chemistry notes8">Ch 8: Organic Chemistry - Basic Principles</a></li>
+                    <li><a href="class 11 chemistry notes9">Ch 9: Hydrocarbons</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

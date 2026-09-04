@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poverty as a Challenge · Class 9 Social Science</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Roboto, sans-serif; 
+      background: #f0f7f4; 
+      color: #1e3a2e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 920px; margin: 0 auto; padding: 0 25px; }
+
+    .header { 
+      background: white; 
+      padding: 22px 0; 
+      border-bottom: 4px solid #2d6a4f; 
+      margin-bottom: 35px; 
+    }
+    .header h1 { font-size: 1.8rem; color: #2d6a4f; }
+    .header h1 span { color: #1e4a76; }
+    .back-link { 
+      display: inline-block; 
+      margin-top: 10px; 
+      color: #2d6a4f; 
+      text-decoration: none; 
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .test-info {
+      background: white;
+      border-radius: 18px;
+      border: 1px solid #c8e6d9;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .test-info .subject { font-weight: 700; color: #2d6a4f; font-size: 1.2rem; }
+    .test-info .total-q { background: #e6f7ee; padding: 6px 18px; border-radius: 30px; font-size: 0.95rem; font-weight: 600; }
+
+    .progress-container {
+      background: #e9ecef;
+      border-radius: 30px;
+      height: 12px;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #2d6a4f;
+      border-radius: 30px;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    .question-card {
+      background: white;
+      border-radius: 24px;
+      border: 1px solid #c8e6d9;
+      padding: 40px 45px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+    .q-number {
+      font-size: 0.95rem;
+      color: #888;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+    .q-text {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .option {
+      background: #f8fafc;
+      border: 2px solid #e8ecf0;
+      padding: 16px 24px;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 1.05rem;
+      transition: all 0.2s;
+    }
+    .option:hover {
+      background: #e6f7ee;
+      border-color: #2d6a4f;
+    }
+    .option.selected {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.correct-answer {
+      background: #dcfce7;
+      border-color: #2d6a4f;
+    }
+    .option.wrong-answer {
+      background: #fee2e2;
+      border-color: #b91c1c;
+    }
+    .option.disabled {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .feedback-box {
+      margin-top: 25px;
+      padding: 18px 22px;
+      border-radius: 14px;
+      display: none;
+    }
+    .feedback-box.show {
+      display: block;
+    }
+    .feedback-box.correct {
+      background: #dcfce7;
+      border-left: 5px solid #2d6a4f;
+    }
+    .feedback-box.wrong {
+      background: #fee2e2;
+      border-left: 5px solid #b91c1c;
+    }
+    .feedback-box .exp {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .btn {
+      padding: 14px 38px;
+      border: none;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary {
+      background: #2d6a4f;
+      color: white;
+    }
+    .btn-primary:hover { background: #1f4d39; }
+    .btn-success {
+      background: #1e4a76;
+      color: white;
+    }
+    .btn-success:hover { background: #163a5c; }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #333;
+    }
+    .btn-secondary:hover { background: #cbd5e1; }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .result-card {
+      background: white;
+      border-radius: 24px;
+      border: 1px solid #c8e6d9;
+      padding: 45px;
+      text-align: center;
+      display: none;
+    }
+    .result-card.show { display: block; }
+    .result-score {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #2d6a4f;
+      margin: 15px 0;
+    }
+    .result-percent {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1e4a76;
+    }
+    .result-msg {
+      background: #f1f5f9;
+      padding: 18px;
+      border-radius: 14px;
+      margin: 25px 0;
+      font-size: 1.1rem;
+    }
+    .result-detail {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 25px 0;
+    }
+    .result-detail .stat {
+      background: #f8fafc;
+      padding: 15px;
+      border-radius: 14px;
+    }
+    .result-detail .stat .num { font-size: 1.8rem; font-weight: 700; }
+    .result-detail .stat.correct .num { color: #2d6a4f; }
+    .result-detail .stat.wrong .num { color: #b91c1c; }
+    .result-detail .stat.skip .num { color: #f59e0b; }
+
+    .other-tests {
+      background: white;
+      border-radius: 18px;
+      border: 1px solid #c8e6d9;
+      padding: 25px 30px;
+      margin-top: 30px;
+    }
+    .other-tests h3 { color: #2d6a4f; margin-bottom: 15px; font-size: 1.1rem; }
+    .test-links { display: flex; flex-wrap: wrap; gap: 15px; }
+    .test-links a {
+      background: #e6f7ee;
+      padding: 10px 22px;
+      border-radius: 30px;
+      color: #2d6a4f;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .test-links a:hover { background: #2d6a4f; color: white; }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 35px 0 20px;
+      margin-top: auto;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      .question-card { padding: 25px 20px; }
+      .result-detail { grid-template-columns: 1fr; }
+      .nav-buttons { flex-direction: column; }
+      .btn { width: 100%; text-align: center; }
+      .q-text { font-size: 1.1rem; }
+      .option { font-size: 0.95rem; padding: 14px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 9 <span>Social Science</span></h1>
+    <a href="class 9 social science.html" class="back-link">← Back to Economics chapters</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="test-info">
+    <span class="subject"> Poverty as a Challenge (Economics)</span>
+    <span class="total-q">10 Questions</span>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="question-card" id="questionCard">
+    <div class="q-number" id="qNumber">Question 1 of 10</div>
+    <div class="q-text" id="qText">Loading question...</div>
+    <div class="options" id="optionsContainer"></div>
+    <div class="feedback-box" id="feedbackBox">
+      <div id="feedbackText"></div>
+      <div class="exp" id="feedbackExp"></div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+      <button class="btn btn-primary" id="nextBtn">Next</button>
+      <button class="btn btn-success" id="submitBtn" style="display:none;">Submit Test</button>
+    </div>
+  </div>
+
+  <div class="result-card" id="resultCard">
+    <h2>Test Completed</h2>
+    <div class="result-score" id="resultScore">0/10</div>
+    <div class="result-percent" id="resultPercent">0%</div>
+    <div class="result-msg" id="resultMsg">Keep practicing!</div>
+    <div class="result-detail">
+      <div class="stat correct"><div class="num" id="correctCount">0</div><div>Correct</div></div>
+      <div class="stat wrong"><div class="num" id="wrongCount">0</div><div>Wrong</div></div>
+      <div class="stat skip"><div class="num" id="skipCount">0</div><div>Not Answered</div></div>
+    </div>
+    <div style="display: flex; gap: 18px; justify-content: center; flex-wrap: wrap;">
+      <button class="btn btn-success" onclick="location.reload()">Retake Test</button>
+      <button class="btn btn-primary" onclick="location.href='#'">Back to Chapters</button>
+    </div>
+  </div>
+
+  <div class="other-tests">
+    <h3>📚 Other Economics Tests</h3>
+    <div class="test-links">
+      <a href="the story of village.html">The Story of Village Palampur</a>
+      <a href="people as source.html">People as Resource</a>
+      <a href="food security in india.html">Food Security in India</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    Copyright 2025 Examora Education Private Limited. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  // ============================================================
+  // CHAPTER 19: POVERTY AS A CHALLENGE (10 QUESTIONS)
+  // ============================================================
+  const questions = [
+    {
+      text: "What is poverty?",
+      options: ["Lack of money", "Lack of food", "Lack of shelter", "All of the above"],
+      correct: 3,
+      explanation: "Poverty is a state of deprivation where people lack money, food, shelter, and other basic necessities."
+    },
+    {
+      text: "What is the poverty line?",
+      options: ["A line on a map", "A benchmark to measure poverty", "A line of people", "A type of food"],
+      correct: 1,
+      explanation: "The poverty line is a benchmark used to measure poverty, based on income or consumption levels."
+    },
+    {
+      text: "What is the current poverty line in India based on?",
+      options: ["Monthly income", "Daily calorie intake", "Annual savings", "Land ownership"],
+      correct: 1,
+      explanation: "The poverty line in India is based on daily calorie intake (2400 calories in rural areas and 2100 in urban areas)."
+    },
+    {
+      text: "Which state has the highest poverty rate in India?",
+      options: ["Bihar", "Uttar Pradesh", "Odisha", "Rajasthan"],
+      correct: 0,
+      explanation: "Bihar has the highest poverty rate in India, with a significant portion of its population below the poverty line."
+    },
+    {
+      text: "What is the main cause of poverty in India?",
+      options: ["Unemployment", "Low education", "High population growth", "All of the above"],
+      correct: 3,
+      explanation: "Poverty in India is caused by multiple factors including unemployment, low education, and high population growth."
+    },
+    {
+      text: "What is the role of the government in reducing poverty?",
+      options: ["Providing subsidies", "Creating jobs", "Improving education", "All of the above"],
+      correct: 3,
+      explanation: "The government plays a role in reducing poverty through subsidies, job creation, and education improvement."
+    },
+    {
+      text: "What is the term for the government's program to reduce poverty?",
+      options: ["Poverty alleviation", "Poverty increase", "Poverty promotion", "Poverty maintenance"],
+      correct: 0,
+      explanation: "Poverty alleviation refers to government programs aimed at reducing poverty."
+    },
+    {
+      text: "Which of the following is NOT a characteristic of poverty?",
+      options: ["Lack of food", "Lack of shelter", "High income", "Lack of education"],
+      correct: 2,
+      explanation: "High income is not a characteristic of poverty; poverty is characterized by lack of basic necessities."
+    },
+    {
+      text: "What is the impact of poverty on children?",
+      options: ["Poor nutrition", "Lack of education", "Poor health", "All of the above"],
+      correct: 3,
+      explanation: "Poverty affects children through poor nutrition, lack of education, and poor health."
+    },
+    {
+      text: "What is the global poverty line?",
+      options: ["$1.90 per day", "$2.50 per day", "$5.00 per day", "$10.00 per day"],
+      correct: 0,
+      explanation: "The global poverty line is set at $1.90 per day (in 2011 PPP), as defined by the World Bank."
+    }
+  ];
+
+  // ---------- state ----------
+  let currentIndex = 0;
+  let userAnswers = new Array(questions.length).fill(null);
+  let answered = new Array(questions.length).fill(false);
+  let testCompleted = false;
+
+  // ---------- DOM refs ----------
+  const qNumber = document.getElementById('qNumber');
+  const qText = document.getElementById('qText');
+  const optionsContainer = document.getElementById('optionsContainer');
+  const feedbackBox = document.getElementById('feedbackBox');
+  const feedbackText = document.getElementById('feedbackText');
+  const feedbackExp = document.getElementById('feedbackExp');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const submitBtn = document.getElementById('submitBtn');
+  const progressBar = document.getElementById('progressBar');
+  const questionCard = document.getElementById('questionCard');
+  const resultCard = document.getElementById('resultCard');
+
+  // ---------- render ----------
+  function renderQuestion(index) {
+    const q = questions[index];
+    qNumber.textContent = `Question ${index + 1} of ${questions.length}`;
+    qText.textContent = q.text;
+
+    let optHtml = '';
+    for (let i = 0; i < q.options.length; i++) {
+      let cls = 'option';
+      if (answered[index]) {
+        cls += ' disabled';
+        if (i === q.correct) cls += ' correct-answer';
+        if (userAnswers[index] === i && i !== q.correct) cls += ' wrong-answer';
+        if (userAnswers[index] === i) cls += ' selected';
+      }
+      const label = ['(a) ', '(b) ', '(c) ', '(d) '][i] || '';
+      optHtml += `<div class="${cls}" data-opt="${i}">${label}${q.options[i]}</div>`;
+    }
+    optionsContainer.innerHTML = optHtml;
+
+    if (answered[index]) {
+      showFeedback(index);
+    } else {
+      feedbackBox.classList.remove('show', 'correct', 'wrong');
+    }
+
+    prevBtn.disabled = (index === 0);
+    if (index === questions.length - 1) {
+      nextBtn.style.display = 'none';
+      submitBtn.style.display = 'inline-block';
+    } else {
+      nextBtn.style.display = 'inline-block';
+      submitBtn.style.display = 'none';
+    }
+
+    let answeredCount = answered.filter(a => a === true).length;
+    let progress = (answeredCount / questions.length) * 100;
+    progressBar.style.width = progress + '%';
+
+    // attach click events to options (only if not answered)
+    if (!answered[index]) {
+      document.querySelectorAll('.option').forEach(opt => {
+        opt.addEventListener('click', function() {
+          if (answered[currentIndex]) return;
+          const selected = parseInt(this.dataset.opt);
+          userAnswers[currentIndex] = selected;
+          answered[currentIndex] = true;
+          renderQuestion(currentIndex);
+        });
+      });
+    }
+  }
+
+  function showFeedback(index) {
+    const q = questions[index];
+    const ans = userAnswers[index];
+    const isCorrect = (ans === q.correct);
+    
+    feedbackBox.className = 'feedback-box show';
+    if (isCorrect) {
+      feedbackBox.classList.add('correct');
+      feedbackText.textContent = '✅ Correct!';
+    } else {
+      feedbackBox.classList.add('wrong');
+      feedbackText.textContent = '❌ Incorrect. The correct answer is: ' + ['(a)', '(b)', '(c)', '(d)'][q.correct];
+    }
+    feedbackExp.textContent = '💡 ' + q.explanation;
+  }
+
+  // ---------- navigation ----------
+  function goToNext() {
+    if (currentIndex < questions.length - 1) {
+      currentIndex++;
+      renderQuestion(currentIndex);
+      document.getElementById('questionCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function goToPrev() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      renderQuestion(currentIndex);
+    }
+  }
+
+  // ---------- submit ----------
+  function submitTest() {
+    let allAnswered = answered.every(a => a === true);
+    let skipCount = answered.filter(a => a === false).length;
+
+    if (!allAnswered) {
+      if (!confirm(`⚠️ You have ${skipCount} question(s) not answered. Submit anyway?`)) {
+        return;
+      }
+    }
+
+    testCompleted = true;
+    let correct = 0, wrong = 0, skipped = 0;
+
+    for (let i = 0; i < questions.length; i++) {
+      if (!answered[i]) skipped++;
+      else if (userAnswers[i] === questions[i].correct) correct++;
+      else wrong++;
+    }
+
+    questionCard.style.display = 'none';
+    resultCard.classList.add('show');
+    document.getElementById('resultScore').textContent = `${correct}/${questions.length}`;
+    let percent = Math.round((correct / questions.length) * 100);
+    document.getElementById('resultPercent').textContent = percent + '%';
+    document.getElementById('correctCount').textContent = correct;
+    document.getElementById('wrongCount').textContent = wrong;
+    document.getElementById('skipCount').textContent = skipped;
+
+    let msg = '';
+    if (percent >= 80) msg = '🌟 Excellent! You have a strong understanding of poverty as a challenge.';
+    else if (percent >= 60) msg = '👍 Good. Review the questions you missed.';
+    else if (percent >= 40) msg = '📖 Read the chapter again and try once more.';
+    else msg = '🔁 Re-read the chapter and retry the test.';
+    document.getElementById('resultMsg').textContent = msg;
+
+    resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ---------- event listeners ----------
+  prevBtn.addEventListener('click', goToPrev);
+  nextBtn.addEventListener('click', goToNext);
+  submitBtn.addEventListener('click', submitTest);
+
+  // keyboard support
+  document.addEventListener('keydown', (e) => {
+    if (testCompleted) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      if (currentIndex === questions.length - 1) {
+        submitTest();
+      } else {
+        goToNext();
+      }
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      goToPrev();
+    }
+  });
+
+  // start
+  renderQuestion(0);
+</script>
+</body>
+</html>

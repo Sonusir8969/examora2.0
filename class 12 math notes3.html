@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Mathematics Chapter 3 Matrices</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <div class="main-container">
+
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Mathematics Chapter 3 Matrices</h1>
+
+            <p>NCERT Solutions for Class 12 Mathematics Chapter 3 Matrices covers the definitions and types of matrices, operations such as addition and multiplication, symmetric and skew-symmetric matrices, and elementary operations used to find the inverse of a matrix.</p>
+
+            <h2>Overview of Topics &amp; Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Types and Operations on Matrices</a></li>
+                    <li><a href="#topic2">2. Transpose, Symmetric and Skew-Symmetric Matrices</a></li>
+                    <li><a href="#topic3">3. Elementary Operations and Inverse of a Matrix</a></li>
+                </ul>
+            </div>
+
+            <div id="topic1">
+                <h2>1. Types and Operations on Matrices</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; Matrices are classified by their order and structure into row, column, square, diagonal, scalar, and identity matrices, each with distinct properties.</p>
+                    <p>&bull; Matrix addition and subtraction require matrices of the same order, while matrix multiplication requires the number of columns of the first matrix to equal the number of rows of the second.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Transpose, Symmetric and Skew-Symmetric Matrices</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; The transpose of a matrix A, denoted A', is obtained by interchanging its rows and columns; A is <strong>symmetric</strong> if A = A' and <strong>skew-symmetric</strong> if A' = -A.</p>
+                    <p>&bull; Any square matrix A can always be expressed as the sum of a symmetric matrix &frac12;(A + A') and a skew-symmetric matrix &frac12;(A - A').</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Elementary Operations and Inverse of a Matrix</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; Elementary row/column operations &mdash; swapping rows, multiplying a row by a nonzero scalar, or adding a multiple of one row to another &mdash; are used to simplify matrices and find inverses.</p>
+                    <p>&bull; A square matrix A has an inverse only if it is non-singular (|A| &ne; 0); the inverse can be computed using elementary operations or the adjoint method.</p>
+                </div>
+            </div>
+
+            <h2>NCERT Textbook Exercise Questions</h2>
+
+            <div class="question">When are two matrices said to be equal?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Two matrices are said to be equal if and only if they have the same order (the same number of rows and columns) and all of their corresponding elements are identical. Even if two matrices contain the same numbers arranged differently, or have different orders, they are not considered equal.
+            </div>
+
+            <div class="question">If A is a square matrix, show that A + A' is always symmetric.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Consider the transpose of (A + A'), which equals A' + (A')' by the property of transposes distributing over addition. Since (A')' = A, this simplifies to A' + A, which is the same as the original expression A + A'. Since the matrix equals its own transpose, A + A' is symmetric for any square matrix A.
+            </div>
+
+            <div class="question">What condition must be satisfied for a matrix to have a multiplicative inverse?</div>
+            <div class="answer">
+                <strong>Answer:</strong> A square matrix A has a multiplicative inverse if and only if it is non-singular, meaning its determinant |A| is not equal to zero. If |A| = 0, the matrix is called singular, and no inverse exists because the formula A&#8315;&sup1; = (1/|A|) adj A would involve division by zero.
+            </div>
+
+            <div class="question">What is the significance of elementary row operations in solving matrix problems?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Elementary row operations allow a matrix to be systematically simplified without altering the underlying system of equations it represents, making them useful for finding the rank of a matrix, solving systems of linear equations, and computing the inverse of a matrix. They include interchanging two rows, multiplying a row by a nonzero constant, and adding a multiple of one row to another.
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Mathematics Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 math notes1.html">Ch 1: Relations and Functions</a></li>
+                    <li><a href="class 12 math notes2.html">Ch 2: Inverse Trigonometric Functions</a></li>
+                    <li class="active"><a href="class 12 math notes3.html">Ch 3: Matrices</a></li>
+                    <li><a href="class 12 math notes4.html">Ch 4: Determinants</a></li>
+                    <li><a href="class 12 math notes5.html">Ch 5: Continuity and Differentiability</a></li>
+                    <li><a href="class 12 math notes6.html">Ch 6: Application of Derivatives</a></li>
+                    <li><a href="class 12 math notes7.html">Ch 7: Integrals</a></li>
+                    <li><a href="class 12 math notes8.html">Ch 8: Application of Integrals</a></li>
+                    <li><a href="class 12 math notes9.html">Ch 9: Differential Equations</a></li>
+                    <li><a href="class 12 math notes10.html">Ch 10: Vector Algebra</a></li>
+                    <li><a href="class 12 math notes11.html">Ch 11: Three Dimensional Geometry</a></li>
+                    <li><a href="class 12 math notes12.html">Ch 12: Linear Programming</a></li>
+                    <li><a href="class 12 math notes13.html">Ch 13: Probability</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

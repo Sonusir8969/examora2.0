@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Class 11 Science Chapter-wise Solutions & Notes | Examora</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .intro-box {
+            background-color: #eef6fc;
+            border-left: 4px solid #11426b;
+            padding: 15px 20px;
+            margin: 15px 0 25px 0;
+            border-radius: 4px;
+        }
+        .subject-unit-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .subject-unit-card h3 {
+            color: #11426b;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
+        }
+        .chapter-btn {
+            display: block;
+            background-color: #f8f9fa;
+            border: 1px solid #d0d7de;
+            border-radius: 5px;
+            padding: 10px 12px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .chapter-btn:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            border-color: #3498db;
+            text-decoration: none;
+        }
+        .exam-tips-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #27ae60; 
+            padding: 15px 20px; 
+            border-radius: 5px; 
+            margin: 20px 0; 
+        }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-subtitle {
+            font-size: 14px;
+            color: #1b7a53;
+            margin: 12px 0 6px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 8px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 13px;
+            display: block;
+            padding: 5px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 11 Science (All Subjects & Chapters Index)</h1>
+
+            <div class="intro-box">
+                <p><strong>Welcome to Class 11 Science Master Portal!</strong></p>
+                <p>Access comprehensive NCERT rationalized syllabus notes, solved textbook exercises, derivations, chemical mechanisms, numerical problems, and objective questions for Physics, Chemistry, and Biology.</p>
+            </div>
+
+            <h2>Chapter Directory by Subject</h2>
+
+            <!-- Physics Unit -->
+            <div class="subject-unit-card">
+                <h3>Class 11 Physics (NCERT)</h3>
+                <div class="chapter-grid">
+                    <a href="class 11 physics notes1" class="chapter-btn">Ch 1: Units and Measurements</a>
+                    <a href="class 11 physics notes2" class="chapter-btn">Ch 2: Motion in a Straight Line</a>
+                    <a href="class 11 physics notes3" class="chapter-btn">Ch 3: Motion in a Plane</a>
+                    <a href="class 11 physics notes4" class="chapter-btn">Ch 4: Laws of Motion</a>
+                    <a href="class 11 physics notes5" class="chapter-btn">Ch 5: Work, Energy and Power</a>
+                    <a href="class 11 physics notes6" class="chapter-btn">Ch 6: System of Particles & Rotational Motion</a>
+                    <a href="class 11 physics notes7" class="chapter-btn">Ch 7: Gravitation</a>
+                    <a href="class 11 physics notes8" class="chapter-btn">Ch 8: Mechanical Properties of Solids</a>
+                    <a href="class 11 physics notes9" class="chapter-btn">Ch 9: Mechanical Properties of Fluids</a>
+                    <a href="class 11 physics notes10" class="chapter-btn">Ch 10: Thermal Properties of Matter</a>
+                    <a href="class 11 physics notes11" class="chapter-btn">Ch 11: Thermodynamics</a>
+                    <a href="class 11 physics notes12" class="chapter-btn">Ch 12: Kinetic Theory</a>
+                    <a href="class 11 physics notes13" class="chapter-btn">Ch 13: Oscillations</a>
+                    <a href="class 11 physics notes14" class="chapter-btn">Ch 14: Waves</a>
+                </div>
+            </div>
+
+            <!-- Chemistry Unit -->
+            <div class="subject-unit-card">
+                <h3>Class 11 Chemistry (NCERT)</h3>
+                <div class="chapter-grid">
+                    <a href="class 11 chemistry notes1" class="chapter-btn">Ch 1: Some Basic Concepts of Chemistry</a>
+                    <a href="class 11 chemistry notes2" class="chapter-btn">Ch 2: Structure of Atom</a>
+                    <a href="class 11 chemistry notes3" class="chapter-btn">Ch 3: Classification of Elements & Periodicity</a>
+                    <a href="class 11 chemistry notes4" class="chapter-btn">Ch 4: Chemical Bonding & Molecular Structure</a>
+                    <a href="class 11 chemistry notes5" class="chapter-btn">Ch 5: Chemical Thermodynamics</a>
+                    <a href="class 11 chemistry notes6" class="chapter-btn">Ch 6: Equilibrium</a>
+                    <a href="class 11 chemistry notes7" class="chapter-btn">Ch 7: Redox Reactions</a>
+                    <a href="class 11 chemistry notes8" class="chapter-btn">Ch 8: Organic Chemistry – Basic Principles & Techniques</a>
+                    <a href="class 11 chemistry notes9" class="chapter-btn">Ch 9: Hydrocarbons</a>
+                </div>
+            </div>
+
+            <!-- Biology Unit -->
+            <div class="subject-unit-card">
+                <h3>Class 11 Biology (NCERT)</h3>
+                <div class="chapter-grid">
+                    <a href="class 11 biology notes1" class="chapter-btn">Ch 1: The Living World</a>
+                    <a href="class 11 biology notes2" class="chapter-btn">Ch 2: Biological Classification</a>
+                    <a href="class 11 biology notes3" class="chapter-btn">Ch 3: Plant Kingdom</a>
+                    <a href="class 11 biology notes4" class="chapter-btn">Ch 4: Animal Kingdom</a>
+                    <a href="class 11 biology notes5" class="chapter-btn">Ch 5: Morphology of Flowering Plants</a>
+                    <a href="class 11 biology notes6" class="chapter-btn">Ch 6: Anatomy of Flowering Plants</a>
+                    <a href="class 11 biology notes7" class="chapter-btn">Ch 7: Structural Organisation in Animals</a>
+                    <a href="class 11 biology notes8" class="chapter-btn">Ch 8: Cell: The Unit of Life</a>
+                    <a href="class 11 biology notes9" class="chapter-btn">Ch 9: Biomolecules</a>
+                    <a href="class 11 biology notes10" class="chapter-btn">Ch 10: Cell Cycle and Cell Division</a>
+                    <a href="class 11 biology notes11" class="chapter-btn">Ch 11: Photosynthesis in Higher Plants</a>
+                    <a href="class 11 biology notes12" class="chapter-btn">Ch 12: Respiration in Plants</a>
+                    <a href="class 11 biology notes13" class="chapter-btn">Ch 13: Plant Growth and Development</a>
+                    <a href="class 11 biology notes14" class="chapter-btn">Ch 14: Breathing and Exchange of Gases</a>
+                    <a href="class 11 biology notes15" class="chapter-btn">Ch 15: Body Fluids and Circulation</a>
+                    <a href="class 11 biology notes16" class="chapter-btn">Ch 16: Excretory Products and Their Elimination</a>
+                    <a href="class 11 biology notes17" class="chapter-btn">Ch 17: Locomotion and Movement</a>
+                    <a href="class 11 biology notes18" class="chapter-btn">Ch 18: Neural Control and Coordination</a>
+                    <a href="class 11 biology notes19" class="chapter-btn">Ch 19: Chemical Coordination and Integration</a>
+                </div>
+            </div>
+
+            <h2>Class 11 Science Exam Strategy & Tips</h2>
+            <div class="exam-tips-box">
+                <p><strong>Key Tips for Board & Competitive Exams (JEE / NEET):</strong></p>
+                <p>• <strong>Physics:</strong> Focus heavily on vector algebra, free-body diagrams in Mechanics, rotational dynamics derivations, and thermodynamic processes.</p>
+                <p>• <strong>Chemistry:</strong> Master mole concepts, quantum numbers, hybridization, IUPAC nomenclature, electronic effects (Inductive, Resonance, Hyperconjugation), and reaction mechanisms.</p>
+                <p>• <strong>Biology:</strong> Memorize NCERT diagrams and tables thoroughly, especially for Biological Classification, Plant/Animal Kingdom, Cell Biology, and Human Physiology.</p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 11 Quick Links</h3>
+                
+                <div class="sidebar-subtitle">Physics</div>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 physics notes1">Ch 1: Units & Measurements</a></li>
+                    <li><a href="class 11 physics notes2">Ch 2: Motion in a Straight Line</a></li>
+                    <li><a href="class 11 physics notes3">Ch 3: Motion in a Plane</a></li>
+                    <li><a href="class 11 physics notes4">Ch 4: Laws of Motion</a></li>
+                    <li><a href="class 11 physics notes5">Ch 5: Work, Energy & Power</a></li>
+                    <li><a href="class 11 physics notes6">Ch 6: Rotational Motion</a></li>
+                    <li><a href="class 11 physics notes7">Ch 7: Gravitation</a></li>
+                    <li><a href="class 11 physics notes8">Ch 8: Properties of Solids</a></li>
+                    <li><a href="class 11 physics notes9">Ch 9: Properties of Fluids</a></li>
+                    <li><a href="class 11 physics notes10">Ch 10: Thermal Properties</a></li>
+                    <li><a href="class 11 physics notes11">Ch 11: Thermodynamics</a></li>
+                    <li><a href="class 11 physics notes12">Ch 12: Kinetic Theory</a></li>
+                    <li><a href="class 11 physics notes13">Ch 13: Oscillations</a></li>
+                    <li><a href="class 11 physics notes14">Ch 14: Waves</a></li>
+                </ul>
+
+                <div class="sidebar-subtitle">Chemistry</div>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 chemistry notes1">Ch 1: Basic Concepts</a></li>
+                    <li><a href="class 11 chemistry notes2">Ch 2: Structure of Atom</a></li>
+                    <li><a href="class 11 chemistry notes3">Ch 3: Periodic Classification</a></li>
+                    <li><a href="class 11 chemistry notes4">Ch 4: Chemical Bonding</a></li>
+                    <li><a href="class 11 chemistry notes5">Ch 5: Thermodynamics</a></li>
+                    <li><a href="class 11 chemistry notes6">Ch 6: Equilibrium</a></li>
+                    <li><a href="class 11 chemistry notes7">Ch 7: Redox Reactions</a></li>
+                    <li><a href="class 11 chemistry notes8">Ch 8: Organic Chemistry Principles</a></li>
+                    <li><a href="class 11 chemistry notes9">Ch 9: Hydrocarbons</a></li>
+                </ul>
+
+                <div class="sidebar-subtitle">Biology</div>
+                <ul class="sidebar-links">
+                    <li><a href="class 11 biology notes1">Ch 1: The Living World</a></li>
+                    <li><a href="class 11 biology notes2">Ch 2: Biological Classification</a></li>
+                    <li><a href="class 11 biology notes3">Ch 3: Plant Kingdom</a></li>
+                    <li><a href="class 11 biology notes4">Ch 4: Animal Kingdom</a></li>
+                    <li><a href="class 11 biology notes5">Ch 5: Plant Morphology</a></li>
+                    <li><a href="class 11 biology notes6">Ch 6: Plant Anatomy</a></li>
+                    <li><a href="class 11 biology notes7">Ch 7: Animal Organisation</a></li>
+                    <li><a href="class 11 biology notes8">Ch 8: Cell: Unit of Life</a></li>
+                    <li><a href="class 11 biology notes9">Ch 9: Biomolecules</a></li>
+                    <li><a href="class 11 biology notes10">Ch 10: Cell Division</a></li>
+                    <li><a href="class 11 biology notes11">Ch 11: Photosynthesis</a></li>
+                    <li><a href="class 11 biology notes12">Ch 12: Plant Respiration</a></li>
+                    <li><a href="class 11 biology notes13">Ch 13: Plant Growth</a></li>
+                    <li><a href="class 11 biology notes14">Ch 14: Breathing & Gas Exchange</a></li>
+                    <li><a href="class 11 biology notes15">Ch 15: Body Fluids & Circulation</a></li>
+                    <li><a href="class 11 biology notes16">Ch 16: Excretory Products</a></li>
+                    <li><a href="class 11 biology notes17">Ch 17: Locomotion & Movement</a></li>
+                    <li><a href="class 11 biology notes18">Ch 18: Neural Control</a></li>
+                    <li><a href="class 11 biology notes19">Ch 19: Chemical Coordination</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

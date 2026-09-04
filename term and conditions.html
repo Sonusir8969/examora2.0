@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Terms & Conditions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .header {
+      background: white;
+      padding: 28px 0;
+      border-bottom: 3px solid #1e4a76;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      color: #1e4a76;
+      letter-spacing: -0.5px;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .header-sub {
+      color: #4a5b6e;
+      font-size: 1rem;
+      margin-top: 4px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #2f855a;
+    }
+
+    .content {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 24px 28px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .content-header .last-updated {
+      color: #4a5b6e;
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+
+    .content-body {
+      padding: 32px 28px;
+    }
+
+    .content-body h3 {
+      color: #1e4a76;
+      font-size: 1.2rem;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    .content-body h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .content-body p {
+      color: #4a5b6e;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .content-body ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+
+    .content-body ul li {
+      padding: 6px 0 6px 24px;
+      color: #4a5b6e;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    .content-body ul li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 14px;
+      width: 8px;
+      height: 8px;
+      background: #2f855a;
+      border-radius: 50%;
+    }
+
+    .highlight-box {
+      background: #f8fafc;
+      border-left: 4px solid #1e4a76;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-ref {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-top: 20px;
+    }
+
+    .contact-ref p {
+      margin-bottom: 4px;
+    }
+
+    .contact-ref a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .contact-ref a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 48px 0 24px;
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-col p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 6px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 24px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .header h1 {
+        font-size: 1.6rem;
+      }
+
+      .content-header {
+        padding: 16px 18px;
+      }
+
+      .content-header h2 {
+        font-size: 1.3rem;
+      }
+
+      .content-body {
+        padding: 20px 18px;
+      }
+
+      .content-body h3 {
+        font-size: 1.05rem;
+      }
+
+      .content-body p {
+        font-size: 0.9rem;
+      }
+
+      .content-body ul li {
+        font-size: 0.9rem;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.3rem;
+      }
+
+      .highlight-box {
+        padding: 12px 14px;
+      }
+
+      .contact-ref {
+        padding: 14px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Examora<span>.</span></h1>
+    <div class="header-sub">Practice. Perform. Progress.</div>
+    <a href="examora.html" class="back-link" id="backHome">← Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="content-header">
+      <h2>Terms & Conditions</h2>
+      <div class="last-updated">Last Updated: 1 January 2025</div>
+    </div>
+    <div class="content-body">
+      <p>
+        Welcome to Examora. By accessing and using our website and services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully before using our platform.
+      </p>
+
+      <h3>1. Acceptance of Terms</h3>
+      <p>
+        By using Examora, you agree to these Terms & Conditions. If you do not agree with any part of these terms, please do not use our services. We reserve the right to update or modify these terms at any time without prior notice.
+      </p>
+
+      <h3>2. User Accounts</h3>
+      <ul>
+        <li>You must provide accurate and complete information when creating an account</li>
+        <li>You are responsible for maintaining the confidentiality of your account credentials</li>
+        <li>You are solely responsible for all activities that occur under your account</li>
+        <li>You must notify us immediately of any unauthorized use of your account</li>
+        <li>We reserve the right to suspend or terminate accounts that violate our terms</li>
+      </ul>
+
+      <h3>3. Use of Services</h3>
+      <ul>
+        <li>Our services are for personal, non-commercial educational use only</li>
+        <li>You may not share your account with others</li>
+        <li>You may not use our content for commercial purposes without our permission</li>
+        <li>You must not attempt to hack, disrupt, or damage our platform</li>
+        <li>You must follow all applicable laws while using our services</li>
+      </ul>
+
+      <h3>4. Content and Intellectual Property</h3>
+      <div class="highlight-box">
+        <p>
+          All content on Examora, including test materials, question banks, and study resources, is our intellectual property. You may not copy, reproduce, distribute, or create derivative works from our content without our written permission.
+        </p>
+      </div>
+      <ul>
+        <li>Test questions and answers are prepared by our subject matter experts</li>
+        <li>Content is provided for educational purposes only</li>
+        <li>You may print or download content for personal study only</li>
+        <li>Commercial use of our content is strictly prohibited</li>
+      </ul>
+
+      <h3>5. User Conduct</h3>
+      <ul>
+        <li>Be respectful to other users and our team</li>
+        <li>Do not share false or misleading information</li>
+        <li>Do not attempt to cheat or manipulate test results</li>
+        <li>Do not post offensive, abusive, or inappropriate content</li>
+        <li>Do not use our platform for any illegal activities</li>
+      </ul>
+
+      <h3>6. Test Results and Performance</h3>
+      <ul>
+        <li>Test results are for practice and self-assessment only</li>
+        <li>We do not guarantee that practice scores will reflect actual board exam performance</li>
+        <li>Results are based on the answers you submit</li>
+        <li>We are not responsible for any decisions made based on practice test results</li>
+      </ul>
+
+      <h3>7. Disclaimer of Warranties</h3>
+      <div class="highlight-box">
+        <p>
+          Examora is provided "as is" without any warranties of any kind. We do not guarantee that our services will be uninterrupted, error-free, or completely accurate. We are not responsible for any technical issues that may affect your access to our platform.
+        </p>
+      </div>
+
+      <h3>8. Limitation of Liability</h3>
+      <ul>
+        <li>We are not liable for any direct, indirect, incidental, or consequential damages</li>
+        <li>We are not responsible for any loss of data or test results</li>
+        <li>We are not liable for any technical issues or service interruptions</li>
+        <li>We are not responsible for any damages arising from your use of our platform</li>
+      </ul>
+
+      <h3>9. Third-Party Links</h3>
+      <ul>
+        <li>Our platform may contain links to third-party websites</li>
+        <li>We do not endorse or take responsibility for third-party content</li>
+        <li>We are not responsible for the privacy practices of third-party sites</li>
+        <li>Access third-party links at your own risk</li>
+      </ul>
+
+      <h3>10. Termination</h3>
+      <ul>
+        <li>We reserve the right to terminate accounts for violation of these terms</li>
+        <li>You may delete your account at any time by contacting us</li>
+        <li>Upon termination, your access to the platform will be removed</li>
+        <li>We may retain certain data as required by law</li>
+      </ul>
+
+      <h3>11. Governing Law</h3>
+      <ul>
+        <li>These terms are governed by the laws of India</li>
+        <li>Any disputes shall be subject to the jurisdiction of courts in Jharkhand</li>
+        <li>We are committed to resolving disputes fairly and promptly</li>
+      </ul>
+
+      <h3>12. Changes to Terms</h3>
+      <ul>
+        <li>We may update these terms from time to time</li>
+        <li>We will notify you of significant changes</li>
+        <li>Continued use of our platform constitutes acceptance of updated terms</li>
+        <li>You are responsible for reviewing these terms periodically</li>
+      </ul>
+
+      <h3>13. Contact Us</h3>
+      <div class="contact-ref">
+        <p>If you have any questions about these Terms & Conditions, please contact us:</p>
+        <p><strong>Email:</strong> <a href="mailto:ansarisir210@gmail.com">ansarisir210@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:6200821665">6200821665</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html" id="aboutLink">About Us</a>
+        <a href="contact us examora.html" id="contactLink">Contact Us</a>
+        <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+        <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+      </div>
+    </div>
+    <div class="copyright">2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll to top when clicking "Terms & Conditions" while already on this page
+  document.getElementById("termsLink")?.addEventListener("click", function(e) {
+    if (window.location.pathname.endsWith("term%20and%20conditions.html") || window.location.pathname.endsWith("term and conditions.html")) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+</script>
+</body>
+</html>

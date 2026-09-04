@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 9 Maths Chapter 15 MCQs - JAC Board</title>
+    <meta name="description" content="JAC Board Class 9 Maths Chapter 15 Probability MCQ Questions with Answers and Explanations.">
+    <meta name="keywords" content="Class 9 Maths, JAC Board, Probability, NCERT, Class 9 Maths MCQ">
+    <style>
+        html, body { width: 100%; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; background-color: #f9fafc; color: #222; box-sizing: border-box; overflow-x: hidden; }
+        *, *::before, *::after { box-sizing: inherit; }
+        .page-container { max-width: 100%; padding: 16px 20px 40px 20px; background: #ffffff; }
+        .header-title { font-size: 22px; font-weight: 700; color: #1b5a55; margin: 0 0 8px 0; letter-spacing: -0.5px; }
+        .back-link { display: inline-block; font-size: 14px; color: #0e5a89; text-decoration: none; margin-bottom: 12px; }
+        .back-link:hover { text-decoration: underline; }
+        .divider-line { border: 0; height: 3px; background: #1a4875; margin: 16px 0 24px 0; width: 100%; }
+        .chapter-card { background: #ffffff; border: 1px solid #e5e9f0; border-radius: 10px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .chapter-title { font-size: 16px; font-weight: 600; color: #142c4b; }
+        .badge-questions { background: #e5f1fb; color: #0d6efd; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; white-space: nowrap; }
+        .q-item { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px dashed #e0e4ed; }
+        .q-item:last-child { border-bottom: 0; margin-bottom: 0; }
+        .question { font-size: 15px; font-weight: 600; color: #cc0000; margin: 0 0 6px 0; line-height: 1.4; }
+        .options { list-style: none; padding: 0; margin: 0 0 8px 0; }
+        .options li { font-size: 14px; color: #000000; padding: 2px 0; line-height: 1.5; }
+        .show-answer-btn { background: #e5f1fb; color: #0d6efd; border: none; padding: 6px 16px; border-radius: 14px; font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.2s; margin-top: 4px; display: inline-block; }
+        .show-answer-btn:hover { background: #d0e3fa; }
+        .answer-section { display: none; margin-top: 6px; }
+        .revealed-answer { font-size: 14px; font-weight: 600; color: #198754; margin: 0 0 2px 0; }
+        .revealed-explain { font-size: 13px; font-weight: 400; color: #198754; margin: 0; line-height: 1.4; }
+        .other-links-section { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e9f0; }
+        .other-links-section a { display: block; color: #0e5a89; text-decoration: underline; padding: 6px 0; font-size: 14px; }
+        .other-links-section a:hover { color: #1b5a55; }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <h1 class="header-title">Class 9 Mathematics (NCERT)</h1>
+        <a href="class 9 mcq hub.html" class="back-link">← Back to Maths Chapters</a>
+        <hr class="divider-line">
+        <div class="chapter-card">
+            <span class="chapter-title">Ch-15: Probability</span>
+            <span class="badge-questions">30 Questions</span>
+        </div>
+        <div class="questions-container">
+            <div class="q-item">
+                <p class="question">1. The numerical measure of uncertainty is called:</p>
+                <ul class="options">
+                    <li>A. Statistics</li>
+                    <li>B. Probability</li>
+                    <li>C. Frequency</li>
+                    <li>D. Variance</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. Probability</p>
+                    <p class="revealed-explain">Explanation: Probability quantifies how likely an event is to occur.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">2. The probability of an event lies between:</p>
+                <ul class="options">
+                    <li>A. -1 and 1</li>
+                    <li>B. 0 and 1 (inclusive)</li>
+                    <li>C. 0 and 100</li>
+                    <li>D. 1 and 2</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. 0 and 1 (inclusive)</p>
+                    <p class="revealed-explain">Explanation: For any event E, 0 ≤ P(E) ≤ 1.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">3. The probability of a sure (certain) event is:</p>
+                <ul class="options">
+                    <li>A. 0</li>
+                    <li>B. 0.5</li>
+                    <li>C. 1</li>
+                    <li>D. Infinity</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: C. 1</p>
+                    <p class="revealed-explain">Explanation: An event that is certain to occur has a probability of 1.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">4. The probability of an impossible event is:</p>
+                <ul class="options">
+                    <li>A. 0</li>
+                    <li>B. 1</li>
+                    <li>C. -1</li>
+                    <li>D. 0.5</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0</p>
+                    <p class="revealed-explain">Explanation: An event that can never occur has a probability equal to 0.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">5. Which of the following CANNOT be the probability of an event?</p>
+                <ul class="options">
+                    <li>A. ⅓</li>
+                    <li>B. 1.5</li>
+                    <li>C. 15%</li>
+                    <li>D. 0.7</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. 1.5</p>
+                    <p class="revealed-explain">Explanation: Probability can never exceed 1 or be less than 0. Thus, 1.5 is impossible.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">6. If P(E) is the probability of an event E, then P(not E) or P(E') is given by:</p>
+                <ul class="options">
+                    <li>A. P(E) - 1</li>
+                    <li>B. 1 - P(E)</li>
+                    <li>C. 1 / P(E)</li>
+                    <li>D. P(E) + 1</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. 1 - P(E)</p>
+                    <p class="revealed-explain">Explanation: Sum of complementary events P(E) + P(not E) = 1 ⇒ P(not E) = 1 - P(E).</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">7. A coin is tossed 100 times and Head obtained is 60 times. The empirical probability of getting a Head is:</p>
+                <ul class="options">
+                    <li>A. ⅗ (0.6)</li>
+                    <li>B. ⅖ (0.4)</li>
+                    <li>C. ½ (0.5)</li>
+                    <li>D. 1</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. ⅗ (0.6)</p>
+                    <p class="revealed-explain">Explanation: Empirical probability = Favourable outcomes / Total trials = 60 / 100 = 0.6 = ⅗.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">8. A fair die is rolled once. The probability of getting an even number (2, 4, 6) is:</p>
+                <ul class="options">
+                    <li>A. ⅙</li>
+                    <li>B. ½</li>
+                    <li>C. ⅓</li>
+                    <li>D. ⅔</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. ½</p>
+                    <p class="revealed-explain">Explanation: Total outcomes = 6 {1, 2, 3, 4, 5, 6}. Favourable outcomes = 3 {2, 4, 6}. P = 3/6 = 1/2.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">9. In a single roll of a die, what is the probability of getting a number greater than 4?</p>
+                <ul class="options">
+                    <li>A. ½</li>
+                    <li>B. ⅓</li>
+                    <li>C. ⅙</li>
+                    <li>D. ⅔</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. ⅓</p>
+                    <p class="revealed-explain">Explanation: Numbers greater than 4 are 5 and 6 (2 outcomes). P = 2/6 = 1/3.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">10. What is the probability of getting a number 7 in a single throw of a standard six-faced die?</p>
+                <ul class="options">
+                    <li>A. 1</li>
+                    <li>B. 0</li>
+                    <li>C. ⅙</li>
+                    <li>D. ⅐</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. 0</p>
+                    <p class="revealed-explain">Explanation: Since a die faces are numbered 1 to 6, getting a 7 is an impossible event (P = 0).</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">11. If P(E) = 0.37, then P(not E) is equal to:</p>
+                <ul class="options">
+                    <li>A. 0.63</li>
+                    <li>B. 0.37</li>
+                    <li>C. 0.73</li>
+                    <li>D. -0.37</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0.63</p>
+                    <p class="revealed-explain">Explanation: P(not E) = 1 - P(E) = 1 - 0.37 = 0.63.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">12. A bag contains 5 red balls and 3 blue balls. The probability of drawing a red ball at random is:</p>
+                <ul class="options">
+                    <li>A. ⅜</li>
+                    <li>B. ⅝</li>
+                    <li>C. ⅗</li>
+                    <li>D. ⅖</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. ⅝</p>
+                    <p class="revealed-explain">Explanation: Total balls = 5 + 3 = 8. Red balls = 5. Probability = 5/8.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">13. In a cricket match, a batswoman hits a boundary 6 times out of 30 balls played. The probability that she did NOT hit a boundary is:</p>
+                <ul class="options">
+                    <li>A. ⅕ (0.2)</li>
+                    <li>B. ⅘ (0.8)</li>
+                    <li>C. ½ (0.5)</li>
+                    <li>D. ⅙ (0.16)</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. ⅘ (0.8)</p>
+                    <p class="revealed-explain">Explanation: Balls without boundary = 30 - 6 = 24. P = 24/30 = 4/5 = 0.8.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">14. Two coins are tossed simultaneously 500 times. Getting 2 Heads = 105 times. The empirical probability of 2 Heads is:</p>
+                <ul class="options">
+                    <li>A. 0.21</li>
+                    <li>B. 0.42</li>
+                    <li>C. 0.50</li>
+                    <li>D. 0.105</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0.21</p>
+                    <p class="revealed-explain">Explanation: P(2 Heads) = 105 / 500 = 21 / 100 = 0.21.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">15. Sum of probabilities of all primary/elementary events of an experiment is always:</p>
+                <ul class="options">
+                    <li>A. 0</li>
+                    <li>B. 0.5</li>
+                    <li>C. 1</li>
+                    <li>D. Variable</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: C. 1</p>
+                    <p class="revealed-explain">Explanation: The sum of probabilities of all elementary events of an experiment is 1.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">16. Out of 1000 families with 2 children, 475 families have 2 girls. The probability of a randomly chosen family having 2 girls is:</p>
+                <ul class="options">
+                    <li>A. 0.475</li>
+                    <li>B. 0.525</li>
+                    <li>C. 0.250</li>
+                    <li>D. 0.800</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0.475</p>
+                    <p class="revealed-explain">Explanation: P(2 girls) = 475 / 1000 = 0.475.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">17. A deck of playing cards contains how many total cards?</p>
+                <ul class="options">
+                    <li>A. 48</li>
+                    <li>B. 52</li>
+                    <li>C. 54</li>
+                    <li>D. 36</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. 52</p>
+                    <p class="revealed-explain">Explanation: A standard deck of playing cards has 52 cards.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">18. Probability based on actual experiments and observations is called:</p>
+                <ul class="options">
+                    <li>A. Theoretical probability</li>
+                    <li>B. Empirical (experimental) probability</li>
+                    <li>C. Subjective probability</li>
+                    <li>D. Classical probability</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. Empirical (experimental) probability</p>
+                    <p class="revealed-explain">Explanation: Empirical probability relies on real trial data and observed outcomes.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">19. In a sample of 200 light bulbs, 10 bulbs are found defective. The probability of selecting a non-defective bulb is:</p>
+                <ul class="options">
+                    <li>A. 0.05</li>
+                    <li>B. 0.95</li>
+                    <li>C. 0.10</li>
+                    <li>D. 0.90</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. 0.95</p>
+                    <p class="revealed-explain">Explanation: Non-defective bulbs = 200 - 10 = 190. P = 190 / 200 = 0.95.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">20. What is the probability of a leap year having 53 Sundays?</p>
+                <ul class="options">
+                    <li>A. ⅐</li>
+                    <li>B. ⅔</li>
+                    <li>C. ⅖</li>
+                    <li>D. ⅖ (2/7)</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: D. ⅖ (2/7)</p>
+                    <p class="revealed-explain">Explanation: A leap year has 366 days = 52 weeks + 2 extra days. Total possibilities for 2 extra days = 7. Favourable for Sunday = 2 (Sat-Sun, Sun-Mon). P = 2/7.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">21. What is the probability of a non-leap year having 53 Sundays?</p>
+                <ul class="options">
+                    <li>A. ⅐</li>
+                    <li>B. ⅖</li>
+                    <li>C. ⅓</li>
+                    <li>D. 0</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. ⅐</p>
+                    <p class="revealed-explain">Explanation: Non-leap year has 365 days = 52 weeks + 1 extra day. Out of 7 days in a week, 1 can be Sunday. P = 1/7.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">22. The probability of choosing a vowel from the English alphabet is:</p>
+                <ul class="options">
+                    <li>A. ⁵/₂₆</li>
+                    <li>B. ²¹/₂₆</li>
+                    <li>C. ⅙</li>
+                    <li>D. ½</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. ⁵/₂₆</p>
+                    <p class="revealed-explain">Explanation: English alphabets = 26. Vowels = 5 {a, e, i, o, u}. Probability = 5/26.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">23. If an event cannot happen, its probability is 0. Such an event is called an:</p>
+                <ul class="options">
+                    <li>A. Sure event</li>
+                    <li>B. Elementary event</li>
+                    <li>C. Impossible event</li>
+                    <li>D. Independent event</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: C. Impossible event</p>
+                    <p class="revealed-explain">Explanation: Events with zero probability are defined as impossible events.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">24. Three coins are tossed simultaneously 200 times. 3 Heads appear 23 times. The probability of 3 Heads is:</p>
+                <ul class="options">
+                    <li>A. 0.115</li>
+                    <li>B. 0.230</li>
+                    <li>C. 0.100</li>
+                    <li>D. 0.050</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0.115</p>
+                    <p class="revealed-explain">Explanation: P(3 Heads) = 23 / 200 = 0.115.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">25. A number x is chosen at random from numbers -3, -2, -1, 0, 1, 2, 3. The probability that |x| < 2 is:</p>
+                <ul class="options">
+                    <li>A. ⅗</li>
+                    <li>B. ⅐</li>
+                    <li>C. ⅜</li>
+                    <li>D. ⅗ (3/7)</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: D. ⅗ (3/7)</p>
+                    <p class="revealed-explain">Explanation: Total numbers = 7. Numbers with |x| < 2 are -1, 0, 1 (3 numbers). P = 3/7.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">26. In 50 throws of a die, '4' was obtained 12 times. The empirical probability of getting 4 is:</p>
+                <ul class="options">
+                    <li>A. 0.24</li>
+                    <li>B. 0.12</li>
+                    <li>C. 0.50</li>
+                    <li>D. 0.36</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. 0.24</p>
+                    <p class="revealed-explain">Explanation: Empirical probability = 12 / 50 = 24 / 100 = 0.24.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">27. Which of the following CANNOT be a probability value?</p>
+                <ul class="options">
+                    <li>A. 0.001</li>
+                    <li>B. -0.5</li>
+                    <li>C. ⅗</li>
+                    <li>D. 85%</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. -0.5</p>
+                    <p class="revealed-explain">Explanation: Probability values cannot be negative.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">28. Probability of an event E + Probability of event 'not E' is equal to:</p>
+                <ul class="options">
+                    <li>A. 0</li>
+                    <li>B. 1</li>
+                    <li>C. -1</li>
+                    <li>D. 2</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: B. 1</p>
+                    <p class="revealed-explain">Explanation: P(E) + P(not E) = 1 for any event E.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">29. A card is selected from a pack of 52 cards. The probability of getting a red face card is:</p>
+                <ul class="options">
+                    <li>A. ³/₂₆</li>
+                    <li>B. ⁶/₅₂</li>
+                    <li>C. Both A and B</li>
+                    <li>D. ¹/₂₆</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: C. Both A and B</p>
+                    <p class="revealed-explain">Explanation: Total red face cards = 6 (3 Heart + 3 Diamond). P = 6/52 = 3/26.</p>
+                </div>
+            </div>
+
+            <div class="q-item">
+                <p class="question">30. A box contains 90 discs numbered 1 to 90. A disc is drawn at random. The probability that it bears a 2-digit number is:</p>
+                <ul class="options">
+                    <li>A. ⁸¹/₉₀ (9/10)</li>
+                    <li>B. ⁹/₉₀ (1/10)</li>
+                    <li>C. ⁸⁰/₉₀</li>
+                    <li>D. 1</li>
+                </ul>
+                <button class="show-answer-btn" onclick="revealAnswer(this)">Show Answer</button>
+                <div class="answer-section">
+                    <p class="revealed-answer">Answer: A. ⁸¹/₉₀ (9/10)</p>
+                    <p class="revealed-explain">Explanation: 1-digit numbers (1-9) = 9. Two-digit numbers (10-90) = 81. P = 81/90 = 9/10.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-links-section">
+            <a href="class 9 maths mcq1.html">Ch-1: Number Systems</a>
+            <a href="class 9 maths mcq2.html">Ch-2: Polynomials</a>
+            <a href="class 9 maths mcq3.html">Ch-3: Coordinate Geometry</a>
+            <a href="class 9 maths mcq4.html">Ch-4: Linear Equations in Two Variables</a>
+            <a href="class 9 maths mcq5.html">Ch-5: Introduction to Euclid's Geometry</a>
+            <a href="class 9 maths mcq6.html">Ch-6: Lines and Angles</a>
+            <a href="class 9 maths mcq7.html">Ch-7: Triangles</a>
+            <a href="class 9 maths mcq8.html">Ch-8: Quadrilaterals</a>
+            <a href="class 9 maths mcq9.html">Ch-9: Areas of Parallelograms and Triangles</a>
+            <a href="class 9 maths mcq10.html">Ch-10: Circles</a>
+            <a href="class 9 maths mcq11.html">Ch-11: Constructions</a>
+            <a href="class 9 maths mcq12.html">Ch-12: Heron's Formula</a>
+            <a href="class 9 maths mcq13.html">Ch-13: Surface Areas and Volumes</a>
+            <a href="class 9 maths mcq14.html">Ch-14: Statistics</a>
+        </div>
+    </div>
+
+    <script>
+        function revealAnswer(btn){
+            var section = btn.nextElementSibling;
+            if(section.style.display === "none" || section.style.display === ""){
+                section.style.display = "block";
+                btn.style.display = "none";
+            } else {
+                section.style.display = "none";
+                btn.style.display = "inline-block";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Mathematics Chapter 4 Determinants</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <div class="main-container">
+
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Mathematics Chapter 4 Determinants</h1>
+
+            <p>NCERT Solutions for Class 12 Mathematics Chapter 4 Determinants covers the determinant of a square matrix and its properties, finding the area of a triangle using determinants, the adjoint and inverse of a matrix, and solving systems of linear equations.</p>
+
+            <h2>Overview of Topics &amp; Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Determinant and Its Properties</a></li>
+                    <li><a href="#topic2">2. Application: Area of a Triangle</a></li>
+                    <li><a href="#topic3">3. Adjoint, Inverse and Cramer's Rule</a></li>
+                </ul>
+            </div>
+
+            <div id="topic1">
+                <h2>1. Determinant and Its Properties</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; The determinant of a square matrix is a scalar value computed from its elements; for a 2&times;2 matrix [[a, b], [c, d]], it equals ad - bc.</p>
+                    <p>&bull; Key properties include: the determinant changes sign when two rows/columns are interchanged, and it equals zero if any two rows/columns are identical or proportional.</p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Application: Area of a Triangle</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; The area of a triangle with vertices (x1,y1), (x2,y2), (x3,y3) can be expressed as half the absolute value of a 3&times;3 determinant formed from the coordinates.</p>
+                    <p>&bull; If the computed determinant is zero, the three points are collinear and do not form a triangle.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Adjoint, Inverse and Cramer's Rule</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>&bull; The adjoint of a matrix A is the transpose of its cofactor matrix, and satisfies A &middot; (adj A) = |A| &middot; I, leading to the inverse formula A&#8315;&sup1; = (1/|A|) adj A.</p>
+                    <p>&bull; Cramer's rule uses determinants to directly solve a system of linear equations when the coefficient determinant is non-zero, yielding a unique solution.</p>
+                </div>
+            </div>
+
+            <h2>NCERT Textbook Exercise Questions</h2>
+
+            <div class="question">State any two properties of determinants.</div>
+            <div class="answer">
+                <strong>Answer:</strong> If any two rows (or columns) of a determinant are interchanged, the sign of the determinant changes, though its magnitude remains unchanged. If any two rows (or columns) of a determinant are identical or proportional to each other, the value of the determinant becomes zero.
+            </div>
+
+            <div class="question">How is the area of a triangle calculated using determinants?</div>
+            <div class="answer">
+                <strong>Answer:</strong> Given three vertices (x1, y1), (x2, y2), (x3, y3), the area is calculated as half the absolute value of the determinant formed by placing the coordinates, along with a column of 1's, as rows of a 3&times;3 matrix. This method is particularly useful for quickly checking whether three given points are collinear, since collinear points yield a determinant value of zero.
+            </div>
+
+            <div class="question">Explain how Cramer's rule is used to solve a system of linear equations.</div>
+            <div class="answer">
+                <strong>Answer:</strong> Cramer's rule expresses each unknown variable as a ratio of two determinants: the numerator is the determinant formed by replacing the corresponding column of the coefficient matrix with the column of constants, and the denominator is the determinant of the original coefficient matrix. This rule provides a unique solution only when the coefficient determinant is non-zero; if it is zero, the system either has no solution or infinitely many solutions.
+            </div>
+
+            <div class="question">What is the relationship between a matrix, its adjoint, and its determinant?</div>
+            <div class="answer">
+                <strong>Answer:</strong> For any square matrix A, the product of A and its adjoint (adj A) equals the determinant of A multiplied by the identity matrix, expressed as A &middot; (adj A) = |A| &middot; I. This fundamental relationship is used to derive the formula for the inverse of a matrix, A&#8315;&sup1; = (1/|A|) adj A, which is valid only when |A| is non-zero.
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Mathematics Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 math notes1.html">Ch 1: Relations and Functions</a></li>
+                    <li><a href="class 12 math notes2.html">Ch 2: Inverse Trigonometric Functions</a></li>
+                    <li><a href="class 12 math notes3.html">Ch 3: Matrices</a></li>
+                    <li class="active"><a href="class 12 math notes4.html">Ch 4: Determinants</a></li>
+                    <li><a href="class 12 math notes5.html">Ch 5: Continuity and Differentiability</a></li>
+                    <li><a href="class 12 math notes6.html">Ch 6: Application of Derivatives</a></li>
+                    <li><a href="class 12 math notes7.html">Ch 7: Integrals</a></li>
+                    <li><a href="class 12 math notes8.html">Ch 8: Application of Integrals</a></li>
+                    <li><a href="class 12 math notes9.html">Ch 9: Differential Equations</a></li>
+                    <li><a href="class 12 math notes10.html">Ch 10: Vector Algebra</a></li>
+                    <li><a href="class 12 math notes11.html">Ch 11: Three Dimensional Geometry</a></li>
+                    <li><a href="class 12 math notes12.html">Ch 12: Linear Programming</a></li>
+                    <li><a href="class 12 math notes13.html">Ch 13: Probability</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

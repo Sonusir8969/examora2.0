@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Class 10 Social Science Chapter-wise Solutions & Notes | Examora</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .intro-box {
+            background-color: #eef6fc;
+            border-left: 4px solid #11426b;
+            padding: 15px 20px;
+            margin: 15px 0 25px 0;
+            border-radius: 4px;
+        }
+        .subject-unit-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .subject-unit-card h3 {
+            color: #11426b;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
+        }
+        .chapter-btn {
+            display: block;
+            background-color: #f8f9fa;
+            border: 1px solid #d0d7de;
+            border-radius: 5px;
+            padding: 10px 12px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .chapter-btn:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            border-color: #3498db;
+            text-decoration: none;
+        }
+        .exam-tips-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #27ae60; 
+            padding: 15px 20px; 
+            border-radius: 5px; 
+            margin: 20px 0; 
+        }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="index.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 10 Social Science (All Chapters Index)</h1>
+
+            <div class="intro-box">
+                <p><strong>Welcome to Class 10 Social Science Study Hub!</strong></p>
+                <p>Access complete NCERT chapter-wise solutions, quick revision notes, key concepts, timeline events, mandatory map work locations, and board exam solutions for History, Geography, Political Science (Civics), and Economics tailored for CBSE, JAC, and state board examinations.</p>
+            </div>
+
+            <h2>Chapter Directory by Subject Units</h2>
+
+            <!-- History Unit -->
+            <div class="subject-unit-card">
+                <h3>Unit I: History (India and the Contemporary World - II)</h3>
+                <div class="chapter-grid">
+                    <a href="class 10 sst notes1.html" class="chapter-btn">Ch 1: The Rise of Nationalism in Europe</a>
+                    <a href="class 10 sst notes2.html" class="chapter-btn">Ch 2: Nationalism in India</a>
+                    <a href="class 10 sst notes3.html" class="chapter-btn">Ch 3: The Making of a Global World</a>
+                    <a href="class 10 sst notes4.html" class="chapter-btn">Ch 4: The Age of Industrialisation</a>
+                    <a href="class 10 sst notes5.html" class="chapter-btn">Ch 5: Print Culture and the Modern World</a>
+                </div>
+            </div>
+
+            <!-- Geography Unit -->
+            <div class="subject-unit-card">
+                <h3>Unit II: Geography (Contemporary India - II)</h3>
+                <div class="chapter-grid">
+                    <a href="class 10 sst notes6.html" class="chapter-btn">Ch 6: Resources and Development</a>
+                    <a href="class 10 sst notes7.html" class="chapter-btn">Ch 7: Forest and Wildlife Resources</a>
+                    <a href="class 10 sst notes8.html" class="chapter-btn">Ch 8: Water Resources</a>
+                    <a href="class 10 sst notes9.html" class="chapter-btn">Ch 9: Agriculture</a>
+                    <a href="class 10 sst notes10.html" class="chapter-btn">Ch 10: Minerals and Energy Resources</a>
+                    <a href="class 10 sst notes11.html" class="chapter-btn">Ch 11: Manufacturing Industries</a>
+                    <a href="class 10 sst notes12.html" class="chapter-btn">Ch 12: Lifelines of National Economy</a>
+                </div>
+            </div>
+
+            <!-- Political Science Unit -->
+            <div class="subject-unit-card">
+                <h3>Unit III: Political Science (Democratic Politics - II)</h3>
+                <div class="chapter-grid">
+                    <a href="class 10 sst notes13.html" class="chapter-btn">Ch 13: Power Sharing</a>
+                    <a href="class 10 sst notes14.html" class="chapter-btn">Ch 14: Federalism</a>
+                    <a href="class 10 sst notes15.html" class="chapter-btn">Ch 15: Gender, Religion and Caste</a>
+                    <a href="class 10 sst notes16.html" class="chapter-btn">Ch 16: Political Parties</a>
+                    <a href="class 10 sst notes17.html" class="chapter-btn">Ch 17: Outcomes of Democracy</a>
+                </div>
+            </div>
+
+            <!-- Economics Unit -->
+            <div class="subject-unit-card">
+                <h3>Unit IV: Economics (Understanding Economic Development)</h3>
+                <div class="chapter-grid">
+                    <a href="class 10 sst notes18.html" class="chapter-btn">Ch 18: Development</a>
+                    <a href="class 10 sst notes19.html" class="chapter-btn">Ch 19: Sectors of the Indian Economy</a>
+                    <a href="class 10 sst notes20.html" class="chapter-btn">Ch 20: Money and Credit</a>
+                    <a href="class 10 sst notes21.html" class="chapter-btn">Ch 21: Globalisation and the Indian Economy</a>
+                    <a href="class 10 sst notes22.html" class="chapter-btn">Ch 22: Consumer Rights</a>
+                </div>
+            </div>
+
+            <h2>Class 10 Social Science Board Exam Strategy</h2>
+            <div class="exam-tips-box">
+                <p><strong>Key Board Preparation Tips:</strong></p>
+                <p>• <strong>History:</strong> Focus heavily on 'Nationalism in India' for source-based questions, long answers, and historical map identification (INC Sessions, Satyagraha centers).</p>
+                <p>• <strong>Geography:</strong> Practice map marking for dams, major crop producers, nuclear/thermal power plants, sea ports, and international airports.</p>
+                <p>• <strong>Political Science:</strong> Focus on comparative case studies (Belgium vs Sri Lanka), 3-tier Federalism features, national & regional parties, and political reforms.</p>
+                <p>• <strong>Economics:</strong> Master key indicators (BMI, Per Capita Income, HDI), formal vs informal credit sources, double coincidence of wants, and MNC globalisation impacts.</p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 10 SST Chapters</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 10 sst notes1.html">Ch 1: Rise of Nationalism in Europe</a></li>
+                    <li><a href="class 10 sst notes2.html">Ch 2: Nationalism in India</a></li>
+                    <li><a href="class 10 sst notes3.html">Ch 3: Making of a Global World</a></li>
+                    <li><a href="class 10 sst notes4.html">Ch 4: Age of Industrialisation</a></li>
+                    <li><a href="class 10 sst notes5.html">Ch 5: Print Culture & Modern World</a></li>
+                    <li><a href="class 10 sst notes6.html">Ch 6: Resources and Development</a></li>
+                    <li><a href="class 10 sst notes7.html">Ch 7: Forest & Wildlife Resources</a></li>
+                    <li><a href="class 10 sst notes8.html">Ch 8: Water Resources</a></li>
+                    <li><a href="class 10 sst notes9.html">Ch 9: Agriculture</a></li>
+                    <li><a href="class 10 sst notes10.html">Ch 10: Minerals & Energy Resources</a></li>
+                    <li><a href="class 10 sst notes11.html">Ch 11: Manufacturing Industries</a></li>
+                    <li><a href="class 10 sst notes12.html">Ch 12: Lifelines of National Economy</a></li>
+                    <li><a href="class 10 sst notes13.html">Ch 13: Power Sharing</a></li>
+                    <li><a href="class 10 sst notes14.html">Ch 14: Federalism</a></li>
+                    <li><a href="class 10 sst notes15.html">Ch 15: Gender, Religion & Caste</a></li>
+                    <li><a href="class 10 sst notes16.html">Ch 16: Political Parties</a></li>
+                    <li><a href="class 10 sst notes17.html">Ch 17: Outcomes of Democracy</a></li>
+                    <li><a href="class 10 sst notes18.html">Ch 18: Development</a></li>
+                    <li><a href="class 10 sst notes19.html">Ch 19: Sectors of Indian Economy</a></li>
+                    <li><a href="class 10 sst notes20.html">Ch 20: Money and Credit</a></li>
+                    <li><a href="class 10 sst notes21.html">Ch 21: Globalisation & Indian Economy</a></li>
+                    <li><a href="class 10 sst notes22.html">Ch 22: Consumer Rights</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/" target="_blank">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions for Class 12 Physics Chapter 8 Electromagnetic Waves</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Navigation --- */
+        .header-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #0f3554;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-text .brand-blue {
+            color: #11426b;
+        }
+        .logo-text .brand-divider {
+            color: #11426b;
+            margin: 0 4px;
+            font-weight: normal;
+        }
+        .logo-text .brand-green {
+            color: #1b7a53;
+        }
+        .nav-right-link {
+            color: #11426b;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-right-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Layout Container --- */
+        .main-container {
+            max-width: 1250px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* --- Left Main Content --- */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; font-size: 24px; }
+        h2 { color: #2980b9; margin-top: 25px; font-size: 20px; }
+        .topic-list { background-color: #f8f9fa; padding: 15px 30px; border-left: 4px solid #3498db; margin: 20px 0; }
+        .topic-list li { margin-bottom: 8px; }
+        .topic-note-box { 
+            background-color: #fdfdfd; 
+            border: 1px dashed #3498db; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 15px 0 25px 0; 
+        }
+        .question { font-weight: bold; background-color: #f1f8ff; padding: 10px; border-radius: 4px; margin-top: 15px; }
+        .answer { padding: 10px; background-color: #ffffff; border: 1px solid #e1e4e8; border-radius: 4px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Right Sidebar (Chapter Links) --- */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            color: #11426b;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        .sidebar-links {
+            list-style: none;
+        }
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+        .sidebar-links a {
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-links a:hover {
+            background-color: #f1f8ff;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sidebar-links li.active a {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #082136;
+            color: #e2e8f0;
+            padding: 50px 60px 25px 60px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            color: #a0aec0;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer-column a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            max-width: 1200px;
+            margin: 35px auto 25px auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .footer-copyright {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .footer-links-group {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .header-navbar {
+                padding: 15px 20px;
+            }
+            .site-footer {
+                padding: 40px 20px 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-navbar">
+        <div class="logo-text">
+            <span class="brand-blue">Examora</span> 
+            <span class="brand-divider">|</span> 
+            <span class="brand-green">MCQ & Notes</span>
+        </div>
+        <a href="examora.html" class="nav-right-link">Back to Home</a>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-container">
+
+        <!-- Left Content Area -->
+        <main class="content-area">
+            <h1>NCERT Solutions for Class 12 Physics Chapter 8 Electromagnetic Waves</h1>
+
+            <p>NCERT Solutions for Class 12 Physics Chapter 8 Electromagnetic Waves offers short notes, key mathematical relations, displacement current concept, Maxwell's equations, speed of EM waves, and complete classification of the electromagnetic spectrum with practical applications.</p>
+
+            <h2>Overview of Topics & Subtopics (Click to Jump)</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><a href="#topic1">1. Displacement Current & Maxwell's Equations</a></li>
+                    <li><a href="#topic2">2. Electromagnetic Waves & Their Characteristics</a></li>
+                    <li><a href="#topic3">3. Electromagnetic Spectrum & Its Applications</a></li>
+                </ul>
+            </div>
+
+            <!-- Topic Short Notes Sections -->
+            <div id="topic1">
+                <h2>1. Displacement Current & Maxwell's Equations</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Need for Displacement Current:</strong> Ampere's Circuital Law was found to be logically inconsistent for time-varying electric fields (such as charging a capacitor). Maxwell modified the law by adding displacement current.</p>
+                    <p>• <strong>Displacement Current (I_d):</strong> Current arising due to time-varying electric field / electric flux: <em>I_d = ε₀ (dΦ_E / dt)</em>.</p>
+                    <p>• <strong>Ampere-Maxwell Law:</strong> Total current = Conduction current (I_c) + Displacement current (I_d). <em>∮ B · dl = μ₀ (I_c + ε₀ dΦ_E / dt)</em>.</p>
+                    <p>• <strong>Maxwell's Four Fundamental Equations:</strong></p>
+                    <p>&nbsp;&nbsp;1. <em>Gauss's Law in Electrostatics:</em> <em>∮ E · dA = q / ε₀</em></p>
+                    <p>&nbsp;&nbsp;2. <em>Gauss's Law in Magnetism:</em> <em>∮ B · dA = 0</em></p>
+                    <p>&nbsp;&nbsp;3. <em>Faraday's Law of Electromagnetic Induction:</em> <em>∮ E · dl = -dΦ_B / dt</em></p>
+                    <p>&nbsp;&nbsp;4. <em>Ampere-Maxwell Law:</em> <em>∮ B · dl = μ₀ I_c + μ₀ ε₀ (dΦ_E / dt)</em></p>
+                </div>
+            </div>
+
+            <div id="topic2">
+                <h2>2. Electromagnetic Waves & Their Characteristics</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>• <strong>Nature of EM Waves:</strong> Coupled sinusoidal electric and magnetic field vectors oscillating mutually perpendicular to each other and perpendicular to direction of propagation (<strong>Transverse Nature</strong>).</p>
+                    <p>• <strong>Speed of EM Waves:</strong></p>
+                    <p>&nbsp;&nbsp;- <em>In Vacuum:</em> <em>c = 1 / √(μ₀ ε₀) ≈ 3 × 10⁸ m/s</em>.</p>
+                    <p>&nbsp;&nbsp;- <em>In Material Medium:</em> <em>v = 1 / √(μ ε) = c / n</em>, where n is refractive index.</p>
+                    <p>• <strong>Ratio of Amplitudes:</strong> Amplitude ratio of electric field E₀ to magnetic field B₀ equals speed of light: <em>c = E₀ / B₀ = E_rms / B_rms</em>.</p>
+                    <p>• <strong>Energy Density:</strong> Energy is shared equally between electric and magnetic fields:</p>
+                    <p>&nbsp;&nbsp;- <em>Average Energy Density:</em> <em>u = u_E + u_B = (1/2) ε₀ E_rms² + (1 / 2μ₀) B_rms² = ε₀ E_rms²</em>.</p>
+                    <p>• <strong>Momentum & Radiation Pressure:</strong> EM wave transports linear momentum <em>p = U / c</em> (where U is energy). When absorbed by surface, it exerts pressure called <strong>Radiation Pressure</strong>.</p>
+                </div>
+            </div>
+
+            <div id="topic3">
+                <h2>3. Electromagnetic Spectrum & Its Applications</h2>
+                <div class="topic-note-box">
+                    <p><strong>Short Note:</strong></p>
+                    <p>Classification of EM waves in order of increasing frequency (decreasing wavelength):</p>
+                    <p>1. <strong>Radio Waves (λ > 0.1 m):</strong> Produced by accelerated motion of charges in conducting wires. Used in radio & TV broadcasting.</p>
+                    <p>2. <strong>Microwaves (0.1 m to 1 mm):</strong> Produced by special vacuum tubes (klystrons, magnetrons). Used in radar systems and microwave ovens.</p>
+                    <p>3. <strong>Infrared Waves (1 mm to 700 nm):</strong> Heat waves produced by hot bodies and molecules. Used in remote controls, night-vision devices, and greenhouse effect.</p>
+                    <p>4. <strong>Visible Light (700 nm to 400 nm):</strong> Emitted by atomic excitation. Provides vision to human eyes.</p>
+                    <p>5. <strong>Ultraviolet Rays (400 nm to 1 nm):</strong> Produced by high-voltage lamps and Sun. Used in water purifiers, sterilization, and LASIK eye surgery.</p>
+                    <p>6. <strong>X-Rays (1 nm to 10⁻³ nm):</strong> Produced by bombarding metal target with high-energy electrons. Used in medical diagnosis and structure detection.</p>
+                    <p>7. <strong>Gamma Rays (< 10⁻³ nm):</strong> Emitted by radioactive nuclei during nuclear transitions. Used in cancer radiotherapy.</p>
+                </div>
+            </div>
+
+            <!-- NCERT Solutions Questions -->
+            <h2>Intext & Conceptual Questions</h2>
+
+            <div class="question">Q1: Why is displacement current needed in Ampere's circuital law? Explain how it restores continuity of current in a capacitor circuit.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                • Ampere's Circuital Law states <em>∮ B · dl = μ₀ I_c</em>. During the charging of a capacitor, a conduction current flows in the wires, but no actual charge moves across the space between the capacitor plates. Applying Ampere's law to a flat surface yields a non-zero magnetic field, whereas applying it to a bulging surface passing between plates yields zero, causing a contradiction.<br>
+                • Maxwell introduced the concept of <strong>displacement current</strong> (<em>I_d = ε₀ dΦ_E / dt</em>) arising from the changing electric flux between capacitor plates.<br>
+                • Between the plates, <em>I_c = 0</em> and <em>I_d = I</em>, while outside in wires, <em>I_c = I</em> and <em>I_d = 0</em>. Hence, total current <em>I_total = I_c + I_d</em> remains continuous throughout the circuit.
+            </div>
+
+            <div class="question">Q2: Summarize the Electromagnetic Spectrum with Frequency and Wavelength ranges along with Main Uses.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                <table>
+                    <thead>
+                        <tr style="background-color: #f1f8ff; text-align: left;">
+                            <th style="padding: 8px; border: 1px solid #ddd;">Type of Wave</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Wavelength Range</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Frequency Range</th>
+                            <th style="padding: 8px; border: 1px solid #ddd;">Primary Application</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Radio Waves</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">> 0.1 m</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">< 3 × 10⁹ Hz</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Radio and television communication.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Microwaves</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">0.1 m – 1 mm</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">3 × 10⁹ Hz – 3 × 10¹¹ Hz</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Radar systems, satellite communication & ovens.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Infrared</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">1 mm – 700 nm</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">3 × 10¹¹ Hz – 4 × 10¹⁴ Hz</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Night vision, remote controls & heat lamps.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Visible Light</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">700 nm – 400 nm</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">4 × 10¹⁴ Hz – 7.5 × 10¹⁴ Hz</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Optical vision, photography.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ultraviolet</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">400 nm – 1 nm</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">7.5 × 10¹⁴ Hz – 3 × 10¹⁶ Hz</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Water purification, sterilization, LASIK.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>X-Rays</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">1 nm – 10⁻³ nm</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">3 × 10¹⁶ Hz – 3 × 10¹⁹ Hz</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Medical radiography, bone fracture detection.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><strong>Gamma Rays</strong></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">< 10⁻³ nm</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">> 3 × 10¹⁹ Hz</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">Cancer radiotherapy and nuclear studies.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Textbook Chapter End Exercise Questions</h2>
+
+            <div class="question">Q1: A parallel plate capacitor with circular plates of radius 1 m has a capacitance of 1 nF. At t = 0, it is connected for charging in series with a resistor R = 1 MΩ across a 2 V battery. Calculate the magnetic field at a point P, halfway between the centre and the peripheral edge of the plates, at t = 10⁻³ s.</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Radius of circular plates (R_p) = 1.0 m<br>
+                • Distance from center (r) = 0.5 m (halfway)<br>
+                • Capacitance (C) = 1 nF = 10⁻⁹ F<br>
+                • Resistance (R) = 1 MΩ = 10⁶ Ω  =>  Time constant (τ = R C) = 10⁶ × 10⁻⁹ = 10⁻³ s<br>
+                • Voltage (V₀) = 2 V, Time (t) = 10⁻³ s = τ<br><br>
+                <strong>Step 1: Charging Current formula</strong><br>
+                <em>I(t) = (V₀ / R) × e^(-t / τ)</em><br>
+                At <em>t = τ</em>:<br>
+                <em>I = (2 / 10⁶) × e⁻¹ = 2 × 10⁻⁶ × 0.368 = 0.736 × 10⁻⁶ A</em><br><br>
+                <strong>Step 2: Magnetic Field inside capacitor at distance r</strong><br>
+                Using Ampere-Maxwell law inside circular plates:<br>
+                <em>B = (μ₀ r I_d) / (2π R_p²) = (4π × 10⁻⁷ × 0.5 × 0.736 × 10⁻⁶) / (2π × 1.0²)</em><br>
+                <em>B = 2 × 10⁻⁷ × 0.5 × 0.736 × 10⁻⁶ = 0.736 × 10⁻¹³ T</em><br><br>
+                The magnetic field at point P at t = 10⁻³ s is <strong>0.736 × 10⁻¹³ T</strong>.
+            </div>
+
+            <div class="question">Q2: In a plane electromagnetic wave, the electric field oscillates sinusoidally at a frequency of 2.0 × 10¹⁰ Hz and amplitude 48 V/m. (a) What is the wavelength of the wave? (b) What is the amplitude of the oscillating magnetic field?</div>
+            <div class="answer">
+                <strong>Answer:</strong><br>
+                Given:<br>
+                • Frequency (f) = 2.0 × 10¹⁰ Hz<br>
+                • Electric field amplitude (E₀) = 48 V/m<br>
+                • Speed of light in vacuum (c) = 3.0 × 10⁸ m/s<br><br>
+                <strong>Part (a): Wavelength (λ)</strong><br>
+                <em>λ = c / f = (3.0 × 10⁸) / (2.0 × 10¹⁰) = 1.5 × 10⁻² m = 1.5 cm</em><br><br>
+                <strong>Part (b): Amplitude of Magnetic Field (B₀)</strong><br>
+                <em>B₀ = E₀ / c = 48 / (3.0 × 10⁸) = 1.6 × 10⁻⁷ T</em><br><br>
+                • The wavelength of the wave is <strong>1.5 cm</strong> (or <strong>1.5 × 10⁻² m</strong>).<br>
+                • The amplitude of the oscillating magnetic field is <strong>1.6 × 10⁻⁷ T</strong>.
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Chapter Links) -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Class 12 Physics</h3>
+                <ul class="sidebar-links">
+                    <li><a href="class 12 physics notes1">Ch 1: Electric Charges and Fields</a></li>
+                    <li><a href="class 12 physics notes2">Ch 2: Electrostatic Potential & Capacitance</a></li>
+                    <li><a href="class 12 physics notes3">Ch 3: Current Electricity</a></li>
+                    <li><a href="class 12 physics notes4">Ch 4: Moving Charges and Magnetism</a></li>
+                    <li><a href="class 12 physics notes5">Ch 5: Magnetism and Matter</a></li>
+                    <li><a href="class 12 physics notes6">Ch 6: Electromagnetic Induction</a></li>
+                    <li><a href="class 12 physics notes7">Ch 7: Alternating Current</a></li>
+                    <li class="active"><a href="class 12 physics notes8">Ch 8: Electromagnetic Waves</a></li>
+                    <li><a href="class 12 physics notes9">Ch 9: Ray Optics and Optical Instruments</a></li>
+                    <li><a href="class 12 physics notes10">Ch 10: Wave Optics</a></li>
+                    <li><a href="class 12 physics notes11">Ch 11: Dual Nature of Radiation & Matter</a></li>
+                    <li><a href="class 12 physics notes12">Ch 12: Atoms</a></li>
+                    <li><a href="class 12 physics notes13">Ch 13: Nuclei</a></li>
+                    <li><a href="class 12 physics notes14">Ch 14: Semiconductor Electronics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Examora</h3>
+                <p>Practice. Perform. Progress.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="about us examora.html">About Us</a></li>
+                        <li><a href="contact us examora.html">Contact</a></li>
+                        <li><a href="privacy policies examora.html">Privacy Policy</a></li>
+                        <li><a href="term and conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://jacexamportal.in/">JAC Board Portal</a></li>
+                        <li><a href="contact us examora.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-copyright">
+            &copy; 2026 Examora Education Platform. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examora | Class 9 JAC Board</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3e;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header {
+      background: white;
+      padding: 20px 0;
+      border-bottom: 2px solid #1e4a76;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      color: #1e4a76;
+    }
+
+    .header span {
+      color: #2f855a;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .row {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: white;
+      border-radius: 16px;
+      padding: 15px 0;
+      border: 1px solid #ddd;
+      height: fit-content;
+      position: sticky;
+      top: 20px;
+    }
+
+    .sidebar h3 {
+      padding: 0 18px 12px 18px;
+      border-bottom: 1px solid #eee;
+      color: #1e4a76;
+    }
+
+    .subject-item {
+      padding: 12px 18px;
+      cursor: pointer;
+      font-weight: 500;
+      border-left: 3px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .subject-item:hover {
+      background: #eef2ff;
+    }
+
+    .subject-item.active {
+      background: #eef2ff;
+      border-left-color: #1e4a76;
+      color: #1e4a76;
+    }
+
+    .content {
+      flex: 1;
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .content-header {
+      background: #f8fafc;
+      padding: 18px 22px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .content-header h2 {
+      color: #1e4a76;
+      font-size: 1.4rem;
+    }
+
+    .chapter-list {
+      padding: 10px 0;
+    }
+
+    .chapter-row {
+      display: flex;
+      align-items: center;
+      padding: 10px 22px;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+    }
+
+    .chapter-row:hover {
+      background: #f8fafc;
+    }
+
+    .chapter-num {
+      width: 65px;
+      font-weight: 600;
+      color: #555;
+      font-size: 0.85rem;
+    }
+
+    .chapter-link {
+      flex: 1;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 6px 0;
+    }
+
+    .chapter-link:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    .test-badge {
+      font-size: 0.7rem;
+      background: #e6f0ff;
+      padding: 4px 14px;
+      border-radius: 20px;
+      color: #1e4a76;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .test-badge:hover {
+      background: #1e4a76;
+      color: white;
+    }
+
+    footer {
+      background: #0f2b3d;
+      color: #cddfe7;
+      padding: 40px 0 20px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2d4a6e;
+      padding-top: 20px;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        position: relative;
+      }
+      .subject-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+      }
+      .subject-item {
+        padding: 8px 16px;
+        border-radius: 40px;
+        border-left: none;
+        background: #f1f5f9;
+      }
+      .subject-item.active {
+        background: #1e4a76;
+        color: white;
+      }
+      .chapter-row {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chapter-num {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Class 9 <span>JAC Board</span></h1>
+    <a href="examora.html" class="back-link" id="backHome" onclick="goHome(event)">← Back to Examora Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="sidebar">
+      <h3>Subjects</h3>
+      <div class="subject-list">
+        <div class="subject-item active" data-sub="science">Science</div>
+        <div class="subject-item" data-sub="maths">Mathematics</div>
+        <div class="subject-item" data-sub="english">English</div>
+        <div class="subject-item" data-sub="hindi">Hindi</div>
+        <div class="subject-item" data-sub="social">Social Science</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content-header">
+        <h2 id="subTitle">Science</h2>
+      </div>
+      <div class="chapter-list" id="chapterList">
+        <!-- chapters will load here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Examora</h4>
+        <p>Practice. Perform. Progress.</p>
+      </div>
+      <div class="footer-col">
+        <a href="about us examora.html" id="aboutLink">About Us</a>
+        <a href="contact us examora.html" id="contactLink">Contact Us</a>
+        <a href="privacy policies examora.html" id="privacyLink">Privacy Policy</a>
+        <a href="term and conditions.html" id="termsLink">Terms & Conditions</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://youtube.com/@sonusir8969?si=Rh0UO_wlG07Dcyiw" target="_blank">YouTube</a>
+        <a href="https://chat.whatsapp.com/KNPN6o3tUAh8IDWgI3bqY6" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/sonu_____study_8969?igsh=a2NtODRsd2U4N29q" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Examora Education Pvt. Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Class 9 JAC Board Syllabus - All Subjects
+  const chaptersData = {
+    science: {
+      name: "Science",
+      list: [
+        { num: "Ch-1", name: "Matter in Our Surroundings", link: "class 9 science mcq1.html" },
+        { num: "Ch-2", name: "Is Matter Around Us Pure", link: "class 9 science mcq2.html" },
+        { num: "Ch-3", name: "Atoms and Molecules", link: "class 9 science mcq3.html" },
+        { num: "Ch-4", name: "Structure of the Atom", link: "class 9 science mcq4.html" },
+        { num: "Ch-5", name: "The Fundamental Unit of Life", link: "class 9 science mcq5.html" },
+        { num: "Ch-6", name: "Tissues", link: "class 9 science mcq6.html" },
+        { num: "Ch-7", name: "Diversity in Living Organisms", link: "class 9 science mcq7.html" },
+        { num: "Ch-8", name: "Motion", link: "class 9 science mcq8.html" },
+        { num: "Ch-9", name: "Force and Laws of Motion", link: "class 9 science mcq9.html" },
+        { num: "Ch-10", name: "Gravitation", link: "class 9 science mcq10.html" },
+        { num: "Ch-11", name: "Work and Energy", link: "class 9 science mcq11.html" },
+        { num: "Ch-12", name: "Sound", link: "class 9 science mcq12.html" },
+        { num: "Ch-13", name: "Why Do We Fall Ill", link: "class 9 science mcq13.html" },
+        { num: "Ch-14", name: "Natural Resources", link: "class 9 science mcq14.html" },
+        { num: "Ch-15", name: "Improvement in Food Resources", link: "class 9 science mcq15.html" }
+      ]
+    },
+    maths: {
+      name: "Mathematics",
+      list: [
+        { num: "Ch-1", name: "Number Systems", link: "class 9 maths mcq1.html" },
+        { num: "Ch-2", name: "Polynomials", link: "class 9 maths mcq2.html" },
+        { num: "Ch-3", name: "Coordinate Geometry", link: "class 9 maths mcq3.html" },
+        { num: "Ch-4", name: "Linear Equations in Two Variables", link: "class 9 maths mcq4.html" },
+        { num: "Ch-5", name: "Introduction to Euclid's Geometry", link: "class 9 maths mcq5.html" },
+        { num: "Ch-6", name: "Lines and Angles", link: "class 9 maths mcq6.html" },
+        { num: "Ch-7", name: "Triangles", link: "class 9 maths mcq7.html" },
+        { num: "Ch-8", name: "Quadrilaterals", link: "class 9 maths mcq8.html" },
+        { num: "Ch-9", name: "Areas of Parallelograms and Triangles", link: "class 9 maths mcq9.html" },
+        { num: "Ch-10", name: "Circles", link: "class 9 maths mcq10.html" },
+        { num: "Ch-11", name: "Constructions", link: "class 9 maths mcq11.html" },
+        { num: "Ch-12", name: "Heron's Formula", link: "class 9 maths mcq12.html" },
+        { num: "Ch-13", name: "Surface Areas and Volumes", link: "class 9 maths mcq13.html" },
+        { num: "Ch-14", name: "Statistics", link: "class 9 maths mcq14.html" },
+        { num: "Ch-15", name: "Probability", link: "class 9 maths mcq15.html" }
+      ]
+    },
+    english: {
+      name: "English",
+      list: [
+        { num: "Ch-1", name: "The Fun They Had", link: "class 9 english mcq1.html" },
+        { num: "Ch-2", name: "The Sound of Music", link: "class 9 english mcq2.html" },
+        { num: "Ch-3", name: "The Little Girl", link: "class 9 english mcq3.html" },
+        { num: "Ch-4", name: "A Truly Beautiful Mind", link: "class 9 english mcq4.html" },
+        { num: "Ch-5", name: "The Snake and the Mirror", link: "class 9 english mcq5.html" },
+        { num: "Ch-6", name: "My Childhood", link: "class 9 english mcq6.html" },
+        { num: "Ch-7", name: "Reach for the Top", link: "class 9 english mcq7.html" },
+        { num: "Ch-8", name: "Kathmandu", link: "class 9 english mcq8.html" },
+        { num: "Ch-9", name: "If I Were You", link: "class 9 english mcq9.html" },
+        { num: "Poem-1", name: "The Road Not Taken", link: "class 9 english mcq10.html" },
+        { num: "Poem-2", name: "Wind", link: "class 9 english mcq11.html" },
+        { num: "Poem-3", name: "Rain on the Roof", link: "class 9 english mcq12.html" },
+        { num: "Poem-4", name: "The Lake Isle of Innisfree", link: "class 9 english mcq13.html" },
+        { num: "Poem-5", name: "A Legend of the Northland", link: "class 9 english mcq14.html" },
+        { num: "Poem-6", name: "No Men Are Foreign", link: "class 9 english mcq15.html" },
+        { num: "Poem-8", name: "On Killing a Tree", link: "class 9 english mcq17.html" },
+      ]
+    },
+    hindi: {
+      name: "Hindi",
+      list: [
+        { num: "Ch-1", name: "Do Bailon Ki Katha", link: "class 9 hindi mcq1.html" },
+        { num: "Ch-2", name: "Lhasa Ki Aur", link: "class 9 hindi mcq2.html" },
+        { num: "Ch-3", name: "Upbhoktawad Ki Sanskriti", link: "class 9 hindi mcq3.html" },
+        { num: "Ch-4", name: "Saanwale Sapno Ki Yaad", link: "class 9 hindi mcq4.html" },
+        { num: "Ch-5", name: "Pratyay", link: "class 9 hindi mcq5.html" },
+        { num: "Ch-6", name: "Prem Chand Ke Phate Joote", link: "class 9 hindi mcq6.html" },
+        { num: "Ch-7", name: "Mere Sang Ki Auratein", link: "class 9 hindi mcq7.html" },
+        { num: "Ch-8", name: "Hazar Varsh", link: "class 9 hindi mcq8.html" },
+        { num: "Poem-1", name: "Gadhya Khand", link: "class 9 hindi mcq9.html" },
+        { num: "Poem-2", name: "Rahim Ke Dohe", link: "class 9 hindi mcq10.html" },
+        { num: "Poem-3", name: "Raidas Ke Pad", link: "class 9 hindi mcq11.html" },
+        { num: "Grammar", name: "Vyakaran - Sandhi, Samas, Alankar", link: "class 9 hindi mcq12.html" },
+        { num: "Writing", name: "Nibandh, Patra, Anuched Lekhan", link: "class 9 hindi mcq13.html" }
+      ]
+    },
+    social: {
+      name: "Social Science",
+      list: [
+        { num: "Ch-1", name: "The French Revolution", link: "class 9 history mcq1.html" },
+        { num: "Ch-2", name: "Socialism in Europe and the Russian Revolution", link: "class 9 history mcq2.html" },
+        { num: "Ch-3", name: "Nazism and the Rise of Hitler", link: "class 9 history mcq3.html" },
+        { num: "Ch-4", name: "Forest Society and Colonialism", link: "class 9 history mcq4.html" },
+        { num: "Ch-5", name: "Pastoralists in the Modern World", link: "class 9 history mcq5.html" },
+        { num: "Ch-6", name: "India - Size and Location", link: "class 9 geography mcq6.html" },
+        { num: "Ch-7", name: "Physical Features of India", link: "class 9 geography mcq7.html" },
+        { num: "Ch-8", name: "Drainage", link: "class 9 geography mcq9.html" },
+        { num: "Ch-9", name: "Climate", link: "class 9 geofraphy mcq10.html" },
+        { num: "Ch-11", name: "Population", link: "class 9 social mcq11.html" },
+        { num: "Ch-12", name: "What is Democracy? Why Democracy?", link: "class 9 social mcq12.html" },
+        { num: "Ch-13", name: "Constitutional Design", link: "class 9 social mcq13.html" },
+        { num: "Ch-14", name: "Electoral Politics", link: "class 9 social mcq14.html" },
+        { num: "Ch-15", name: "Working of Institutions", link: "class 9 social mcq15.html" },
+        { num: "Ch-16", name: "Democratic Rights", link: "class 9 social mcq16.html" },
+        { num: "Ch-17", name: "The Story of Village Palampur (Economics)", link: "class 9 social mcq17.html" },
+        { num: "Ch-18", name: "People as Resource (Economics)", link: "class 9 social mcq18.html" },
+        { num: "Ch-19", name: "Poverty as a Challenge (Economics)", link: "class 9 social mcq19.html" },
+        { num: "Ch-20", name: "Food Security in India (Economics)", link: "class 9 social mcq20.html" }
+      ]
+    }
+  };
+
+  function renderChapters(subject) {
+    const data = chaptersData[subject];
+    if (!data) return;
+    document.getElementById("subTitle").textContent = data.name;
+
+    let html = "";
+    for (let i = 0; i < data.list.length; i++) {
+      const ch = data.list[i];
+      html += `
+        <div class="chapter-row">
+          <div class="chapter-num">${ch.num}</div>
+          <a href="${ch.link}" class="chapter-link" target="_blank">${ch.name}</a>
+          <a href="${ch.link}" class="test-badge" target="_blank">MCQ</a>
+        </div>
+      `;
+    }
+    document.getElementById("chapterList").innerHTML = html;
+  }
+
+  document.querySelectorAll(".subject-item").forEach(function(item) {
+    item.addEventListener("click", function() {
+      document.querySelectorAll(".subject-item").forEach(function(s) {
+        s.classList.remove("active");
+      });
+      this.classList.add("active");
+      const subject = this.getAttribute("data-sub");
+      renderChapters(subject);
+    });
+  });
+
+  // Dynamic Back Home Navigation Logic
+  function goHome(e) {
+    e.preventDefault();
+    window.location.href = "examora.html";
+  }
+
+  renderChapters("science");
+</script>
+</body>
+</html>
